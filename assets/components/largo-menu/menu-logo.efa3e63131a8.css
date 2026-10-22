@@ -1,0 +1,29 @@
+/* Client-owned LARGO geometry; native menu button and labels remain in place. */
+#header-right-menu-btn {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#header-right-menu-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+#header-right-menu-btn-dots {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background: currentColor;
+  -webkit-mask: url("./largo-slashes.9c84f842015e.svg") center / contain no-repeat;
+  mask: url("./largo-slashes.9c84f842015e.svg") center / contain no-repeat;
+}
+
+#header-right-menu-btn #header-right-menu-btn-dots,
+#header-right-menu-btn:hover #header-right-menu-btn-dots,
+#header-right-menu-btn.--opened #header-right-menu-btn-dots {
+  transform: none;
+}
+
+#header-right-menu-btn-dots .header-right-menu-btn-dot {
+  visibility: hidden;
+}

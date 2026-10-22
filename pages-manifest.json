@@ -330,6 +330,16 @@
       "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
     },
     {
+      "path": "assets/components/largo-menu/largo-slashes.9c84f842015e.svg",
+      "bytes": 271,
+      "sha256": "9c84f842015e65e491322d8e28ab9da4a764a6a738a04a87279954091ba97004"
+    },
+    {
+      "path": "assets/components/largo-menu/menu-logo.efa3e63131a8.css",
+      "bytes": 794,
+      "sha256": "efa3e63131a8b7fd3d8b444cfe4207613a68d49f5a6332361e59aa00ad9cdc39"
+    },
+    {
       "path": "assets/components/vr-glasses/optics.98f68714d244.js",
       "bytes": 3477167,
       "sha256": "ce3296827ef8222425310309146e11e6a40fd5aef74eedbc36bcc4b4b1f6e05c"
@@ -791,8 +801,8 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1369883,
-      "sha256": "5c0f4777af6190393cd32d63980d1bfbe9b283dcbc4427c3fd2a59e7f645f7c2"
+      "bytes": 1371798,
+      "sha256": "4e9e632d5f0fbe93217df897751c103fdac5371629ae71332d93f27e0602335f"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/js-b097aa9872.js",
@@ -801,8 +811,8 @@
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1537491,
-      "sha256": "f6d783382e1a3be381f478e99aea0e02a6ce35e501db76ef26d81a0d2e803a11"
+      "bytes": 1539406,
+      "sha256": "4c3a02a7303c986d66561a4531f54a56fb19e2290cf4ace105370881d44ef8ef"
     },
     {
       "path": "assets/js/js-b097aa9872.js",
@@ -1176,8 +1186,8 @@
     },
     {
       "path": "settings-site.js",
-      "bytes": 9076,
-      "sha256": "a4947574832ba80ed1730b07f024074213c8e8abe662ad929cab5b398746f3e1"
+      "bytes": 9348,
+      "sha256": "66d30f3ae4fc709682b9c8f91251a824ee063155d1f39e36c6618d35886b45d7"
     },
     {
       "path": "uploads/00d896477f00a9ffc3abe73693ba4139.webp",

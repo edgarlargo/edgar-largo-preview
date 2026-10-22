@@ -67,7 +67,7 @@
     choice = value;
     try { if (value) localStorage.setItem(key, JSON.stringify(value)); else localStorage.removeItem(key); } catch { /* Storage is optional. */ }
   };
-  let panel, launcher, analytics, marketing;
+  let panel, launcher, opener, analytics, marketing;
   const make = (tag, text, parent) => {
     const element = document.createElement(tag);
     if (text) element.textContent = text;
@@ -83,7 +83,9 @@
     if (!panel) return;
     const restoreFocus = panel.contains(document.activeElement);
     panel.hidden = true;
-    if (restoreFocus) launcher?.focus({preventScroll: true});
+    const target = opener || launcher;
+    if (restoreFocus && target?.isConnected !== false) target?.focus({preventScroll: true});
+    opener = null;
   };
   const save = (a, m) => {
     const reduced = (choice?.analytics === true && !a) || (choice?.marketing === true && !m);
@@ -96,7 +98,9 @@
   };
   function open(preferences = false) {
     if (!cookies.enabled) return;
-    const moveFocus = document.activeElement === launcher || panel?.contains(document.activeElement);
+    const inside = panel?.contains(document.activeElement);
+    const moveFocus = preferences || !!launcher && document.activeElement === launcher || inside;
+    if (preferences && !inside) opener = document.activeElement;
     if (!panel) {
       panel = make('section', '', document.body); panel.id = 'ea-consent';
       panel.dataset.position = position;
@@ -136,9 +140,11 @@
     withdraw: () => { const reload = optionalRunning(); persist(null); if (reload) window.location.reload(); else { apply(); open(); } }
   };
   if (cookies.enabled) {
-    launcher = button(labels.withdraw, document.body, () => open(true), true); launcher.id = 'ea-consent-open';
-    launcher.dataset.position = position;
-    launcher.dataset.theme = theme;
+    if (cookies.showLauncher !== false) {
+      launcher = button(labels.withdraw, document.body, () => open(true), true); launcher.id = 'ea-consent-open';
+      launcher.dataset.position = position;
+      launcher.dataset.theme = theme;
+    }
     if (!choice) open();
     window.addEventListener('storage', event => {
       if (event.key !== key) return;
