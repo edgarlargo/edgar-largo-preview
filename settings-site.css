@@ -1,0 +1,38 @@
+#ea-consent,#ea-consent-open{--ea-consent-gap:12px;--ea-consent-left:calc(var(--ea-consent-gap) + env(safe-area-inset-left,0px));--ea-consent-right:calc(var(--ea-consent-gap) + env(safe-area-inset-right,0px));--ea-consent-top:calc(var(--ea-consent-gap) + env(safe-area-inset-top,0px));--ea-consent-bottom:calc(var(--ea-consent-gap) + env(safe-area-inset-bottom,0px));--ea-consent-bg:#fff;--ea-consent-ink:#111;--ea-consent-line:#ccc;--ea-consent-hover:#eee;--ea-consent-active:#ddd;box-sizing:border-box;font-family:Arial,sans-serif;font-size:14px;line-height:1.5;color:var(--ea-consent-ink);isolation:isolate;color-scheme:light;position:fixed;top:auto;right:auto;bottom:var(--ea-consent-bottom);left:var(--ea-consent-left);transform:none;max-width:calc(100vw - var(--ea-consent-left) - var(--ea-consent-right));text-align:left;letter-spacing:normal;text-transform:none}
+:is(#ea-consent,#ea-consent-open)[data-theme="dark"]{--ea-consent-bg:#111;--ea-consent-ink:#fff;--ea-consent-line:#555;--ea-consent-hover:#292929;--ea-consent-active:#3d3d3d;color-scheme:dark}
+#ea-consent{--ea-consent-gap:24px;z-index:2147483600;display:block;width:min(480px,calc(100vw - var(--ea-consent-left) - var(--ea-consent-right)));max-height:calc(100vh - var(--ea-consent-top) - var(--ea-consent-bottom));max-height:calc(100dvh - var(--ea-consent-top) - var(--ea-consent-bottom));overflow:auto;padding:24px;border:1px solid var(--ea-consent-line);border-radius:20px;background:var(--ea-consent-bg);box-shadow:0 8px 40px #0003}
+#ea-consent *{box-sizing:border-box}
+:is(#ea-consent,#ea-consent-open)[data-position^="top-"]{top:var(--ea-consent-top);bottom:auto}
+:is(#ea-consent,#ea-consent-open)[data-position$="-right"]{right:var(--ea-consent-right);left:auto}
+:is(#ea-consent,#ea-consent-open)[data-position$="-center"]{left:calc((100vw + var(--ea-consent-left) - var(--ea-consent-right)) / 2);transform:translateX(-50%)}
+#ea-consent[hidden]{display:none!important}
+#ea-consent h2{font:700 20px/1.3 Arial,sans-serif;margin:0 0 12px;color:inherit;letter-spacing:normal;text-transform:none}
+#ea-consent p{font:400 14px/1.6 Arial,sans-serif;margin:0 0 12px;color:inherit;white-space:pre-wrap}
+#ea-consent a{font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+#ea-consent a:hover{text-decoration-thickness:2px}
+#ea-consent .ea-consent-copy{min-width:0;overflow-wrap:anywhere}
+#ea-consent button,#ea-consent-open{appearance:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--ea-consent-ink);border-radius:10px;padding:10px 14px;min-height:38px;font:600 13px/1.4 Arial,sans-serif;letter-spacing:normal;text-transform:none;text-align:center;background:var(--ea-consent-ink);color:var(--ea-consent-bg);margin:0;box-shadow:none;white-space:normal;overflow-wrap:anywhere;transition:background-color .15s,color .15s}
+#ea-consent .ea-consent-secondary,#ea-consent-open{border-color:var(--ea-consent-line);background:var(--ea-consent-bg);color:var(--ea-consent-ink)}
+#ea-consent button:hover{background:var(--ea-consent-bg);color:var(--ea-consent-ink)}
+#ea-consent .ea-consent-secondary:hover,#ea-consent-open:hover{background:var(--ea-consent-hover)}
+#ea-consent button:active,#ea-consent-open:active{background:var(--ea-consent-active);color:var(--ea-consent-ink)}
+#ea-consent button:focus-visible,#ea-consent a:focus-visible,#ea-consent input:focus-visible,#ea-consent-open:focus-visible{outline:2px solid var(--ea-consent-ink);outline-offset:3px}
+#ea-consent button:disabled{cursor:default;opacity:.55}
+#ea-consent .ea-consent-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+#ea-consent .ea-consent-options{display:grid;gap:12px;margin:20px 0}
+#ea-consent label{display:flex;align-items:center;gap:10px;font:400 14px/1.5 Arial,sans-serif;color:inherit}
+#ea-consent input[type=checkbox]{appearance:auto;flex-shrink:0;width:18px;height:18px;margin:0;accent-color:var(--ea-consent-ink)}
+#ea-consent-open{z-index:2147483599;padding:7px 12px;box-shadow:0 3px 14px #0002}
+/* The notice can be a compact strip; category preferences remain a readable card. */
+#ea-consent[data-type="bar"][data-view="notice"]{display:flex;align-items:center;gap:24px;left:0;right:auto;top:auto;bottom:0;transform:none;width:100%;max-width:none;max-height:100vh;max-height:100dvh;border-width:1px 0;border-radius:0;padding:12px max(24px,env(safe-area-inset-right,0px)) max(12px,env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px))}
+#ea-consent[data-type="bar"][data-view="notice"][data-position^="top-"]{top:0;bottom:auto;padding-top:max(12px,env(safe-area-inset-top,0px));padding-bottom:12px}
+#ea-consent[data-type="bar"][data-view="notice"] h2{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#ea-consent[data-type="bar"][data-view="notice"] .ea-consent-copy{flex:1}
+#ea-consent[data-type="bar"][data-view="notice"] p{display:inline;margin:0;font-size:13px;line-height:1.5}
+#ea-consent[data-type="bar"][data-view="notice"] a{margin-left:.4em;font-size:13px}
+#ea-consent[data-type="bar"][data-view="notice"] .ea-consent-actions{flex:0 1 auto;justify-content:flex-end;margin:0;max-width:50%}
+#ea-consent[data-type="bar"][data-view="notice"] button{padding:8px 12px;border-radius:6px}
+@media(max-width:700px){#ea-consent[data-type="bar"][data-view="notice"]{flex-direction:column;align-items:stretch;gap:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}#ea-consent[data-type="bar"][data-view="notice"] .ea-consent-actions{justify-content:flex-start;max-width:none}#ea-consent[data-type="bar"][data-view="notice"] button{flex:1 1 auto}}
+@media(max-width:520px){#ea-consent{--ea-consent-gap:12px;width:calc(100vw - var(--ea-consent-left) - var(--ea-consent-right));padding:20px}#ea-consent .ea-consent-actions button{flex:1 1 40%}}
+@media(pointer:coarse){#ea-consent button,#ea-consent-open{min-height:44px}#ea-consent label{min-height:44px}}
+@media(prefers-reduced-motion:reduce){#ea-consent button,#ea-consent-open{transition:none}}

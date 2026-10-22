@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+  "modelPath": "assets/scene/edgar-photo-portrait-9a7e82fd82595bb3.buf",
+  "mode": "photo-particles",
+  "assembly": "scroll",
+  "style": "particles",
+  "centerPortrait": true,
+  "floatingPortrait": true,
+  "surroundingStars": 96,
+  "reveal": "second-screen",
+  "skipAstronaut": true,
+  "skipLandscape": true,
+  "hideTerrainContours": true,
+  "skipTeamScreen": true,
+  "scrollDistanceScale": 0.5,
+  "introScrollDistance": 0.15,
+  "detailsScrollDistance": 0.2,
+  "portraitMotion": "gather-fall",
+  "fallUntil": "services",
+  "portraitFrame": {
+    "left": -0.61,
+    "right": 0.61,
+    "bottom": -0.65,
+    "top": 0.86
+  }
+}

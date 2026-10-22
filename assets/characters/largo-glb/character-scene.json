@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "kind": "goal-tunnel-astronauts",
+  "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+  "assetDirectory": "assets/characters/largo-glb",
+  "parts": {
+    "helmet": {
+      "assetPath": "assets/characters/largo-glb/helmet-49fb00662f4a.buf"
+    },
+    "helmet_glass": {
+      "assetPath": "assets/characters/largo-glb/helmet_glass-0975a01c80e1.buf"
+    },
+    "glove_shoes": {
+      "assetPath": "assets/characters/largo-glb/glove_shoes-a2c554079134.buf"
+    },
+    "wearpack": {
+      "assetPath": "assets/characters/largo-glb/wearpack-754034aafaa1.buf"
+    }
+  },
+  "hideFaceCard": true,
+  "skinInfluences": 16,
+  "skinning": "dual-quaternion",
+  "mobileFinalOffsetX": -0.12,
+  "mobileFinalScale": 0.85,
+  "colorTextureAssetPath": "assets/characters/largo-glb/base-color-7e22eb96f19a.png",
+  "colorTextureFlipY": false,
+  "colorTextureSRGB": true,
+  "loopAnimationAssetPath": "assets/characters/largo-glb/loop-dance-19269443f663.buf"
+}

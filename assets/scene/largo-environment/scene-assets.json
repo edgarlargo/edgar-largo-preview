@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "kind": "explicit-imported-runtime-assets",
+  "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+  "assetDirectory": "assets/scene/largo-environment",
+  "assets": [
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/cinematic_0.ogg",
+      "assetPath": "assets/scene/largo-environment/cinematic_0-481c7d87d9eb.ogg",
+      "byteLength": 132390,
+      "sha256": "481c7d87d9eb009e207b02f9bc6c6468f5b661fcf48f2bd748c887728da9c458"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/cinematic_2.ogg",
+      "assetPath": "assets/scene/largo-environment/cinematic_2-090d37d49a1d.ogg",
+      "byteLength": 102857,
+      "sha256": "090d37d49a1d94aee9a1cf7884c900a85cfdecf7189c2db1cebc3c14d84b4ec4"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/cinematic_3.ogg",
+      "assetPath": "assets/scene/largo-environment/cinematic_3-4da6b0553a09.ogg",
+      "byteLength": 219018,
+      "sha256": "4da6b0553a09a94d04bf8405682c5c082cdb98046159fd723e01d391db264cc3"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/click_0.ogg",
+      "assetPath": "assets/scene/largo-environment/click_0-f6ebc6bee3e0.ogg",
+      "byteLength": 6651,
+      "sha256": "f6ebc6bee3e04e41d859195b509c5436b3de86311fc5b8e1e85086a1e4448a56"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/click_1.ogg",
+      "assetPath": "assets/scene/largo-environment/click_1-dad4088c83cc.ogg",
+      "byteLength": 6413,
+      "sha256": "dad4088c83cce0f16ded4e18c3504ddecf7b82260d09ee55002131b27411c069"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/focus_0.ogg",
+      "assetPath": "assets/scene/largo-environment/focus_0-79b7abf07228.ogg",
+      "byteLength": 10062,
+      "sha256": "79b7abf0722832ce187c20ac1b502a31d42862b985e58f39a16a535a99a190d8"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/focus_1.ogg",
+      "assetPath": "assets/scene/largo-environment/focus_1-28d08fcd5a45.ogg",
+      "byteLength": 9883,
+      "sha256": "28d08fcd5a451bfe69d55a524936ae7e2fe02796df53869e14664d8f86dcd424"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/focus_2.ogg",
+      "assetPath": "assets/scene/largo-environment/focus_2-9b8fbeb07997.ogg",
+      "byteLength": 10036,
+      "sha256": "9b8fbeb07997854ab4852d79fe1213674aac45ff4cf1f271303208b4edd759b7"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/generic_end.ogg",
+      "assetPath": "assets/scene/largo-environment/generic_end-f5cc41962479.ogg",
+      "byteLength": 475936,
+      "sha256": "f5cc419624795dbb604767686bc94bb940f7feb2c31a77f8468fe210c9036d73"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/generic.ogg",
+      "assetPath": "assets/scene/largo-environment/generic-f2ed982c0efa.ogg",
+      "byteLength": 236668,
+      "sha256": "f2ed982c0efa03a551c7c36c7ea55fc2a5ab1879183195e2064f67f9e3a93bd5"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/glass_broken.ogg",
+      "assetPath": "assets/scene/largo-environment/glass_broken-2038a39aaede.ogg",
+      "byteLength": 30803,
+      "sha256": "2038a39aaedefdc0824ce9b8f1a66f348bed1aa22ca9b673bc68454439ef0afd"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/hover_0.ogg",
+      "assetPath": "assets/scene/largo-environment/hover_0-c3fe4a95839a.ogg",
+      "byteLength": 6130,
+      "sha256": "c3fe4a95839a57301a1e3bd888c4a1e74a64e33ddb0c9728b928fc8924781700"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/hover_1.ogg",
+      "assetPath": "assets/scene/largo-environment/hover_1-12f1ea186a84.ogg",
+      "byteLength": 6158,
+      "sha256": "12f1ea186a8406825afed9ef4b668139defede7f8c95cbc625b008965b70eb9b"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/hover_2.ogg",
+      "assetPath": "assets/scene/largo-environment/hover_2-bc217d920ce3.ogg",
+      "byteLength": 6152,
+      "sha256": "bc217d920ce3376eb1a3fa93b7043717b48d0ff359c4a1ac5a5eca51b8b76653"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/page_0.ogg",
+      "assetPath": "assets/scene/largo-environment/page_0-72ba637745f5.ogg",
+      "byteLength": 21202,
+      "sha256": "72ba637745f56cabff587c10d73221cefb4020df6dd37d0785132c1ffca0a8cd"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/audios/page_1.ogg",
+      "assetPath": "assets/scene/largo-environment/page_1-aa8fa9abf82f.ogg",
+      "byteLength": 21190,
+      "sha256": "aa8fa9abf82f4f9d51b48c1f22e220afbaf5f485e0a363ea70cd0c932255cc2c"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/home/cross_ld.buf",
+      "assetPath": "assets/scene/largo-environment/cross_ld-844075336e90.buf",
+      "byteLength": 123984,
+      "sha256": "844075336e90b920aaafce20c2d5bdb225ff7b489b86a5ce662287458922df93"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/home/cross.buf",
+      "assetPath": "assets/scene/largo-environment/cross-948be63d94e3.buf",
+      "byteLength": 282676,
+      "sha256": "948be63d94e36ee324ebfedfe9ede698f3142b1d1ee4d7ddf1b9039e9accdecc"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/lines/line_goal.buf",
+      "assetPath": "assets/scene/largo-environment/line_goal-f3fbba0bdd4d.buf",
+      "byteLength": 12840,
+      "sha256": "f3fbba0bdd4dc0b8c1e672deaaa8a7d49e50b62cea76b18271714ff461df7631"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/lines/line_reel.buf",
+      "assetPath": "assets/scene/largo-environment/line_reel-9913246e3873.buf",
+      "byteLength": 12840,
+      "sha256": "9913246e3873c23db8a97ad35f96b57515f72403a28695bb3d79967349f2d51d"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/astronaut_in_animation.buf",
+      "assetPath": "assets/scene/largo-environment/astronaut_in_animation-8d93587dbee3.buf",
+      "byteLength": 1960,
+      "sha256": "8d93587dbee3e033ac5b1268dc9866110310e89228d6e2c01b5a9b549a730e01"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/astronaut_out_animation.buf",
+      "assetPath": "assets/scene/largo-environment/astronaut_out_animation-27c2dfbdf34f.buf",
+      "byteLength": 2564,
+      "sha256": "27c2dfbdf34f602634eaa708e2c7e153c57a5e5b28fb20c1d9a6bb65be2616fc"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/broken_glass_animation.buf",
+      "assetPath": "assets/scene/largo-environment/broken_glass_animation-1c78a671ae1a.buf",
+      "byteLength": 312576,
+      "sha256": "1c78a671ae1abdc563f7ace98dd524dd8c24be1e7015a1d2ed95cd1cb0546516"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/broken_glass.buf",
+      "assetPath": "assets/scene/largo-environment/broken_glass-5c055aea28cc.buf",
+      "byteLength": 135904,
+      "sha256": "5c055aea28cc2185b647a1963065494b3fc00fd7f24158ffe4b438afdab904e8"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/diamond.buf",
+      "assetPath": "assets/scene/largo-environment/diamond-862f81db85be.buf",
+      "byteLength": 5104,
+      "sha256": "862f81db85bec6c1d3b8728b0e4aa6045702502f8fdb7900dda3234aa430b5da"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/earth_card.buf",
+      "assetPath": "assets/scene/largo-environment/earth_card-b036bd6cbc72.buf",
+      "byteLength": 14156,
+      "sha256": "b036bd6cbc72039e4d32eda0b955881132966336f6a21c01ff9725670b2aaa9e"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/grid_base_hd.buf",
+      "assetPath": "assets/scene/largo-environment/grid_base_hd-ef91591f9d7d.buf",
+      "byteLength": 90628,
+      "sha256": "ef91591f9d7d26ac1fd57348162f82dc1065c38f735a4bca6bf076a24cb671c3"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/grid_base_ld.buf",
+      "assetPath": "assets/scene/largo-environment/grid_base_ld-7f3debda9824.buf",
+      "byteLength": 1636,
+      "sha256": "7f3debda982440d493e74b98482399affef8e93b3467d9691827705f43771be2"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/grid_structure_hd.buf",
+      "assetPath": "assets/scene/largo-environment/grid_structure_hd-95a98715c7d2.buf",
+      "byteLength": 2912,
+      "sha256": "95a98715c7d2f1b2f69b7106a5e92f022aba782d5fb5bfe9baa0b45be2baf097"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/grid_structure_ld.buf",
+      "assetPath": "assets/scene/largo-environment/grid_structure_ld-82dbd8687276.buf",
+      "byteLength": 12632,
+      "sha256": "82dbd86872768285c8c4585b60a04eab53e0021ff64b639d0d771dee86ece5b1"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/tunnel_block_base.buf",
+      "assetPath": "assets/scene/largo-environment/tunnel_block_base-fb1623095cc9.buf",
+      "byteLength": 8760,
+      "sha256": "fb1623095cc901aedc7de35dae8ea5ba3307c32774ade9b0b0cb40c282fde8cf"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/models/tunnels/tunnel_block_wall.buf",
+      "assetPath": "assets/scene/largo-environment/tunnel_block_wall-e46a4c99bd8b.buf",
+      "byteLength": 363860,
+      "sha256": "e46a4c99bd8ba2d811e11f9693e928de2e1db61820966e20555c0fb08fa4aabb"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures//tunnels/desktop.png",
+      "assetPath": "assets/scene/largo-environment/desktop-cba703e5a3db.png",
+      "byteLength": 67412,
+      "sha256": "cba703e5a3db573b113fe797075b13a440536708d516760facc301bc3d700ece"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures//tunnels/tablet.png",
+      "assetPath": "assets/scene/largo-environment/tablet-e5dae8a0eea7.png",
+      "byteLength": 73188,
+      "sha256": "e5dae8a0eea7074290e585ded9bfdc0d47b796e4f928a7cbd4abfd836a1fd1c6"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/flip_texture.png",
+      "assetPath": "assets/scene/largo-environment/flip_texture-55c877a02ec4.png",
+      "byteLength": 8696,
+      "sha256": "55c877a02ec46c530267288dc857ebd4dfba7d4efaa573d9bea5cf1739b4bb44"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/home/matcap_ld.exr",
+      "assetPath": "assets/scene/largo-environment/matcap_ld-f2a923cef101.exr",
+      "byteLength": 172380,
+      "sha256": "f2a923cef101cb3cedec75697edb34eb7f226a6bd11bddadd465d7e785ff39e6"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/home/matcap.exr",
+      "assetPath": "assets/scene/largo-environment/matcap-6d7770319454.exr",
+      "byteLength": 602702,
+      "sha256": "6d77703194542ea4ceadf8454ef212fb426179a6b43d03ee038c16fcb39395cd"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/LDR_RGB1_0.png",
+      "assetPath": "assets/scene/largo-environment/LDR_RGB1_0-11ad7fa715ae.png",
+      "byteLength": 48759,
+      "sha256": "11ad7fa715ae19f6e18e9ad2065622d79a2acceb31e56f7cb1837d764e97acec"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/smaa-area.png",
+      "assetPath": "assets/scene/largo-environment/smaa-area-b5a8e3bb3fbf.png",
+      "byteLength": 33203,
+      "sha256": "b5a8e3bb3fbf11136d1411c6b7454f4469358559352987a074e22047582c0625"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/smaa-search.png",
+      "assetPath": "assets/scene/largo-environment/smaa-search-025eb54fb8c4.png",
+      "byteLength": 113,
+      "sha256": "025eb54fb8c4c2858a7d6d9743b88919fe5f9c661329c447a8f1e28971ae7403"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/astronaut/face.png",
+      "assetPath": "assets/scene/largo-environment/face-6289e452c092.png",
+      "byteLength": 771,
+      "sha256": "6289e452c09225d8135c27dc05ae663f11370cf5c782ab1746323910dfb2c0cc"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/desktop.png",
+      "assetPath": "assets/scene/largo-environment/desktop-cba703e5a3db.png",
+      "byteLength": 67412,
+      "sha256": "cba703e5a3db573b113fe797075b13a440536708d516760facc301bc3d700ece"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/earth_landscape.jpg",
+      "assetPath": "assets/scene/largo-environment/earth_landscape-2f27be7fd37e.jpg",
+      "byteLength": 245092,
+      "sha256": "2f27be7fd37e4887571e808c6a07b318c72e05b65289cf994079bd696fd5d0b9"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/earth.webp",
+      "assetPath": "assets/scene/largo-environment/earth-87a4f1e08a0d.webp",
+      "byteLength": 1634,
+      "sha256": "87a4f1e08a0dce61ce3dab70455f57e6b962fec1cb4e79fedb57e3a8329e205c"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/grids/greeble_arm.webp",
+      "assetPath": "assets/scene/largo-environment/greeble_arm-36d8ea607c35.webp",
+      "byteLength": 354148,
+      "sha256": "36d8ea607c3526db0523d5770f06adc3060957413b76dbab45cbf7cda6222e25"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/grids/greeble_base.webp",
+      "assetPath": "assets/scene/largo-environment/greeble_base-18c9835e4b31.webp",
+      "byteLength": 276006,
+      "sha256": "18c9835e4b3192737e1d22b711fef23af9d2c654112244b67412d0130042077c"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/grids/greeble_nor.webp",
+      "assetPath": "assets/scene/largo-environment/greeble_nor-aeccfc92013d.webp",
+      "byteLength": 198056,
+      "sha256": "aeccfc92013dea15beea0db77261d59b25120fa97423af3465c49c667314cec6"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/stickers_low.png",
+      "assetPath": "assets/scene/largo-environment/stickers_low-602501332670.png",
+      "byteLength": 258457,
+      "sha256": "60250133267038b786812d9863fb43529ec4785f8ea2d480bae1125f4e87f171"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/stickers.png",
+      "assetPath": "assets/scene/largo-environment/stickers-a8e2d2fa088d.png",
+      "byteLength": 409573,
+      "sha256": "a8e2d2fa088d0d5aa96f2a84d0fa0f5a131b1475017ad831c5099ca605eff206"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/tablet.png",
+      "assetPath": "assets/scene/largo-environment/tablet-e5dae8a0eea7.png",
+      "byteLength": 73188,
+      "sha256": "e5dae8a0eea7074290e585ded9bfdc0d47b796e4f928a7cbd4abfd836a1fd1c6"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/white_block.webp",
+      "assetPath": "assets/scene/largo-environment/white_block-084c82586b64.webp",
+      "byteLength": 189362,
+      "sha256": "084c82586b6404f393e111ce402bbac9ed9af3d5a269057d3491d83b1d2d8a5d"
+    },
+    {
+      "sourceUrl": "https://lusion.dev/assets/textures/tunnels/white_matcap.jpg",
+      "assetPath": "assets/scene/largo-environment/white_matcap-0852f8f314bb.jpg",
+      "byteLength": 69851,
+      "sha256": "0852f8f314bbc454a07cc8ee1f37220aefe2ff64c481f7cd0a8d6b0b758dc875"
+    }
+  ]
+}

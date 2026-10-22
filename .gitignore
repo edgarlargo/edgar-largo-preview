@@ -1,0 +1,12 @@
+.env
+.env.*
+.vercel/
+node_modules/
+admin/
+data/
+*.php
+*.pem
+*.key
+*.log
+.DS_Store
+Thumbs.db

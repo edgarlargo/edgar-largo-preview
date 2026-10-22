@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "kind": "goal-tunnel-astronauts",
+  "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+  "assetDirectory": "assets/characters/edgar",
+  "parts": {
+    "helmet": {
+      "assetPath": "assets/characters/edgar/helmet-1ea2b9f8f58c.buf"
+    },
+    "helmet_glass": {
+      "assetPath": "assets/characters/edgar/helmet_glass-a0f93a224f42.buf"
+    },
+    "glove_shoes": {
+      "assetPath": "assets/characters/edgar/glove_shoes-86c7eca23947.buf"
+    },
+    "wearpack": {
+      "assetPath": "assets/characters/edgar/wearpack-95135933b31f.buf"
+    }
+  },
+  "hideFaceCard": true
+}

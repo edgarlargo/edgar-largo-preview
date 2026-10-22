@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "pageIds": [
+    "home"
+  ],
+  "targetId": "footer-top",
+  "formId": "footer-contact",
+  "ctaId": "end-section-title-link",
+  "heading": "Tell us about your project.",
+  "labels": {
+    "name": "Please enter your name",
+    "email": "What's your best contact email?",
+    "phone": "Please enter a phone number",
+    "message": "Message",
+    "consent": "I agree to receive personalized direct marketing offers to my designated contacts, prepared taking into account my order and purchase information, as well as my submitted data.",
+    "send": "Send"
+  },
+  "placeholders": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Comment"
+  },
+  "allPages": true,
+  "additionalCtaIds": [
+    "end-bottom"
+  ]
+}
