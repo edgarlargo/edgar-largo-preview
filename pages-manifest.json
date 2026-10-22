@@ -466,8 +466,8 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.bundle.js",
-      "bytes": 605205,
-      "sha256": "b82eb7a7e2f4a6387cd00056fb63e584f06443027d9d1513308716631cd89a36"
+      "bytes": 605221,
+      "sha256": "bafe58686549e766ec9642daff0a0f248973e7b498ea93951e1fae54a54a5773"
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
