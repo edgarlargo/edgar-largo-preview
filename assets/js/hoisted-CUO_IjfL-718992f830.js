@@ -588,7 +588,8 @@ function eaAboutStarsPatternUpdate(owner,delta){
 
 
 
-/* Admintation optional split preloader v4 */
+
+/* Admintation optional split preloader v5 */
 function eaImportedPreloaderTitle(owner,wordmark,title,split,reduced,width,viewHeight){
   const ctx=owner.ctx;
   if(typeof ctx.measureText!=='function'||typeof ctx.fillText!=='function')return false;
@@ -637,6 +638,11 @@ function eaImportedPreloaderTitle(owner,wordmark,title,split,reduced,width,viewH
     owner.eaTitleLayout=layout;
   }
   const layout=owner.eaTitleLayout;
+  // Only the painted marks and their spacing change; keep title typography
+  // and wrapping identical to the existing measured layout.
+  const configuredScale=window.__EA_PRELOADER__?.titleSlashScale;
+  const slashScale=Number.isFinite(configuredScale)&&configuredScale>=.25&&configuredScale<=1?configuredScale:1;
+  const slashHeight=layout.slashHeight*slashScale;
   if(owner.eaTitleSlashSource!==wordmark){
     owner.eaTitleSlashSource=wordmark;owner.eaTitleSlashPaths=null;
     const slashes=wordmark?.slashes;
@@ -650,8 +656,8 @@ function eaImportedPreloaderTitle(owner,wordmark,title,split,reduced,width,viewH
   const slashes=wordmark?.slashes;
   const nativeSpacing=slashes&&[slashes.leftCenterX,slashes.rightCenterX,wordmark.markHeight].every(Number.isFinite)&&wordmark.markHeight>0
     ?Math.abs(slashes.rightCenterX-slashes.leftCenterX)/wordmark.markHeight:16.6119/36.0103;
-  const initialOffset=layout.slashHeight*nativeSpacing/2;
-  const offset=initialOffset+(layout.textWidth/2+layout.gap+layout.halfWidth-initialOffset)*split;
+  const initialOffset=slashHeight*nativeSpacing/2;
+  const offset=initialOffset+(layout.textWidth/2+layout.gap+layout.halfWidth*slashScale-initialOffset)*split;
   if(split>0){
     ctx.save();ctx.beginPath();
     const opening=(layout.textWidth/2+layout.gap)*split;
@@ -663,15 +669,15 @@ function eaImportedPreloaderTitle(owner,wordmark,title,split,reduced,width,viewH
   for(const [side,center]of [['left',-offset],['right',offset]]){
     if(owner.eaTitleSlashPaths){
       ctx.save();ctx.translate(center,0);
-      const scale=layout.slashHeight/wordmark.markHeight;
+      const scale=slashHeight/wordmark.markHeight;
       ctx.scale(scale,scale);ctx.translate(-wordmark.slashes[side+'CenterX'],-wordmark.centerY);
       ctx.fill(owner.eaTitleSlashPaths[side]);ctx.restore();
     }else{
-      const thickness=layout.slashHeight*7.7128/36.0103,skew=layout.slashHeight*15.8705/36.0103;
-      ctx.beginPath();ctx.moveTo(center-thickness/2-skew/2,-layout.slashHeight/2);
-      ctx.lineTo(center+thickness/2-skew/2,-layout.slashHeight/2);
-      ctx.lineTo(center+thickness/2+skew/2,layout.slashHeight/2);
-      ctx.lineTo(center-thickness/2+skew/2,layout.slashHeight/2);ctx.closePath();ctx.fill();
+      const thickness=slashHeight*7.7128/36.0103,skew=slashHeight*15.8705/36.0103;
+      ctx.beginPath();ctx.moveTo(center-thickness/2-skew/2,-slashHeight/2);
+      ctx.lineTo(center+thickness/2-skew/2,-slashHeight/2);
+      ctx.lineTo(center+thickness/2+skew/2,slashHeight/2);
+      ctx.lineTo(center-thickness/2+skew/2,slashHeight/2);ctx.closePath();ctx.fill();
     }
   }
   ctx.restore();return true;
@@ -742,6 +748,7 @@ function eaImportedPreloaderDraw(owner){
   if(split===0)bar(0);else{bar(-offset);bar(offset);}
   ctx.restore();
 }
+
 
 
 
