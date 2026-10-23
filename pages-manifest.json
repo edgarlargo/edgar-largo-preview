@@ -841,13 +841,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1350123,
-      "sha256": "d6d1f57c3d74e64b2be60627034ad153372aa104d5bb6f5641546df86787f05a"
+      "bytes": 1355984,
+      "sha256": "4322a3e641a4bf9c50eb38f19edd1f094c6c27964b9365685119fc4b1fab44f5"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1500649,
-      "sha256": "a50de0e1c1d8660a096561e56c9f1c5510a1d6eaa1cb70763e291beb31d91a03"
+      "bytes": 1506510,
+      "sha256": "f945abefc6d63eeee726262106e5a8ab41332f6e79d257b168ba2916f83889e0"
     },
     {
       "path": "assets/meta/largo-social-3855fc3e4c68.jpg",
@@ -858,6 +858,11 @@
       "path": "assets/meta/safari-pinned-tab.svg",
       "bytes": 439,
       "sha256": "cf0b8ea5f1fa3f2eb7c8c90f9ec502fb1f4f25188f17d8ecd25185dbbb45502e"
+    },
+    {
+      "path": "assets/scene/about-graffiti.json",
+      "bytes": 4475,
+      "sha256": "06becfaea2560ec8b19fad9b5fdf9b3ce87a353ba2de8ff76165952ba135c379"
     },
     {
       "path": "assets/scene/about-hidden-scenes.json",
