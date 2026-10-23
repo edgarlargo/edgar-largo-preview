@@ -127,7 +127,7 @@ const eaSiteBrandShader="vec3(0.47058823529411764,0.30196078431372547,1.)";
 if(typeof document!=='undefined'){
   let style=document.querySelector('style[data-ea-brand-color]');
   if(!style){style=document.createElement('style');style.setAttribute('data-ea-brand-color','');document.head.appendChild(style);}
-  style.textContent=":root{--color-blue:#784DFF;--color-dark-blue:#784DFF;--header-color:#784DFF}@media(hover:hover){#header-right-talk-btn.--is-contact-active:hover{background:#784DFF}}#header-background{width:100vw;background:#784DFF}#header-background.--opened{opacity:1!important}#header.--menu-opened #header-logo{color:#FFFFFF}";
+  style.textContent=":root{--color-blue:#784DFF;--color-dark-blue:#784DFF;--header-color:#784DFF}@media(hover:hover){#header-right-talk-btn.--is-contact-active:hover{background:#784DFF}}#header-background{width:100vw;background:#784DFF}#header-background.--opened{opacity:1!important}#header.--menu-opened #header-logo{color:#FFFFFF}#scroll-nav-next-bar-inner{background-color:#784DFF}";
 }
 /* easyadmin-brand-color:end */
 /* easyadmin-about-motion:v1 */

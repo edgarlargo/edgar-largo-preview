@@ -350,6 +350,16 @@
       "sha256": "efa3e63131a8b7fd3d8b444cfe4207613a68d49f5a6332361e59aa00ad9cdc39"
     },
     {
+      "path": "assets/components/roadster-footer/roadster-flight-3b2f475c467d.jpg",
+      "bytes": 108362,
+      "sha256": "3b2f475c467d9bbbac017cde49f0e505a0ecbaf6bd08c867ecd70bad8909cef5"
+    },
+    {
+      "path": "assets/components/roadster-footer/roadster-footer.css",
+      "bytes": 2193,
+      "sha256": "8cdc19fa763d5900959a58a646a0e066eb8cd1e892f5c290556608f5a74bc77b"
+    },
+    {
       "path": "assets/components/vr-glasses/optics.98f68714d244.js",
       "bytes": 3477167,
       "sha256": "ce3296827ef8222425310309146e11e6a40fd5aef74eedbc36bcc4b4b1f6e05c"
@@ -821,13 +831,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1349621,
-      "sha256": "71c2d517ade04ddf5a96d73ca43609a75b41c78d7278d034e271d73f77410f9a"
+      "bytes": 1349673,
+      "sha256": "3cb26572e88e7473207d59b100977550db1c8df22372659a0b4d670b7d778c95"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1500147,
-      "sha256": "25e7854e0b5c52a1668c038e6c647319175cd7d1a8e1e15d37e0dd28d7bdc15b"
+      "bytes": 1500199,
+      "sha256": "b4c8a77fec2a203d84eb2abd579e2b5a58e8d2620b4ea5dc67f8cc1a45ed5161"
     },
     {
       "path": "assets/meta/largo-social-3855fc3e4c68.jpg",
@@ -861,8 +871,8 @@
     },
     {
       "path": "assets/scene/brand-color.json",
-      "bytes": 132,
-      "sha256": "a73f3440a17f502789e64e0849d052c6177edf2de5fe48d60a3c41ff9d4497fa"
+      "bytes": 170,
+      "sha256": "b4891d606f77bd03bfd0850c9ed5c62a045b7bfe847fe0467119aeb9dd8c70c8"
     },
     {
       "path": "assets/scene/character-dance.json",
