@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = await realpath(fileURLToPath(new URL('./', import.meta.url)));
 const { basePath } = JSON.parse(await readFile(path.join(root, 'pages-manifest.json'), 'utf8'));
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif', '.mp4': 'video/mp4', '.webm': 'video/webm', '.ogg': 'audio/ogg', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif', '.mp4': 'video/mp4', '.webm': 'video/webm', '.ogg': 'audio/ogg', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const server = createServer(async (request, response) => {
   try {
     if (!['GET', 'HEAD'].includes(request.method)) { response.statusCode = 405; response.end('Preview is read-only.'); return; }
@@ -17,7 +17,16 @@ const server = createServer(async (request, response) => {
     if (file !== root && !file.startsWith(root + path.sep)) { response.statusCode = 404; response.end(); return; }
     let details = await stat(file).catch(() => null);
     if (details?.isDirectory()) { file = path.join(file, 'index.html'); details = await stat(file).catch(() => null); }
-    if (!details?.isFile()) { response.statusCode = 404; response.end('Page not found.'); return; }
+    if (!details?.isFile()) {
+      response.statusCode = 404;
+      const fallback = await realpath(path.join(root, '404.html')).catch(() => null);
+      if (!fallback || !fallback.startsWith(root + path.sep)) { response.end(request.method === 'HEAD' ? undefined : 'Page not found.'); return; }
+      const body = await readFile(fallback);
+      response.setHeader('Content-Type', 'text/html; charset=utf-8');
+      response.setHeader('X-Content-Type-Options', 'nosniff');
+      response.setHeader('Content-Length', body.length);
+      response.end(request.method === 'HEAD' ? undefined : body); return;
+    }
     file = await realpath(file); if (!file.startsWith(root + path.sep)) { response.statusCode = 404; response.end(); return; }
     response.setHeader('Content-Type', types[path.extname(file)] || 'application/octet-stream');
     response.setHeader('X-Content-Type-Options', 'nosniff'); response.setHeader('Accept-Ranges', 'bytes');

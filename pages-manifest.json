@@ -350,6 +350,41 @@
       "sha256": "efa3e63131a8b7fd3d8b444cfe4207613a68d49f5a6332361e59aa00ad9cdc39"
     },
     {
+      "path": "assets/components/not-found.json",
+      "bytes": 77,
+      "sha256": "e8a2e1628b68c7779de7ecfd76269fd316a03aa8c77c4269ea0e8bafe7fad813"
+    },
+    {
+      "path": "assets/components/roadster-404/logo.svg",
+      "bytes": 6509,
+      "sha256": "f75fda1056b7b864c998b552704b846620cc0c5521011776bdee53452457689a"
+    },
+    {
+      "path": "assets/components/roadster-404/page.css",
+      "bytes": 5645,
+      "sha256": "3cdb2558974e20b61a39aa44d2949241cc029656608af8915450fcc6018b6913"
+    },
+    {
+      "path": "assets/components/roadster-404/page.html",
+      "bytes": 2402,
+      "sha256": "9125e3c842c036eb84bbf10fd539dfea7e452dae9f2f8cff2832ba7f01793db3"
+    },
+    {
+      "path": "assets/components/roadster-404/poster.jpg",
+      "bytes": 23116,
+      "sha256": "9773b85132added4372b76416c3ec21f4146958babb1956ecb6869eae8caa291"
+    },
+    {
+      "path": "assets/components/roadster-404/scene.bundle.js",
+      "bytes": 565148,
+      "sha256": "71d4618be7591442abfe14bb8f1c238d24d1ff6a89e676c31e1489a4b6293cc8"
+    },
+    {
+      "path": "assets/components/roadster-404/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
       "path": "assets/components/roadster-footer/roadster-flight-3b2f475c467d.jpg",
       "bytes": 108362,
       "sha256": "3b2f475c467d9bbbac017cde49f0e505a0ecbaf6bd08c867ecd70bad8909cef5"
@@ -1828,6 +1863,9 @@
   "forms": "remote-footer",
   "remoteContact": {
     "endpoint": "https://edgarlargo.com/wp-json/largo-contact/v1/message"
+  },
+  "notFound": {
+    "file": "404.html"
   },
   "phpIncluded": false
 }

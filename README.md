@@ -10,4 +10,6 @@ GitHub Pages publishes the repository root from `main`. Changes pushed to that b
 
 Project cover/depth textures load near the viewport and VR starts when visible. Unused landscape, astronaut and Matrix scene code and 24 exclusive resources have been removed while retaining the introductory stars, photo portrait and active animations. The export contains optimized, versioned Caviar videos and no editor bootstrap or private PHP runtime.
 
+The custom `404.html` page displays a rotating procedural 3D Roadster with `404` number plates and links to Roadster Flight and the homepage. Drag, keyboard arrows and a pause button control the rotation; reduced motion starts with a still view. Geometry, scripts, the fallback photograph and the Three.js license are local assets. Missing nested paths use the same page and retain HTTP 404.
+
 This repository contains the public viewing export only. The complete PHP website, administration and private configuration are maintained separately. The design, fonts, media and models retain their respective rights; public visibility does not grant a blanket open-source license. Bundled library copyright and license notices are retained.
