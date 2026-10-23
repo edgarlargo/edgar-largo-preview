@@ -1346,7 +1346,8 @@ function eaBindImportedAudio(owner) {
  owner.eaAudioObserver.observe(host,{attributes:true,attributeFilter:Object.keys(owner.items).map(id=>'data-ea-audio-'+id)});
 }
 
-/* Admintation imported scene override v8 */
+/* Admintation imported scene override v9 */
+
 
 
 function eaImportedNativePrepare(owner,stage,hasReplacement){
@@ -1510,8 +1511,11 @@ function eaImportedGoalImmersive(owner,frame,config,width,height){
   set('position','absolute');set('left','0px');set('top','0px');set('width',frameWidth+'px');set('height',frameHeight+'px');
   set('max-width','none');set('transform-origin','0 0');set('pointer-events','none');set('z-index','3');
   set('transform','translate3d('+(left-anchor.left)+'px,'+(top-anchor.top)+'px,0)');
-  const fade=progress>0&&progress<1?1-smooth(progress/.12):1;
+  const titleFade=progress>0&&progress<1?1-smooth(progress/.12):1;
+  // Paragraphs remain readable until their last line leaves the viewport.
+  const textFade=progress>0&&progress<1?smooth(owner.domDescs.getBoundingClientRect().bottom/(height*.25)):1;
   for(const [node,opacity]of state.opacities){
+    const fade=node===owner.domDescs?textFade:titleFade;
     const original=state.styles.find(item=>item[0]===node&&item[1]==='opacity');
     if(fade===1){if(original[2])node.style.setProperty('opacity',original[2],original[3]);else node.style.removeProperty('opacity');}
     else node.style.setProperty('opacity',String((Number.isFinite(opacity)?opacity:1)*fade),'important');
