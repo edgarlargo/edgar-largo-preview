@@ -482,7 +482,7 @@
     {
       "path": "assets/components/vr-glasses/scene.html",
       "bytes": 2716,
-      "sha256": "4f51c0118b1ddf717df830e065fae67fece69e4182b7c5530836250c98ff7cfa"
+      "sha256": "4c2d3f658b8753bdba11d95c563daffd805dba8e330471f85c2ab12d3fa0b509"
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
@@ -821,18 +821,18 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1348991,
-      "sha256": "4b6ea30bf37ceea3825d7a2d375bf34b298e76abe4c9a477e283b92f3360803d"
+      "bytes": 1349001,
+      "sha256": "98d518bab67643072e3deb83564fdc81f0ca7a475b28255187e67343ce84a8a2"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1499517,
-      "sha256": "184ee7eec3f8c121505b4ebefabce9554bcc08f6e167c7220a5dd0f0c4dd9d1a"
+      "bytes": 1499527,
+      "sha256": "375c48639d55f226c59192e98cd9a39e0ab99af7345b5be281242feae512cd3d"
     },
     {
-      "path": "assets/meta/largo-social-891cf2a7c315.jpg",
-      "bytes": 40186,
-      "sha256": "891cf2a7c315ecde8096ff99931c72e19a8d696b34dd0c45d8125fec1fe53582"
+      "path": "assets/meta/largo-social-3855fc3e4c68.jpg",
+      "bytes": 55350,
+      "sha256": "3855fc3e4c6870af848049e3131151da95883b2ae1c1f789577aa07d206c5611"
     },
     {
       "path": "assets/meta/safari-pinned-tab.svg",
@@ -1090,6 +1090,16 @@
       "sha256": "ae84325d351f0071988441a3e3c408f7e27d6228a7a8687c929a81786e985fac"
     },
     {
+      "path": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7.png",
+      "bytes": 1445260,
+      "sha256": "bdd0094132a77550c9fe471f2ee06976d8e225d60da069ccfd5c7636fb2d49ec"
+    },
+    {
+      "path": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e.png",
+      "bytes": 401581,
+      "sha256": "6370f64cd03ec3c4a531057762d1dfa95d478be3d7196923573260457e3b8cc0"
+    },
+    {
       "path": "assets/scene/largo-environment/largo-plant-3e3a769101a8.buf",
       "bytes": 177002,
       "sha256": "3e3a769101a88b0c9d35ab7ffb7e2e3eaace7ca6ee8ba4ca7842a8bb66381c89"
@@ -1113,16 +1123,6 @@
       "path": "assets/scene/largo-environment/largo-sphere_xs-9dd73c11126c.buf",
       "bytes": 624,
       "sha256": "9dd73c11126cfffda37b9d4759569043a1eee3d356a35cc62db7c61e333e4ab7"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-stickers-1465-2fffff24da73.png",
-      "bytes": 1559126,
-      "sha256": "2fffff24da73f8a15102fa8b37c25557da0aa2c20eaf6d516fbd683940e7bc99"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-stickers-733-3a7740da6e73.png",
-      "bytes": 439486,
-      "sha256": "3a7740da6e73a4cf24fa592726a5c61b402de61bb920094e1a0723a7c617e0cc"
     },
     {
       "path": "assets/scene/largo-environment/largo-team-4eb19b7f9440.json",
@@ -1166,8 +1166,8 @@
     },
     {
       "path": "assets/scene/largo-environment/scene-assets.json",
-      "bytes": 18156,
-      "sha256": "6963762d6490183ce077ae83ce7925a4501dbf838bf67ed413601e586221de89"
+      "bytes": 18166,
+      "sha256": "23231204c7b2fb2a551abe046c68579a617ba5e0cf2475e193cc499e82ccd9b0"
     },
     {
       "path": "assets/scene/largo-environment/smaa-area-b5a8e3bb3fbf.png",

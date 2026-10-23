@@ -354,15 +354,15 @@
     },
     {
       "sourceUrl": "https://edgarlargo.com/assets/textures/tunnels/stickers_low.png",
-      "assetPath": "assets/scene/largo-environment/largo-stickers-733-3a7740da6e73.png",
-      "byteLength": 439486,
-      "sha256": "3a7740da6e73a4cf24fa592726a5c61b402de61bb920094e1a0723a7c617e0cc"
+      "assetPath": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e.png",
+      "byteLength": 401581,
+      "sha256": "6370f64cd03ec3c4a531057762d1dfa95d478be3d7196923573260457e3b8cc0"
     },
     {
       "sourceUrl": "https://edgarlargo.com/assets/textures/tunnels/stickers.png",
-      "assetPath": "assets/scene/largo-environment/largo-stickers-1465-2fffff24da73.png",
-      "byteLength": 1559126,
-      "sha256": "2fffff24da73f8a15102fa8b37c25557da0aa2c20eaf6d516fbd683940e7bc99"
+      "assetPath": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7.png",
+      "byteLength": 1445260,
+      "sha256": "bdd0094132a77550c9fe471f2ee06976d8e225d60da069ccfd5c7636fb2d49ec"
     },
     {
       "sourceUrl": "https://edgarlargo.com/assets/textures/tunnels/tablet.png",
