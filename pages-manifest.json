@@ -335,6 +335,16 @@
       "sha256": "9c84f842015e65e491322d8e28ab9da4a764a6a738a04a87279954091ba97004"
     },
     {
+      "path": "assets/components/largo-menu/largo-slashes.a40856992823.svg",
+      "bytes": 369,
+      "sha256": "a408569928237139a752c24c70d559cfbfa8c139b8bef2b9e9092c60df325808"
+    },
+    {
+      "path": "assets/components/largo-menu/menu-logo.2fc37c3fab69.css",
+      "bytes": 1088,
+      "sha256": "2fc37c3fab69374acdd6877db51286a657d33aa6195a2f6c7c4e99179ebbb0ed"
+    },
+    {
       "path": "assets/components/largo-menu/menu-logo.efa3e63131a8.css",
       "bytes": 794,
       "sha256": "efa3e63131a8b7fd3d8b444cfe4207613a68d49f5a6332361e59aa00ad9cdc39"
