@@ -1,0 +1,9 @@
+#footer-section a.largo-roadster-card{position:relative;z-index:1;isolation:isolate;display:block;width:100%;margin:clamp(2rem,5vw,4rem) 0 clamp(3rem,7vw,6rem);overflow:hidden;border-radius:var(--global-border-radius,20px);background:#000;color:#fff;text-decoration:none}
+#footer-section .largo-roadster-card .largo-roadster-card-visual{position:relative;display:block;width:100%;overflow:hidden}
+#footer-section .largo-roadster-card .largo-roadster-card-visual img{position:static;display:block;width:100%;max-width:100%;height:auto;aspect-ratio:596/335;object-fit:contain;margin:0;transform:none}
+#footer-section .largo-roadster-card .largo-roadster-card-go{position:absolute;top:clamp(1rem,3vw,3rem);left:clamp(1rem,3vw,3rem);color:#fff;font-family:inherit;font-size:clamp(4rem,12vw,11rem);font-weight:500;line-height:.85;letter-spacing:-.06em;pointer-events:none}
+#footer-section .largo-roadster-card .largo-roadster-card-bottom{display:block;padding:1.5rem;background:#000}
+#footer-section .largo-roadster-card .largo-roadster-card-cta{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-height:52px;padding:1rem 1.5rem;border-radius:100px;background:#fff;color:#000;font-family:inherit;font-size:1rem;font-weight:500;line-height:1.2;letter-spacing:.025em;text-align:center}
+#footer-section a.largo-roadster-card:focus-visible{outline:3px solid #000;outline-offset:6px}
+@media(hover:hover){#footer-section a.largo-roadster-card:hover .largo-roadster-card-cta{background:#eee;color:#000}}
+@media(max-width:812px){#footer-section a.largo-roadster-card{margin:2rem 0 3rem}#footer-section .largo-roadster-card .largo-roadster-card-bottom{padding:1rem}}
