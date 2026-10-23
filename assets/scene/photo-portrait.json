@@ -5,6 +5,8 @@
   "mode": "photo-particles",
   "assembly": "scroll",
   "style": "particles",
+  "particleLook": "violet-cloud",
+  "particleBrightness": 2.6,
   "centerPortrait": true,
   "floatingPortrait": true,
   "surroundingStars": 96,

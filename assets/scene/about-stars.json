@@ -1,7 +1,9 @@
 {
-  "version": 1,
+  "version": 2,
   "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
   "mode": "colored-stars",
   "pattern": "helix",
-  "hoverScatter": true
+  "hoverScatter": true,
+  "accentColor": "#784DFF",
+  "accentRatio": 0.42
 }

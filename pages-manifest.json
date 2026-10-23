@@ -5,21 +5,21 @@
     {
       "key": "home:en",
       "kind": "home",
-      "title": "Home",
+      "title": "Edgar Largo Studio — Branding, Websites & Digital Design",
       "path": "/edgar-largo-preview/",
       "file": "index.html"
     },
     {
       "key": "about:en",
       "kind": "about",
-      "title": "About Us",
+      "title": "About Us — Edgar Largo Studio",
       "path": "/edgar-largo-preview/about/",
       "file": "about/index.html"
     },
     {
       "key": "archive:en",
       "kind": "archive",
-      "title": "Projects",
+      "title": "Projects — Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/",
       "file": "projects/index.html"
     },
@@ -481,8 +481,8 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
-      "bytes": 1471,
-      "sha256": "f8907fee061fbd24177a37007c06a48333ebf363f2865d2aad1116eb16afbc28"
+      "bytes": 2697,
+      "sha256": "0c0bbe3f1eaf082f2f10ade87e4735044bada861ac2029df7ecd491439405f6d"
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
@@ -491,8 +491,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 90469,
-      "sha256": "dda4639fcb7878596d2bb1cb697a2549974078129047725bc21c8c84a10cf9dc"
+      "bytes": 90483,
+      "sha256": "bcd2f9cd38070ef112d7c9da1a7bbf043bcae18ee9afe921a1269fc8b4625169"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -525,6 +525,11 @@
       "sha256": "96646e5f23acf229a6210f10a69eccbe66752e3f862d96923a85a9275a1f2916"
     },
     {
+      "path": "assets/fonts/IBM-Plex-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
       "path": "assets/fonts/IBMPlexMono-Medium-d7e109b1f3.woff2",
       "bytes": 40088,
       "sha256": "684da4e82924e5a1bf1ddb07eeed1db06627b35f8f5ea4417e91b0fa1746260c"
@@ -545,19 +550,19 @@
       "sha256": "0a4fda21fa9d4dcb1b078a83b59c21f8de981ef9b43d5449ae9f2878240c81bd"
     },
     {
-      "path": "assets/fonts/LusionMono-0cf1c90769.woff",
-      "bytes": 2324,
-      "sha256": "76c502c215dd71634cb1841ee31c46c8d3c24d816d0982a5587554f92223bf7c"
+      "path": "assets/fonts/LargoMono-Regular-0a4fda21fa9d.woff2",
+      "bytes": 38988,
+      "sha256": "0a4fda21fa9d4dcb1b078a83b59c21f8de981ef9b43d5449ae9f2878240c81bd"
     },
     {
-      "path": "assets/fonts/LusionMono-b27564e8f7.woff2",
-      "bytes": 1600,
-      "sha256": "cb2bacbaa2e9921d207171ffd939a3bf4f7a10deb9065883c910733567fb830c"
+      "path": "assets/fonts/LargoMono-Regular-de7d0690aebe.woff",
+      "bytes": 56780,
+      "sha256": "de7d0690aebe7e58b6af01e9715dc014bd8bc4a01f16ffee76b3b76d10db3c47"
     },
     {
       "path": "assets/images/apple-touch-icon-3989346fd8.png",
-      "bytes": 854,
-      "sha256": "5c673dfea0e1d3e8a84dcebce92d36b72695eb692417cfbf270813ba5545e37b"
+      "bytes": 4272,
+      "sha256": "6587a72d681eba50d0935519eb6518db36825633b5bdd8baffd09103b4a229ee"
     },
     {
       "path": "assets/images/arrow-down-ef4b226561.svg",
@@ -571,38 +576,38 @@
     },
     {
       "path": "assets/images/back-7edff53aba.png",
-      "bytes": 49818,
-      "sha256": "01bf7f222a6f17f73c4b65b3147da0e8116df9001bf50f6642391a9e2c6a9edb"
+      "bytes": 51624,
+      "sha256": "f883cc0d11dacb7d3c50845b1625ddacb1c4ead99e5ecdea6d7168dc8c80221a"
     },
     {
       "path": "assets/images/favicon-0ce586fc40.ico",
-      "bytes": 15086,
-      "sha256": "21d914f77714d67d28df5fa586e518abe3f41c16fed80e95e3ceb8a294336cc0"
+      "bytes": 1961,
+      "sha256": "a90b3a5a3e9e5e8fbee624de7a7f79b7490220cad44974cc73bd133fb0bc2b3e"
     },
     {
       "path": "assets/images/favicon-16x16-57b8c2ff67.png",
-      "bytes": 447,
-      "sha256": "4e24ce91d85db04b1c2476ff05cc20a401866cae2f4c55a4dc47f0e836509d68"
+      "bytes": 388,
+      "sha256": "e8253c3b9259d62491a2e4df30ac235622ea001f116817ebab866cf7843467b8"
     },
     {
       "path": "assets/images/favicon-16x16-b4a5ae71e1.png",
-      "bytes": 448,
-      "sha256": "488b49c3da8dd43a8a925aec6b76d15f807ba0080d2394d2a92dfdeb44d05459"
+      "bytes": 388,
+      "sha256": "e8253c3b9259d62491a2e4df30ac235622ea001f116817ebab866cf7843467b8"
     },
     {
       "path": "assets/images/favicon-32x32-1a241918d2.png",
-      "bytes": 469,
-      "sha256": "48605c1a0ada298dd165013fbd1ec781b940d58fd27832e10105858c9145bf1e"
+      "bytes": 699,
+      "sha256": "337c14af56c6d08c01a62f67967e5e563c91ac099439e0298a59cf68f60007ec"
     },
     {
       "path": "assets/images/favicon-32x32-d80f115f3c.png",
-      "bytes": 451,
-      "sha256": "438a9ef697b6dc7851d094226b73b76cca6d63bc97a1d8f77ff5ef6f14e10933"
+      "bytes": 699,
+      "sha256": "337c14af56c6d08c01a62f67967e5e563c91ac099439e0298a59cf68f60007ec"
     },
     {
       "path": "assets/images/favicon-c7bb425e1a.ico",
-      "bytes": 15086,
-      "sha256": "61e628aa0bf677a0b7e7212cd757fe761553e5ddb4641cbf567d8b3f47c003ce"
+      "bytes": 1961,
+      "sha256": "a90b3a5a3e9e5e8fbee624de7a7f79b7490220cad44974cc73bd133fb0bc2b3e"
     },
     {
       "path": "assets/images/largo-card-back-284cf49c1fb0d1da.svg",
@@ -696,8 +701,8 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 90469,
-      "sha256": "dda4639fcb7878596d2bb1cb697a2549974078129047725bc21c8c84a10cf9dc"
+      "bytes": 90483,
+      "sha256": "bcd2f9cd38070ef112d7c9da1a7bbf043bcae18ee9afe921a1269fc8b4625169"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -730,6 +735,11 @@
       "sha256": "96646e5f23acf229a6210f10a69eccbe66752e3f862d96923a85a9275a1f2916"
     },
     {
+      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/IBM-Plex-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/IBMPlexMono-Medium-d7e109b1f3.woff2",
       "bytes": 40088,
       "sha256": "684da4e82924e5a1bf1ddb07eeed1db06627b35f8f5ea4417e91b0fa1746260c"
@@ -750,19 +760,19 @@
       "sha256": "0a4fda21fa9d4dcb1b078a83b59c21f8de981ef9b43d5449ae9f2878240c81bd"
     },
     {
-      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LusionMono-0cf1c90769.woff",
-      "bytes": 2324,
-      "sha256": "76c502c215dd71634cb1841ee31c46c8d3c24d816d0982a5587554f92223bf7c"
+      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LargoMono-Regular-0a4fda21fa9d.woff2",
+      "bytes": 38988,
+      "sha256": "0a4fda21fa9d4dcb1b078a83b59c21f8de981ef9b43d5449ae9f2878240c81bd"
     },
     {
-      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LusionMono-b27564e8f7.woff2",
-      "bytes": 1600,
-      "sha256": "cb2bacbaa2e9921d207171ffd939a3bf4f7a10deb9065883c910733567fb830c"
+      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LargoMono-Regular-de7d0690aebe.woff",
+      "bytes": 56780,
+      "sha256": "de7d0690aebe7e58b6af01e9715dc014bd8bc4a01f16ffee76b3b76d10db3c47"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/apple-touch-icon-3989346fd8.png",
-      "bytes": 854,
-      "sha256": "5c673dfea0e1d3e8a84dcebce92d36b72695eb692417cfbf270813ba5545e37b"
+      "bytes": 4272,
+      "sha256": "6587a72d681eba50d0935519eb6518db36825633b5bdd8baffd09103b4a229ee"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/arrow-down-ef4b226561.svg",
@@ -776,58 +786,53 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/back-7edff53aba.png",
-      "bytes": 49818,
-      "sha256": "01bf7f222a6f17f73c4b65b3147da0e8116df9001bf50f6642391a9e2c6a9edb"
+      "bytes": 51624,
+      "sha256": "f883cc0d11dacb7d3c50845b1625ddacb1c4ead99e5ecdea6d7168dc8c80221a"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/favicon-0ce586fc40.ico",
-      "bytes": 15086,
-      "sha256": "21d914f77714d67d28df5fa586e518abe3f41c16fed80e95e3ceb8a294336cc0"
+      "bytes": 1961,
+      "sha256": "a90b3a5a3e9e5e8fbee624de7a7f79b7490220cad44974cc73bd133fb0bc2b3e"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/favicon-16x16-57b8c2ff67.png",
-      "bytes": 447,
-      "sha256": "4e24ce91d85db04b1c2476ff05cc20a401866cae2f4c55a4dc47f0e836509d68"
+      "bytes": 388,
+      "sha256": "e8253c3b9259d62491a2e4df30ac235622ea001f116817ebab866cf7843467b8"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/favicon-16x16-b4a5ae71e1.png",
-      "bytes": 448,
-      "sha256": "488b49c3da8dd43a8a925aec6b76d15f807ba0080d2394d2a92dfdeb44d05459"
+      "bytes": 388,
+      "sha256": "e8253c3b9259d62491a2e4df30ac235622ea001f116817ebab866cf7843467b8"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/favicon-32x32-1a241918d2.png",
-      "bytes": 469,
-      "sha256": "48605c1a0ada298dd165013fbd1ec781b940d58fd27832e10105858c9145bf1e"
+      "bytes": 699,
+      "sha256": "337c14af56c6d08c01a62f67967e5e563c91ac099439e0298a59cf68f60007ec"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/favicon-32x32-d80f115f3c.png",
-      "bytes": 451,
-      "sha256": "438a9ef697b6dc7851d094226b73b76cca6d63bc97a1d8f77ff5ef6f14e10933"
+      "bytes": 699,
+      "sha256": "337c14af56c6d08c01a62f67967e5e563c91ac099439e0298a59cf68f60007ec"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/images/favicon-c7bb425e1a.ico",
-      "bytes": 15086,
-      "sha256": "61e628aa0bf677a0b7e7212cd757fe761553e5ddb4641cbf567d8b3f47c003ce"
+      "bytes": 1961,
+      "sha256": "a90b3a5a3e9e5e8fbee624de7a7f79b7490220cad44974cc73bd133fb0bc2b3e"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1372122,
-      "sha256": "6efe979af1c36b8c186e02bb66060848c760431dd7b8f92548f83e96bbf18aef"
-    },
-    {
-      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/js-b097aa9872.js",
-      "bytes": 536618,
-      "sha256": "d92022f672255a1c8e4bc117fefaa543c2a0167b99327587c183e75533927fbe"
+      "bytes": 1382558,
+      "sha256": "e87b8d1077edfe22b06672fffe589488f65fa225c568f1b0c242d22a04bc1135"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1539730,
-      "sha256": "d650f5cf393078a86329a1c388c5569b21dcc7dc65947deae9d24159fa0d7f3f"
+      "bytes": 1540466,
+      "sha256": "57639d9bebd90c482c61e7eb8bccd0f50eb917c88e77ee8137359fe628326a54"
     },
     {
-      "path": "assets/js/js-b097aa9872.js",
-      "bytes": 524537,
-      "sha256": "8ac96a622a5ae0ef08f0cc1a31bc7434bb506ab9931c0ffe629d46b56e8a12f5"
+      "path": "assets/meta/largo-social-891cf2a7c315.jpg",
+      "bytes": 40186,
+      "sha256": "891cf2a7c315ecde8096ff99931c72e19a8d696b34dd0c45d8125fec1fe53582"
     },
     {
       "path": "assets/meta/safari-pinned-tab.svg",
@@ -846,8 +851,8 @@
     },
     {
       "path": "assets/scene/about-stars.json",
-      "bytes": 152,
-      "sha256": "cca5e858571a995a9eb46ebe79bf2f4649246def7a18b62593282b26e03beb2e"
+      "bytes": 203,
+      "sha256": "3663aa9f199ca4f1c11ac1bbd048bdd21f5972f04c628fa4aa168307f09f4197"
     },
     {
       "path": "assets/scene/brand-color.json",
@@ -1055,6 +1060,16 @@
       "sha256": "bc217d920ce3376eb1a3fa93b7043717b48d0ff359c4a1ac5a5eca51b8b76653"
     },
     {
+      "path": "assets/scene/largo-environment/largo-stickers-1465-2fffff24da73.png",
+      "bytes": 1559126,
+      "sha256": "2fffff24da73f8a15102fa8b37c25557da0aa2c20eaf6d516fbd683940e7bc99"
+    },
+    {
+      "path": "assets/scene/largo-environment/largo-stickers-733-3a7740da6e73.png",
+      "bytes": 439486,
+      "sha256": "3a7740da6e73a4cf24fa592726a5c61b402de61bb920094e1a0723a7c617e0cc"
+    },
+    {
       "path": "assets/scene/largo-environment/LDR_RGB1_0-11ad7fa715ae.png",
       "bytes": 48759,
       "sha256": "11ad7fa715ae19f6e18e9ad2065622d79a2acceb31e56f7cb1837d764e97acec"
@@ -1091,8 +1106,8 @@
     },
     {
       "path": "assets/scene/largo-environment/scene-assets.json",
-      "bytes": 14794,
-      "sha256": "aa5ef13f741fa08976c4e0566e7ed4163ebea931f97055a3ae6b9ca27d53f105"
+      "bytes": 15020,
+      "sha256": "a614025b37880b4823903f0b1858340122a19436e6217110c0f0d54ad8376e1e"
     },
     {
       "path": "assets/scene/largo-environment/smaa-area-b5a8e3bb3fbf.png",
@@ -1103,16 +1118,6 @@
       "path": "assets/scene/largo-environment/smaa-search-025eb54fb8c4.png",
       "bytes": 113,
       "sha256": "025eb54fb8c4c2858a7d6d9743b88919fe5f9c661329c447a8f1e28971ae7403"
-    },
-    {
-      "path": "assets/scene/largo-environment/stickers-a8e2d2fa088d.png",
-      "bytes": 409573,
-      "sha256": "a8e2d2fa088d0d5aa96f2a84d0fa0f5a131b1475017ad831c5099ca605eff206"
-    },
-    {
-      "path": "assets/scene/largo-environment/stickers_low-602501332670.png",
-      "bytes": 258457,
-      "sha256": "60250133267038b786812d9863fb43529ec4785f8ea2d480bae1125f4e87f171"
     },
     {
       "path": "assets/scene/largo-environment/tablet-e5dae8a0eea7.png",
@@ -1146,8 +1151,8 @@
     },
     {
       "path": "assets/scene/photo-portrait.json",
-      "bytes": 701,
-      "sha256": "55eb8f1a91d457103be760153d5a019eee09c9a1f8f713adc2ad08dabebe0771"
+      "bytes": 764,
+      "sha256": "08bd064826293126104b8e9f40ff27810f83f0847ae025698e436033bd44f5a6"
     },
     {
       "path": "assets/scene/scroll-navigation.json",
