@@ -101,106 +101,10 @@
       "sha256": "aa8fa9abf82f4f9d51b48c1f22e220afbaf5f485e0a363ea70cd0c932255cc2c"
     },
     {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/bg_box.buf",
-      "assetPath": "assets/scene/largo-environment/largo-bg_box-2c2b4afd860e.buf",
-      "byteLength": 454,
-      "sha256": "2c2b4afd860eed3215af1afbed279e714cc1f452be189c9be6c63b173dee422f"
-    },
-    {
       "sourceUrl": "https://edgarlargo.com/assets/models/about/camera_spline.buf",
       "assetPath": "assets/scene/largo-environment/largo-camera_spline-80249a7d2906.buf",
       "byteLength": 4784,
       "sha256": "80249a7d29069e6f31d8cd9669273ceb292d8ed14d375a2ae76bbdb0cbe5c64a"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/letter_placements.buf",
-      "assetPath": "assets/scene/largo-environment/largo-letter_placements-3444250a0ce1.buf",
-      "byteLength": 2272,
-      "sha256": "3444250a0ce1bbb285ebc6f2a50dfefbc82c7f82b1994919e1b46a040bf07650"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/person_idle.buf",
-      "assetPath": "assets/scene/largo-environment/largo-person_idle-c1efc427813a.buf",
-      "byteLength": 101372,
-      "sha256": "c1efc427813a116f1a7c4f2ab2689972e04e6be8a0cb6a277de04831f9f92945"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/person.buf",
-      "assetPath": "assets/scene/largo-environment/largo-person-0b5d623b78d3.buf",
-      "byteLength": 86170,
-      "sha256": "0b5d623b78d3000d2dae46b014eeee6aef27effe7283aafd7b25bfd13eaa72e3"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_0_low.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_0_low-c160a38544d6.buf",
-      "byteLength": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_0.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_0-e9c1ce5bde3d.buf",
-      "byteLength": 33891,
-      "sha256": "e9c1ce5bde3d91d2b7fc7971906b9bc59412d726deb21e9da19ca08eaeb081c2"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_1_low.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_1_low-c160a38544d6.buf",
-      "byteLength": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_1.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_1-6705e31547a5.buf",
-      "byteLength": 38409,
-      "sha256": "6705e31547a506e3e3e3ecb825aec714d2e49e2af4f32c865d1aeb97f50ed253"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_2_low.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_2_low-c160a38544d6.buf",
-      "byteLength": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_2.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_2-a08861bb795b.buf",
-      "byteLength": 39145,
-      "sha256": "a08861bb795be9278fa20a8dddadf603ad9a80d9116799b57e5d4cdb6ba46659"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_3_low.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_3_low-c160a38544d6.buf",
-      "byteLength": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_3.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_3-f5886c9249cf.buf",
-      "byteLength": 40024,
-      "sha256": "f5886c9249cf3d00943e9806da334e66d19b46195cc600ed3432d7348085352a"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_animation_0.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_animation_0-d511d0c44154.buf",
-      "byteLength": 42624,
-      "sha256": "d511d0c44154886e124a9652581eb293a84719604655040295a10b7fc011fc9c"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_animation_1.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_animation_1-7d3c56f98808.buf",
-      "byteLength": 42628,
-      "sha256": "7d3c56f988086d8cb08d8c7d6dbb574381d4d086df788a6a00dad87bf1731124"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_animation_2.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_animation_2-0664834f6fab.buf",
-      "byteLength": 42628,
-      "sha256": "0664834f6fab1a744ef7a0eaa532b6fc8017df5208825b92755ee04a85e96a2e"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/rock_animation_3.buf",
-      "assetPath": "assets/scene/largo-environment/largo-rock_animation_3-b3adcb935763.buf",
-      "byteLength": 42620,
-      "sha256": "b3adcb935763d68a4f62af7b137cfc8a851250a3c058784e10dc8e1b7256538f"
     },
     {
       "sourceUrl": "https://edgarlargo.com/assets/models/about/sphere_l.buf",
@@ -225,18 +129,6 @@
       "assetPath": "assets/scene/largo-environment/largo-sphere_xs-9dd73c11126c.buf",
       "byteLength": 624,
       "sha256": "9dd73c11126cfffda37b9d4759569043a1eee3d356a35cc62db7c61e333e4ab7"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/terrain_lines.buf",
-      "assetPath": "assets/scene/largo-environment/largo-terrain_lines-ea3800cbe109.buf",
-      "byteLength": 71276,
-      "sha256": "ea3800cbe1090f3381aa26d863fbd6abbc680d5e778e2f4077691faf2a093754"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/models/about/terrain.buf",
-      "assetPath": "assets/scene/largo-environment/largo-terrain-44018abc47fa.buf",
-      "byteLength": 396996,
-      "sha256": "44018abc47fa75ac5e78795528406b07300d7d6981abcbe7ebb640bff6e25052"
     },
     {
       "sourceUrl": "https://edgarlargo.com/assets/models/home/cross_ld.buf",
@@ -369,42 +261,6 @@
       "assetPath": "assets/scene/largo-environment/tablet-e5dae8a0eea7.png",
       "byteLength": 73188,
       "sha256": "e5dae8a0eea7074290e585ded9bfdc0d47b796e4f928a7cbd4abfd836a1fd1c6"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/textures/about/fog.png",
-      "assetPath": "assets/scene/largo-environment/largo-fog-88dac1d5f369.png",
-      "byteLength": 57325,
-      "sha256": "88dac1d5f369e5b8777e7f6a869bd57f426f075293f7088bc9fe5e77261dcbb7"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/textures/about/ground_person_shadow.webp",
-      "assetPath": "assets/scene/largo-environment/largo-ground_person_shadow-b47c04799b54.webp",
-      "byteLength": 2992,
-      "sha256": "b47c04799b54be8be0ed7bf6e39b0b1b825e6a6be7b9d4e000561c0aa766fc7d"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/textures/about/person_light.webp",
-      "assetPath": "assets/scene/largo-environment/largo-person_light-31d2f08fe3f9.webp",
-      "byteLength": 91978,
-      "sha256": "31d2f08fe3f935b1a4603b2decfb36997138e05f6eabe68a6f6cffa833d99daf"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/textures/about/person.webp",
-      "assetPath": "assets/scene/largo-environment/largo-person-4e947930fff9.webp",
-      "byteLength": 55682,
-      "sha256": "4e947930fff9efd5b415fd536945e5b136bb707c7673282b698d8228ec282792"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/textures/about/rocks.webp",
-      "assetPath": "assets/scene/largo-environment/largo-rocks-8695a1c6b43c.webp",
-      "byteLength": 88684,
-      "sha256": "8695a1c6b43c28890d97927416af35ea3ba6ee6cd1004d68b10ee72d5bdfbb63"
-    },
-    {
-      "sourceUrl": "https://edgarlargo.com/assets/textures/about/terrain_shadow_light_height.webp",
-      "assetPath": "assets/scene/largo-environment/largo-terrain_shadow_light_height-64d522d9263a.webp",
-      "byteLength": 1112136,
-      "sha256": "64d522d9263a1bbe2a60820407d68b8157040c2f7d78dad35de5555fba47f0a8"
     },
     {
       "sourceUrl": "https://edgarlargo.com/assets/textures/award_gradient.png",

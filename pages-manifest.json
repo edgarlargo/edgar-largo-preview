@@ -476,13 +476,13 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.bundle.js",
-      "bytes": 605221,
-      "sha256": "bafe58686549e766ec9642daff0a0f248973e7b498ea93951e1fae54a54a5773"
+      "bytes": 605756,
+      "sha256": "ca6abdd50ba2cf32d7a02a5c89608b41cdcf8b02f0fbce072358bf0de734bed1"
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
-      "bytes": 2697,
-      "sha256": "0c0bbe3f1eaf082f2f10ade87e4735044bada861ac2029df7ecd491439405f6d"
+      "bytes": 2716,
+      "sha256": "4f51c0118b1ddf717df830e065fae67fece69e4182b7c5530836250c98ff7cfa"
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
@@ -821,13 +821,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1394483,
-      "sha256": "3f745636d9a94cff585b70b55a4d7146c204232d926f37485b675ee50016788d"
+      "bytes": 1348991,
+      "sha256": "4b6ea30bf37ceea3825d7a2d375bf34b298e76abe4c9a477e283b92f3360803d"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1544793,
-      "sha256": "4b4d4a94aa432e7b1e0a44b5652b55e9055b4e276082a4f295a9687a2f272187"
+      "bytes": 1499517,
+      "sha256": "184ee7eec3f8c121505b4ebefabce9554bcc08f6e167c7220a5dd0f0c4dd9d1a"
     },
     {
       "path": "assets/meta/largo-social-891cf2a7c315.jpg",
@@ -838,6 +838,11 @@
       "path": "assets/meta/safari-pinned-tab.svg",
       "bytes": 439,
       "sha256": "cf0b8ea5f1fa3f2eb7c8c90f9ec502fb1f4f25188f17d8ecd25185dbbb45502e"
+    },
+    {
+      "path": "assets/scene/about-hidden-scenes.json",
+      "bytes": 335,
+      "sha256": "631de7e853ccc8cdd458a4e408ac3aadd2a231ac1df85252638942ab42fb4c6f"
     },
     {
       "path": "assets/scene/about-motion.json",
@@ -1065,34 +1070,14 @@
       "sha256": "38f7c3b769a4f679a769a18ac2984eab3609fa75df5a89ca3615b3bbc1f0a302"
     },
     {
-      "path": "assets/scene/largo-environment/largo-bg_box-2c2b4afd860e.buf",
-      "bytes": 454,
-      "sha256": "2c2b4afd860eed3215af1afbed279e714cc1f452be189c9be6c63b173dee422f"
-    },
-    {
       "path": "assets/scene/largo-environment/largo-camera_spline-80249a7d2906.buf",
       "bytes": 4784,
       "sha256": "80249a7d29069e6f31d8cd9669273ceb292d8ed14d375a2ae76bbdb0cbe5c64a"
     },
     {
-      "path": "assets/scene/largo-environment/largo-fog-88dac1d5f369.png",
-      "bytes": 57325,
-      "sha256": "88dac1d5f369e5b8777e7f6a869bd57f426f075293f7088bc9fe5e77261dcbb7"
-    },
-    {
       "path": "assets/scene/largo-environment/largo-font-3ffce68b0657.png",
       "bytes": 200,
       "sha256": "3ffce68b06573e5f5f79a110b19719ac6b02ee8947acdf4117e3407843393283"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-ground_person_shadow-b47c04799b54.webp",
-      "bytes": 2992,
-      "sha256": "b47c04799b54be8be0ed7bf6e39b0b1b825e6a6be7b9d4e000561c0aa766fc7d"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-letter_placements-3444250a0ce1.buf",
-      "bytes": 2272,
-      "sha256": "3444250a0ce1bbb285ebc6f2a50dfefbc82c7f82b1994919e1b46a040bf07650"
     },
     {
       "path": "assets/scene/largo-environment/largo-line_capability-40d33adb9a86.buf",
@@ -1105,94 +1090,9 @@
       "sha256": "ae84325d351f0071988441a3e3c408f7e27d6228a7a8687c929a81786e985fac"
     },
     {
-      "path": "assets/scene/largo-environment/largo-person-0b5d623b78d3.buf",
-      "bytes": 86170,
-      "sha256": "0b5d623b78d3000d2dae46b014eeee6aef27effe7283aafd7b25bfd13eaa72e3"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-person-4e947930fff9.webp",
-      "bytes": 55682,
-      "sha256": "4e947930fff9efd5b415fd536945e5b136bb707c7673282b698d8228ec282792"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-person_idle-c1efc427813a.buf",
-      "bytes": 101372,
-      "sha256": "c1efc427813a116f1a7c4f2ab2689972e04e6be8a0cb6a277de04831f9f92945"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-person_light-31d2f08fe3f9.webp",
-      "bytes": 91978,
-      "sha256": "31d2f08fe3f935b1a4603b2decfb36997138e05f6eabe68a6f6cffa833d99daf"
-    },
-    {
       "path": "assets/scene/largo-environment/largo-plant-3e3a769101a8.buf",
       "bytes": 177002,
       "sha256": "3e3a769101a88b0c9d35ab7ffb7e2e3eaace7ca6ee8ba4ca7842a8bb66381c89"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rocks-8695a1c6b43c.webp",
-      "bytes": 88684,
-      "sha256": "8695a1c6b43c28890d97927416af35ea3ba6ee6cd1004d68b10ee72d5bdfbb63"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_0-e9c1ce5bde3d.buf",
-      "bytes": 33891,
-      "sha256": "e9c1ce5bde3d91d2b7fc7971906b9bc59412d726deb21e9da19ca08eaeb081c2"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_0_low-c160a38544d6.buf",
-      "bytes": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_1-6705e31547a5.buf",
-      "bytes": 38409,
-      "sha256": "6705e31547a506e3e3e3ecb825aec714d2e49e2af4f32c865d1aeb97f50ed253"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_1_low-c160a38544d6.buf",
-      "bytes": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_2-a08861bb795b.buf",
-      "bytes": 39145,
-      "sha256": "a08861bb795be9278fa20a8dddadf603ad9a80d9116799b57e5d4cdb6ba46659"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_2_low-c160a38544d6.buf",
-      "bytes": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_3-f5886c9249cf.buf",
-      "bytes": 40024,
-      "sha256": "f5886c9249cf3d00943e9806da334e66d19b46195cc600ed3432d7348085352a"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_3_low-c160a38544d6.buf",
-      "bytes": 2205,
-      "sha256": "c160a38544d6144b35f64320149240ee16d99dacca0e73893cdc2c43fc27ec92"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_animation_0-d511d0c44154.buf",
-      "bytes": 42624,
-      "sha256": "d511d0c44154886e124a9652581eb293a84719604655040295a10b7fc011fc9c"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_animation_1-7d3c56f98808.buf",
-      "bytes": 42628,
-      "sha256": "7d3c56f988086d8cb08d8c7d6dbb574381d4d086df788a6a00dad87bf1731124"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_animation_2-0664834f6fab.buf",
-      "bytes": 42628,
-      "sha256": "0664834f6fab1a744ef7a0eaa532b6fc8017df5208825b92755ee04a85e96a2e"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-rock_animation_3-b3adcb935763.buf",
-      "bytes": 42620,
-      "sha256": "b3adcb935763d68a4f62af7b137cfc8a851250a3c058784e10dc8e1b7256538f"
     },
     {
       "path": "assets/scene/largo-environment/largo-sphere_l-ae0a2df5ec21.buf",
@@ -1228,21 +1128,6 @@
       "path": "assets/scene/largo-environment/largo-team-4eb19b7f9440.json",
       "bytes": 50,
       "sha256": "4eb19b7f94403cbc3c64d207b40ec3efdc7e9dcad3105d26b18b26c84537f805"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-terrain-44018abc47fa.buf",
-      "bytes": 396996,
-      "sha256": "44018abc47fa75ac5e78795528406b07300d7d6981abcbe7ebb640bff6e25052"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-terrain_lines-ea3800cbe109.buf",
-      "bytes": 71276,
-      "sha256": "ea3800cbe1090f3381aa26d863fbd6abbc680d5e778e2f4077691faf2a093754"
-    },
-    {
-      "path": "assets/scene/largo-environment/largo-terrain_shadow_light_height-64d522d9263a.webp",
-      "bytes": 1112136,
-      "sha256": "64d522d9263a1bbe2a60820407d68b8157040c2f7d78dad35de5555fba47f0a8"
     },
     {
       "path": "assets/scene/largo-environment/LDR_RGB1_0-11ad7fa715ae.png",
@@ -1281,8 +1166,8 @@
     },
     {
       "path": "assets/scene/largo-environment/scene-assets.json",
-      "bytes": 25176,
-      "sha256": "aee579e041f6ff79830a09ea7086939e49fedad5f33821b9458e96059d70c7b8"
+      "bytes": 18156,
+      "sha256": "6963762d6490183ce077ae83ce7925a4501dbf838bf67ed413601e586221de89"
     },
     {
       "path": "assets/scene/largo-environment/smaa-area-b5a8e3bb3fbf.png",
@@ -1328,6 +1213,11 @@
       "path": "assets/scene/photo-portrait.json",
       "bytes": 764,
       "sha256": "08bd064826293126104b8e9f40ff27810f83f0847ae025698e436033bd44f5a6"
+    },
+    {
+      "path": "assets/scene/project-texture-loading.json",
+      "bytes": 347,
+      "sha256": "6821dcd694ff52d3ffd08c4e421e1eabf0243c68e5e16e86e607d7bf50919d50"
     },
     {
       "path": "assets/scene/scroll-navigation.json",
@@ -1490,11 +1380,6 @@
       "sha256": "54f8067f79e2cce0003a5733f1eacc3d5dfa0f39c8c06a7c5b40fce708857ad0"
     },
     {
-      "path": "uploads/586985a0dedfd7c07857283633c79f5f.mp4",
-      "bytes": 22674214,
-      "sha256": "cb685d92b5f762d8ee92628fcf1d0853c75348a2034981147330a805112e3894"
-    },
-    {
       "path": "uploads/58ed11148975357cbdbab252516c758d.webp",
       "bytes": 30406,
       "sha256": "58ed11148975357cbdbab252516c758d02d28ce2752a79258885565b29ab8d2b"
@@ -1518,11 +1403,6 @@
       "path": "uploads/7ab78785503e05447bdee8cac00d1173.webp",
       "bytes": 93988,
       "sha256": "c769c4dfafca6803de7b9a41fa2d7e87956031270948e12219c0ea1395207178"
-    },
-    {
-      "path": "uploads/802f7ead6adc1d79de7f07463c1cb03f.mp4",
-      "bytes": 24364559,
-      "sha256": "1b90486889cd3a9760afa171422171239b2a1983b6bc5ebbc8d90eb7f2c6db34"
     },
     {
       "path": "uploads/83ebb5bc3ac338783c93857413ecbb58.png",
@@ -1708,6 +1588,16 @@
       "path": "uploads/fc4b1ca14bf392c9eddb2bcdd8ee0b7e.webp",
       "bytes": 68040,
       "sha256": "fc4b1ca14bf392c9eddb2bcdd8ee0b7eebc3fc5e0e04a49473f0b58c6d60d903"
+    },
+    {
+      "path": "uploads/largo-caviar-1b90486889cd3a97.mp4",
+      "bytes": 24364559,
+      "sha256": "1b90486889cd3a9760afa171422171239b2a1983b6bc5ebbc8d90eb7f2c6db34"
+    },
+    {
+      "path": "uploads/largo-caviar-cb685d92b5f762d8.mp4",
+      "bytes": 22674214,
+      "sha256": "cb685d92b5f762d8ee92628fcf1d0853c75348a2034981147330a805112e3894"
     },
     {
       "path": "uploads/largo-project-06744e2423e25ca0f5c2.webp",
