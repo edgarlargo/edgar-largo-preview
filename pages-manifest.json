@@ -821,13 +821,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1349001,
-      "sha256": "98d518bab67643072e3deb83564fdc81f0ca7a475b28255187e67343ce84a8a2"
+      "bytes": 1349621,
+      "sha256": "71c2d517ade04ddf5a96d73ca43609a75b41c78d7278d034e271d73f77410f9a"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1499527,
-      "sha256": "375c48639d55f226c59192e98cd9a39e0ab99af7345b5be281242feae512cd3d"
+      "bytes": 1500147,
+      "sha256": "25e7854e0b5c52a1668c038e6c647319175cd7d1a8e1e15d37e0dd28d7bdc15b"
     },
     {
       "path": "assets/meta/largo-social-3855fc3e4c68.jpg",
@@ -861,8 +861,8 @@
     },
     {
       "path": "assets/scene/brand-color.json",
-      "bytes": 101,
-      "sha256": "766e807e1b9f08575c691162852c29770894d66401e3b838759cbd009f3f2ec3"
+      "bytes": 132,
+      "sha256": "a73f3440a17f502789e64e0849d052c6177edf2de5fe48d60a3c41ff9d4497fa"
     },
     {
       "path": "assets/scene/character-dance.json",
