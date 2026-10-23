@@ -4,7 +4,7 @@
 
 This is a static public snapshot for the repository path `/edgar-largo-preview/`. All ten routes are ordinary directories with index.html; no PHP, Node function, database or build is required for hosting. Run `node local-server.mjs` for a local view at http://127.0.0.1:8189/edgar-largo-preview/.
 
-Forms retain their layout and show a preview message; they do not send mail or collect submissions. CMS/admin features and sessions are excluded. Old index.php query addresses are replaced by clean paths; those old PHP addresses are not supported on GitHub Pages. Re-export if the repository name or base path changes.
+The footer contact form sends inquiries to Edgar Largo Studio through the explicitly configured HTTPS endpoint on edgarlargo.com. WordPress sends the email through its existing SMTP setup; passwords and cookies are never included in this repository or browser requests. Other forms remain preview-only. CMS/admin features and sessions are excluded. Old index.php query addresses are replaced by clean paths; those old PHP addresses are not supported on GitHub Pages. Re-export if the repository name or base path changes.
 
 GitHub Pages publishes the repository root from `main`. Changes pushed to that branch update the preview. `.nojekyll` preserves the exported static files without a Jekyll build. `deployment/pages.yml.example` is an optional, inactive workflow example.
 

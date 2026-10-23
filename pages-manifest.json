@@ -1266,8 +1266,8 @@
     },
     {
       "path": "preview.js",
-      "bytes": 654,
-      "sha256": "6a4cb6c557297ea157d36f92d146303640c309754afea09e446be166b6aba842"
+      "bytes": 5896,
+      "sha256": "0f9c832d6d57e3eac86ec04ff7e748795d6d577f3dc4cb81131bb87cf5fd623c"
     },
     {
       "path": "settings-site.css",
@@ -1810,6 +1810,9 @@
       "sha256": "395f463c76134932524ed2b7cd0dac22b75524d6fd91d4226fde04d9daf4e92f"
     }
   ],
-  "forms": "preview-only",
+  "forms": "remote-footer",
+  "remoteContact": {
+    "endpoint": "https://edgarlargo.com/wp-json/largo-contact/v1/message"
+  },
   "phpIncluded": false
 }
