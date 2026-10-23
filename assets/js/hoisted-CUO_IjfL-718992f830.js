@@ -1346,7 +1346,8 @@ function eaBindImportedAudio(owner) {
  owner.eaAudioObserver.observe(host,{attributes:true,attributeFilter:Object.keys(owner.items).map(id=>'data-ea-audio-'+id)});
 }
 
-/* Admintation imported scene override v7 */
+/* Admintation imported scene override v8 */
+
 
 function eaImportedNativePrepare(owner,stage,hasReplacement){
   if(owner.eaNativeScene)return;
@@ -1561,8 +1562,10 @@ function eaImportedGoalViewport(owner){
     const rect=frame.getBoundingClientRect();
     const progress=Math.max(0,Math.min(1,(height*.85-rect.top)/(height*.7+rect.height)));
     const visible=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height;
+    const preload=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height*4;
+    if(preload&&frame.getAttribute('loading')==='lazy')frame.setAttribute('loading','eager');
     const scene=frame===immersive?(stage||{immersive:true,motion:false,expansion:0,progress,visible}):{progress,visible};
-    frame.contentWindow.postMessage({type:'ea-code-viewport',...scene},'*');
+    frame.contentWindow.postMessage({type:'ea-code-viewport',...scene,preload},'*');
   }
 }
 function eaImportedSceneFrame(host){return !!host?.querySelector('iframe[data-ea-code]');}
