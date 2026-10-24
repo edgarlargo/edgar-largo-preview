@@ -2,9 +2,9 @@
 
 [Open the website](https://edgarlargo.github.io/edgar-largo-preview/)
 
-All ten content pages have individual SEO titles and descriptions, canonical URLs, Open Graph/Twitter metadata, structured data and the owner's Google site verification tag. The preview deliberately retains `noindex,nofollow` until an authorized production launch. The prepared [sitemap](https://edgarlargo.github.io/edgar-largo-preview/sitemap.xml) excludes the 404 page; the project-path robots file does not replace the domain-root crawl policy. The public configuration is stored in `assets/scene/site-seo.json`.
+All 11 content pages have individual SEO titles and descriptions, canonical URLs, Open Graph/Twitter metadata, structured data and the owner's Google site verification tag. The preview deliberately retains `noindex,nofollow` until an authorized production launch. The prepared [sitemap](https://edgarlargo.github.io/edgar-largo-preview/sitemap.xml) excludes the 404 page; the project-path robots file does not replace the domain-root crawl policy. The public configuration is stored in `assets/scene/site-seo.json`.
 
-This is a static public snapshot for the repository path `/edgar-largo-preview/`. All ten routes are ordinary directories with index.html; no PHP, Node function, database or build is required for hosting. Run `node local-server.mjs` for a local view at http://127.0.0.1:8189/edgar-largo-preview/.
+This is a static public snapshot for the repository path `/edgar-largo-preview/`. All 11 routes are ordinary directories with index.html; no PHP, Node function, database or build is required for hosting. Run `node local-server.mjs` for a local view at http://127.0.0.1:8189/edgar-largo-preview/.
 
 The footer contact form sends inquiries to Edgar Largo Studio through the explicitly configured HTTPS endpoint on edgarlargo.com. WordPress sends the email through its existing SMTP setup; passwords and cookies are never included in this repository or browser requests. Other forms remain preview-only. CMS/admin features and sessions are excluded. Old index.php query addresses are replaced by clean paths; those old PHP addresses are not supported on GitHub Pages. Re-export if the repository name or base path changes.
 
@@ -35,3 +35,5 @@ Original studio music — October 24, 2026
 Five original instrumental loops now replace the imported background music: Studio, Glass, Orbit, Shadow and Return. Their shared score uses 100 BPM and B minor / D major. They were composed as a new note score and rendered with deterministic additive/FM/noise synthesis; no source recordings, external samples or music generation models were used. The source score, renderer and delivery hashes are in `music-sources/edgar-largo/`.
 
 The web audio totals 510,714 bytes across five Ogg/Vorbis files. Music still waits for the first native user interaction. Existing interface sound effects, page text, graphics, layout and JavaScript remain unchanged. Automated checks cover decoding, loop measurements, all ten selected routes and sound controls; an artistic listening review is not claimed.
+
+The OrtoMed case study at `/projects/ortomed/` presents clinic services, specialist profiles and appointment requests with original desktop/mobile screenshots. It includes a dedicated gallery card, a wide presentation cover and page-specific social metadata; the project leads the portfolio collection.

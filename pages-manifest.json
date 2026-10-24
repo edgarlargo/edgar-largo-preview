@@ -24,6 +24,13 @@
       "file": "projects/index.html"
     },
     {
+      "key": "project:3a4928d1a884c4895af695e0",
+      "kind": "project",
+      "title": "OrtoMed — Healthcare Website | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/projects/ortomed/",
+      "file": "projects/ortomed/index.html"
+    },
+    {
       "key": "project:ec89366859d9901d50eecdca",
       "kind": "project",
       "title": "Vintage Stories: Brand & E-commerce | Edgar Largo Studio",
@@ -2410,6 +2417,81 @@
       "sha256": "cf0b8ea5f1fa3f2eb7c8c90f9ec502fb1f4f25188f17d8ecd25185dbbb45502e"
     },
     {
+      "path": "assets/ortomed-case/appointment-desktop.webp",
+      "bytes": 34864,
+      "sha256": "a05e3db100846dace1372fc21f45a93d107be20b8c0d38136356473ff7dd8470"
+    },
+    {
+      "path": "assets/ortomed-case/card.webp",
+      "bytes": 133336,
+      "sha256": "0b5664feae679a52f1ee544e55942173d18fefd5cd8aa8157dc9d17db90896ef"
+    },
+    {
+      "path": "assets/ortomed-case/case.css",
+      "bytes": 6229,
+      "sha256": "b73a2dff7f1ed01f4eb8e13d44029e3b37bdc49ec2ee2a7707f146eacb7d1bf7"
+    },
+    {
+      "path": "assets/ortomed-case/cover.webp",
+      "bytes": 110492,
+      "sha256": "12c473f151774a99003cba6e47ef7d0943c9a18f7d177ffe293939e117dc1a4e"
+    },
+    {
+      "path": "assets/ortomed-case/doctor-desktop.webp",
+      "bytes": 69208,
+      "sha256": "f2f0929e1cfa37b6c4e8d55e2fca996fce4e57f8b22fb689925c95e0d5fd4010"
+    },
+    {
+      "path": "assets/ortomed-case/doctor-mobile.webp",
+      "bytes": 49630,
+      "sha256": "5c87b43bc213c9c628c565d677b38ac7988e283c25dd657951a2dc4d0275dc1f"
+    },
+    {
+      "path": "assets/ortomed-case/home-desktop.webp",
+      "bytes": 71222,
+      "sha256": "6d9ba58fd3ef4bd508fd590ac9d74f7fe3ae2aad7e574bf0ac12227a706e7ff3"
+    },
+    {
+      "path": "assets/ortomed-case/home-mobile.webp",
+      "bytes": 30630,
+      "sha256": "1b3541083c799c9a549618e55ce796ecc4bbfc7fc6c43c2795abd358f215b041"
+    },
+    {
+      "path": "assets/ortomed-case/home-overview.webp",
+      "bytes": 78274,
+      "sha256": "a907b7eb6be78894f697f26c3bb0b232e0c78aafe2ef701cbe7278f1d4668a70"
+    },
+    {
+      "path": "assets/ortomed-case/logo-white.png",
+      "bytes": 28321,
+      "sha256": "15609682043c8a8e10fada64999f42d378db0bb7d513c889f1eda8a1e4bb1461"
+    },
+    {
+      "path": "assets/ortomed-case/logo.png",
+      "bytes": 13447,
+      "sha256": "b516c2bf3a44dedee24b4cb604505199077f4b0afb4e1085af68f9ab3cb28f16"
+    },
+    {
+      "path": "assets/ortomed-case/services-desktop.webp",
+      "bytes": 79664,
+      "sha256": "2ea557e3b30e8cc0231962535306fdb62fed97b7860620839b4ea24f56b0edf7"
+    },
+    {
+      "path": "assets/ortomed-case/specialists-desktop.webp",
+      "bytes": 77064,
+      "sha256": "f1caf62a157d86c71665e1073f0b062d7998fad0d47ee71c0e84de791aed1918"
+    },
+    {
+      "path": "assets/ortomed-case/specialists-grid.webp",
+      "bytes": 85148,
+      "sha256": "f09fdd2fbe03bcdf4ba62f0689517b8716410e165c01c37c9d951490f721e1a9"
+    },
+    {
+      "path": "assets/ortomed-case/specialists-mobile.webp",
+      "bytes": 45534,
+      "sha256": "6fcd0c2519a65bcbea788d03fe57ee2f7e8b7d179a44043ef6fa4951ab236e52"
+    },
+    {
       "path": "assets/scene/about-graffiti.json",
       "bytes": 2735,
       "sha256": "6424e3aac5354df9cf0001e4256b22fea69358680dff2ebbc00e69ecfa58d338"
@@ -2831,8 +2913,8 @@
     },
     {
       "path": "assets/scene/site-seo.json",
-      "bytes": 28172,
-      "sha256": "faaf9e6e60e1c49d5776071f1d37c73f28eb7ef27ac296aced23190b658fc0bb"
+      "bytes": 31253,
+      "sha256": "c6ce98aa5a495611f61a644611c11b10180a5cc2ec0f36c2fe34f57c8593342f"
     },
     {
       "path": "assets/scene/tunnel-exit.json",
@@ -3436,8 +3518,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 1090,
-      "sha256": "46eb3405e969371f31352a16ec3e465c764f386bab7565a3b6c3eec7630d1b2d"
+      "bytes": 1181,
+      "sha256": "86072f2bea3e8b2d7991b5a6a060d7708185595292cee06588f3ca5a534a5c13"
     },
     {
       "path": "robots.txt",

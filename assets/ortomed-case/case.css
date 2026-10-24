@@ -1,0 +1,178 @@
+/* OrtoMed presentation. Exact content-block namespace survives source SPA navigation. */
+#project-details .project-details-item[data-ea-project-media^="block:ortomed-"] {
+  border-radius: 0;
+}
+.ea-content-story .ea-story-block[data-ea-content-block^="ortomed-"] {
+  --ortomed-blue: #062b5c;
+  --ortomed-orange: #ff6b00;
+  --ortomed-paper: #ffffff;
+  --ortomed-canvas: #e7eef7;
+  color: var(--ortomed-blue);
+}
+.ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] {
+  padding: clamp(40px, 7vw, 112px) clamp(24px, 8vw, 128px);
+  background: var(--ortomed-paper);
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.65;
+}
+.ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] > p {
+  max-width: 42em;
+}
+.ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] > p:first-child {
+  margin-bottom: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .14em;
+}
+.ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] h2 {
+  max-width: 17ch;
+  margin: 0 0 32px;
+  font-size: clamp(32px, 5.4vw, 80px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+.ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] a:hover {
+  text-decoration-thickness: 2px;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-cover"] {
+  background: var(--ortomed-blue);
+}
+.ea-content-story .ea-story-image[data-ea-content-block^="ortomed-"]:where(:not([data-ea-content-block="ortomed-cover"])) {
+  padding: clamp(20px, 5vw, 80px);
+  background: var(--ortomed-canvas);
+}
+.ea-content-story .ea-story-image[data-ea-content-block^="ortomed-"] > img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 0;
+}
+.ea-content-story .ea-story-image[data-ea-content-block^="ortomed-"]:not([data-ea-content-block="ortomed-cover"]) > img {
+  border: 1px solid #062b5c1f;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px #062b5c12;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-home-screen"],
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-specialists-grid"],
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-appointment-screen"] {
+  background: var(--ortomed-blue);
+  color: var(--ortomed-paper);
+}
+.ea-content-story .ea-story-block[data-ea-content-block^="ortomed-"] figcaption {
+  padding: 20px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  opacity: 1;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-language"] {
+  background: var(--ortomed-blue);
+  color: var(--ortomed-paper);
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-language"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-language"] li {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  margin: 0;
+  padding-left: 16px;
+  border-left: 48px solid var(--ortomed-blue);
+  box-shadow: -1px 0 #ffffff80;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-language"] li:nth-child(2) {
+  border-left-color: var(--ortomed-paper);
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-language"] li:nth-child(3) {
+  border-left-color: var(--ortomed-orange);
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-mobile-screens"] {
+  padding: clamp(32px, 6vw, 96px) clamp(24px, 7vw, 112px);
+  background: var(--ortomed-blue);
+  color: var(--ortomed-paper);
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-mobile-screens"] .ea-story-grid-items {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(16px, 4vw, 64px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-mobile-screens"] .ea-story-grid-items > figure:nth-child(2) {
+  margin-top: 56px;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-mobile-screens"] img {
+  border: clamp(4px, .7vw, 10px) solid #ffffff;
+  border-radius: clamp(16px, 2.2vw, 32px);
+  box-shadow: 0 16px 32px #00000024;
+  box-sizing: border-box;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-closing"] {
+  padding-bottom: 24px;
+}
+.ea-content-story .ea-story-block.ea-story-button[data-ea-content-block="ortomed-contact"] {
+  padding: 0 clamp(24px, 8vw, 128px) clamp(40px, 7vw, 112px);
+  background: var(--ortomed-paper);
+  text-align: left;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-contact"] > a {
+  min-height: 48px;
+  margin: 0;
+  padding: 16px 24px;
+  border: 1px solid var(--ortomed-blue);
+  border-radius: 4px;
+  background: var(--ortomed-blue);
+  color: var(--ortomed-paper);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-contact"] > a:hover {
+  background: #12447d;
+  opacity: 1;
+}
+.ea-content-story .ea-story-block[data-ea-content-block="ortomed-contact"] > a:active {
+  background: #041e40;
+  opacity: 1;
+}
+.ea-content-story .ea-story-block[data-ea-content-block^="ortomed-"] a:focus-visible {
+  outline: 3px solid var(--ortomed-orange);
+  outline-offset: 5px;
+}
+@media (max-width: 640px) {
+  .ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] h2 {
+    max-width: 18ch;
+    font-size: clamp(30px, 8vw, 48px);
+    letter-spacing: -.035em;
+  }
+  .ea-content-story .ea-story-text[data-ea-content-block^="ortomed-"] > p:first-child {
+    margin-bottom: 24px;
+    font-size: 11px;
+  }
+  .ea-content-story .ea-story-image[data-ea-content-block^="ortomed-"]:not([data-ea-content-block="ortomed-cover"]) {
+    padding: 16px;
+  }
+  .ea-content-story .ea-story-block[data-ea-content-block="ortomed-mobile-screens"] .ea-story-grid-items {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 264px;
+  }
+  .ea-content-story .ea-story-block[data-ea-content-block="ortomed-mobile-screens"] .ea-story-grid-items > figure:nth-child(2) {
+    margin-top: 0;
+  }
+}
