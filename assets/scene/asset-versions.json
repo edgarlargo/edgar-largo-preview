@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "stripQuery": [
+        "edgar-about"
+      ],
+      "bytes": 1514630,
+      "sha256": "1d91e022f4642e77558fec814ce7fe6fad222b6811049579862685058bda06e4"
+    },
+    {
+      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "stripQuery": [
+        "edgar-about"
+      ],
+      "bytes": 1364081,
+      "sha256": "12cccdc7370f38a48b720d055641e7217f98d84c083b0c71592ba179a9ec21bd"
+    },
+    {
+      "path": "assets/css/about-CNa9RfUh-7471abac12.css",
+      "stripQuery": [],
+      "bytes": 90483,
+      "sha256": "dc61fd9d41e7f2be26104f366c9f59e5e3af7342747f1e8333a04b4bccf3edde"
+    },
+    {
+      "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css",
+      "stripQuery": [],
+      "bytes": 90519,
+      "sha256": "b0ab3e18810f813a85c50b5e21f311ccbcde021b972480bbd24c83ca1f7e0f54"
+    },
+    {
+      "path": "assets/components/hero-scene/scene.bundle.js",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 586249,
+      "sha256": "dbe0e5559d9fb48249dced995a89571c575646887cfb58c090bcdcd433a67f3f"
+    },
+    {
+      "path": "content.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 1879,
+      "sha256": "c29808cc5884b4bc0591f24a8f7c5958a3d717811a77d8d635f3015efd8d2d60"
+    },
+    {
+      "path": "content-blocks.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 7821,
+      "sha256": "1cdd9d4cd1bdc12fe1e2d2282b3a986ba148ecb621cc5cf345ebce2421a4dd3f"
+    },
+    {
+      "path": "studio-content.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 4247,
+      "sha256": "b296d34971da2cf73df2530b2fdc9f4c2ddb907b57093c33a15886239b82450c"
+    },
+    {
+      "path": "studio-content.js",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 433,
+      "sha256": "2e72ece9d7c413590b2298b65a477156dfeb5c303f74a24a1b119ce047bfb04e"
+    },
+    {
+      "path": "content-video.js",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 12145,
+      "sha256": "d21bdd46639c370c08e23ca0d98d4b6467f282ef1fd4b413f0cf800efa246467"
+    }
+  ]
+}

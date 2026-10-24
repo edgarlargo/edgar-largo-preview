@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "enabled": true,
+  "profiles": [
+    {
+      "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "stylePath": "assets/css/about-CNa9RfUh-7471abac12.css"
+    },
+    {
+      "bundlePath": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "stylePath": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css"
+    }
+  ],
+  "initialFont": "Aeonik:400",
+  "queuedFonts": [
+    "Aeonik:500",
+    "Aeonik:400:italic",
+    "IBMPlexMono:400",
+    "IBMPlexMono:500",
+    "LargoMono:400"
+  ],
+  "fonts": [
+    {
+      "face": "Aeonik:400",
+      "path": "assets/fonts/Aeonik-Regular-01e61dc264.woff2",
+      "phase": "critical",
+      "requiredSelectors": [
+        "html"
+      ]
+    },
+    {
+      "face": "Aeonik:500",
+      "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
+      "phase": "critical",
+      "requiredSelectors": [
+        "html"
+      ]
+    },
+    {
+      "face": "Aeonik:400:italic",
+      "path": "assets/fonts/Aeonik-RegularItalic-8b3b07a740.woff2",
+      "phase": "near-viewport",
+      "requiredSelectors": [
+        "#about-who-title-left-4",
+        "#about-who-title-right",
+        "#about-who-subsection-details .is-italic"
+      ]
+    },
+    {
+      "face": "IBMPlexMono:400",
+      "path": "assets/fonts/IBMPlexMono-Regular-5cfdc4acbb.woff2",
+      "phase": "near-viewport",
+      "requiredSelectors": [
+        "#about-who-team-number",
+        ".about-award-header-text",
+        ".award-category-awards .about-award-item-wrapper-text:nth-child(2)",
+        "#projects-main-title-project-number"
+      ]
+    },
+    {
+      "face": "IBMPlexMono:500",
+      "path": "assets/fonts/IBMPlexMono-Medium-d7e109b1f3.woff2",
+      "phase": "on-demand",
+      "requiredSelectors": [
+        ".project-item-toggle"
+      ]
+    },
+    {
+      "face": "LargoMono:400",
+      "path": "assets/fonts/IBMPlexMono-Regular-5cfdc4acbb.woff2",
+      "phase": "near-viewport",
+      "requiredSelectors": [
+        ".about-capability-subheader-card",
+        ".about-capability-card-header-letter",
+        "#playground-bottom-text"
+      ]
+    }
+  ],
+  "aliases": [
+    {
+      "targetPath": "assets/fonts/IBMPlexMono-Regular-5cfdc4acbb.woff2",
+      "sourcePaths": [
+        "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/IBMPlexMono-Regular-5cfdc4acbb.woff2",
+        "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LargoMono-Regular-0a4fda21fa9d.woff2",
+        "assets/fonts/LargoMono-Regular-0a4fda21fa9d.woff2"
+      ],
+      "sha256": "0a4fda21fa9d4dcb1b078a83b59c21f8de981ef9b43d5449ae9f2878240c81bd"
+    },
+    {
+      "targetPath": "assets/fonts/IBMPlexMono-Regular-5380b152ac.woff",
+      "sourcePaths": [
+        "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/IBMPlexMono-Regular-5380b152ac.woff",
+        "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LargoMono-Regular-de7d0690aebe.woff",
+        "assets/fonts/LargoMono-Regular-de7d0690aebe.woff"
+      ]
+    }
+  ],
+  "preloads": [
+    {
+      "href": "assets/fonts/Aeonik-Regular-01e61dc264.woff2",
+      "as": "font",
+      "type": "font/woff2",
+      "crossorigin": "anonymous"
+    }
+  ]
+}

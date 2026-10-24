@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "bundlePath": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "aliases": [
+        {
+          "source": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7.png",
+          "width": 1465,
+          "height": 1024,
+          "bytes": 1445260,
+          "sha256": "bdd0094132a77550c9fe471f2ee06976d8e225d60da069ccfd5c7636fb2d49ec",
+          "target": {
+            "src": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7-lossless-2e4ee9776a3d.webp",
+            "width": 1465,
+            "height": 1024,
+            "bytes": 1251344,
+            "sha256": "2e4ee9776a3d5f43f6dca1c324279918e61a92f7f9e1e3a781666293515a476e"
+          },
+          "lossless": true,
+          "decodedSha256": "92889ec0a67e2c4bc64bb6eb3e4a227194175f2919d3c6c795c2225eb6b38ebc"
+        },
+        {
+          "source": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e.png",
+          "width": 733,
+          "height": 512,
+          "bytes": 401581,
+          "sha256": "6370f64cd03ec3c4a531057762d1dfa95d478be3d7196923573260457e3b8cc0",
+          "target": {
+            "src": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e-lossless-116604b579ed.webp",
+            "width": 733,
+            "height": 512,
+            "bytes": 369184,
+            "sha256": "116604b579edf52680d1c03effff4575e046824f2eacfee928c6a9664c790b47"
+          },
+          "lossless": true,
+          "decodedSha256": "98f70990aa54af937a8641f4f611d185926c375a3f6f4df0c1298b5725138605"
+        }
+      ]
+    },
+    {
+      "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "aliases": [
+        {
+          "source": "assets/characters/largo-glb/base-color-7e22eb96f19a.png",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 1376492,
+          "sha256": "7e22eb96f19ae6bf6cc0948e5a83b546651328a7897c7776a39a6cb37acb6026",
+          "target": {
+            "src": "assets/characters/largo-glb/base-color-7e22eb96f19a-lossless-f9c30265331a.webp",
+            "width": 1024,
+            "height": 1024,
+            "bytes": 1104650,
+            "sha256": "f9c30265331a17213de44f7d6e55c382e3947a33f0d11691b5ad25f0b0a8edc9"
+          },
+          "lossless": true,
+          "decodedSha256": "3d6fb06699ddde312badddb2861aa0904827b0bc08cc792c1f14d3c8b77a2b9e"
+        },
+        {
+          "source": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7.png",
+          "width": 1465,
+          "height": 1024,
+          "bytes": 1445260,
+          "sha256": "bdd0094132a77550c9fe471f2ee06976d8e225d60da069ccfd5c7636fb2d49ec",
+          "target": {
+            "src": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7-lossless-2e4ee9776a3d.webp",
+            "width": 1465,
+            "height": 1024,
+            "bytes": 1251344,
+            "sha256": "2e4ee9776a3d5f43f6dca1c324279918e61a92f7f9e1e3a781666293515a476e"
+          },
+          "lossless": true,
+          "decodedSha256": "92889ec0a67e2c4bc64bb6eb3e4a227194175f2919d3c6c795c2225eb6b38ebc"
+        },
+        {
+          "source": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e.png",
+          "width": 733,
+          "height": 512,
+          "bytes": 401581,
+          "sha256": "6370f64cd03ec3c4a531057762d1dfa95d478be3d7196923573260457e3b8cc0",
+          "target": {
+            "src": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e-lossless-116604b579ed.webp",
+            "width": 733,
+            "height": 512,
+            "bytes": 369184,
+            "sha256": "116604b579edf52680d1c03effff4575e046824f2eacfee928c6a9664c790b47"
+          },
+          "lossless": true,
+          "decodedSha256": "98f70990aa54af937a8641f4f611d185926c375a3f6f4df0c1298b5725138605"
+        }
+      ]
+    }
+  ]
+}

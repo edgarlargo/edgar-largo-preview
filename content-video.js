@@ -178,7 +178,7 @@
         video.preload = 'metadata';
         video.setAttribute('playsinline', '');
         video.src = fallback;
-        const poster = button.getAttribute('data-ea-video-cover');
+        const poster = button.querySelector('img[data-ea-responsive-media]')?.currentSrc || button.getAttribute('data-ea-video-cover');
         if (poster) video.poster = poster;
         video.addEventListener('error', () => {
           if (player !== video) return;
