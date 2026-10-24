@@ -23,3 +23,9 @@ The seven published projects now have individual background, text and accent pal
 The About process/expertise spray line now follows five smooth cubic Bezier segments with continuous tangents. It enters from outside the left edge and exits beyond the right edge, with endpoint clearance based on the actual brush width. Its purple spray texture, native responsive thickness, scroll timing and reduced-motion state are retained in the portable About profile.
 
 The four expertise cards now show original black vector graffiti letters B, D, M and V in both corners, with the lower corner using the existing 180-degree card header rotation. The mini navigation uses the same B/D/M/V sequence. The SVGs are small editable client images; service content, card backs, native scripts and flip animations remain intact.
+
+Loading audit — October 24, 2026
+
+The shared converter runtime now reuses exact HTML scans within each PHP request. Music starts after the first native user interaction; small interface sounds load independently of the page readiness queue. The local cold desktop audit transferred 3.62 MB instead of 4.79 MB (24.4% less), and local PHP home TTFB changed from 442 ms to 335 ms (five requests per route). Ten selected public routes retain their text, layout and graphics. A fresh four-template build reproduced both scripts and the PHP runtime, delivered through the existing WebSync connection. Browser checks confirm that the first gesture still starts music.
+
+One-second opening has not been achieved: the existing WebGL application and animated preloader still delay the visible content. Headless Chromium uses software GPU rendering; local measurements do not establish production device performance. Public static previews benefit from deferred music; the PHP timing applies to the local dynamic installation. No primary-domain migration is part of this update.
