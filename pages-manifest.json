@@ -643,13 +643,13 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.bundle.js",
-      "bytes": 608956,
-      "sha256": "258fcf10057738e635b90db450d89bc27e4cfdc90b9954642fa26962cfb40b23"
+      "bytes": 608966,
+      "sha256": "03aaf6393133af5fd40209c83d130f44a5f3c48e9aec810db1ef42c56c8987e2"
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
       "bytes": 2764,
-      "sha256": "55ce7aebb455de1aa7a31fadd39cf2051bca467fe118c49f2cb051965be91986"
+      "sha256": "634a0541cf71a0bf4f8288e7d84b10f059e80b5a037826f6facace097b1ef287"
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
