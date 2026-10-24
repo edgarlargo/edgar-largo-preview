@@ -675,9 +675,19 @@
       "sha256": "48ac1dda29c837b49127a6b32eac24984fad393366665a4d7c3a46b032e8e49d"
     },
     {
+      "path": "assets/images/largo-card-letter-b-c93e16deb0e4304e.svg",
+      "bytes": 12176,
+      "sha256": "c93e16deb0e4304ee3faf8321d43b12531f39c518d68112d57343fb5d09015be"
+    },
+    {
       "path": "assets/images/largo-card-letter-d-39d37b6e7af7b7d5.svg",
       "bytes": 542,
       "sha256": "39d37b6e7af7b7d50e61639a96c62873afdccec791fdfba0ce97c5808206fcc7"
+    },
+    {
+      "path": "assets/images/largo-card-letter-d-64d8d709e296d9ba.svg",
+      "bytes": 8505,
+      "sha256": "64d8d709e296d9bad253696e61a393b6c68cbbfded51396fa8ff1abebbfad5a3"
     },
     {
       "path": "assets/images/largo-card-letter-d-a928069942b2576e.svg",
@@ -695,6 +705,11 @@
       "sha256": "9629c108350a6fed0f9330c32d5742f0ba74a8f62e4e7e92dd3c69f9c37ec02a"
     },
     {
+      "path": "assets/images/largo-card-letter-m-ff937770c5294abd.svg",
+      "bytes": 12472,
+      "sha256": "ff937770c5294abdaac72e00ce60cbb76c6adef974b90660fd15972d7661ae01"
+    },
+    {
       "path": "assets/images/largo-card-letter-v-45295e06f5caa32d.svg",
       "bytes": 573,
       "sha256": "45295e06f5caa32d3b614e7b169260d06deb09db48fd570b910873fb7c668ace"
@@ -703,6 +718,11 @@
       "path": "assets/images/largo-card-letter-v-6cb1849e1a6f14bc.svg",
       "bytes": 496,
       "sha256": "6cb1849e1a6f14bc0b7aa85b373a8fee819973bce45c3730b3b199ecac5e4b1b"
+    },
+    {
+      "path": "assets/images/largo-card-letter-v-85aa193ccb272e00.svg",
+      "bytes": 7858,
+      "sha256": "85aa193ccb272e0083e6c0a967c89bec7c9dbb8750efc515814b803d7d8867ea"
     },
     {
       "path": "assets/images/logo--akqa-d1387d88dc.svg",
