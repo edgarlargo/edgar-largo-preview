@@ -29,3 +29,9 @@ Loading audit — October 24, 2026
 The shared converter runtime now reuses exact HTML scans within each PHP request. Music starts after the first native user interaction; small interface sounds load independently of the page readiness queue. The local cold desktop audit transferred 3.62 MB instead of 4.79 MB (24.4% less), and local PHP home TTFB changed from 442 ms to 335 ms (five requests per route). Ten selected public routes retain their text, layout and graphics. A fresh four-template build reproduced both scripts and the PHP runtime, delivered through the existing WebSync connection. Browser checks confirm that the first gesture still starts music.
 
 One-second opening has not been achieved: the existing WebGL application and animated preloader still delay the visible content. Headless Chromium uses software GPU rendering; local measurements do not establish production device performance. Public static previews benefit from deferred music; the PHP timing applies to the local dynamic installation. No primary-domain migration is part of this update.
+
+Original studio music — October 24, 2026
+
+Five original instrumental loops now replace the imported background music: Studio, Glass, Orbit, Shadow and Return. Their shared score uses 100 BPM and B minor / D major. They were composed as a new note score and rendered with deterministic additive/FM/noise synthesis; no source recordings, external samples or music generation models were used. The source score, renderer and delivery hashes are in `music-sources/edgar-largo/`.
+
+The web audio totals 510,714 bytes across five Ogg/Vorbis files. Music still waits for the first native user interaction. Existing interface sound effects, page text, graphics, layout and JavaScript remain unchanged. Automated checks cover decoding, loop measurements, all ten selected routes and sound controls; an artistic listening review is not claimed.

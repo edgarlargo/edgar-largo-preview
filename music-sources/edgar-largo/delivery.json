@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "manifestSha256": "9bc5b7c7fbfe22736d9d4b95b46bf96ed3840931d9f8f88a66bacd0d8507d07e",
+  "tracks": [
+    {
+      "id": "generic",
+      "path": "uploads/largo-original-generic-925d68e2154a.ogg",
+      "sha256": "8315c51cb5cb3c8b62d7c291670a364f24fd383428e2144eea05e1f273d39c1e"
+    },
+    {
+      "id": "cinematic_0",
+      "path": "uploads/largo-original-cinematic_0-08f8328f5345.ogg",
+      "sha256": "3b5464e420fa95002d59d24c3fac0eb52f2b1646fcaf6de9c04f794d22168187"
+    },
+    {
+      "id": "cinematic_2",
+      "path": "uploads/largo-original-cinematic_2-b338c7a0a59c.ogg",
+      "sha256": "5cfe8943ec10797a97e7cc400d81847fb67ca22d027a6931e25581c17d59345b"
+    },
+    {
+      "id": "cinematic_3",
+      "path": "uploads/largo-original-cinematic_3-ade52dec5f38.ogg",
+      "sha256": "715ff6de8627f3e9f085a793d099c2f9f006d8de8e4efbe0deacc6300660f789"
+    },
+    {
+      "id": "generic_end",
+      "path": "uploads/largo-original-generic_end-2fe7b8ccfe9a.ogg",
+      "sha256": "a2d2f975cb6aba271a25ac4a99fe72749513971f53b3250ac0a19b06c6014b98"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "compose.py",
+      "sha256": "fd014f540b178744783eb878c58c231aace1c42e59fe4768606cad4e7ed91e6f"
+    },
+    {
+      "file": "score.json",
+      "sha256": "32c90a6314c8a229025ff4c0f242d306f83fa2bf9b96b852108efd794988aafb"
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "9bc5b7c7fbfe22736d9d4b95b46bf96ed3840931d9f8f88a66bacd0d8507d07e"
+    },
+    {
+      "file": "README.md",
+      "sha256": "d1395abc72817ec452faa5c0debf99a2f0358b75412fb72399f45ddf83984852"
+    }
+  ],
+  "audioDelivery": "The five web audio files are delivered through uploads; PCM masters and audition files are excluded."
+}

@@ -3085,6 +3085,31 @@
       "sha256": "cb685d92b5f762d8ee92628fcf1d0853c75348a2034981147330a805112e3894"
     },
     {
+      "path": "uploads/largo-original-cinematic_0-08f8328f5345.ogg",
+      "bytes": 93340,
+      "sha256": "3b5464e420fa95002d59d24c3fac0eb52f2b1646fcaf6de9c04f794d22168187"
+    },
+    {
+      "path": "uploads/largo-original-cinematic_2-b338c7a0a59c.ogg",
+      "bytes": 50129,
+      "sha256": "5cfe8943ec10797a97e7cc400d81847fb67ca22d027a6931e25581c17d59345b"
+    },
+    {
+      "path": "uploads/largo-original-cinematic_3-ade52dec5f38.ogg",
+      "bytes": 91956,
+      "sha256": "715ff6de8627f3e9f085a793d099c2f9f006d8de8e4efbe0deacc6300660f789"
+    },
+    {
+      "path": "uploads/largo-original-generic-925d68e2154a.ogg",
+      "bytes": 93078,
+      "sha256": "8315c51cb5cb3c8b62d7c291670a364f24fd383428e2144eea05e1f273d39c1e"
+    },
+    {
+      "path": "uploads/largo-original-generic_end-2fe7b8ccfe9a.ogg",
+      "bytes": 182211,
+      "sha256": "a2d2f975cb6aba271a25ac4a99fe72749513971f53b3250ac0a19b06c6014b98"
+    },
+    {
       "path": "uploads/largo-project-06744e2423e25ca0f5c2.webp",
       "bytes": 182214,
       "sha256": "6758878f0aa9552442ac5b54f6d16e8ab42c0e2bd1c2046ad1bf04b3499152ab"
