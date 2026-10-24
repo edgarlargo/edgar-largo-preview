@@ -659,8 +659,8 @@
     "/projects/ortomed/": {
       "title": "OrtoMed — Healthcare Website | Edgar Largo Studio",
       "description": "Explore the OrtoMed clinic website: medical services, specialist profiles and appointment requests, presented across desktop and mobile screens.",
-      "image": "assets/ortomed-case/cover.webp",
-      "imageAlt": "OrtoMed clinic website presentation with desktop and mobile screens",
+      "image": "assets/ortomed-case/ortomed-v2-01.webp",
+      "imageAlt": "OrtoMed clinic identity and website presentation, with the original logo on navy medical scrubs",
       "schema": [
         {
           "@type": "Organization",
@@ -684,7 +684,7 @@
           "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/ortomed/",
           "name": "OrtoMed — Healthcare Website | Edgar Largo Studio",
           "description": "Explore the OrtoMed clinic website: medical services, specialist profiles and appointment requests, presented across desktop and mobile screens.",
-          "image": "https://edgarlargo.github.io/edgar-largo-preview/assets/ortomed-case/cover.webp",
+          "image": "https://edgarlargo.github.io/edgar-largo-preview/assets/ortomed-case/ortomed-v2-01.webp",
           "inLanguage": "en",
           "isPartOf": {
             "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"

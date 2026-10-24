@@ -2428,8 +2428,8 @@
     },
     {
       "path": "assets/ortomed-case/case.css",
-      "bytes": 6229,
-      "sha256": "b73a2dff7f1ed01f4eb8e13d44029e3b37bdc49ec2ee2a7707f146eacb7d1bf7"
+      "bytes": 4620,
+      "sha256": "61490f3eb4c1dd34fd6b3e80ab8f0f560a00f721680de1cd85109bd77772046a"
     },
     {
       "path": "assets/ortomed-case/cover.webp",
@@ -2470,6 +2470,76 @@
       "path": "assets/ortomed-case/logo.png",
       "bytes": 13447,
       "sha256": "b516c2bf3a44dedee24b4cb604505199077f4b0afb4e1085af68f9ab3cb28f16"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-01.webp",
+      "bytes": 119754,
+      "sha256": "1937409264a7e914f3e4e627b2592da758ad6df6e29bf846e47c4025e9da869c"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-02.webp",
+      "bytes": 132282,
+      "sha256": "581604e85b1df852fd933d527a1b4543eff4abe615d2d9ddfb3c95b6cd18ce8f"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-03.webp",
+      "bytes": 49314,
+      "sha256": "deb0f5f98403ab288b66c7f1ccffc7a9a16a6023cfdf87681c5ca9d81b6c7cd4"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-04.webp",
+      "bytes": 57762,
+      "sha256": "db0f91658c262ff1c84734a9429e164bd24a9faae3699447ceee41bfab0a2acd"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-05.webp",
+      "bytes": 37470,
+      "sha256": "ab3e14f903235cc39b6f25a710e8e9d7a881582cd83666a9ae52931a1112749f"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-06.webp",
+      "bytes": 74106,
+      "sha256": "f713bce7caa700a7430a94c883a3dff4224bc9638ad54f9c21227ef56553f61d"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-07.webp",
+      "bytes": 165726,
+      "sha256": "dc9e949912039a8f9d0ef55c3c296610208955fce6deebee227c3ea8ccf2de98"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-08.webp",
+      "bytes": 73204,
+      "sha256": "fb9d65c0902ec87bc233981477bdb4712fcd5fff6617ba1a9b9b5324a183a58a"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-09.webp",
+      "bytes": 84626,
+      "sha256": "d050dc9d99eb763d99555a29aed8d88c26ceea9eb08b7727e41096eeda6cd508"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-10.webp",
+      "bytes": 318292,
+      "sha256": "2d7d809b8034256f253b1837bba5e2e2c3cec30ecba0e179e64e4c6d694d747b"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-11.webp",
+      "bytes": 142558,
+      "sha256": "bf3d29c943ed85aa59a43eefd9e3aafcbdb0064923d86b7016e8cee89f14250a"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-12.webp",
+      "bytes": 47828,
+      "sha256": "8b8866ed39f149a0d7347a9e1656a3498ffa5eb59233158a4b41caba9844329f"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-13.webp",
+      "bytes": 79140,
+      "sha256": "c3e781ab059b9ce7a23978622b08c8d76a9cc615b29298621f897ef2bd439724"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v2-14.webp",
+      "bytes": 44338,
+      "sha256": "fbdb442d4318e0a49f8f80bfdfb55e249e1e519e58394fbccd12f1de7f7b0794"
     },
     {
       "path": "assets/ortomed-case/services-desktop.webp",
@@ -2913,8 +2983,8 @@
     },
     {
       "path": "assets/scene/site-seo.json",
-      "bytes": 31253,
-      "sha256": "c6ce98aa5a495611f61a644611c11b10180a5cc2ec0f36c2fe34f57c8593342f"
+      "bytes": 31297,
+      "sha256": "c92c65a022b147e99655d16accdd87f88f1f4b76d4fc517109e67e2bf8470606"
     },
     {
       "path": "assets/scene/tunnel-exit.json",
