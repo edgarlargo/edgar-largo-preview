@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "bundlePath": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "plants": false
+    },
+    {
+      "bundlePath": "assets/js/hoisted-CUO_IjfL-718992f830.js",
+      "plants": false
+    }
+  ]
+}

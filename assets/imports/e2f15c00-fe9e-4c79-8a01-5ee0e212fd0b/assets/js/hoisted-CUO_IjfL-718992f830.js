@@ -67,195 +67,108 @@ function eaResponsiveProjectTexture(node,url){
   return allowed.some(path=>new URL(path,document.baseURI).href===selected)?selected:original;
 }
 /* easyadmin-responsive-project-media:end */
+/* easyadmin-project-decoration:plants-removed:v1 */
 
-/* Admintation source project images v1 */
-const eaProjectSourceImageStates=new WeakMap(),eaProjectSourceImageActive=new Set(),eaProjectSourceImageCanvases=new WeakSet();
+/* Admintation source project images v2 */
+// DOM-first photo entrance: no texture upload or canvas takeover.
+const eaProjectSourceImageStates=new WeakMap();
 const eaProjectSourceImageMotion=typeof matchMedia==='function'?matchMedia('(prefers-reduced-motion: reduce)'):null;
-let eaProjectSourceImageUploadAt=-1;
 function eaProjectSourceImageRead(node,data){
   data.eaSourceImage=node.hasAttribute('data-ea-project-story-item')&&node.closest('#project-details')?.getAttribute('data-ea-project-images')==='source';
 }
+function eaProjectSourceImageStyle(state,node,name,value){
+  if(node.style.getPropertyValue(name)!==value)node.style.setProperty(name,value);
+}
 function eaProjectSourceImageFallback(state){
-  if(!state.hidden)return;
-  const saved=state.opacity;
-  if(saved.value)state.image.style.setProperty('opacity',saved.value,saved.priority);
-  else state.image.style.removeProperty('opacity');
-  state.hidden=false;
-}
-function eaProjectSourceImageDropTexture(state){
-  const owner=state.owner,texture=state.texture;
-  if(owner.texture===texture)owner.texture=null;
-  if(owner.uniforms.u_texture.value===texture)owner.uniforms.u_texture.value=textureHelper.blackTexture;
-  state.texture=null;state.uploaded=false;
-  if(texture)texture.dispose();
-}
-function eaProjectSourceImageReset(state){
-  state.generation++;state.pending=false;state.failed=false;state.rendered=false;
-  eaProjectSourceImageFallback(state);eaProjectSourceImageDropTexture(state);
-  const owner=state.owner;
-  owner.imgVersion++;owner.activeTime=0;
-  owner.uniforms.u_readyRatio.value=0;owner.uniforms.u_activeRatio.value=0;
-  owner.ufxMesh.material.visible=false;
+  if(!state.managed)return;
+  for(const saved of state.styles){
+    try{
+      if(saved.value)saved.node.style.setProperty(saved.name,saved.value,saved.priority);
+      else saved.node.style.removeProperty(saved.name);
+    }catch{}
+  }
+  state.managed=false;
 }
 function eaProjectSourceImageClear(owner){
   const state=eaProjectSourceImageStates.get(owner);if(!state)return;
-  state.alive=false;eaProjectSourceImageReset(state);
+  state.alive=false;
+  // Restore the normal photo before any pooled story is removed or reused.
+  eaProjectSourceImageFallback(state);
   state.image.removeEventListener('load',state.onLoad);
   state.image.removeEventListener('error',state.onError);
-  if(owner.ufxMesh.onAfterRender===state.afterRender)owner.ufxMesh.onAfterRender=state.previousAfterRender;
-  owner.ufxMesh.refDom=state.previousRefDom;
-  owner.uniforms.u_eaStoryImageAlpha.value=0;
-  eaProjectSourceImageStates.delete(owner);eaProjectSourceImageActive.delete(state);
-}
-function eaProjectSourceImageStyleKey(state){
-  return state.ancestors.map(node=>node.className+'|'+node.style.background+'|'+node.style.backgroundColor+'|'+node.style.backgroundImage+'|'+node.style.clipPath+'|'+node.style.filter+'|'+node.style.mixBlendMode).join('\n');
-}
-function eaProjectSourceImageBackgroundSafe(state){
-  if(!state.image.isConnected)return false;
-  const root=state.image.closest('#project-details');
-  if(!root)return false;
-  if(root!==state.styleRoot){
-    state.styleRoot=root;state.ancestors=[];state.styleKey=null;
-    for(let node=state.image;node;node=node.parentElement){state.ancestors.push(node);if(node.id==='ui')break;}
-  }
-  const key=eaProjectSourceImageStyleKey(state);
-  if(key===state.styleKey)return state.backgroundSafe;
-  state.styleKey=key;state.backgroundSafe=true;
-  for(const node of state.ancestors){
-    const style=getComputedStyle(node),background=style.backgroundColor;
-    const transparent=background==='transparent'||/^rgba\([^)]*,\s*0(?:\.0+)?\s*\)$/.test(background);
-    if(!transparent||style.backgroundImage!=='none'||style.clipPath!=='none'||style.filter!=='none'||style.mixBlendMode!=='normal'){
-      state.backgroundSafe=false;break;
-    }
-  }
-  return state.backgroundSafe;
-}
-function eaProjectSourceImageUrl(image){
-  try{
-    const url=new URL(image.currentSrc||image.src,document.baseURI);
-    // SVG/GIF and cross-origin images retain their original DOM rendering.
-    // In particular, never lose SVG detail or animation to a raster texture.
-    return url.origin===location.origin&&/^https?:$/.test(url.protocol)&&/\.(?:jpe?g|png|webp|avif)$/i.test(url.pathname)?url.href:'';
-  }catch{return '';}
-}
-function eaProjectSourceImageWatch(renderer){
-  const canvas=renderer?.domElement;if(!canvas||eaProjectSourceImageCanvases.has(canvas))return;
-  eaProjectSourceImageCanvases.add(canvas);
-  canvas.addEventListener('webglcontextlost',()=>{
-    for(const state of eaProjectSourceImageActive){
-      state.lost=true;state.uploaded=false;state.rendered=false;
-      eaProjectSourceImageFallback(state);state.owner.ufxMesh.material.visible=false;
-      state.owner.uniforms.u_readyRatio.value=0;
-      if(state.texture)state.texture.__loaded=false;
-    }
-  });
-  canvas.addEventListener('webglcontextrestored',()=>{
-    eaProjectSourceImageUploadAt=-1;
-    for(const state of eaProjectSourceImageActive){
-      state.lost=false;
-      if(state.texture)state.texture.needsUpdate=true;
-    }
-  });
+  eaProjectSourceImageStates.delete(owner);
 }
 function eaProjectSourceImageBind(owner){
   const story=owner.eaStoryDom;
   if(!owner.data.eaSourceImage||!story||owner.type!=='image')return false;
   const figure=story.firstElementChild,image=figure?.firstElementChild;
-  if(story.children.length!==1||!figure?.classList.contains('ea-story-image')||figure.children.length!==1||image?.tagName!=='IMG'||story.querySelector('figcaption,video,audio,iframe,button')||!eaProjectSourceImageUrl(image))return false;
-  const state={owner,story,image,ancestors:[],styleRoot:null,alive:true,generation:0,pending:false,failed:false,source:'',texture:null,uploaded:false,rendered:false,hidden:false,lost:false,styleKey:null,backgroundSafe:false,
-    opacity:{value:image.style.getPropertyValue('opacity'),priority:image.style.getPropertyPriority('opacity')},previousRefDom:owner.ufxMesh.refDom,previousAfterRender:owner.ufxMesh.onAfterRender};
-  // Native activates pooled slides before appending them to the live page.
-  // Resolve computed styles only after insertion, never from a detached clone.
-  if(image.isConnected&&!eaProjectSourceImageBackgroundSafe(state))return false;
-  if(owner.texture?.__loaded)eaDisposeProjectTexture(owner.texture);
-  owner.texture=null;owner.imgVersion++;owner.activeTime=0;
-  owner.uniforms.u_texture.value=textureHelper.blackTexture;
-  owner.uniforms.u_readyRatio.value=0;owner.uniforms.u_activeRatio.value=0;
-  owner.uniforms.u_eaStoryImageAlpha.value=1;
-  const width=Number(owner.data.width),height=Number(owner.data.height);
-  if(width>0&&height>0)owner.aspect=width/height;
-  owner.ufxMesh.refDom=image;owner.ufxMesh.material.visible=false;
-  state.afterRender=function(renderer,...args){
-    if(state.previousAfterRender)state.previousAfterRender.call(this,renderer,...args);
-    if(!state.alive||state.lost||!state.uploaded||owner.texture!==state.texture||owner.uniforms.u_texture.value!==state.texture||!(owner.uniforms.u_opacity.value>0)||!image.isConnected||!owner.isActive||!eaProjectSourceImageBackgroundSafe(state))return;
-    state.rendered=true;
-    if(!state.hidden){image.style.setProperty('opacity','0');state.hidden=true;}
-  };
-  owner.ufxMesh.onAfterRender=state.afterRender;
-  state.onLoad=()=>{if(state.alive)eaProjectSourceImageUpdate(owner);};
-  state.onError=()=>{
-    if(!state.alive)return;
-    eaProjectSourceImageReset(state);state.failed=true;
-  };
-  image.addEventListener('load',state.onLoad);image.addEventListener('error',state.onError);
-  eaProjectSourceImageStates.set(owner,state);eaProjectSourceImageActive.add(state);
-  eaProjectSourceImageWatch(properties.renderer);
-  return true;
-}
-async function eaProjectSourceImagePrepare(state,source){
-  if(state.pending||state.failed)return;
-  state.pending=true;
-  const generation=state.generation,version=state.owner.imgVersion;
+  if(story.children.length!==1||!figure?.classList.contains('ea-story-image')||figure.children.length!==1||image?.tagName!=='IMG'||story.querySelector('figcaption,video,audio,iframe,button'))return false;
   try{
-    if(typeof state.image.decode==='function')await state.image.decode();
-    const {owner,image}=state;
-    if(!state.alive||generation!==state.generation||version!==owner.imgVersion||owner.eaStoryDom!==state.story||!image.isConnected||source!==eaProjectSourceImageUrl(image))return;
-    const renderer=properties.renderer,width=image.naturalWidth,height=image.naturalHeight;
-    const originalWidth=Number(owner.data.width),originalHeight=Number(owner.data.height),limit=renderer?.capabilities.maxTextureSize||0;
-    // naturalWidth can be density-corrected for w-srcset. The original source
-    // dimensions are a conservative upper bound for the non-upscaled variants.
-    if(!(width>0&&height>0&&limit>0)||width>limit||height>limit||originalWidth>limit||originalHeight>limit){state.failed=true;return;}
-    // Reuse the browser-selected, decoded HTMLImageElement: no second request,
-    // no reconstructed srcset selection, and the same native Texture defaults.
-    const texture=new Texture(image);
-    texture.size=new Vector2(width,height);
-    texture.minFilter=settings.USE_WEBGL2?LinearMipmapLinearFilter:LinearFilter;
-    texture.generateMipmaps=!!settings.USE_WEBGL2;
-    texture.anisotropy=texture.generateMipmaps?renderer.capabilities.getMaxAnisotropy():1;
-    texture.flipY=true;texture.needsUpdate=true;
-    texture.__url=source;texture.__version=version;texture.__loaded=false;
-    state.texture=texture;
+    const state={owner,story,figure,image,alive:true,failed:false,managed:false,source:'',activeSince:null,readySince:null,finished:false,styles:[],baseOpacity:1};
+    for(const [node,names]of [[image,['opacity','transition']],[figure,['clip-path','background-color','transition']]]){
+      for(const name of names)state.styles.push({node,name,value:node.style.getPropertyValue(name),priority:node.style.getPropertyPriority(name)});
+    }
+    state.onLoad=()=>{state.failed=false;if(state.alive)eaProjectSourceImageUpdate(owner);};
+    state.onError=()=>{state.failed=true;state.activeSince=null;state.readySince=null;eaProjectSourceImageFallback(state);};
+    image.addEventListener('load',state.onLoad);image.addEventListener('error',state.onError);
+    eaProjectSourceImageStates.set(owner,state);
+    // The existing structured-story pipeline remains the owner of layout,
+    // texture cleanup and its disabled mesh. Only the visible DOM photo moves.
+    return false;
   }catch{
-    if(generation===state.generation){state.failed=true;eaProjectSourceImageFallback(state);}
-  }finally{if(generation===state.generation)state.pending=false;}
+    const state=eaProjectSourceImageStates.get(owner);
+    if(state){eaProjectSourceImageFallback(state);state.failed=true;}
+    return false;
+  }
 }
 function eaProjectSourceImageUpdate(owner){
   const state=eaProjectSourceImageStates.get(owner);
-  if(!state||!state.alive||!owner.isActive||owner.eaStoryDom!==state.story||!state.image.isConnected)return;
-  const source=eaProjectSourceImageUrl(state.image);
-  if(source!==state.source){eaProjectSourceImageReset(state);state.source=source;}
-  if(!source||state.lost||!eaProjectSourceImageBackgroundSafe(state)){
-    eaProjectSourceImageFallback(state);owner.ufxMesh.material.visible=false;return;
-  }
-  const position=owner.uniforms.u_domXY.value,range=owner.uniforms.u_domWH.value,margin=1000;
-  const near=range.x>0&&range.y>0&&position.x+range.x>=-margin&&position.x<=properties.viewportWidth+margin&&position.y+range.y>=-margin&&position.y<=properties.viewportHeight+margin;
-  const geometryKnown=range.x>0&&range.y>0&&properties.viewportWidth>0&&properties.viewportHeight>0&&[position.x,position.y,range.x,range.y].every(Number.isFinite);
-  const far=geometryKnown&&(position.x+range.x< -2000||position.x>properties.viewportWidth+2000||position.y+range.y< -2000||position.y>properties.viewportHeight+2000);
-  if(state.texture&&far){
-    // Keep a wider release margin than the preparation margin to avoid churn.
-    // The pooled DOM image/currentSrc stay intact for a reverse scroll; only
-    // this adapter's GPU texture is released, with fallback restored offscreen.
-    eaProjectSourceImageReset(state);return;
-  }
-  if(near&&state.image.loading==='lazy')state.image.loading='eager';
-  if(near&&!state.texture&&!state.pending&&!state.failed&&state.image.complete&&state.image.naturalWidth>0)eaProjectSourceImagePrepare(state,source);
-  if(near&&state.texture&&!state.uploaded&&eaProjectSourceImageUploadAt!==properties.time){
-    eaProjectSourceImageUploadAt=properties.time;
-    try{
-      // Warm at most one GPU texture per existing native tick. The existing
-      // page loop owns scheduling; this adapter creates no animation loop.
-      properties.renderer.initTexture(state.texture);
-      state.uploaded=true;state.texture.__loaded=true;
-      owner.texture=state.texture;owner.uniforms.u_texture.value=state.texture;
-      owner.uniforms.u_textureSize.value.copy(state.texture.size);
-      owner.uniforms.u_readyRatio.value=0;owner.uniforms.u_activeRatio.value=0;owner.activeTime=0;
-    }catch{
-      state.failed=true;eaProjectSourceImageFallback(state);eaProjectSourceImageDropTexture(state);
+  if(!state||!state.alive)return;
+  try{
+    if(!owner.isActive||owner.eaStoryDom!==state.story||!state.image.isConnected){eaProjectSourceImageFallback(state);state.activeSince=null;return;}
+    const image=state.image,source=image.currentSrc||image.src;
+    if(source!==state.source){
+      eaProjectSourceImageFallback(state);state.source=source;state.failed=false;
+      state.activeSince=null;state.readySince=null;state.finished=false;
     }
-  }
-  owner.ufxMesh.material.visible=state.uploaded&&!state.failed;
-  if(state.uploaded&&eaProjectSourceImageMotion?.matches){
-    owner.uniforms.u_activeRatio.value=1;owner.uniforms.u_readyRatio.value=1;
+    const rect=image.getBoundingClientRect(),width=properties.viewportWidth,height=properties.viewportHeight;
+    const geometryKnown=width>0&&height>0&&rect.width>0&&rect.height>0&&[rect.left,rect.right,rect.top,rect.bottom].every(Number.isFinite);
+    const near=geometryKnown&&rect.right>=-1000&&rect.left<=width+1000&&rect.bottom>=-1000&&rect.top<=height+1000;
+    if(near&&image.loading==='lazy')image.loading='eager';
+    const visible=geometryKnown&&rect.right>0&&rect.left<width&&rect.bottom>0&&rect.top<height;
+    // A complete, naturally sized IMG is already browser-ready. Waiting for
+    // decode() again can stall responsive photos in Safari. The DOM renders
+    // normally throughout loading and is never hidden for a canvas hand-off.
+    if(state.failed||!visible||!image.complete||!(image.naturalWidth>0&&image.naturalHeight>0)){
+      eaProjectSourceImageFallback(state);state.activeSince=null;
+      if(!visible)state.finished=false;
+      return;
+    }
+    if(eaProjectSourceImageMotion?.matches){eaProjectSourceImageFallback(state);state.finished=true;return;}
+    const now=properties.time;
+    if(!Number.isFinite(now)){eaProjectSourceImageFallback(state);return;}
+    if(state.finished)return;
+    if(state.activeSince===null){
+      state.activeSince=now;if(state.readySince===null)state.readySince=now;
+      const opacity=Number.parseFloat(getComputedStyle(image).opacity);
+      state.baseOpacity=Number.isFinite(opacity)?Math.max(0,Math.min(1,opacity)):1;
+    }
+    const active=Math.max(0,Math.min(1,now-state.activeSince)),ready=Math.max(0,Math.min(1,now-state.readySince));
+    if(active>=1&&ready>=1){eaProjectSourceImageFallback(state);state.finished=true;return;}
+    // Match the source's 60-to-100-percent, one-second expo-out mask.
+    // Keep at least 20 percent of the real photo visible even on the first
+    // frame, so an interrupted optional entrance can never blank the photo.
+    const eased=active>=1?1:1-Math.pow(2,-10*active),inset=20*(1-eased);
+    const highlight=owner.uniforms.u_highlightColor?.value?.getStyle?.()||'transparent';
+    state.managed=true;
+    eaProjectSourceImageStyle(state,image,'transition','none');
+    eaProjectSourceImageStyle(state,state.figure,'transition','none');
+    eaProjectSourceImageStyle(state,state.figure,'background-color',highlight);
+    eaProjectSourceImageStyle(state,state.figure,'clip-path','inset('+inset.toFixed(3)+'%)');
+    eaProjectSourceImageStyle(state,image,'opacity',String(state.baseOpacity*(.2+.8*ready)));
+  }catch{
+    // This optional entrance must never escape into the native page update.
+    eaProjectSourceImageFallback(state);state.failed=true;
   }
 }
 /* Admintation source project images end */
@@ -5988,7 +5901,7 @@ attribute float centroidY;uniform mat4 u_shadowViewMatrixCamera;uniform mat4 u_s
 varying vec2 v_uv;void main(){vec3 basePos=getBasePosition(position);vec3 screenPos=getScreenPosition(basePos);gl_Position=projectionMatrix*modelViewMatrix*vec4(screenPos,1.0);v_uv=padUv(uv);vec4 worldPosition=modelMatrix*vec4(position,1.0);v_worldPosition=worldPosition.xyz;}`,frag$f=`#define GLSLIFY 1
 uniform sampler2D u_texture;uniform sampler2D u_shadowTexture;uniform vec3 u_shadowProjPosition;uniform mat4 u_shadowViewMatrixCamera;uniform mat4 u_shadowProjectionMatrixCamera;uniform mat4 u_shadowModelMatrixCamera;uniform vec3 u_bgColor;uniform float u_plantsShadow;uniform vec3 u_previewBgColor;uniform float u_previewBgThreshold;uniform bool u_isVertical;uniform float u_scrollXStrength;uniform float u_activeRatio;varying vec2 v_uv;varying vec3 v_worldPosition;
 #include <getBlueNoise>
-void main(){vec3 noise=getBlueNoise(gl_FragCoord.xy+vec2(22.,45.));vec2 imageUv=v_uv;float moveAxis=u_isVertical ? 1.-v_uv.y : v_uv.x;float waveOffset=cos(moveAxis*6.2831853)*2.*u_scrollXStrength*u_scrollXStrength;vec2 imageUvOffsetBit=vec2(0.0,0.0);if(u_isVertical){imageUv.x+=waveOffset;imageUvOffsetBit.y=u_scrollXStrength/8.;}else{imageUv.y+=waveOffset;imageUvOffsetBit.x=u_scrollXStrength/8.;}imageUv+=imageUvOffsetBit*noise.x;vec4 image=vec4(0.0,0.0,0.0,0.0);vec4 baseColor=vec4(u_bgColor,0.0);for(int i=0;i<8;i++){vec4 texel=texture2D(u_texture,imageUv);image+=mix(baseColor,texel,texel.a);imageUv+=imageUvOffsetBit;}image/=8.;vec3 worldPosition=v_worldPosition;worldPosition.z+=mix(0.0,-4.,image.a);vec3 projectorDirection=normalize(u_shadowProjPosition-worldPosition);float projectorDistance=length(u_shadowProjPosition-worldPosition);vec4 texCoords=u_shadowViewMatrixCamera*vec4(worldPosition,1.0);vec2 shadowUv=(texCoords.xy/texCoords.w)*0.9;shadowUv.y=1.0-shadowUv.y;vec4 shadowImage=texture2D(u_shadowTexture,shadowUv);float shadow=max(shadowImage.r,max(shadowImage.g,shadowImage.b));shadow=mix(0.,mix(shadow,0.35+shadow*0.65,image.w),u_activeRatio);vec3 color=image.rgb;color=mix(color,u_previewBgColor,smoothstep(u_previewBgThreshold,u_previewBgThreshold+fwidth(moveAxis),moveAxis));color*=mix(1.0,u_plantsShadow,shadow);gl_FragColor=vec4(color,1.);}`,_v3=new Vector3;let _c1$2=new Color;new Color;class ProjectDetailsScreen{screenRT;screenCamera;screenScene=new Scene;screenMesh;shadowContainer=new Object3D;shadowCamera;shadowRt;shadowBlurRt1;shadowBlurRt2;shadowBlurRt3;shadowFinalRt;plantGeo;plantMaterial;plantMesh0;plantMesh1;plantMesh2;velocity=new Vector2;mouse=new Vector2;angleForce=0;angleForceEased=0;shadow=1;previewBgThreshold=1;previewColorRatio=0;previewBgColorDefaultColorHex="#F3F4F9";previewBgColorHex="#000";sharedUniforms={u_shadowTexture:{value:null},u_shadowViewMatrixCamera:{value:new Matrix4},u_shadowProjectionMatrixCamera:{value:new Matrix4},u_shadowModelMatrixCamera:{value:new Matrix4},u_shadowProjPosition:{value:new Vector3}};preInit(e){this.screenCamera=new OrthographicCamera(-1,1,1,-1,0,200),this.screenCamera.position.set(0,0,100),this.screenRT=fboHelper.createRenderTarget(1,1),this.screenMesh=new UfxMesh({refDom:e,uniforms:Object.assign({u_texture:{value:this.screenRT.texture},u_bgColor:projectDetailsSection.sharedUniforms.u_bgColor,u_previewBgColor:{value:new Color("#f00")},u_previewBgThreshold:{value:1},u_plantsShadow:{value:1},u_scrollXStrength:{value:0},u_activeRatio:{value:0},u_isVertical:projectDetailsSection.sharedUniforms.u_isVertical},this.sharedUniforms,blueNoise.sharedUniforms),vertexShader:vert$b,fragmentShader:frag$f,depthWrite:!0,depthTest:!0,transparent:!1}),projectPage.preUfxContainer.add(this.screenMesh),properties.loader.add(settings.MODEL_PATH+"plant.buf",{onLoad:t=>this.plantGeo=t}),this.shadowRT=fboHelper.createRenderTarget(1,1),this.shadowBlurRT1=fboHelper.createRenderTarget(1,1),this.shadowBlurRT2=fboHelper.createRenderTarget(1,1),this.shadowBlurRT3=fboHelper.createRenderTarget(1,1),this.shadowFinalRt=fboHelper.createRenderTarget(1,1),this.shadowCamera=new OrthographicCamera(-1,1,1,-1,.001,50),this.sharedUniforms.u_shadowTexture.value=this.shadowFinalRt.texture}init(){this.shadowCamera.position.set(0,0,10),this.shadowCamera.lookAt(.2,0,0),this.shadowCamera.zoom=2500,this.shadowCamera.updateProjectionMatrix(),this.shadowCamera.updateMatrixWorld(),this.shadowCamera.updateWorldMatrix(),this.plantGeo.computeBoundingBox();const e=new ShaderMaterial({uniforms:{u_time:properties.sharedUniforms.u_time,u_bbMin:{value:this.plantGeo.boundingBox.min},u_bbMax:{value:this.plantGeo.boundingBox.max},u_delay:{value:0},u_angleForce:{value:0},u_mask:{value:new Vector3}},vertexShader,fragmentShader:fragmentShader$3,side:2});e.uniforms.u_mask.value.set(1,0,0),this.plantMesh0=new Mesh(this.plantGeo,e),this.plantMesh0.position.set(-.55,-.8,-5),this.plantMesh0.rotation.set(0,-.2,-.2);const t=e.clone();t.uniforms.u_time=properties.sharedUniforms.u_time,t.uniforms.u_mask.value.set(0,1,0),this.plantMesh1=new Mesh(this.plantGeo,t),this.plantMesh1.position.set(-.75,-.8,0),this.plantMesh1.rotation.set(0,.2,-.5);const r=e.clone();r.uniforms.u_time=properties.sharedUniforms.u_time,r.uniforms.u_mask.value.set(0,0,1),this.plantMesh2=new Mesh(this.plantGeo,r),this.plantMesh2.position.set(-.45,-.8,5),this.plantMesh2.rotation.set(.3,.3,.1),this.shadowContainer.add(this.plantMesh0),this.shadowContainer.add(this.plantMesh1),this.shadowContainer.add(this.plantMesh2),this.plantMesh0.onBeforeRender=this._onPlantMeshRender.bind(this,this.plantMesh0),this.plantMesh1.onBeforeRender=this._onPlantMeshRender.bind(this,this.plantMesh1),this.plantMesh2.onBeforeRender=this._onPlantMeshRender.bind(this,this.plantMesh2)}_onPlantMeshRender(e){let t=e.material.uniforms.u_mask.value;properties.gl.colorMask(t.x==1,t.y==1,t.z==1,!0)}resize(){let e=properties.width,t=properties.height;this.screenMesh.syncDom(0),this.screenRT.setSize(e,t);let r=properties.viewportWidth,n=properties.viewportHeight;this.screenCamera.left=-r*.5,this.screenCamera.right=r*.5,this.screenCamera.top=n*.5,this.screenCamera.bottom=-n*.5;const a=.75;let l=Math.ceil(a*e),c=Math.ceil(a*t);this.shadowRT.setSize(l,c),this.shadowFinalRt.setSize(l,c),this.shadowCamera.left=-r*.5,this.shadowCamera.right=r*.5,this.shadowCamera.top=n*.5,this.shadowCamera.bottom=-n*.5,this.shadowCamera.updateProjectionMatrix()}update(e){if(!this.plantMesh0)return;let t=projectDetailsSection.scrollPane;_v3.set(-.1,.1,10),_v3.x+=.03*input.mouseXY.x,_v3.y+=.015*input.mouseXY.y,this.shadowCamera.position.lerp(_v3,4*e),this.shadowCamera.lookAt(-.1,0,0),this.shadowCamera.updateProjectionMatrix(),this.shadowCamera.updateMatrixWorld(),this.shadowCamera.updateWorldMatrix(),this.angleForce+=Math.abs(t.scrollViewDelta),this.angleForceEased=math.mix(this.angleForceEased,this.angleForce,.02);const r=math.clamp(this.angleForce-this.angleForceEased,-1,1);this.sharedUniforms.u_shadowViewMatrixCamera.value.copy(this.shadowCamera.matrixWorldInverse),this.sharedUniforms.u_shadowProjectionMatrixCamera.value.copy(this.shadowCamera.projectionMatrix),this.sharedUniforms.u_shadowModelMatrixCamera.value.copy(this.shadowCamera.matrixWorld),this.sharedUniforms.u_shadowProjPosition.value.copy(this.shadowCamera.position),fboHelper.copy(textureHelper.transparentTexture,this.shadowFinalRt);const n=fboHelper.getColorState();let a=fboHelper.renderer.getRenderTarget(),l=fboHelper.renderer;l.setRenderTarget(this.shadowRT),l.setClearColor(0,0),this.plantMesh0.material.uniforms.u_delay.value=0,this.plantMesh1.material.uniforms.u_delay.value=.2,this.plantMesh2.material.uniforms.u_delay.value=.5,this.plantMesh0.material.uniforms.u_angleForce.value=r,this.plantMesh1.material.uniforms.u_angleForce.value=r,this.plantMesh2.material.uniforms.u_angleForce.value=r,fboHelper.renderMesh(this.shadowContainer,this.shadowRT,this.shadowCamera),properties.gl.colorMask(!0,!0,!0,!0),blur.blur(2,1,this.shadowRT,this.shadowBlurRT1),textureHelper.mixChannels(this.shadowRT.texture,this.shadowFinalRt,0,-1,-1,-1),blur.blur(4,.5,this.shadowRT,this.shadowBlurRT2),textureHelper.mixChannels(this.shadowRT.texture,this.shadowFinalRt,-1,1,-1,-1),blur.blur(4,.75,this.shadowRT,this.shadowBlurRT3),textureHelper.mixChannels(this.shadowRT.texture,this.shadowFinalRt,-1,-1,2,-1),l.setRenderTarget(null),this.screenCamera.position.x=properties.viewportWidth*.5,this.screenCamera.position.y=-properties.viewportHeight*.5,this.screenCamera.updateProjectionMatrix(),this.screenMesh.material.uniforms.u_plantsShadow.value=this.shadow,this.screenMesh.material.uniforms.u_previewBgThreshold.value=this.previewBgThreshold,this.screenMesh.material.uniforms.u_scrollXStrength.value=Math.min(.15,t.isActive?t.scrollViewDelta:0),this.screenMesh.material.uniforms.u_previewBgColor.value.setStyle(this.previewBgColorDefaultColorHex).lerp(_c1$2.setStyle(this.previewBgColorHex),this.previewColorRatio),this.screenMesh.material.uniforms.u_activeRatio.value=projectPage.activeRatio,this.screenMesh.update(),l.setClearColor(0,0),l.clear(this.screenRT),l.setRenderTarget(this.screenRT),l.render(this.screenScene,this.screenCamera),l.setRenderTarget(a),fboHelper.setColorState(n)}}const projectDetailsScreen=new ProjectDetailsScreen;class Route{constructor(e){this.path=e,this.pathNodes=e?e.split("/"):[],this.target=null,this.title="",this.dom=null,this.scrollNavPath="",this.scrollNavText="",this.hasContentPreloaded=!1,this.content={}}setTitleDom(e,t,r,n){this.title=e,this.dom=t,this.scrollNavPath=r,this.scrollNavText=n}setTarget(e){let t=null;for(let r=0;r<e.length;r++){let n=e[r];if(n.regExp.test(this.path)){t=n;break}}t||(console.error("route not found for path: "+this.path),window.location.href=window.location.origin),this.target=t.target}}let loc=window.location,ORIGIN=window.location.origin,URL_PREFIX_REGEX=new RegExp("^"+ORIGIN.replace(/\//g,"\\/"));/* Admintation imported RouteManager adapter v2 */
+void main(){vec3 noise=getBlueNoise(gl_FragCoord.xy+vec2(22.,45.));vec2 imageUv=v_uv;float moveAxis=u_isVertical ? 1.-v_uv.y : v_uv.x;float waveOffset=cos(moveAxis*6.2831853)*2.*u_scrollXStrength*u_scrollXStrength;vec2 imageUvOffsetBit=vec2(0.0,0.0);if(u_isVertical){imageUv.x+=waveOffset;imageUvOffsetBit.y=u_scrollXStrength/8.;}else{imageUv.y+=waveOffset;imageUvOffsetBit.x=u_scrollXStrength/8.;}imageUv+=imageUvOffsetBit*noise.x;vec4 image=vec4(0.0,0.0,0.0,0.0);vec4 baseColor=vec4(u_bgColor,0.0);for(int i=0;i<8;i++){vec4 texel=texture2D(u_texture,imageUv);image+=mix(baseColor,texel,texel.a);imageUv+=imageUvOffsetBit;}image/=8.;vec3 worldPosition=v_worldPosition;worldPosition.z+=mix(0.0,-4.,image.a);vec3 projectorDirection=normalize(u_shadowProjPosition-worldPosition);float projectorDistance=length(u_shadowProjPosition-worldPosition);vec4 texCoords=u_shadowViewMatrixCamera*vec4(worldPosition,1.0);vec2 shadowUv=(texCoords.xy/texCoords.w)*0.9;shadowUv.y=1.0-shadowUv.y;vec4 shadowImage=texture2D(u_shadowTexture,shadowUv);float shadow=max(shadowImage.r,max(shadowImage.g,shadowImage.b));shadow=mix(0.,mix(shadow,0.35+shadow*0.65,image.w),u_activeRatio);vec3 color=image.rgb;color=mix(color,u_previewBgColor,smoothstep(u_previewBgThreshold,u_previewBgThreshold+fwidth(moveAxis),moveAxis));color*=mix(1.0,u_plantsShadow,shadow);gl_FragColor=vec4(color,1.);}`,_v3=new Vector3;let _c1$2=new Color;new Color;class ProjectDetailsScreen{screenRT;screenCamera;screenScene=new Scene;screenMesh;shadow=1;previewBgThreshold=1;previewColorRatio=0;previewBgColorDefaultColorHex="#F3F4F9";previewBgColorHex="#000";sharedUniforms={u_shadowTexture:{value:null},u_shadowViewMatrixCamera:{value:new Matrix4},u_shadowProjectionMatrixCamera:{value:new Matrix4},u_shadowModelMatrixCamera:{value:new Matrix4},u_shadowProjPosition:{value:new Vector3}};preInit(e){this.screenCamera=new OrthographicCamera(-1,1,1,-1,0,200),this.screenCamera.position.set(0,0,100),this.screenRT=fboHelper.createRenderTarget(1,1),this.screenMesh=new UfxMesh({refDom:e,uniforms:Object.assign({u_texture:{value:this.screenRT.texture},u_bgColor:projectDetailsSection.sharedUniforms.u_bgColor,u_previewBgColor:{value:new Color("#f00")},u_previewBgThreshold:{value:1},u_plantsShadow:{value:1},u_scrollXStrength:{value:0},u_activeRatio:{value:0},u_isVertical:projectDetailsSection.sharedUniforms.u_isVertical},this.sharedUniforms,blueNoise.sharedUniforms),vertexShader:vert$b,fragmentShader:frag$f,depthWrite:!0,depthTest:!0,transparent:!1}),projectPage.preUfxContainer.add(this.screenMesh),this.sharedUniforms.u_shadowTexture.value=textureHelper.transparentTexture;}init(){}resize(){let e=properties.width,t=properties.height;this.screenMesh.syncDom(0),this.screenRT.setSize(e,t);let r=properties.viewportWidth,n=properties.viewportHeight;this.screenCamera.left=-r*.5,this.screenCamera.right=r*.5,this.screenCamera.top=n*.5,this.screenCamera.bottom=-n*.5;}update(e){let t=projectDetailsSection.scrollPane;const n=fboHelper.getColorState();let a=fboHelper.renderer.getRenderTarget(),l=fboHelper.renderer;l.setRenderTarget(null),this.screenCamera.position.x=properties.viewportWidth*.5,this.screenCamera.position.y=-properties.viewportHeight*.5,this.screenCamera.updateProjectionMatrix(),this.screenMesh.material.uniforms.u_plantsShadow.value=1,this.screenMesh.material.uniforms.u_previewBgThreshold.value=this.previewBgThreshold,this.screenMesh.material.uniforms.u_scrollXStrength.value=Math.min(.15,t.isActive?t.scrollViewDelta:0),this.screenMesh.material.uniforms.u_previewBgColor.value.setStyle(this.previewBgColorDefaultColorHex).lerp(_c1$2.setStyle(this.previewBgColorHex),this.previewColorRatio),this.screenMesh.material.uniforms.u_activeRatio.value=projectPage.activeRatio,this.screenMesh.update(),l.setClearColor(0,0),l.clear(this.screenRT),l.setRenderTarget(this.screenRT),l.render(this.screenScene,this.screenCamera),l.setRenderTarget(a),fboHelper.setColorState(n);}}const projectDetailsScreen=new ProjectDetailsScreen;class Route{constructor(e){this.path=e,this.pathNodes=e?e.split("/"):[],this.target=null,this.title="",this.dom=null,this.scrollNavPath="",this.scrollNavText="",this.hasContentPreloaded=!1,this.content={}}setTitleDom(e,t,r,n){this.title=e,this.dom=t,this.scrollNavPath=r,this.scrollNavText=n}setTarget(e){let t=null;for(let r=0;r<e.length;r++){let n=e[r];if(n.regExp.test(this.path)){t=n;break}}t||(console.error("route not found for path: "+this.path),window.location.href=window.location.origin),this.target=t.target}}let loc=window.location,ORIGIN=window.location.origin,URL_PREFIX_REGEX=new RegExp("^"+ORIGIN.replace(/\//g,"\\/"));/* Admintation imported RouteManager adapter v2 */
 function eaImportedRouteContext(){
   const value=window.__EA_ROUTE__;
   if(!value||typeof value.sourceUrl!=="string"||typeof value.basePath!=="string")return null;

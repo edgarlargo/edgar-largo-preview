@@ -861,13 +861,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1376500,
-      "sha256": "76475ebbed37753b3ad8d47c914d764370ad65a70434b571da437b78bb41e8e7"
+      "bytes": 1366790,
+      "sha256": "aa934a8133e6c1b86186ddb01433c93ab0a8def09c087bfdd309792b128c5eae"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1527049,
-      "sha256": "f944ce8afd481ab8df31cbaf7340e5f63f60d18533e435a9605782a65bec2faa"
+      "bytes": 1517339,
+      "sha256": "2f0642c239471416b2e2d3c6d24433bd365546a431b9075ba6f26b6d25808f93"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -2252,7 +2252,7 @@
     {
       "path": "assets/scene/asset-versions.json",
       "bytes": 2196,
-      "sha256": "f892a433bd880061d148be6d513fbe1e08aadc9d674f21b0f94f32a287b03c1c"
+      "sha256": "36f8250e4632b1170da6f3a862dab93182612ba3ae10b3147693e3ea8f62e09a"
     },
     {
       "path": "assets/scene/brand-color.json",
@@ -2623,6 +2623,11 @@
       "path": "assets/scene/photo-portrait.json",
       "bytes": 764,
       "sha256": "08bd064826293126104b8e9f40ff27810f83f0847ae025698e436033bd44f5a6"
+    },
+    {
+      "path": "assets/scene/project-decoration.json",
+      "bytes": 289,
+      "sha256": "fb2aecbf6f8ab80ffdb3110159c435ad20c84edb712029e58c0d0e3051f71cd9"
     },
     {
       "path": "assets/scene/project-texture-loading.json",
