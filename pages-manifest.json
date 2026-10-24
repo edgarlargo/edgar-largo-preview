@@ -390,6 +390,126 @@
       "sha256": "9773b85132added4372b76416c3ec21f4146958babb1956ecb6869eae8caa291"
     },
     {
+      "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
+      "bytes": 197886,
+      "sha256": "21e5769821995057dd3344b297b997a50d3acdd9688b2430d68b42dc2394a975"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/2273311f061e09e2.webp",
+      "bytes": 66488,
+      "sha256": "2273311f061e09e2162aec38ff74d33ee9836f5e5bdc742106ec745362b40963"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/27f1ef0d4c405f82.webp",
+      "bytes": 167390,
+      "sha256": "27f1ef0d4c405f82f48e232567857d08cbb2fde01654aa792a3ba5cefef96492"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/2bb994b5be1f4a7d.webp",
+      "bytes": 14330,
+      "sha256": "2bb994b5be1f4a7da790e6d5b270c267466ee6f4ed22dfd8f150f315e1f95d8d"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/2c14f8f5e63b38f0.webp",
+      "bytes": 76434,
+      "sha256": "2c14f8f5e63b38f0afec9c51b23b392d654685c66ab54fc759b53c4048ebb13c"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/2d2689ffa99abdc8.webp",
+      "bytes": 69234,
+      "sha256": "2d2689ffa99abdc89ec1bada666671db6aec55ee9a3cac2d10963cfbd100df5f"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/43a665c7f3270092.webp",
+      "bytes": 115208,
+      "sha256": "43a665c7f3270092b864918e4962b2781fc977ddd1c511c0b3b1dca6d0778851"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/52f9467171a34b76.webp",
+      "bytes": 48712,
+      "sha256": "52f9467171a34b76e9f54489a8eaa5981e89e947d381cb6da398fe40edbb59a5"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/6c973048fe2b93a7.webp",
+      "bytes": 89982,
+      "sha256": "6c973048fe2b93a78c7aeb5a2b2a1554d8409d9f71f45d2f463f7ed06431f713"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/76f1269b342f015d.webp",
+      "bytes": 74330,
+      "sha256": "76f1269b342f015d9086f8ea105855dc621a67c1fdb55b6674cbc11359142974"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/82db12e0fdb966c7.webp",
+      "bytes": 65556,
+      "sha256": "82db12e0fdb966c75c9adf756caaf07c58ea6ca9c4e35c41a762c8507d0cd816"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/8cf679f4ec1c17ee.webp",
+      "bytes": 120516,
+      "sha256": "8cf679f4ec1c17ee6c3a1fbe6bd70171cfa488e2f9168dbe720cfc2610042a29"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/9acfc3ddc6ea0c23.webp",
+      "bytes": 37132,
+      "sha256": "9acfc3ddc6ea0c233d4ea29965da91178d810894e44a8991a8a20d814f0437a3"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/a743e1c6a08d5253.webp",
+      "bytes": 66614,
+      "sha256": "a743e1c6a08d52539d08372d2682f034d29d0e645b6290999312209030423f8c"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/b44e6a17ea701c9e.webp",
+      "bytes": 34198,
+      "sha256": "b44e6a17ea701c9eeeb479357517d772a42fb39110aa1701cfe9e93ca4424f84"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/b5523f4b2eb2a79d.webp",
+      "bytes": 128264,
+      "sha256": "b5523f4b2eb2a79d4510f1fa46fffe66e4a18d39934b66a2fc90f5fb052f27d4"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/bd8396c0789d073d.webp",
+      "bytes": 24282,
+      "sha256": "bd8396c0789d073de2f4ff968e6381555f9a930b49c987595ce94a3776773222"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/bf9ed27a6dc1c46c.webp",
+      "bytes": 54482,
+      "sha256": "bf9ed27a6dc1c46cb2a2eab962779fa738aabb1f8d5bbc0a4ba252ae1f30e445"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/bfe1b7ead49a62d6.webp",
+      "bytes": 171030,
+      "sha256": "bfe1b7ead49a62d6731d856d4b494488932908513cc169fa156ed415e78e04e3"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/c11c9534a2a476e9.webp",
+      "bytes": 246798,
+      "sha256": "c11c9534a2a476e9dd3c790b7501de55ad95b60c24cb286e639d9d506304b2c6"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/d7f455c9f78a13de.webp",
+      "bytes": 111328,
+      "sha256": "d7f455c9f78a13dedb3a6bbaf8a5a9a764e4ce88bec4409c2930c1d7e93ce5f3"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/f521426e597ec21f.webp",
+      "bytes": 37642,
+      "sha256": "f521426e597ec21fdbaaa61cab5574c13356658b81bb3e3c581eb9f87f54414e"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/f67d020574dded1e.webp",
+      "bytes": 142568,
+      "sha256": "f67d020574dded1e7c8a36c51df879be9c9f54f7c3ff72d6cd639ccc6b1277a7"
+    },
+    {
+      "path": "assets/components/vr-glasses/images/f76a2a10783a4e6c.webp",
+      "bytes": 118346,
+      "sha256": "f76a2a10783a4e6c554aa7293d799eadabc7a8dc556aebcc2e399ee4574ff475"
+    },
+    {
       "path": "assets/components/vr-glasses/optics.98f68714d244.js",
       "bytes": 3477167,
       "sha256": "ce3296827ef8222425310309146e11e6a40fd5aef74eedbc36bcc4b4b1f6e05c"
@@ -516,13 +636,13 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.bundle.js",
-      "bytes": 605637,
-      "sha256": "4de2e58a467d645eee79dcf6f16118021c874df88eba9b2750b5cc9a48941d58"
+      "bytes": 609164,
+      "sha256": "64a52c9933bcdd3322579b2567d671fef79d5e9da65d70a950b8c16d05f5e2ca"
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
-      "bytes": 2716,
-      "sha256": "85fd4f36918290878c4c63b1bbc9835e552f4e2e4a77ffdacee0cceb0d800737"
+      "bytes": 2764,
+      "sha256": "a8046f8d7c83b9ea61fcaead3f934d24f8bbadf330d3de38b827ddef65eb1951"
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
@@ -2698,6 +2818,11 @@
       "path": "assets/scene/project-texture-loading.json",
       "bytes": 347,
       "sha256": "6821dcd694ff52d3ffd08c4e421e1eabf0243c68e5e16e86e607d7bf50919d50"
+    },
+    {
+      "path": "assets/scene/scene-gallery.js",
+      "bytes": 7096,
+      "sha256": "7f32e32eca01428283e5560bdae24f2503fce029b4c1ccd5588b6fad906bf0bc"
     },
     {
       "path": "assets/scene/scroll-navigation.json",
