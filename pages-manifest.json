@@ -861,13 +861,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1366790,
-      "sha256": "aa934a8133e6c1b86186ddb01433c93ab0a8def09c087bfdd309792b128c5eae"
+      "bytes": 1367338,
+      "sha256": "432dcb59f246d61b6e446827264174616fcc4502829b2e3279e69beac24fd685"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1517339,
-      "sha256": "2f0642c239471416b2e2d3c6d24433bd365546a431b9075ba6f26b6d25808f93"
+      "bytes": 1517887,
+      "sha256": "7de9e3d2f34f6faf788196a2a005a086d877780105ae9366e1d262f762a73760"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -2226,8 +2226,8 @@
     },
     {
       "path": "assets/scene/about-graffiti.json",
-      "bytes": 4533,
-      "sha256": "accda43c31420048c98a656b033acc3564932cd3c4341eeca7584f75ce46002e"
+      "bytes": 2735,
+      "sha256": "6424e3aac5354df9cf0001e4256b22fea69358680dff2ebbc00e69ecfa58d338"
     },
     {
       "path": "assets/scene/about-hidden-scenes.json",
@@ -2252,7 +2252,7 @@
     {
       "path": "assets/scene/asset-versions.json",
       "bytes": 2196,
-      "sha256": "36f8250e4632b1170da6f3a862dab93182612ba3ae10b3147693e3ea8f62e09a"
+      "sha256": "e689e462e592ef82ad46a1a9c13acd07a507b9811598e93383c1c34334688810"
     },
     {
       "path": "assets/scene/brand-color.json",

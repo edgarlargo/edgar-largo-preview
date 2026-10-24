@@ -174,7 +174,7 @@ function eaProjectSourceImageUpdate(owner){
 /* Admintation source project images end */
 /* Admintation project palette fallback v2 */
 /* easyadmin-about-graffiti:v1 */
-const eaAboutGraffitiConfig={"processSelector":"#about-award .award-category-talks","startSelector":"#about-award [data-ea-node=\"n720\"]","endSelector":"#about-capability-title","points":[[0.061,0],[0.049,0.086],[0.071,0.173],[0.136,0.314],[0.271,0.442],[0.347,0.495],[0.536,0.577],[0.625,0.619],[0.71,0.621],[0.775,0.596],[0.834,0.54],[0.876,0.47],[0.897,0.408],[0.9,0.377],[0.836,0.342],[0.747,0.317],[0.675,0.298],[0.598,0.298],[0.534,0.314],[0.478,0.344],[0.424,0.388],[0.359,0.454],[0.3,0.524],[0.275,0.589],[0.266,0.642],[0.268,0.705],[0.302,0.787],[0.375,0.866],[0.493,0.938],[0.608,0.977],[0.759,0.995],[0.932,0.997],[0.995,1]],"color":"#784dff","widthMode":"native","widthPixels":{"mobile":11,"desktop":18},"drawStart":0.8,"drawEnd":0.55};
+const eaAboutGraffitiConfig={"processSelector":"#about-award .award-category-talks","startSelector":"#about-award [data-ea-node=\"n720\"]","endSelector":"#about-capability-title","points":[[-0.25,-0.1],[0.08,-0.1],[-0.02,0.16],[0.18,0.37],[0.38,0.58],[0.74,0.77],[0.9,0.55],[1.06,0.33],[0.74,0.16],[0.51,0.29],[0.28,0.42],[0.12,0.64],[0.29,0.83],[0.46,1.02],[0.94,1.08],[1.25,1.08]],"curveMode":"cubic-bezier","color":"#784dff","widthMode":"native","widthPixels":{"mobile":11,"desktop":18},"drawStart":0.8,"drawEnd":0.55};
 const eaAboutGraffitiPreference=typeof window!=='undefined'&&typeof window.matchMedia==='function'?window.matchMedia('(prefers-reduced-motion: reduce)'):null;
 function eaAboutGraffitiPrepare(owner,root){
   const config=eaAboutGraffitiConfig,process=root.querySelector(config.processSelector),start=root.querySelector(config.startSelector),end=root.querySelector(config.endSelector);
@@ -187,7 +187,18 @@ function eaAboutGraffitiGeometry(state){
   const pixelWidth=config.widthMode==='native'
     ?2*state.nativeRadius*math.fit(width,540,1920,2,1)*1.65*Math.hypot(width,height)
     :Math.min(width*.04,width<=812?config.widthPixels.mobile:config.widthPixels.desktop);
-  const samples=256,curve=new CatmullRomCurve3(config.points.map(point=>new Vector3(point[0]*width,-point[1]*span,0)),false,'centripetal');
+  const samples=256,pathPoints=config.points.map(point=>new Vector3(point[0]*width,-point[1]*span,0));
+  let curve;
+  if(config.curveMode==='cubic-bezier'){
+    // A configured offscreen endpoint stays at least one whole brush width
+    // beyond the viewport, including unusually tall/narrow phone screens.
+    // Move its first handle with it to retain the endpoint tangent.
+    const first=pathPoints[0],last=pathPoints[pathPoints.length-1],clearance=pixelWidth*1.25;
+    const left=first.x<0?Math.min(0,-clearance-first.x):0,right=last.x>width?Math.max(0,width+clearance-last.x):0;
+    first.x+=left;pathPoints[1].x+=left;last.x+=right;pathPoints[pathPoints.length-2].x+=right;
+    curve=new CurvePath;
+    for(let i=0;i<pathPoints.length-1;i+=3)curve.add(new CubicBezierCurve3(pathPoints[i],pathPoints[i+1],pathPoints[i+2],pathPoints[i+3]));
+  }else curve=new CatmullRomCurve3(pathPoints,false,'centripetal');
   const points=curve.getSpacedPoints(samples),positions=new Float32Array((samples+1)*6),centers=new Float32Array((samples+1)*6),colors=new Float32Array((samples+1)*2),ratios=new Float32Array((samples+1)*2),indices=[];
   let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
   for(let i=0;i<=samples;i++){
