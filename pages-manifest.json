@@ -665,6 +665,26 @@
       "sha256": "799e6e249b6008f3df125bb484024b01910f5f8cf4bdfd74b721dd83d34cb032"
     },
     {
+      "path": "assets/images/largo-card-letter-b-48ac1dda29c837b4.svg",
+      "bytes": 661,
+      "sha256": "48ac1dda29c837b49127a6b32eac24984fad393366665a4d7c3a46b032e8e49d"
+    },
+    {
+      "path": "assets/images/largo-card-letter-d-a928069942b2576e.svg",
+      "bytes": 623,
+      "sha256": "a928069942b2576e64666045d068aa636d8cf006d1565e03f6fa73d3180860a9"
+    },
+    {
+      "path": "assets/images/largo-card-letter-m-9629c108350a6fed.svg",
+      "bytes": 610,
+      "sha256": "9629c108350a6fed0f9330c32d5742f0ba74a8f62e4e7e92dd3c69f9c37ec02a"
+    },
+    {
+      "path": "assets/images/largo-card-letter-v-45295e06f5caa32d.svg",
+      "bytes": 573,
+      "sha256": "45295e06f5caa32d3b614e7b169260d06deb09db48fd570b910873fb7c668ace"
+    },
+    {
       "path": "assets/images/logo--akqa-d1387d88dc.svg",
       "bytes": 9303,
       "sha256": "d9f9a2f5e078ff1bc95c2bbd7b8820eef5eaa9e706f5aa6d1df9ab6f2a481103"
