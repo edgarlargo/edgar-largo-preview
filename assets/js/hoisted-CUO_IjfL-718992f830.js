@@ -261,7 +261,7 @@ function eaProjectSourceImageUpdate(owner){
 /* Admintation source project images end */
 /* Admintation project palette fallback v2 */
 /* easyadmin-about-graffiti:v1 */
-const eaAboutGraffitiConfig={"processSelector":"#about-award .award-category-talks","startSelector":"#about-award [data-ea-node=\"n720\"]","endSelector":"#about-capability-title","points":[[0.061,0],[0.049,0.086],[0.071,0.173],[0.136,0.314],[0.271,0.442],[0.347,0.495],[0.536,0.577],[0.625,0.619],[0.71,0.621],[0.775,0.596],[0.834,0.54],[0.876,0.47],[0.897,0.408],[0.9,0.377],[0.836,0.342],[0.747,0.317],[0.675,0.298],[0.598,0.298],[0.534,0.314],[0.478,0.344],[0.424,0.388],[0.359,0.454],[0.3,0.524],[0.275,0.589],[0.266,0.642],[0.268,0.705],[0.302,0.787],[0.375,0.866],[0.493,0.938],[0.608,0.977],[0.759,0.995],[0.932,0.997],[0.995,1]],"color":"#f0f1fa","widthPixels":{"mobile":11,"desktop":18},"drawStart":0.8,"drawEnd":0.55};
+const eaAboutGraffitiConfig={"processSelector":"#about-award .award-category-talks","startSelector":"#about-award [data-ea-node=\"n720\"]","endSelector":"#about-capability-title","points":[[0.061,0],[0.049,0.086],[0.071,0.173],[0.136,0.314],[0.271,0.442],[0.347,0.495],[0.536,0.577],[0.625,0.619],[0.71,0.621],[0.775,0.596],[0.834,0.54],[0.876,0.47],[0.897,0.408],[0.9,0.377],[0.836,0.342],[0.747,0.317],[0.675,0.298],[0.598,0.298],[0.534,0.314],[0.478,0.344],[0.424,0.388],[0.359,0.454],[0.3,0.524],[0.275,0.589],[0.266,0.642],[0.268,0.705],[0.302,0.787],[0.375,0.866],[0.493,0.938],[0.608,0.977],[0.759,0.995],[0.932,0.997],[0.995,1]],"color":"#784dff","widthMode":"native","widthPixels":{"mobile":11,"desktop":18},"drawStart":0.8,"drawEnd":0.55};
 const eaAboutGraffitiPreference=typeof window!=='undefined'&&typeof window.matchMedia==='function'?window.matchMedia('(prefers-reduced-motion: reduce)'):null;
 function eaAboutGraffitiPrepare(owner,root){
   const config=eaAboutGraffitiConfig,process=root.querySelector(config.processSelector),start=root.querySelector(config.startSelector),end=root.querySelector(config.endSelector);
@@ -271,7 +271,9 @@ function eaAboutGraffitiPrepare(owner,root){
 function eaAboutGraffitiGeometry(state){
   const config=eaAboutGraffitiConfig,line=state.line,width=Math.max(1,properties.viewportWidth||window.innerWidth),height=Math.max(1,properties.viewportHeight||window.innerHeight);
   const start=state.start.getBoundingClientRect(),end=state.end.getBoundingClientRect(),span=Math.max(64,end.bottom-start.top);
-  const pixelWidth=Math.min(width*.04,width<=812?config.widthPixels.mobile:config.widthPixels.desktop);
+  const pixelWidth=config.widthMode==='native'
+    ?2*state.nativeRadius*math.fit(width,540,1920,2,1)*1.65*Math.hypot(width,height)
+    :Math.min(width*.04,width<=812?config.widthPixels.mobile:config.widthPixels.desktop);
   const samples=256,curve=new CatmullRomCurve3(config.points.map(point=>new Vector3(point[0]*width,-point[1]*span,0)),false,'centripetal');
   const points=curve.getSpacedPoints(samples),positions=new Float32Array((samples+1)*6),centers=new Float32Array((samples+1)*6),colors=new Float32Array((samples+1)*2),ratios=new Float32Array((samples+1)*2),indices=[];
   let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
@@ -303,6 +305,8 @@ function eaAboutGraffitiGeometry(state){
 function eaAboutGraffitiInit(owner){
   const state=owner.eaAboutGraffiti;if(!state||state.line)return;
   const config=eaAboutGraffitiConfig,line=state.line=new Line(2);
+  // Preserve the native full-viewport brush size before fitting the custom path.
+  state.nativeRadius=line.radius;
   line.lineData={...line.lineData,margin:{x:0,y:0},boxMin:new Vector3,boxMax:new Vector3,color0:config.color,color1:config.color};
   // Do not call Line.preInit: its native loader would replace this custom path.
   line.container.add(line.innerContainer);eaAboutGraffitiGeometry(state);line.init();
