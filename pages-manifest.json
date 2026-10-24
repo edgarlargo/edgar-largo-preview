@@ -516,13 +516,13 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.bundle.js",
-      "bytes": 605979,
-      "sha256": "55b299d5470ae6bee6c6ed5d6c2a6710b5ef13b4a59fd5084a1b7ae26b050628"
+      "bytes": 605637,
+      "sha256": "4de2e58a467d645eee79dcf6f16118021c874df88eba9b2750b5cc9a48941d58"
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
       "bytes": 2716,
-      "sha256": "cae5c1070a6c35c867f04209814018b6af0025365d00bacf917c5e1d03c5418c"
+      "sha256": "85fd4f36918290878c4c63b1bbc9835e552f4e2e4a77ffdacee0cceb0d800737"
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
@@ -926,13 +926,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1369495,
-      "sha256": "2052cb2dce2562d1ec07cbcc951a0c5aa97f2049096228b019bd277cfb0556b1"
+      "bytes": 1370739,
+      "sha256": "951fbe2f23db2680390466ffe65f5afbf2ac1dc5902185af0751cb6149c2cccb"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1520044,
-      "sha256": "b00c41f36f40ecb3e8fd45ce19ad36366a4ff0668eb264ec64d38f308e62bcf7"
+      "bytes": 1521288,
+      "sha256": "841de64b822fa755cfbd9affa5b2858772164987ade7ad3286b141ec53b28036"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",

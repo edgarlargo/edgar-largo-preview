@@ -1642,7 +1642,8 @@ function eaBindImportedAudio(owner) {
  owner.eaAudioObserver.observe(host,{attributes:true,attributeFilter:Object.keys(owner.items).map(id=>'data-ea-audio-'+id)});
 }
 
-/* Admintation imported scene override v10 */
+/* Admintation imported scene override v11 */
+
 function eaImportedSceneStyle(node,property,value='',priority=''){
   const style=node.style;
   if(value){if(style.getPropertyValue(property)!==value||style.getPropertyPriority(property)!==priority)style.setProperty(property,value,priority);}
@@ -1770,6 +1771,7 @@ function eaImportedGoalRestoreImmersive(owner){
   eaImportedGoalRestoreHandoff(owner);
   const state=owner.eaSceneImmersive;
   if(!state)return;
+  window.removeEventListener('resize',state.invalidateGeometry);
   for(const [node,property,value,priority]of state.styles){if(value)node.style.setProperty(property,value,priority);else node.style.removeProperty(property);}
   if(state.attribute===null)owner.domContainer.removeAttribute('data-ea-goal-immersive');
   else owner.domContainer.setAttribute('data-ea-goal-immersive',state.attribute);
@@ -1777,7 +1779,7 @@ function eaImportedGoalRestoreImmersive(owner){
   owner.uiBgColorNeedsOverride=false;owner.isUIBgBlack=false;
   requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));
 }
-function eaImportedGoalImmersive(owner,frame,config,width,height){
+function eaImportedGoalImmersive(owner,frame,config,width,height,measure){
   const {screens,darkRange,handoffScreens,handoff,startViewport}=config;
   if(owner.eaSceneImmersive?.frame!==frame)eaImportedGoalRestoreImmersive(owner);
   if(!owner.eaSceneImmersive){
@@ -1786,35 +1788,43 @@ function eaImportedGoalImmersive(owner,frame,config,width,height){
     owner.eaSceneImmersive={frame,attribute:owner.domContainer.getAttribute('data-ea-goal-immersive'),
       styles:nodes.map(([node,property])=>[node,property,node.style.getPropertyValue(property),node.style.getPropertyPriority(property)]),
       opacities:[owner.domTitle,owner.domDescs].map(node=>[node,Number(getComputedStyle(node).opacity)])};
+    const state=owner.eaSceneImmersive;
+    state.invalidateGeometry=()=>{state.geometry=null;};
+    window.addEventListener('resize',state.invalidateGeometry);
   }
-  const state=owner.eaSceneImmersive,host=frame.parentElement||owner.domImgIn;
-  // Read this update's geometry before changing padding, handoff or the frame.
-  // Resize/first activation may need the next update after its queued resize;
-  // steady scroll updates must not read layout after their own style writes.
-  const anchor=host.getBoundingClientRect(),scroll=scrollManager.scrollPixel;
-  const start=anchor.top+scroll-height*startViewport,duration=height*screens;
-  const currentPadding=parseFloat(getComputedStyle(owner.domContainer).paddingBottom)||0;
-  const containerRect=owner.domContainer.getBoundingClientRect(),textRect=owner.domDescs.getBoundingClientRect();
-  const handoffDom=handoffScreens&&typeof endSection!=='undefined'&&typeof homePage!=='undefined'?endSection.domContainer:null;
-  const handoffRect=handoffDom?.getBoundingClientRect();
-  const naturalBottom=containerRect.bottom+scroll-currentPadding;
-  const padding=Math.max(0,start+duration-naturalBottom);
+  const state=owner.eaSceneImmersive,scroll=scrollManager.scrollPixel;
+  if(measure||!state.geometry){
+    // Sample document coordinates at 30 Hz or after invalidation. Never read
+    // layout after this update's padding, handoff or frame style writes.
+    const anchor=(frame.parentElement||owner.domImgIn).getBoundingClientRect();
+    const padding=parseFloat(getComputedStyle(owner.domContainer).paddingBottom)||0;
+    const container=owner.domContainer.getBoundingClientRect(),text=owner.domDescs.getBoundingClientRect();
+    const handoffDom=handoffScreens&&typeof endSection!=='undefined'&&typeof homePage!=='undefined'?endSection.domContainer:null;
+    const handoffRect=handoffDom?.getBoundingClientRect();
+    state.geometry={anchor:{left:anchor.left,top:anchor.top+scroll,width:anchor.width,height:anchor.height},
+      containerBottom:container.bottom+scroll,naturalBottom:container.bottom+scroll-padding,
+      textBottom:text.bottom+scroll,handoffBottom:handoffRect?handoffRect.bottom+scroll:null,padding};
+  }
+  const geometry=state.geometry,anchor={...geometry.anchor,top:geometry.anchor.top-scroll};
+  const start=geometry.anchor.top-height*startViewport,duration=height*screens;
+  const padding=Math.max(0,start+duration-geometry.naturalBottom);
   const progress=Math.max(0,Math.min(1,(scroll-start)/duration));
   const smooth=value=>{value=Math.max(0,Math.min(1,value));return value*value*(3-2*value);};
   const expansion=smooth(progress/.16),exit=smooth((progress-.9)/.1);
-  const exitTop=handoffRect&&handoff==='overlay'?Math.min(0,handoffRect.bottom-height)
-    :handoffRect?(progress>=1?-height:Math.min(0,containerRect.bottom-height)):-height*exit;
+  const exitTop=geometry.handoffBottom!==null&&handoff==='overlay'?Math.min(0,geometry.handoffBottom-scroll-height)
+    :geometry.handoffBottom!==null?(progress>=1?-height:Math.min(0,geometry.containerBottom-scroll-height)):-height*exit;
   const left=anchor.left*(1-expansion),top=anchor.top*(1-expansion)+exitTop;
   const frameWidth=anchor.width+(width-anchor.width)*expansion,frameHeight=anchor.height+(height-anchor.height)*expansion;
   const titleFade=progress>0&&progress<1?1-smooth(progress/.12):1;
   // Paragraphs remain readable until their last line leaves the viewport.
-  const textFade=progress>0&&progress<1?smooth(textRect.bottom/(height*.25)):1;
+  const textFade=progress>0&&progress<1?smooth((geometry.textBottom-scroll)/(height*.25)):1;
   if(owner.domContainer.getAttribute('data-ea-goal-immersive')!=='true')owner.domContainer.setAttribute('data-ea-goal-immersive','true');
   eaImportedGoalCompactHandoff(owner,handoffScreens,height,handoff);
   // Layout engines quantize rectangles to subpixels. Avoid a resize feedback
   // loop when a legal fractional screen count falls between those values.
-  if(Math.abs(currentPadding-padding)>.75){
-    eaImportedSceneStyle(owner.domContainer,'padding-bottom',Math.round(padding)+'px','important');
+  if(Math.abs(geometry.padding-padding)>.75){
+    geometry.padding=Math.round(padding);
+    eaImportedSceneStyle(owner.domContainer,'padding-bottom',geometry.padding+'px','important');
     requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));
   }
   const set=(property,value)=>eaImportedSceneStyle(frame,property,value);
@@ -1862,23 +1872,32 @@ function eaImportedGoalLayout(){
 function eaImportedGoalViewport(owner){
   const height=window.innerHeight||document.documentElement?.clientHeight||1,width=window.innerWidth||document.documentElement?.clientWidth||1;
   const now=performance.now(),reduce=!!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches,previous=owner.eaSceneViewportState;
-  // Limit the expensive layout helper itself, not only its outgoing messages.
-  // A viewport/visibility/motion change bypasses the scroll-update throttle.
-  if(previous&&previous.width===width&&previous.height===height&&previous.reduce===reduce&&previous.hidden===document.hidden&&now-previous.at<1000/30)return;
-  owner.eaSceneViewportState={width,height,reduce,hidden:document.hidden,at:now};
   const frames=[owner.domImgIn,owner.domImgOut].map(host=>host?.querySelector('iframe[data-ea-code]')).filter(frame=>frame?.contentWindow);
   const immersive=frames.find(frame=>eaImportedGoalSceneConfiguration(frame));
-  const rectangles=new Map(frames.map(frame=>[frame,frame.getBoundingClientRect()]));
+  const config=eaImportedGoalSceneConfiguration(immersive),key=JSON.stringify(config);
+  const changed=!previous||previous.width!==width||previous.height!==height||previous.reduce!==reduce||previous.hidden!==document.hidden
+    ||previous.immersive!==immersive||previous.key!==key||previous.frames.length!==frames.length||frames.some((frame,index)=>frame!==previous.frames[index]);
+  const sample=changed||now-previous.at>=1000/30||!!(immersive&&!reduce&&!owner.eaSceneImmersive?.geometry);
+  // Read ordinary frame rectangles only on a sampling tick, before immersive
+  // placement writes. The immersive frame uses its cached document geometry.
+  const rectangles=sample?new Map(frames.filter(frame=>frame!==immersive||reduce).map(frame=>[frame,frame.getBoundingClientRect()])):null;
+  if(sample)owner.eaSceneViewportState={width,height,reduce,hidden:document.hidden,frames,immersive,key,at:now};
   let stage=null;
-  if(immersive&&!reduce)stage=eaImportedGoalImmersive(owner,immersive,eaImportedGoalSceneConfiguration(immersive),width,height);
+  // Pin and handoff placement must follow every native scroll frame, even
+  // between geometry/message samples; reusing the previous transform jumps.
+  if(immersive&&!reduce)stage=eaImportedGoalImmersive(owner,immersive,config,width,height,sample);
   else eaImportedGoalRestoreImmersive(owner);
+  if(!sample)return;
   for(const frame of frames){
-    const rect=rectangles.get(frame);
-    const progress=Math.max(0,Math.min(1,(height*.85-rect.top)/(height*.7+rect.height)));
-    const visible=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height;
-    const preload=frame===immersive&&stage?stage.preload:!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height*4;
+    let scene=frame===immersive?stage:null;
+    if(!scene){
+      const rect=rectangles.get(frame),progress=Math.max(0,Math.min(1,(height*.85-rect.top)/(height*.7+rect.height)));
+      const visible=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height;
+      const preload=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height*4;
+      scene=frame===immersive?{immersive:true,motion:false,expansion:0,progress,visible,preload}:{progress,visible,preload};
+    }
+    const preload=scene.preload;
     if(preload&&frame.getAttribute('loading')==='lazy')frame.setAttribute('loading','eager');
-    const scene=frame===immersive?(stage||{immersive:true,motion:false,expansion:0,progress,visible}):{progress,visible};
     frame.contentWindow.postMessage({type:'ea-code-viewport',...scene,preload},'*');
   }
 }
