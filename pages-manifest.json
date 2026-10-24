@@ -24,6 +24,13 @@
       "file": "projects/index.html"
     },
     {
+      "key": "project:e9a8357f14b26c08d13f6a42",
+      "kind": "project",
+      "title": "PreiļiMED — Healthcare Website | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/projects/preilimed/",
+      "file": "projects/preilimed/index.html"
+    },
+    {
       "key": "project:3a4928d1a884c4895af695e0",
       "kind": "project",
       "title": "OrtoMed — Healthcare Website | Edgar Largo Studio",
@@ -2592,6 +2599,36 @@
       "sha256": "6fcd0c2519a65bcbea788d03fe57ee2f7e8b7d179a44043ef6fa4951ab236e52"
     },
     {
+      "path": "assets/preilimed-case/case.css",
+      "bytes": 3492,
+      "sha256": "1bd4279d3055c0576e95d87435be4a8b3664eab92822b251b78c74be64d87817"
+    },
+    {
+      "path": "assets/preilimed-case/logo-original.svg",
+      "bytes": 24828,
+      "sha256": "94191b066e378dfe7f45ff02f877df1edc37c00c0c169c496c7a0df707372cdc"
+    },
+    {
+      "path": "assets/preilimed-case/preilimed-01.webp",
+      "bytes": 99992,
+      "sha256": "a7f26a11d91324126f31464825d94ac0d3794e601317e86ca2881f92e1602405"
+    },
+    {
+      "path": "assets/preilimed-case/preilimed-02.webp",
+      "bytes": 43042,
+      "sha256": "d0d304f11e8456087ac5f95cacbf8260430e8e1b61e61c8abd6497cc618cbf5f"
+    },
+    {
+      "path": "assets/preilimed-case/preilimed-03.webp",
+      "bytes": 39030,
+      "sha256": "6a2bb33246f349e4c8f4b329bc84399833bea20966830aa7e2c30b4370367826"
+    },
+    {
+      "path": "assets/preilimed-case/preilimed-04.webp",
+      "bytes": 62914,
+      "sha256": "291a5b7ea71693161b0a78c8b966e558fa57bb6d6bb9a9771b49eac9ef00fedc"
+    },
+    {
       "path": "assets/scene/about-graffiti.json",
       "bytes": 2735,
       "sha256": "6424e3aac5354df9cf0001e4256b22fea69358680dff2ebbc00e69ecfa58d338"
@@ -3013,8 +3050,8 @@
     },
     {
       "path": "assets/scene/site-seo.json",
-      "bytes": 31297,
-      "sha256": "c92c65a022b147e99655d16accdd87f88f1f4b76d4fc517109e67e2bf8470606"
+      "bytes": 34456,
+      "sha256": "6e47acd99b17cae79ac05ab675876a77a127c5206431723b28179b15cbb14cae"
     },
     {
       "path": "assets/scene/tunnel-exit.json",
@@ -3618,8 +3655,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 1181,
-      "sha256": "86072f2bea3e8b2d7991b5a6a060d7708185595292cee06588f3ca5a534a5c13"
+      "bytes": 1274,
+      "sha256": "53b81723692bb2b0b1eb3b76e6af08509003b3e46ba6f1e17c72b68830f7c5fd"
     },
     {
       "path": "robots.txt",

@@ -166,48 +166,54 @@
             {
               "@type": "ListItem",
               "position": 1,
+              "name": "PreiļiMED",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
               "name": "OrtoMed",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/ortomed/"
             },
             {
               "@type": "ListItem",
-              "position": 2,
+              "position": 3,
               "name": "Vintage Stories",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/"
             },
             {
               "@type": "ListItem",
-              "position": 3,
+              "position": 4,
               "name": "Flow Mural in Daugavpils",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/"
             },
             {
               "@type": "ListItem",
-              "position": 4,
+              "position": 5,
               "name": "Edgar Largo Studio Website",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/"
             },
             {
               "@type": "ListItem",
-              "position": 5,
+              "position": 6,
               "name": "Dixieme Art",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/"
             },
             {
               "@type": "ListItem",
-              "position": 6,
+              "position": 7,
               "name": "Latvian Spine Surgeons",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/"
             },
             {
               "@type": "ListItem",
-              "position": 7,
+              "position": 8,
               "name": "Latvian Pearl Caviar",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/"
             },
             {
               "@type": "ListItem",
-              "position": 8,
+              "position": 9,
               "name": "Euro Energo Company",
               "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/"
             }
@@ -717,6 +723,72 @@
               "position": 3,
               "name": "OrtoMed",
               "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/ortomed/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/preilimed/": {
+      "title": "PreiļiMED — Healthcare Website | Edgar Largo Studio",
+      "description": "Explore the PreiļiMED hospital website project: services, specialists and patient information, presented with its original identity and editorial visuals.",
+      "image": "assets/preilimed-case/preilimed-01.webp",
+      "imageAlt": "PreiļiMED website presentation with its original visual identity and interface",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/",
+          "name": "PreiļiMED — Healthcare Website | Edgar Largo Studio",
+          "description": "Explore the PreiļiMED hospital website project: services, specialists and patient information, presented with its original identity and editorial visuals.",
+          "image": "https://edgarlargo.github.io/edgar-largo-preview/assets/preilimed-case/preilimed-01.webp",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "PreiļiMED",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/"
             }
           ]
         }
