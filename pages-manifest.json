@@ -2542,6 +2542,36 @@
       "sha256": "fbdb442d4318e0a49f8f80bfdfb55e249e1e519e58394fbccd12f1de7f7b0794"
     },
     {
+      "path": "assets/ortomed-case/ortomed-v3-03.webp",
+      "bytes": 90428,
+      "sha256": "228296608fae39dc4d190a557bf6d3854dfca76fa419ac9061882d6ce7aaa510"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v3-07.webp",
+      "bytes": 46078,
+      "sha256": "431b08b5ee799f1f76d0abc9d79fbde1d429d61c6749de7e7119e2371ef961aa"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v3-09.webp",
+      "bytes": 80898,
+      "sha256": "cb8c61af1df2a41481f76590848a2166b07484f4f8ca9e7ca721187c33f497da"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v3-11.webp",
+      "bytes": 52242,
+      "sha256": "cb1f8e5256ce3bf0264c05ccd7b24baf695be93b7f1f32ecd1834f0a1f058163"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v3-12.webp",
+      "bytes": 133418,
+      "sha256": "485bba522be3f4fb1745c4300073db39ed7904ce33fabd2b58617509fe3b63ef"
+    },
+    {
+      "path": "assets/ortomed-case/ortomed-v3-14.webp",
+      "bytes": 50848,
+      "sha256": "c447e7894874bbb8a5a86d89dbfa4f189b9638a4c1411e66f7007fb4a0079b85"
+    },
+    {
       "path": "assets/ortomed-case/services-desktop.webp",
       "bytes": 79664,
       "sha256": "2ea557e3b30e8cc0231962535306fdb62fed97b7860620839b4ea24f56b0edf7"
