@@ -1,0 +1,654 @@
+{
+  "version": 1,
+  "indexing": "noindex",
+  "publicOrigin": "https://edgarlargo.github.io",
+  "basePath": "/edgar-largo-preview/",
+  "siteName": "Edgar Largo Studio",
+  "googleSiteVerification": "QcXYP33uaXoGRaZr9VjH5EMatIN98xxVrVVQL_j6oMU",
+  "socialImage": "assets/meta/largo-social-3855fc3e4c68.jpg",
+  "socialImageAlt": "Edgar Largo Studio — Branding, Websites & Digital Design",
+  "pages": {
+    "/": {
+      "title": "Web Design & Branding in Latvia | Edgar Largo Studio",
+      "description": "Edgar Largo Studio in Latvia creates websites, brand identities, packaging and visual content. Explore our work and discuss your next creative project.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "name": "Web Design & Branding in Latvia | Edgar Largo Studio",
+          "description": "Edgar Largo Studio in Latvia creates websites, brand identities, packaging and visual content. Explore our work and discuss your next creative project.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        }
+      ]
+    },
+    "/about/": {
+      "title": "About Our Creative Studio | Edgar Largo Studio",
+      "description": "Meet Edgar Largo Studio in Latvia. Discover our team, services and process for creating brands, websites, packaging, photography and video around your business goals.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/about/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/about/",
+          "name": "About Our Creative Studio | Edgar Largo Studio",
+          "description": "Meet Edgar Largo Studio in Latvia. Discover our team, services and process for creating brands, websites, packaging, photography and video around your business goals.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/about/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/about/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/about/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/": {
+      "title": "Branding & Web Design Projects | Edgar Largo Studio",
+      "description": "Explore Edgar Largo Studio’s selected work in branding, web design, e-commerce, packaging and art. See creative projects for clients in Latvia and beyond.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/",
+          "name": "Branding & Web Design Projects | Edgar Largo Studio",
+          "description": "Explore Edgar Largo Studio’s selected work in branding, web design, e-commerce, packaging and art. See creative projects for clients in Latvia and beyond.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/#breadcrumb"
+          },
+          "mainEntity": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/#projects"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/#projects",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Vintage Stories",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Flow Mural in Daugavpils",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Edgar Largo Studio Website",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Dixieme Art",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Latvian Spine Surgeons",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Latvian Pearl Caviar",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Euro Energo Company",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/vintage-stories-shop/": {
+      "title": "Vintage Stories: Brand & E-commerce | Edgar Largo Studio",
+      "description": "Explore the Vintage Stories project: brand strategy, a monochrome visual identity and UX/UI design for an e-commerce store dedicated to timeless vintage objects.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/",
+          "name": "Vintage Stories: Brand & E-commerce | Edgar Largo Studio",
+          "description": "Explore the Vintage Stories project: brand strategy, a monochrome visual identity and UX/UI design for an e-commerce store dedicated to timeless vintage objects.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Vintage Stories",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/vintage-stories-shop/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/flow-mural-in-daugavpils/": {
+      "title": "Flow Mural in Daugavpils | Edgar Largo Studio",
+      "description": "See Flow, a mural created by Edgar Largo and Victoria Valueva at Daugavpils Palace of Culture. Explore the artwork and details of this public art project.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/",
+          "name": "Flow Mural in Daugavpils | Edgar Largo Studio",
+          "description": "See Flow, a mural created by Edgar Largo and Victoria Valueva at Daugavpils Palace of Culture. Explore the artwork and details of this public art project.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Flow Mural in Daugavpils",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/flow-mural-in-daugavpils/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/ru-edgar-largo-studia-website/": {
+      "title": "Studio Branding & Website | Edgar Largo Studio",
+      "description": "Explore Edgar Largo Studio’s own brand and corporate website: a digital identity for a creative team in Daugavpils, Latvia, working across design and technology.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/",
+          "name": "Studio Branding & Website | Edgar Largo Studio",
+          "description": "Explore Edgar Largo Studio’s own brand and corporate website: a digital identity for a creative team in Daugavpils, Latvia, working across design and technology.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Edgar Largo Studio Website",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/ru-edgar-largo-studia-website/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/dixieme-art/": {
+      "title": "Dixieme Art: Furniture Website | Edgar Largo Studio",
+      "description": "Discover our corporate website and video project for Dixieme Art, a London luxury furniture company combining traditional craftsmanship with innovative materials.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/",
+          "name": "Dixieme Art: Furniture Website | Edgar Largo Studio",
+          "description": "Discover our corporate website and video project for Dixieme Art, a London luxury furniture company combining traditional craftsmanship with innovative materials.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Dixieme Art",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/dixieme-art/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/latvian-spine-surgeons-website/": {
+      "title": "Latvian Spine Surgeons: Branding | Edgar Largo Studio",
+      "description": "Explore branding and web design for Latvian Spine Surgeons, including a logo, visual identity, UX/UI design, 3D graphics and animation by Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/",
+          "name": "Latvian Spine Surgeons: Branding | Edgar Largo Studio",
+          "description": "Explore branding and web design for Latvian Spine Surgeons, including a logo, visual identity, UX/UI design, 3D graphics and animation by Edgar Largo Studio.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Latvian Spine Surgeons",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-spine-surgeons-website/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/latvian-caviar/": {
+      "title": "Latvian Caviar: Branding & Packaging | Edgar Largo Studio",
+      "description": "See the Latvian Pearl Caviar project: brand identity, packaging, product photography and e-commerce brought together in a cohesive visual language by Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/",
+          "name": "Latvian Caviar: Branding & Packaging | Edgar Largo Studio",
+          "description": "See the Latvian Pearl Caviar project: brand identity, packaging, product photography and e-commerce brought together in a cohesive visual language by Edgar Largo Studio.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Latvian Pearl Caviar",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/latvian-caviar/"
+            }
+          ]
+        }
+      ]
+    },
+    "/projects/euro-energo-company-website/": {
+      "title": "Euro Energo: Corporate Website | Edgar Largo Studio",
+      "description": "Explore the Euro Energo Company website project, from logo analysis and visual style to UX/UI design, photography and interactive details by Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Organization",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website",
+          "name": "Edgar Largo Studio",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/",
+          "name": "Euro Energo: Corporate Website | Edgar Largo Studio",
+          "description": "Explore the Euro Energo Company website project, from logo analysis and visual style to UX/UI design, photography and interactive details by Edgar Largo Studio.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          },
+          "breadcrumb": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Euro Energo Company",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/projects/euro-energo-company-website/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

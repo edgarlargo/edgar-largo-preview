@@ -5,70 +5,70 @@
     {
       "key": "home:en",
       "kind": "home",
-      "title": "Edgar Largo Studio — Branding, Websites & Digital Design",
+      "title": "Web Design & Branding in Latvia | Edgar Largo Studio",
       "path": "/edgar-largo-preview/",
       "file": "index.html"
     },
     {
       "key": "about:en",
       "kind": "about",
-      "title": "About Us — Edgar Largo Studio",
+      "title": "About Our Creative Studio | Edgar Largo Studio",
       "path": "/edgar-largo-preview/about/",
       "file": "about/index.html"
     },
     {
       "key": "archive:en",
       "kind": "archive",
-      "title": "Projects — Edgar Largo Studio",
+      "title": "Branding & Web Design Projects | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/",
       "file": "projects/index.html"
     },
     {
       "key": "project:ec89366859d9901d50eecdca",
       "kind": "project",
-      "title": "Vintage Stories Shop",
+      "title": "Vintage Stories: Brand & E-commerce | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/vintage-stories-shop/",
       "file": "projects/vintage-stories-shop/index.html"
     },
     {
       "key": "project:db1f0e072531516acc00d533",
       "kind": "project",
-      "title": "Flow mural in Daugavpils",
+      "title": "Flow Mural in Daugavpils | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/flow-mural-in-daugavpils/",
       "file": "projects/flow-mural-in-daugavpils/index.html"
     },
     {
       "key": "project:d20d870afd8eb6646182c0b5",
       "kind": "project",
-      "title": "Edgar Largo Studio",
+      "title": "Studio Branding & Website | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/ru-edgar-largo-studia-website/",
       "file": "projects/ru-edgar-largo-studia-website/index.html"
     },
     {
       "key": "project:47e61af0a448b33db58882b1",
       "kind": "project",
-      "title": "Dixieme Art",
+      "title": "Dixieme Art: Furniture Website | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/dixieme-art/",
       "file": "projects/dixieme-art/index.html"
     },
     {
       "key": "project:291552af83442c9a93c26cf2",
       "kind": "project",
-      "title": "Latvian Spine Surgeons",
+      "title": "Latvian Spine Surgeons: Branding | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/latvian-spine-surgeons-website/",
       "file": "projects/latvian-spine-surgeons-website/index.html"
     },
     {
       "key": "project:8300dfa675fa70a7aad3b567",
       "kind": "project",
-      "title": "Latvian caviar",
+      "title": "Latvian Caviar: Branding & Packaging | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/latvian-caviar/",
       "file": "projects/latvian-caviar/index.html"
     },
     {
       "key": "project:d204c30224eb1409a53d5958",
       "kind": "project",
-      "title": "Euro Energo Company Website",
+      "title": "Euro Energo: Corporate Website | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/euro-energo-company-website/",
       "file": "projects/euro-energo-company-website/index.html"
     }
@@ -2660,6 +2660,11 @@
       "sha256": "9f39357ada814f9719f393833448b707006f66df966ff4079a089dd9d405737a"
     },
     {
+      "path": "assets/scene/site-seo.json",
+      "bytes": 28172,
+      "sha256": "faaf9e6e60e1c49d5776071f1d37c73f28eb7ef27ac296aced23190b658fc0bb"
+    },
+    {
       "path": "assets/scene/tunnel-exit.json",
       "bytes": 105,
       "sha256": "00af13be4e6340f2a8a96365ca9b39cc037d213ff5a14367e4d4bfdb6db9f7c7"
@@ -3233,6 +3238,16 @@
       "path": "project-images.js",
       "bytes": 518,
       "sha256": "395f463c76134932524ed2b7cd0dac22b75524d6fd91d4226fde04d9daf4e92f"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1090,
+      "sha256": "46eb3405e969371f31352a16ec3e465c764f386bab7565a3b6c3eec7630d1b2d"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 113,
+      "sha256": "82f7d43a7a5b5d8ec215935945f370b2e47f14f1d58729cb1010cbba3b10902d"
     }
   ],
   "forms": "remote-footer",
@@ -3241,6 +3256,14 @@
   },
   "notFound": {
     "file": "404.html"
+  },
+  "seo": {
+    "indexing": "noindex",
+    "sitemap": "sitemap.xml",
+    "sitemapUrl": "https://edgarlargo.github.io/edgar-largo-preview/sitemap.xml",
+    "origin": "https://edgarlargo.github.io",
+    "siteName": "Edgar Largo Studio",
+    "googleSiteVerification": "QcXYP33uaXoGRaZr9VjH5EMatIN98xxVrVVQL_j6oMU"
   },
   "phpIncluded": false
 }
