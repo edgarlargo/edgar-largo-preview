@@ -725,6 +725,11 @@
       "sha256": "85aa193ccb272e0083e6c0a967c89bec7c9dbb8750efc515814b803d7d8867ea"
     },
     {
+      "path": "assets/images/largo-card-letter-w-b3cc9ba9dab19e56.svg",
+      "bytes": 15347,
+      "sha256": "b3cc9ba9dab19e569c52f6e2c303eada97e3d90c4bfa6ba1edc27d5fb131a7d8"
+    },
+    {
       "path": "assets/images/logo--akqa-d1387d88dc.svg",
       "bytes": 9303,
       "sha256": "d9f9a2f5e078ff1bc95c2bbd7b8820eef5eaa9e706f5aa6d1df9ab6f2a481103"
