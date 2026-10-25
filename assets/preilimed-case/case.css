@@ -1,3 +1,5 @@
+@font-face{font-family:PreilimedInter;src:url(Inter-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:PreilimedInter;src:url(Inter-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
 /* Individual PreiļiMED presentation; selectors also work after SPA navigation. */
 #project-details:has([data-ea-content-block^="preilimed-"]) #project-details-meta,
 #project-details:has([data-ea-content-block^="preilimed-"]) #project-details-header-info {
@@ -39,8 +41,9 @@
   transition: none !important;
 }
 #project-details .ea-content-story .ea-story-text[data-ea-content-block^="preilimed-"] {
-  --case-ink: #20231f;
-  --case-paper: #f2f1eb;
+  --case-ink: #151f6d;
+  font-family: PreilimedInter, Inter, sans-serif;
+  --case-paper: #edf4fa;
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   gap: 32px 64px;
@@ -52,7 +55,7 @@
 #project-details .ea-content-story .ea-story-text[data-ea-content-block^="preilimed-"] h2 {
   margin: 0;
   font-size: clamp(32px, 4.8vw, 72px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.04;
   letter-spacing: -.045em;
 }
@@ -62,14 +65,15 @@
   font-size: clamp(16px, 1.4vw, 21px);
   line-height: 1.6;
 }
-#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-intro"] h2 {
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-intro"] h2,
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-digital"] h2 {
   grid-row: span 2;
 }
-#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-intro"] p:last-child {
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-intro"] p:last-child {
   font-size: 12px;
   letter-spacing: .05em;
 }
-#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-visit"] a {
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] a {
   display: inline-block;
   min-height: 44px;
   padding-block: 8px;
@@ -77,14 +81,14 @@
   text-decoration: underline;
   text-underline-offset: .25em;
 }
-#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-visit"] a:hover {
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] a:hover {
   text-decoration-thickness: 2px;
 }
-#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-visit"] a:focus-visible {
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 6px;
 }
-#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-visit"] p:last-child {
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] p:last-child {
   grid-column: 1 / -1;
   font-size: 12px;
   line-height: 1.5;
@@ -95,7 +99,8 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
-  #project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-intro"] h2 {
+  #project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-intro"] h2,
+  #project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-digital"] h2 {
     grid-row: auto;
   }
 }

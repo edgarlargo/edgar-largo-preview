@@ -731,8 +731,8 @@
     "/projects/preilimed/": {
       "title": "PreiļiMED — Healthcare Website | Edgar Largo Studio",
       "description": "Explore the PreiļiMED hospital website project: services, specialists and patient information, presented with its original identity and editorial visuals.",
-      "image": "assets/preilimed-case/preilimed-01.webp",
-      "imageAlt": "PreiļiMED website presentation with its original visual identity and interface",
+      "image": "assets/preilimed-case/preilimed-v2-01.webp",
+      "imageAlt": "PreiļiMED case study cover in the hospital’s original visual style",
       "schema": [
         {
           "@type": "Organization",
@@ -756,7 +756,7 @@
           "url": "https://edgarlargo.github.io/edgar-largo-preview/projects/preilimed/",
           "name": "PreiļiMED — Healthcare Website | Edgar Largo Studio",
           "description": "Explore the PreiļiMED hospital website project: services, specialists and patient information, presented with its original identity and editorial visuals.",
-          "image": "https://edgarlargo.github.io/edgar-largo-preview/assets/preilimed-case/preilimed-01.webp",
+          "image": "https://edgarlargo.github.io/edgar-largo-preview/assets/preilimed-case/preilimed-v2-01.webp",
           "inLanguage": "en",
           "isPartOf": {
             "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
