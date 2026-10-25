@@ -2579,6 +2579,11 @@
       "sha256": "c447e7894874bbb8a5a86d89dbfa4f189b9638a4c1411e66f7007fb4a0079b85"
     },
     {
+      "path": "assets/ortomed-case/ortomed-v4-15-mobile-lifestyle.webp",
+      "bytes": 157242,
+      "sha256": "ea32a398f9f9648b7fd8fc77f4fa65b5a578d392c4ca43f5f9dd1c44c2f422f4"
+    },
+    {
       "path": "assets/ortomed-case/services-desktop.webp",
       "bytes": 79664,
       "sha256": "2ea557e3b30e8cc0231962535306fdb62fed97b7860620839b4ea24f56b0edf7"
