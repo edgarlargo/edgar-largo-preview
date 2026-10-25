@@ -2,9 +2,9 @@
 
 [Open the website](https://edgarlargo.github.io/edgar-largo-preview/)
 
-All 12 content pages have individual SEO titles and descriptions, canonical URLs, Open Graph/Twitter metadata, structured data and the owner's Google site verification tag. The preview deliberately retains `noindex,nofollow` until an authorized production launch. The prepared [sitemap](https://edgarlargo.github.io/edgar-largo-preview/sitemap.xml) excludes the 404 page; the project-path robots file does not replace the domain-root crawl policy. The public configuration is stored in `assets/scene/site-seo.json`.
+All 11 content pages have individual SEO titles and descriptions, canonical URLs, Open Graph/Twitter metadata, structured data and the owner's Google site verification tag. The preview deliberately retains `noindex,nofollow` until an authorized production launch. The prepared [sitemap](https://edgarlargo.github.io/edgar-largo-preview/sitemap.xml) excludes the 404 page; the project-path robots file does not replace the domain-root crawl policy. The public configuration is stored in `assets/scene/site-seo.json`.
 
-This is a static public snapshot for the repository path `/edgar-largo-preview/`. All 12 routes are ordinary directories with index.html; no PHP, Node function, database or build is required for hosting. Run `node local-server.mjs` for a local view at http://127.0.0.1:8189/edgar-largo-preview/.
+This is a static public snapshot for the repository path `/edgar-largo-preview/`. All 11 routes are ordinary directories with index.html; no PHP, Node function, database or build is required for hosting. Run `node local-server.mjs` for a local view at http://127.0.0.1:8189/edgar-largo-preview/.
 
 The footer contact form sends inquiries to Edgar Largo Studio through the explicitly configured HTTPS endpoint on edgarlargo.com. WordPress sends the email through its existing SMTP setup; passwords and cookies are never included in this repository or browser requests. Other forms remain preview-only. CMS/admin features and sessions are excluded. Old index.php query addresses are replaced by clean paths; those old PHP addresses are not supported on GitHub Pages. Re-export if the repository name or base path changes.
 
@@ -37,5 +37,3 @@ Five original instrumental loops now replace the imported background music: Stud
 The web audio totals 510,714 bytes across five Ogg/Vorbis files. Music still waits for the first native user interaction. Existing interface sound effects, page text, graphics, layout and JavaScript remain unchanged. Automated checks cover decoding, loop measurements, all ten selected routes and sound controls; an artistic listening review is not claimed.
 
 The OrtoMed case study at `/projects/ortomed/` presents clinic services, specialist profiles and appointment requests with original desktop/mobile screenshots. It includes a dedicated gallery card, a wide presentation cover and page-specific social metadata; the project remains available in the portfolio collection.
-
-The PreiļiMED case study at `/projects/preilimed/` leads the portfolio collection. Following the Medcolab presentation reference, fifteen boards present its original coral/navy identity, Inter typography, website icons, concept applications and actual desktop/mobile website screens. Live explanatory text and accessible image alternatives distinguish generated presentation mockups from published site content. The keyboard-accessible visit link, 320–1440px layouts, native card transition and both static exports were verified; no new branding authorship is asserted.
