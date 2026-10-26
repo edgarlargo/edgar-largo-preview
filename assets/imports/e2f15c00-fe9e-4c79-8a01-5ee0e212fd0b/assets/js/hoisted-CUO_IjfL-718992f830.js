@@ -790,7 +790,7 @@ function eaPhotoPortraitSectionInit(owner){
     const team=owner.domContainer.querySelector('#about-who-subsection-team');
     if(team){team.setAttribute('aria-hidden','true');team.setAttribute('inert','');}
   }
-  if(eaPhotoPortraitDesktopStudioAssembly){const extra=Math.max(0,.75-owner.RANGE_PAGE_23);for(let i=2;i<owner.THRESHOLDS.length;i++)owner.THRESHOLDS[i]+=extra;}
+  if(eaPhotoPortraitDesktopStudioAssembly){for(let i=2;i<owner.THRESHOLDS.length;i++)owner.THRESHOLDS[i]=owner.THRESHOLDS[1]+.001;}
   owner.domContainer.setAttribute('data-ea-photo-portrait-scroll','');
   const style=document.createElement('style');
   style.textContent='[data-ea-photo-portrait-scroll]{padding-bottom:'+owner.THRESHOLDS[owner.THRESHOLDS.length-1]*100+'vw!important}@media(max-width:812px){[data-ea-photo-portrait-scroll]{padding-bottom:calc(var(--vh,1vh)*'+owner.MOBILE_THRESHOLDS[owner.MOBILE_THRESHOLDS.length-1]*100+')!important}}';
