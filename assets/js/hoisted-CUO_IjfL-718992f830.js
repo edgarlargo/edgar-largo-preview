@@ -630,7 +630,7 @@ function eaPhotoPortraitServicesState(section){
   if(typeof scrollManager==='undefined'||typeof aboutAwardSection==='undefined'||!aboutAwardSection.domContainer||!section.domContainer)return null;
   const who=scrollManager.getDomRange(section.domContainer),services=scrollManager.getDomRange(aboutAwardSection.domContainer),edges=properties.useMobileLayout?section.MOBILE_THRESHOLDS:section.THRESHOLDS;
   const unit=properties.useMobileLayout?properties.viewportHeight:properties.viewportWidth,viewport=properties.viewportHeight;
-  const fallStart=eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout?edges[1]+.45:edges[0]+section.RANGE_PAGE_12*.4;
+  const fallStart=eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout?edges[0]+(edges[1]-edges[0])*.72:edges[0]+section.RANGE_PAGE_12*.4;
   const from=who.top+fallStart*unit,to=services.top-viewport*.3,move=scrollManager.scrollPixel;
   if(!Number.isFinite(from)||!Number.isFinite(to)||!Number.isFinite(move)||to<=from)return null;
   const fall=Math.max(0,Math.min(1,(move-from)/(to-from)));
