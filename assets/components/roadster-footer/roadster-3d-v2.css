@@ -1,0 +1,25 @@
+#footer-section .largo-roadster-card{position:relative;z-index:1;isolation:isolate;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;width:100%;max-width:760px;margin:clamp(24px,4vw,48px) auto;overflow:hidden;border-radius:20px;background:#09090f;padding:8px 16px 24px;color:#f0f1fa}
+#footer-section .largo-roadster-view{display:block;width:100%;height:clamp(220px,34vw,330px);border:0;background:#09090f}
+#footer-section a.largo-roadster-play{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:space-between;gap:24px;width:min(100%,300px);min-height:60px;padding:12px 22px;border-radius:999px;background:#f0f1fa;color:#09090f;text-decoration:none;font-family:inherit;font-size:15px;line-height:1.3;transition:background .2s ease}
+#footer-section .largo-roadster-mark{display:flex;align-items:center;justify-content:center;flex:0 0 32px;height:32px;border-radius:50%;background:#09090f;color:#f0f1fa;font-size:11px}
+#footer-section a.largo-roadster-play:focus-visible{outline:3px solid #784DFF;outline-offset:5px}
+@media(hover:hover){#footer-section a.largo-roadster-play:hover{background:#d7caff}}
+@media(max-width:360px){#footer-section .largo-roadster-card{padding-inline:10px}#footer-section a.largo-roadster-play{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){#footer-section a.largo-roadster-play{transition:none}}
+
+.largo-game-intro,.largo-game-caption{display:none}
+@media(min-width:813px){
+#home-goal #home-goal-texts{font-size:clamp(17px,2.35vw,36px)!important;line-height:1.2!important;letter-spacing:-.025em!important;align-self:start!important}
+#home-goal[data-ea-goal-replacement] #home-goal-image-in-outer{align-self:start!important}
+#footer-section .largo-roadster-card{overflow:clip;max-width:none;min-height:460px;padding:clamp(32px,4vw,64px);display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);grid-template-rows:1fr auto;gap:24px 12px;background:radial-gradient(ellipse at 72% 60%,#2b1556 0,transparent 60%),#09090f;isolation:isolate}
+#footer-section .largo-roadster-card:before{content:'';position:absolute;inset:60% -20% -40%;z-index:-1;background:repeating-linear-gradient(90deg,transparent 0 79px,#784dff30 80px 81px),repeating-linear-gradient(0deg,transparent 0 39px,#784dff30 40px 41px);transform:perspective(280px) rotateX(55deg);pointer-events:none}
+#footer-section .largo-game-intro{display:block;grid-column:1;grid-row:1;align-self:center;position:relative;z-index:2}
+#footer-section .largo-game-eyebrow{font-size:12px;letter-spacing:.18em;color:#bda8ff;margin:0 0 22px}
+#footer-section .largo-game-title{font-size:clamp(44px,5.4vw,94px);line-height:.9;letter-spacing:-.055em;color:#fff;margin:0 0 22px;font-weight:500}
+#footer-section .largo-game-title span{color:#ad8fff}
+#footer-section .largo-game-description{font-size:clamp(15px,1.2vw,20px);line-height:1.5;color:#bbb8ce;max-width:28ch;margin:0}
+#footer-section .largo-roadster-view{grid-column:2;grid-row:1/3;height:clamp(340px,30vw,490px);background:transparent}
+#footer-section a.largo-roadster-play{grid-column:1;grid-row:2;width:280px;max-width:100%;background:#784DFF;color:white;box-shadow:0 10px 36px #784dff30}
+#footer-section a.largo-roadster-play:hover{background:#946fff}
+#footer-section .largo-roadster-mark{background:#fff;color:#09090f}
+}
