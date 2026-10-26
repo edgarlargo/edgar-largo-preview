@@ -608,7 +608,7 @@ function eaPhotoPortraitEarlyProgress(section){
   const move=section.getMoveRatio();
   if(!Number.isFinite(move)||!Number.isFinite(edges[0]))return 0;
   const stage=typeof whoSubsectionWeAre==='undefined'?null:whoSubsectionWeAre;
-  if(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout)return eaPhotoPortraitSmooth(edges[1]-.08,edges[1]+.35,move);
+  if(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout)return eaPhotoPortraitSmooth(0,edges[1]-.08,move);
   if(move>=edges[0]){if(stage)stage.logoHideRatio=1;return 1;}
   const phase=stage?stage.logoHideRatio:0;
   // The first WE ARE word begins appearing at native logo phase .28.
@@ -769,7 +769,7 @@ function eaPhotoPortraitHoverUpdate(owner,delta){
     }
     // One shared curve drives geometry and additive RGB. A second narrow
     // presence gate compressed the visible brightening into a single frame.
-    presence=formation*(owner.eaPhotoPortraitServicesState?.opacity??1);
+    presence=(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout?eaPhotoPortraitSmooth(0,.12,formation):formation)*(owner.eaPhotoPortraitServicesState?.opacity??1);
     if(owner.container)owner.container.visible=owner.isActive&&presence>0;
     eaPhotoPortraitEarlyBackdrop(formation);
   }else if(eaPhotoPortraitScrollAssembly&&typeof aboutWhoSection!=='undefined'){
