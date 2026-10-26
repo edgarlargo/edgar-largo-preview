@@ -336,7 +336,6 @@ function eaImportedMotionSensorsDisabled(){return typeof window!=='undefined'&&w
 /* easyadmin-line-spray:v1 */
 // The original line mesh and its moving cap keep their native scroll clock.
 function eaLineSprayInit(line){
-  if(line.lineId!==0&&line.lineId!==1)return;
   for(const mesh of [line.mesh,line.circle]){
     mesh.material.defines=Object.assign({},mesh.material.defines,{EA_SPRAY_PAINT:1});
     mesh.material.uniforms.u_eaSprayScale={value:1.65};
@@ -361,6 +360,10 @@ const eaAboutMotionPreference=typeof window!=='undefined'&&typeof window.matchMe
 function eaAboutMotionReduced(){return eaAboutMotionPreference?.matches===true;}
 function eaAboutMotionEase(value){const t=Math.max(0,Math.min(1,value));return eaAboutMotionReduced()?t:(1-Math.cos(Math.PI*t))*.5;}
 function eaAboutMotionLogoPhase(value,delta,initial){
+  if(typeof eaPhotoPortraitDesktopStudioAssembly!=='undefined'&&eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout&&typeof aboutWhoSection!=='undefined'){
+    const progress=Math.max(0,Math.min(1,aboutWhoSection.getMoveRatio()/aboutWhoSection.THRESHOLDS[0]));
+    return progress*progress*(3-2*progress);
+  }
   if(eaAboutMotionReduced())return initial?0:1;
   const next=Math.max(0,Math.min(1,value+Math.max(0,Math.min(delta,1/15))*(initial?-1:.4)));
   if(initial)return next;
@@ -386,6 +389,7 @@ function eaAboutMotionMobileCardTransform(turn){return 'rotateY('+(eaAboutMotion
 /* easyadmin-about-motion:end */
 /* easyadmin-photo-portrait:v1 */
 const eaPhotoPortraitModelUrl=new URL("../scene/edgar-photo-portrait-9a7e82fd82595bb3.buf",import.meta.url).href;
+const eaPhotoPortraitDesktopStudioAssembly=true;
 const eaPhotoPortraitScrollAssembly=true;
 const eaPhotoPortraitSecondScreen=true;
 const eaPhotoPortraitGatherFall=true;
@@ -604,6 +608,7 @@ function eaPhotoPortraitEarlyProgress(section){
   const move=section.getMoveRatio();
   if(!Number.isFinite(move)||!Number.isFinite(edges[0]))return 0;
   const stage=typeof whoSubsectionWeAre==='undefined'?null:whoSubsectionWeAre;
+  if(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout)return eaPhotoPortraitSmooth(edges[1]-.08,edges[1]+.35,move);
   if(move>=edges[0]){if(stage)stage.logoHideRatio=1;return 1;}
   const phase=stage?stage.logoHideRatio:0;
   // The first WE ARE word begins appearing at native logo phase .28.
@@ -611,7 +616,7 @@ function eaPhotoPortraitEarlyProgress(section){
 }
 function eaPhotoPortraitGatherStep(value,target,delta){
   const dt=Math.max(0,Math.min(.1,Number.isFinite(delta)?delta:0));
-  const next=value+(target-value)*(1-Math.exp(-2*dt));
+  const next=value+(target-value)*(1-Math.exp(-(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout?5:2)*dt));
   return Math.max(0,Math.min(1,target===0&&next<.00001?0:next));
 }
 function eaPhotoPortraitFallProgress(section){
@@ -625,7 +630,8 @@ function eaPhotoPortraitServicesState(section){
   if(typeof scrollManager==='undefined'||typeof aboutAwardSection==='undefined'||!aboutAwardSection.domContainer||!section.domContainer)return null;
   const who=scrollManager.getDomRange(section.domContainer),services=scrollManager.getDomRange(aboutAwardSection.domContainer),edges=properties.useMobileLayout?section.MOBILE_THRESHOLDS:section.THRESHOLDS;
   const unit=properties.useMobileLayout?properties.viewportHeight:properties.viewportWidth,viewport=properties.viewportHeight;
-  const from=who.top+(edges[0]+section.RANGE_PAGE_12*.4)*unit,to=services.top-viewport*.3,move=scrollManager.scrollPixel;
+  const fallStart=eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout?edges[1]+.45:edges[0]+section.RANGE_PAGE_12*.4;
+  const from=who.top+fallStart*unit,to=services.top-viewport*.3,move=scrollManager.scrollPixel;
   if(!Number.isFinite(from)||!Number.isFinite(to)||!Number.isFinite(move)||to<=from)return null;
   const fall=Math.max(0,Math.min(1,(move-from)/(to-from)));
   return{finished:move>=to,extend:move>=from&&move<to,fall,opacity:1-eaPhotoPortraitSmooth(.88,1,fall)};
@@ -657,7 +663,7 @@ function eaPhotoPortraitSectionUpdate(section){
   if(progress<=0)return;
   // Sample 171 is the existing portrait camera. Reach it while only the
   // screen-space star field is visible; then retain the native exit pan.
-  const framing=eaPhotoPortraitSmooth(0,.08,progress);
+  const framing=eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout?1:eaPhotoPortraitSmooth(0,.08,progress);
   aboutHero.initialSplineRatio+=(1-aboutHero.initialSplineRatio)*framing;
   aboutHero.panningSplineRaito+=((services ? .44 : Math.max(.44,aboutHero.panningSplineRaito))-aboutHero.panningSplineRaito)*framing;
   if(services){aboutHero.scrollYRatio=0;aboutHero.outSectionRatio=0;aboutHero.properties.cameraViewportOffsetX=0;aboutHero.properties.cameraViewportOffsetY=0;}
@@ -672,7 +678,12 @@ function eaPhotoPortraitSectionShow(){
 function eaPhotoPortraitEarlyBackdrop(progress){
   if(!eaPhotoPortraitSecondScreen||typeof aboutHero==='undefined')return;
   const reveal=eaPhotoPortraitSmooth(0,1,progress);
-  
+  if(!eaPhotoPortraitHideTerrainContours&&typeof aboutHeroLines!=='undefined'&&aboutHeroLines.mesh){
+    const uniforms=aboutHeroLines.mesh.material.uniforms;
+    if(!aboutHeroLines.eaPhotoPortraitReveal)uniforms.u_hudRatio=aboutHeroLines.eaPhotoPortraitReveal={value:0};
+    uniforms.u_hudRatio.value=Math.max(aboutHero.hudRatio,reveal);
+    if(aboutHero.isActive&&reveal>0)aboutHero.hudContainer.visible=true;
+  }
   if(typeof aboutHeroParticles!=='undefined')for(const mesh of [aboutHeroParticles.nonEmissiveMesh,aboutHeroParticles.emissiveMesh]){
     if(!mesh)continue;
     const uniforms=mesh.material.uniforms;
@@ -709,6 +720,7 @@ function eaPhotoPortraitSectionInit(owner){
     const team=owner.domContainer.querySelector('#about-who-subsection-team');
     if(team){team.setAttribute('aria-hidden','true');team.setAttribute('inert','');}
   }
+  if(eaPhotoPortraitDesktopStudioAssembly){const extra=Math.max(0,.75-owner.RANGE_PAGE_23);for(let i=2;i<owner.THRESHOLDS.length;i++)owner.THRESHOLDS[i]+=extra;}
   owner.domContainer.setAttribute('data-ea-photo-portrait-scroll','');
   const style=document.createElement('style');
   style.textContent='[data-ea-photo-portrait-scroll]{padding-bottom:'+owner.THRESHOLDS[owner.THRESHOLDS.length-1]*100+'vw!important}@media(max-width:812px){[data-ea-photo-portrait-scroll]{padding-bottom:calc(var(--vh,1vh)*'+owner.MOBILE_THRESHOLDS[owner.MOBILE_THRESHOLDS.length-1]*100+')!important}}';
@@ -738,14 +750,14 @@ function eaPhotoPortraitHoverUpdate(owner,delta){
   if(!state)return;
   if(eaPhotoPortraitSkipTeamScreen){
     owner.showRatio=0;
-    
+    if(typeof aboutHeroLetters!=='undefined')aboutHeroLetters.container.visible=false;
     if(typeof whoSubsectionTeam!=='undefined'&&whoSubsectionTeam.letterMesh)whoSubsectionTeam.letterMesh.visible=false;
   }
-  
+  if(eaPhotoPortraitSkipAstronaut&&typeof aboutHeroPerson$1!=='undefined')aboutHeroPerson$1.container.visible=false;
   if(eaPhotoPortraitSkipLandscape){
-    
+    if(typeof aboutHeroGround!=='undefined')aboutHeroGround.container.visible=false;
     if(typeof aboutHero!=='undefined')aboutHero.sceneContainer.visible=false;
-    
+    if(typeof aboutHeroHalo!=='undefined')aboutHeroHalo.container.visible=false;
   }
   let formation=owner.showRatio,presence=owner.showRatio;
   if(eaPhotoPortraitSecondScreen){
@@ -785,10 +797,15 @@ function eaPhotoPortraitHoverUpdate(owner,delta){
     state.strength+=state.strengthVelocity*step;
   }
   owner.sharedUniforms.u_photoScatter.value=Math.max(0,Math.min(1.1,state.strength));
-  
+  if(eaPhotoPortraitHideTerrainContours&&typeof aboutHeroLines!=='undefined'){
+    // Hide only the terrain child. Its native HUD parent also owns other
+    // effects and may be made visible again at any point in the scroll.
+    if(aboutHeroLines.container)aboutHeroLines.container.visible=false;
+    if(aboutHeroLines.mesh)aboutHeroLines.mesh.visible=false;
+  }
   if(owner.eaPhotoPortraitServicesExtending){
     // The face has its own prepass scene. Keep the native scene and HUD asleep.
-    for(const container of [aboutHero.sceneContainer,aboutHero.hudContainer])if(container)container.visible=false;
+    for(const container of [aboutHero.sceneContainer,aboutHero.hudContainer,typeof aboutHeroGround==='undefined'?null:aboutHeroGround.container,typeof aboutHeroHalo==='undefined'?null:aboutHeroHalo.container,typeof aboutHeroLetters==='undefined'?null:aboutHeroLetters.container])if(container)container.visible=false;
     if(typeof whoSubsectionTeam!=='undefined'&&whoSubsectionTeam.letterMesh)whoSubsectionTeam.letterMesh.visible=false;
   }
 }

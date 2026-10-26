@@ -4,6 +4,7 @@
   "modelPath": "assets/scene/edgar-photo-portrait-9a7e82fd82595bb3.buf",
   "mode": "photo-particles",
   "assembly": "scroll",
+  "desktopStudioAssembly": true,
   "style": "particles",
   "particleLook": "violet-cloud",
   "particleBrightness": 2.6,

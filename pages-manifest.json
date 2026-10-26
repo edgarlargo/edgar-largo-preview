@@ -1078,13 +1078,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1370739,
-      "sha256": "951fbe2f23db2680390466ffe65f5afbf2ac1dc5902185af0751cb6149c2cccb"
+      "bytes": 1372933,
+      "sha256": "f17578cb25b2775cc7e79b0db662ee6486791dd4e5ee10f44fa9bac179c4d6ec"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1521288,
-      "sha256": "841de64b822fa755cfbd9affa5b2858772164987ade7ad3286b141ec53b28036"
+      "bytes": 1523482,
+      "sha256": "e8694e9fc2813dc46bdc3b2243290fa16702eaa2736ca1572c98e9f7fa8c8078"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -3078,13 +3078,13 @@
     },
     {
       "path": "assets/scene/line-spray.json",
-      "bytes": 105,
-      "sha256": "2d60d0db19db3eaede6176049f13c7b2300a1d4480e8c94115bf19d38868b10d"
+      "bytes": 123,
+      "sha256": "aaef8abad6a66141da1030910f61e3f2c726a8205927e221aaa9a98bde1c9dcc"
     },
     {
       "path": "assets/scene/photo-portrait.json",
-      "bytes": 764,
-      "sha256": "08bd064826293126104b8e9f40ff27810f83f0847ae025698e436033bd44f5a6"
+      "bytes": 797,
+      "sha256": "ec6b44f2a1c09a8c7e5665c5083cefd8260ca304ef6ea8192b636119498ee0fd"
     },
     {
       "path": "assets/scene/project-decoration.json",
