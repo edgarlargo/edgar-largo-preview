@@ -220,6 +220,7 @@
       unload();
       dialog.remove();
       activeDialog = null;
+      window.dispatchEvent(new CustomEvent('ea-content-video-state', {detail: {active: false}}));
       activeTrigger = null;
       for (const state of states.values()) apply(state);
       if (button.isConnected && !button.closest('[inert]')) button.focus({preventScroll: true});
@@ -229,6 +230,7 @@
     dialog.append(header, stage, status);
     document.body.append(dialog);
     activeDialog = dialog;
+    window.dispatchEvent(new CustomEvent('ea-content-video-state', {detail: {active: true}}));
     activeTrigger = button;
     for (const state of states.values()) apply(state);
     dialog.showModal();

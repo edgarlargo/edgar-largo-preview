@@ -71,7 +71,21 @@ function eaResponsiveProjectTexture(node,url){
 /* easyadmin-deferred-audio:v1 */
 const eaImportedAudioIntentState={ready:false,listening:false,pending:new Map(),owners:new Set()};
 function eaImportedAudioBindIntent(owner){
- if(!SKIP_AUDIO)eaImportedAudioIntentState.owners.add(owner);
+ if(SKIP_AUDIO)return;
+ eaImportedAudioIntentState.owners.add(owner);
+ if(owner.eaVideoAudioBound)return;
+ owner.eaVideoAudioBound=true;
+ window.addEventListener('ea-content-video-state',event=>{
+  if(event.detail?.active===true){
+   if(owner.eaVideoAudioActive)return;
+   owner.eaVideoAudioActive=true;owner.eaVideoAudioWasActive=owner.isActive;
+   owner.off();owner.volume=0;
+   for(const group of Object.values(owner.groups))group.update(0);
+  }else if(event.detail?.active===false&&owner.eaVideoAudioActive){
+   owner.eaVideoAudioActive=false;
+   if(owner.eaVideoAudioWasActive)owner.on();
+  }
+ });
 }
 function eaImportedAudioLoadAfterIntent(item,callback){
  if(SKIP_AUDIO)return false;
@@ -93,6 +107,7 @@ function eaImportedAudioLoadAfterIntent(item,callback){
 function eaImportedAudioActivate(event){
  const state=eaImportedAudioIntentState;
  if(state.ready||SKIP_AUDIO||event?.isTrusted===false)return;
+ if(event?.target?.closest?.('[data-ea-video-open],.ea-video-lightbox')||document.querySelector?.('.ea-video-lightbox[open]'))return;
  state.ready=true;
  window.removeEventListener('pointerdown',eaImportedAudioActivate,true);
  window.removeEventListener('keydown',eaImportedAudioActivate,true);
