@@ -377,6 +377,11 @@
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
     },
     {
+      "path": "assets/components/roadster-footer/roadster-3d-v1.css",
+      "bytes": 1386,
+      "sha256": "c9455e631b1b4c0470934b6da52ff160ee73255aa271297290abef9721726f26"
+    },
+    {
       "path": "assets/components/roadster-footer/roadster-flight-3b2f475c467d.jpg",
       "bytes": 108362,
       "sha256": "3b2f475c467d9bbbac017cde49f0e505a0ecbaf6bd08c867ecd70bad8909cef5"
@@ -395,6 +400,11 @@
       "path": "assets/components/roadster-footer/roadster-photo-9773b85132ad.jpg",
       "bytes": 23116,
       "sha256": "9773b85132added4372b76416c3ec21f4146958babb1956ecb6869eae8caa291"
+    },
+    {
+      "path": "assets/components/roadster-footer/roadster-view-v1.html",
+      "bytes": 979,
+      "sha256": "1726ba2baeb6253eb26b2a91ccca3af24a50ec5ccbf9ce91ebf0e9955fd8109f"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
