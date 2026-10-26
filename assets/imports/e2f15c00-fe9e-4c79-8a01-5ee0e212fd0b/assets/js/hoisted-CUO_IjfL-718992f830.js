@@ -678,7 +678,7 @@ function eaPhotoPortraitEarlyProgress(section){
   const move=section.getMoveRatio();
   if(!Number.isFinite(move)||!Number.isFinite(edges[0]))return 0;
   const stage=typeof whoSubsectionWeAre==='undefined'?null:whoSubsectionWeAre;
-  if(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout)return eaPhotoPortraitSmooth(0,edges[1]-.08,move);
+  if(eaPhotoPortraitDesktopStudioAssembly&&!properties.useMobileLayout)return eaPhotoPortraitSmooth(0,edges[0]+(edges[1]-edges[0])*.55,move);
   if(move>=edges[0]){if(stage)stage.logoHideRatio=1;return 1;}
   const phase=stage?stage.logoHideRatio:0;
   // The first WE ARE word begins appearing at native logo phase .28.
