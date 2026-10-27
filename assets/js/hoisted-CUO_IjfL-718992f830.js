@@ -70,11 +70,28 @@ function eaResponsiveProjectTexture(node,url){
 
 /* easyadmin-deferred-audio:v1 */
 const eaImportedAudioIntentState={ready:false,listening:false,pending:new Map(),owners:new Set()};
+function eaImportedAudioApplyMute(owner){
+ const active=owner.isActive&&!owner.eaVideoAudioActive;
+ // The donor fades individual groups in its graphics loop. A suspended scene
+ // must still mute immediately, including HTML media and future audio sources.
+ owner.listener?.setMasterVolume?.(active?1:0);
+ for(const item of Object.values(owner.items))if(item.elem)item.elem.muted=!active;
+ const host=document.getElementById('header-right-sound-btn');
+ host?.setAttribute?.('aria-pressed',String(active));
+ host?.setAttribute?.('aria-label',active?'Mute sound':'Unmute sound');
+ host?.setAttribute?.('data-ea-audio-active',String(active));
+}
 function eaImportedAudioBindIntent(owner){
  if(SKIP_AUDIO)return;
  eaImportedAudioIntentState.owners.add(owner);
  if(owner.eaVideoAudioBound)return;
  owner.eaVideoAudioBound=true;
+ for(const name of ['on','off','toggle']){
+  const original=owner[name];
+  owner[name]=function(...args){const result=original.apply(this,args);eaImportedAudioApplyMute(this);return result;};
+ }
+ owner._onBodyClicked.add(()=>eaImportedAudioApplyMute(owner));
+ eaImportedAudioApplyMute(owner);
  window.addEventListener('ea-content-video-state',event=>{
   if(event.detail?.active===true){
    if(owner.eaVideoAudioActive)return;

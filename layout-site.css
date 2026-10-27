@@ -1,9 +1,17 @@
 /* Only assembled pages load this compatibility layer. Original styles remain. */
 html[data-ea-layout],html[data-ea-layout] body{height:auto!important;min-height:100%;max-height:none!important;overflow-x:hidden!important;overflow-y:auto!important;touch-action:auto!important}
-html[data-ea-layout] :is(#preloader,#transition-overlay,#canvas,#video-overlay,#scroll-indicator,#scroll-nav-section,#home-hero-scroll-container){display:none!important}
+html[data-ea-layout] body{overflow:visible!important}
+html[data-ea-layout] :is(#canvas,#video-overlay,#scroll-indicator,#scroll-nav-section,#home-hero-scroll-container){display:none!important}
+html[data-ea-layout] :is(#preloader,#transition-overlay)[hidden]{display:none!important}
+html[data-ea-layout] #transition-overlay{position:fixed!important;inset:0!important;pointer-events:none!important;z-index:10000}
+html[data-ea-layout] #preloader{position:fixed!important;inset:0!important;pointer-events:none!important;z-index:10001}
 html[data-ea-layout] :is(#ui,#page-container,#page-container-inner,#page-extra-sections,.page,.section){position:relative!important;inset:auto!important;height:auto!important;max-height:none!important;overflow:visible!important;opacity:1!important;visibility:visible!important;transform:none!important}
 html[data-ea-layout] :is(#header,#home-hero-title,#home-reel-title,#home-goal-context-inner,#end-section-inner,#footer-middle,#footer-bottom){position:relative!important;inset:auto!important;transform:none!important;opacity:1!important;visibility:visible!important}
+html[data-ea-layout] #header{position:sticky!important;top:0!important;z-index:20;background-color:var(--color-off-white,inherit)}
 html[data-ea-layout] :is(#header-right-talk-btn,#header-right-menu-btn){transform:none!important}
+html[data-ea-layout] #header-right-menu-btn-text-close{display:none!important}
+html[data-ea-layout][data-ea-layout-menu] #header-right-menu-btn-text{display:none!important}
+html[data-ea-layout][data-ea-layout-menu] #header-right-menu-btn-text-close{display:inline!important}
 html[data-ea-layout] #header-menu{display:none!important}
 html[data-ea-layout][data-ea-layout-menu] #header-container{flex-wrap:wrap!important;overflow:visible!important}
 html[data-ea-layout][data-ea-layout-menu] #header-container:after{content:'';flex-basis:100%;order:1}

@@ -1,0 +1,7 @@
+/* Content dimensions only. Fonts, colours, header and footer belong to the theme. */
+.ea-page-content{padding:clamp(32px,5vw,96px);min-height:50vh;line-height:1.5;overflow-wrap:anywhere}
+.ea-page-content h1{font-family:inherit;font-weight:400;font-size:clamp(2.25rem,5vw,6rem);line-height:1.05;margin:0 0 .75em}
+.ea-page-content p{margin:1em 0}
+.ea-page-content .ea-cover{display:block;width:100%;max-width:100%;height:auto;margin:2em 0;border-radius:var(--global-border-radius,0)}
+.ea-page-content .ea-prose{font-size:clamp(1rem,1.4vw,1.5rem);max-width:70ch}
+@media(max-width:812px){.ea-page-content{padding:32px 6vw}}

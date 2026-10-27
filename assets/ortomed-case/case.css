@@ -1,6 +1,4 @@
-/* Scope by current block IDs: the native SPA can retain the prior record attribute. */
-#project-details:has([data-ea-content-block^="ortomed-v2-"]) #project-details-meta,
-#project-details:has([data-ea-content-block^="ortomed-v2-"]) #project-details-header-info { display: none !important; }
+/* The shared project template supplies the title, description and services. */
 #project-details .project-details-item[data-ea-project-media^="block:ortomed-v2-"] > .ea-content-story { border-radius: 0 !important; }
 /* OrtoMed: a continuous visual case, built from reference-led presentation boards. */
 #project-details .project-details-item[data-ea-project-story-item][data-ea-project-media^="block:ortomed-v2-"] {

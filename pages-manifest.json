@@ -157,6 +157,14 @@
       "title": "Maintenance & Ongoing Support | Edgar Largo Studio",
       "path": "/edgar-largo-preview/services/maintenance-and-ongoing-support/",
       "file": "services/maintenance-and-ongoing-support/index.html"
+    },
+    {
+      "key": "page:8b059f60aa013f0a6855cf7f",
+      "kind": "page",
+      "title": "Test | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/pages/8b059f60aa013f0a6855cf7f/",
+      "file": "pages/8b059f60aa013f0a6855cf7f/index.html",
+      "assembled": true
     }
   ],
   "assets": [
@@ -1157,13 +1165,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1373714,
-      "sha256": "3212e343b58efe20a5db27a7f37b3dd30a3b42bd51e550601f8c0164ce4946eb"
+      "bytes": 1374649,
+      "sha256": "0c3540f5d7fb3d9cc3ed17a9cbab1246372356054147c3c851746bdaade82959"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1524263,
-      "sha256": "373f86b509d63b6948fd8b9eb245592eab05d9af6b0cde2f48e0dac4d38a6d7f"
+      "bytes": 1525198,
+      "sha256": "7d844b5a33a696979b5a1dd5d4fe5bf26f837460e5d561ab36d5501c0d4adda9"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -2532,8 +2540,8 @@
     },
     {
       "path": "assets/ortomed-case/case.css",
-      "bytes": 4620,
-      "sha256": "61490f3eb4c1dd34fd6b3e80ab8f0f560a00f721680de1cd85109bd77772046a"
+      "bytes": 4408,
+      "sha256": "b127f005928cf976c818b5d41a9ba092d555011feec33b133366325f49e10ea5"
     },
     {
       "path": "assets/ortomed-case/cover.webp",
@@ -2792,8 +2800,8 @@
     },
     {
       "path": "assets/scene/asset-versions.json",
-      "bytes": 2196,
-      "sha256": "e689e462e592ef82ad46a1a9c13acd07a507b9811598e93383c1c34334688810"
+      "bytes": 3470,
+      "sha256": "8f66f16bfb706955c8ac4e1f3ee7fdd620441de292e8a5e68e94240a6acd3b99"
     },
     {
       "path": "assets/scene/brand-color.json",
@@ -3201,6 +3209,11 @@
       "sha256": "1cdd9d4cd1bdc12fe1e2d2282b3a986ba148ecb621cc5cf345ebce2421a4dd3f"
     },
     {
+      "path": "content-page.css",
+      "bytes": 621,
+      "sha256": "29c5bd6380b2b8ca6fc0df8e1db6f3e7aa1cc87e18f057b3a59cc0d659d092fa"
+    },
+    {
       "path": "content-video.js",
       "bytes": 12338,
       "sha256": "de23718cf82360985f23736c3444021302c03efa6135bd4370d01e1244c8826f"
@@ -3221,14 +3234,24 @@
       "sha256": "53bbadb4b721ac3c1a04fb5632d14e067a9044f564691b3d58c7588332ea0029"
     },
     {
+      "path": "layout-preloader.js",
+      "bytes": 4553,
+      "sha256": "a3da14cdf557e90bf1482e7f8c6739b05262ab1506ce88688bce487e0ba31f3c"
+    },
+    {
       "path": "layout-site.css",
-      "bytes": 2319,
-      "sha256": "bcbe389cd49dea6439ebb1816cbf43f3cdb77fda40ae98040a8307727698d975"
+      "bytes": 3086,
+      "sha256": "fef695cd3868bbc84340abc23806ecf4fea5ac1ca2237b3313fead73aa163780"
     },
     {
       "path": "layout-site.js",
-      "bytes": 972,
-      "sha256": "eaed1d020dcd51e22aa0041509b5cca8c632271600abf0784edc356b943a488d"
+      "bytes": 3794,
+      "sha256": "52810b45875c7edde5528bc485a941231e1be12a96cb235ba7c15cbe17ecfdaa"
+    },
+    {
+      "path": "preloader-paint.js",
+      "bytes": 13051,
+      "sha256": "80cd085694ee35594169e067fa684c5fbb3d7e85c69ab4165022c5c79f69081b"
     },
     {
       "path": "preview.js",
@@ -3309,6 +3332,11 @@
       "path": "uploads/31e61ce2897b06bdeff12539844f6d57.webp",
       "bytes": 202650,
       "sha256": "0b96d4e338342c6bec56b84769c2e325e5c4f7ad5589bc8b96804ed6e58de800"
+    },
+    {
+      "path": "uploads/3d8d3a6cc6fc075e0fc7510cb69f5307.jpg",
+      "bytes": 77125,
+      "sha256": "283936b240dbbecbc3a9bfc48f892a549f85547c36783665efb7e1c50f8c707f"
     },
     {
       "path": "uploads/41e20a05ab791f464f25fc1ba48cb05e.svg",
@@ -3802,8 +3830,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 2334,
-      "sha256": "f13bff20f76555d5730e25b54f73a48f09a0fe096491056535556a44ba6b9f88"
+      "bytes": 2439,
+      "sha256": "d70a032bcb08f825042a6a32c2da6ca030c6e3c06666433e8b20050c92f44a03"
     },
     {
       "path": "robots.txt",
