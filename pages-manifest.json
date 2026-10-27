@@ -165,6 +165,22 @@
       "path": "/edgar-largo-preview/pages/8b059f60aa013f0a6855cf7f/",
       "file": "pages/8b059f60aa013f0a6855cf7f/index.html",
       "assembled": true
+    },
+    {
+      "key": "page:largo-privacy-policy",
+      "kind": "page",
+      "title": "Privacy Policy | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/pages/privacy-policy/",
+      "file": "pages/privacy-policy/index.html",
+      "assembled": true
+    },
+    {
+      "key": "page:largo-terms-and-conditions",
+      "kind": "page",
+      "title": "Terms & Conditions | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/pages/terms-and-conditions/",
+      "file": "pages/terms-and-conditions/index.html",
+      "assembled": true
     }
   ],
   "assets": [
@@ -3950,8 +3966,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 2439,
-      "sha256": "d70a032bcb08f825042a6a32c2da6ca030c6e3c06666433e8b20050c92f44a03"
+      "bytes": 2635,
+      "sha256": "bc006c40f7c57294d7e7b1974d5960b5ecf260067887b97b06109d50ddc81e8b"
     },
     {
       "path": "robots.txt",
