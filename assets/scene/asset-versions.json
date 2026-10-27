@@ -6,16 +6,16 @@
       "stripQuery": [
         "edgar-about"
       ],
-      "bytes": 1530043,
-      "sha256": "996286dc84f63074d5eb3e6171f5bd8e5d68fb363a89771e46bdf42fa5e136aa"
+      "bytes": 1531022,
+      "sha256": "3296ca51aa1e81c2ff55580e4bf47928608d11aea14ee060c41f48e42ab050df"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
       "stripQuery": [
         "edgar-about"
       ],
-      "bytes": 1379494,
-      "sha256": "0744fe5ac0c5ba3655d640af6eb5c988f7af6147d694da7f41c5d3e81ca057c8"
+      "bytes": 1380473,
+      "sha256": "f3ee5caadf529e5b5c8bddc545e76c4cf055c57ae97fa7d7a65fe96523285107"
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
