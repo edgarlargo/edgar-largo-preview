@@ -78,6 +78,85 @@
       "title": "Euro Energo: Corporate Website | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/euro-energo-company-website/",
       "file": "projects/euro-energo-company-website/index.html"
+    },
+    {
+      "key": "service-archive:en",
+      "kind": "service-archive",
+      "title": "Services | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/",
+      "file": "services/index.html",
+      "assembled": true,
+      "sandboxedEmbeds": 4
+    },
+    {
+      "key": "service:b174244fa2b6eb611fdf6654",
+      "kind": "service",
+      "title": "Crafted Websites | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/crafted-websites/",
+      "file": "services/crafted-websites/index.html"
+    },
+    {
+      "key": "service:d6594b1431cefc511a7fe0f6",
+      "kind": "service",
+      "title": "Website Redesign | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/website-redesign/",
+      "file": "services/website-redesign/index.html"
+    },
+    {
+      "key": "service:9056783663a748ae12a611ae",
+      "kind": "service",
+      "title": "eCommerce Website Design | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/ecommerce-website-design/",
+      "file": "services/ecommerce-website-design/index.html"
+    },
+    {
+      "key": "service:0bfd4d82dec192e8fa73b4e2",
+      "kind": "service",
+      "title": "CMS & Dynamic Websites | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/cms-and-dynamic-websites/",
+      "file": "services/cms-and-dynamic-websites/index.html"
+    },
+    {
+      "key": "service:52bd46d2bbb44a383da6a3f3",
+      "kind": "service",
+      "title": "Landing Pages & Microsites | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/landing-pages-and-microsites/",
+      "file": "services/landing-pages-and-microsites/index.html"
+    },
+    {
+      "key": "service:f92cea885641b880426262a7",
+      "kind": "service",
+      "title": "Consistent Identity | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/consistent-identity/",
+      "file": "services/consistent-identity/index.html"
+    },
+    {
+      "key": "service:11c21da28c428255315edf29",
+      "kind": "service",
+      "title": "Motion & Interaction Design | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/motion-and-interaction-design/",
+      "file": "services/motion-and-interaction-design/index.html"
+    },
+    {
+      "key": "service:0f7c4ae6ddcb1255472b4be5",
+      "kind": "service",
+      "title": "UX Centric Strategy | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/ux-centric-strategy/",
+      "file": "services/ux-centric-strategy/index.html"
+    },
+    {
+      "key": "service:8289ecbd474a8d63ec4a2041",
+      "kind": "service",
+      "title": "Performance Optimization | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/performance-optimization/",
+      "file": "services/performance-optimization/index.html"
+    },
+    {
+      "key": "service:6a906e9c44c173630f0b05f9",
+      "kind": "service",
+      "title": "Maintenance & Ongoing Support | Edgar Largo Studio",
+      "path": "/edgar-largo-preview/services/maintenance-and-ongoing-support/",
+      "file": "services/maintenance-and-ongoing-support/index.html"
     }
   ],
   "assets": [
@@ -3142,6 +3221,16 @@
       "sha256": "53bbadb4b721ac3c1a04fb5632d14e067a9044f564691b3d58c7588332ea0029"
     },
     {
+      "path": "layout-site.css",
+      "bytes": 2319,
+      "sha256": "bcbe389cd49dea6439ebb1816cbf43f3cdb77fda40ae98040a8307727698d975"
+    },
+    {
+      "path": "layout-site.js",
+      "bytes": 972,
+      "sha256": "eaed1d020dcd51e22aa0041509b5cca8c632271600abf0784edc356b943a488d"
+    },
+    {
       "path": "preview.js",
       "bytes": 5896,
       "sha256": "0f9c832d6d57e3eac86ec04ff7e748795d6d577f3dc4cb81131bb87cf5fd623c"
@@ -3713,8 +3802,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 1181,
-      "sha256": "86072f2bea3e8b2d7991b5a6a060d7708185595292cee06588f3ca5a534a5c13"
+      "bytes": 2334,
+      "sha256": "f13bff20f76555d5730e25b54f73a48f09a0fe096491056535556a44ba6b9f88"
     },
     {
       "path": "robots.txt",

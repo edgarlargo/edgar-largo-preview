@@ -1,0 +1,16 @@
+/* Only assembled pages load this compatibility layer. Original styles remain. */
+html[data-ea-layout],html[data-ea-layout] body{height:auto!important;min-height:100%;max-height:none!important;overflow-x:hidden!important;overflow-y:auto!important;touch-action:auto!important}
+html[data-ea-layout] :is(#preloader,#transition-overlay,#canvas,#video-overlay,#scroll-indicator,#scroll-nav-section,#home-hero-scroll-container){display:none!important}
+html[data-ea-layout] :is(#ui,#page-container,#page-container-inner,#page-extra-sections,.page,.section){position:relative!important;inset:auto!important;height:auto!important;max-height:none!important;overflow:visible!important;opacity:1!important;visibility:visible!important;transform:none!important}
+html[data-ea-layout] :is(#header,#home-hero-title,#home-reel-title,#home-goal-context-inner,#end-section-inner,#footer-middle,#footer-bottom){position:relative!important;inset:auto!important;transform:none!important;opacity:1!important;visibility:visible!important}
+html[data-ea-layout] :is(#header-right-talk-btn,#header-right-menu-btn){transform:none!important}
+html[data-ea-layout] #header-menu{display:none!important}
+html[data-ea-layout][data-ea-layout-menu] #header-container{flex-wrap:wrap!important;overflow:visible!important}
+html[data-ea-layout][data-ea-layout-menu] #header-container:after{content:'';flex-basis:100%;order:1}
+html[data-ea-layout][data-ea-layout-menu] #header-menu{display:flex!important;position:relative!important;inset:auto!important;order:2;margin-left:auto!important;max-width:100%;pointer-events:auto!important;opacity:1!important;visibility:visible!important}
+html[data-ea-layout][data-ea-layout-menu] #header-menu :is(a,button,input,textarea){pointer-events:auto!important}
+html[data-ea-layout][data-ea-layout-menu] :is(#header-menu-links,#header-menu-newsletter,#header-menu-talk,#header-menu-labs,.header-menu-link-text,#header-menu-labs-text){opacity:1!important;visibility:visible!important;transform:none!important}
+html[data-ea-layout] :is(.header-menu-link-text-clone,#header-menu-labs-text-clone){visibility:hidden!important}
+html[data-ea-layout] [data-ea-code]{position:relative;z-index:1}
+html[data-ea-layout] video{max-width:100%}
+@media(max-width:812px){html[data-ea-layout] #header-right-talk-btn{display:none!important}}
