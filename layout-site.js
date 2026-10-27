@@ -7,7 +7,13 @@
   if(document.getElementById('canvas')&&!document.body.style.backgroundColor&&getComputedStyle(document.documentElement).getPropertyValue('--color-off-white').trim())document.body.style.backgroundColor='var(--color-off-white)';
   const button = document.getElementById('header-right-menu-btn'), menu = document.getElementById('header-menu');
   if (button && menu) {
-    const toggle = open => { document.documentElement.toggleAttribute('data-ea-layout-menu',open); button.setAttribute('aria-expanded',String(open)); };
+    const toggle = open => {
+      document.documentElement.toggleAttribute('data-ea-layout-menu',open);button.setAttribute('aria-expanded',String(open));
+      // Use the source navbar's own state classes on partial composed pages.
+      document.getElementById('header')?.classList.toggle('--menu-opened',open);
+      document.getElementById('header-container')?.classList.toggle('--opened',open);
+      button.classList.toggle('--opened',open);
+    };
     button.setAttribute('aria-controls',menu.id); toggle(false);
     button.addEventListener('click', () => toggle(button.getAttribute('aria-expanded') !== 'true'));
     document.addEventListener('keydown', event => { if(event.key==='Escape'){toggle(false);button.focus();} });

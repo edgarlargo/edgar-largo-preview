@@ -13,12 +13,15 @@ html[data-ea-layout] #header-right-menu-btn-text-close{display:none!important}
 html[data-ea-layout][data-ea-layout-menu] #header-right-menu-btn-text{display:none!important}
 html[data-ea-layout][data-ea-layout-menu] #header-right-menu-btn-text-close{display:inline!important}
 html[data-ea-layout] #header-menu{display:none!important}
-html[data-ea-layout][data-ea-layout-menu] #header-container{flex-wrap:wrap!important;overflow:visible!important}
-html[data-ea-layout][data-ea-layout-menu] #header-container:after{content:'';flex-basis:100%;order:1}
-html[data-ea-layout][data-ea-layout-menu] #header-menu{display:flex!important;position:relative!important;inset:auto!important;order:2;margin-left:auto!important;max-width:100%;pointer-events:auto!important;opacity:1!important;visibility:visible!important}
+html[data-ea-layout][data-ea-layout-menu] #header{background:transparent;color:var(--color-white,#fff)}
+html[data-ea-layout][data-ea-layout-menu] #header:before{content:'';position:fixed;inset:0;background:var(--header-color);z-index:-1;pointer-events:none}
+html[data-ea-layout][data-ea-layout-menu] #header-container{overflow:visible!important;pointer-events:auto!important}
+html[data-ea-layout][data-ea-layout-menu] #header-menu{display:flex!important;max-width:100%;max-height:calc(100dvh - 140px);overflow-y:auto;pointer-events:auto!important;opacity:1!important;visibility:visible!important}
 html[data-ea-layout][data-ea-layout-menu] #header-menu :is(a,button,input,textarea){pointer-events:auto!important}
 html[data-ea-layout][data-ea-layout-menu] :is(#header-menu-links,#header-menu-newsletter,#header-menu-talk,#header-menu-labs,.header-menu-link-text,#header-menu-labs-text){opacity:1!important;visibility:visible!important;transform:none!important}
 html[data-ea-layout] :is(.header-menu-link-text-clone,#header-menu-labs-text-clone){visibility:hidden!important}
 html[data-ea-layout] [data-ea-code]{position:relative;z-index:1}
 html[data-ea-layout] video{max-width:100%}
+@media(min-width:813px){html[data-ea-layout] #header-right-menu-btn{width:9.5em;padding:0 1.125em 0 1.625em}html[data-ea-layout] #header-right-menu-btn-inner{justify-content:space-between}html[data-ea-layout][data-ea-layout-menu] #header-right-menu-btn-text-close{position:static!important;transform:none!important}}
+@media(max-width:812px){html[data-ea-layout] :is(#header-right-menu-btn-text,#header-right-menu-btn-text-close){display:none!important}}
 @media(max-width:812px){html[data-ea-layout] #header-right-talk-btn{display:none!important}}

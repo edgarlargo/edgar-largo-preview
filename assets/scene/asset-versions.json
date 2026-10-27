@@ -6,16 +6,16 @@
       "stripQuery": [
         "edgar-about"
       ],
-      "bytes": 1525198,
-      "sha256": "7d844b5a33a696979b5a1dd5d4fe5bf26f837460e5d561ab36d5501c0d4adda9"
+      "bytes": 1530043,
+      "sha256": "996286dc84f63074d5eb3e6171f5bd8e5d68fb363a89771e46bdf42fa5e136aa"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
       "stripQuery": [
         "edgar-about"
       ],
-      "bytes": 1374649,
-      "sha256": "0c3540f5d7fb3d9cc3ed17a9cbab1246372356054147c3c851746bdaade82959"
+      "bytes": 1379494,
+      "sha256": "0744fe5ac0c5ba3655d640af6eb5c988f7af6147d694da7f41c5d3e81ca057c8"
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
@@ -92,8 +92,8 @@
         "v",
         "ea-v"
       ],
-      "bytes": 3794,
-      "sha256": "52810b45875c7edde5528bc485a941231e1be12a96cb235ba7c15cbe17ecfdaa"
+      "bytes": 4096,
+      "sha256": "2f9463802a6e0645a6ebc488b57ddbe5016dd0d06a75ea2da1879ac95d52a357"
     },
     {
       "path": "layout-site.css",
@@ -101,8 +101,8 @@
         "v",
         "ea-v"
       ],
-      "bytes": 3086,
-      "sha256": "fef695cd3868bbc84340abc23806ecf4fea5ac1ca2237b3313fead73aa163780"
+      "bytes": 3665,
+      "sha256": "5a7c40638d7ad6cbebd65d3c4e8760fdb6e2a6637183056bbfd8721b8fdf1370"
     },
     {
       "path": "layout-preloader.js",
@@ -130,6 +130,15 @@
       ],
       "bytes": 621,
       "sha256": "29c5bd6380b2b8ca6fc0df8e1db6f3e7aa1cc87e18f057b3a59cc0d659d092fa"
+    },
+    {
+      "path": "assets/scene/brand-color.css",
+      "stripQuery": [
+        "v",
+        "ea-v"
+      ],
+      "bytes": 365,
+      "sha256": "1f81c2f34c66f9cc15b8ffe4ce6b90c3a3ecb098e018cea79913eed5e053b0a6"
     }
   ]
 }
