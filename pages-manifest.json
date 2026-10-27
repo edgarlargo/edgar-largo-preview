@@ -3364,11 +3364,6 @@
       "sha256": "812f434415fea86c23980b25cd7cbcedb1c2c4889d2f125a6ed5122a4d13ab49"
     },
     {
-      "path": "uploads/4a6b09a11017e2154e570b280b117b92.png",
-      "bytes": 45733,
-      "sha256": "4a6b09a11017e2154e570b280b117b921b0356975f9bd833363b1bf619638e17"
-    },
-    {
       "path": "uploads/4c01503fcf64cd52bcd370a408dd125d.jpg",
       "bytes": 26361,
       "sha256": "4c01503fcf64cd52bcd370a408dd125df18684acade929ac859d2b0da00e195d"
@@ -3577,11 +3572,6 @@
       "path": "uploads/dd8f1628fce3742f314e9cf5b27e0f7b.webp",
       "bytes": 100062,
       "sha256": "dd8f1628fce3742f314e9cf5b27e0f7b5596c83cf10251ea0a69d5074ee4b030"
-    },
-    {
-      "path": "uploads/e062738ad47b1c3ca4d17daf00b3c759.png",
-      "bytes": 44727,
-      "sha256": "e062738ad47b1c3ca4d17daf00b3c75967c35786922d6f7ccc7d2aa85797de5d"
     },
     {
       "path": "uploads/e1284b321893f70bc204372a0da5d2b3.svg",
@@ -3852,6 +3842,106 @@
       "path": "uploads/largo-studio-light-48-567bf1ccb020e42f.png",
       "bytes": 820,
       "sha256": "567bf1ccb020e42f22ad0faa4d5ad9bddc5a5eb3fb6cff5972a0e9fd83bda332"
+    },
+    {
+      "path": "uploads/service-cms-and-dynamic-websites-depth-v1.png",
+      "bytes": 123432,
+      "sha256": "2e6f0af4f575d41022c5e32eefa4210326ce200634080fe56fd4e039cc63eceb"
+    },
+    {
+      "path": "uploads/service-cms-and-dynamic-websites-v1.webp",
+      "bytes": 137232,
+      "sha256": "4a4c39dcf0f95b3370ad0aa2df14c7db5d17dc7f33f0b420ff8a21fba2045b3e"
+    },
+    {
+      "path": "uploads/service-consistent-identity-depth-v1.png",
+      "bytes": 121651,
+      "sha256": "2ee5636c2ec1c08644bcbc833c523dc00230f7c631cf4f15ac6c7123e54dbda9"
+    },
+    {
+      "path": "uploads/service-consistent-identity-v1.webp",
+      "bytes": 189674,
+      "sha256": "8d7e83b78df35bfaa35a23b787dc8449df7a3c677b77200738c87ba4627e316c"
+    },
+    {
+      "path": "uploads/service-crafted-websites-depth-v1.png",
+      "bytes": 109820,
+      "sha256": "73f6a8266147a93081bbcf00ba81ea2b1595ccacffb14b4852eeb91af9ec8f99"
+    },
+    {
+      "path": "uploads/service-crafted-websites-v1.webp",
+      "bytes": 115906,
+      "sha256": "21f97be7da60e4fa4f9ae3d5a6ded8b614c3c6fc2f70df271ae5f7536fb8371c"
+    },
+    {
+      "path": "uploads/service-ecommerce-website-design-depth-v1.png",
+      "bytes": 121938,
+      "sha256": "6636770b383fa490ba0367f47da3974dcfd65c68ced4c7c5d41704f558f2f9dd"
+    },
+    {
+      "path": "uploads/service-ecommerce-website-design-v1.webp",
+      "bytes": 118604,
+      "sha256": "fb4c1bf96b31b7f46a257ee8de646749ccf8a3bf5a7791d7325e119132181a05"
+    },
+    {
+      "path": "uploads/service-landing-pages-and-microsites-depth-v1.png",
+      "bytes": 110126,
+      "sha256": "0bdea044a3b2d7fa9ea14e24db1128910cb046f81849262e993b32ca4a371c56"
+    },
+    {
+      "path": "uploads/service-landing-pages-and-microsites-v1.webp",
+      "bytes": 80382,
+      "sha256": "e5f3d402a58c05141d50a1c90fc3d8d69968bcb4116e9ec9f2b9a04d8cb303ae"
+    },
+    {
+      "path": "uploads/service-maintenance-and-ongoing-support-depth-v1.png",
+      "bytes": 121985,
+      "sha256": "0e82d4f86c66b0f4a49852888b2bb45657635790d3ec9c9cb19234cd00e05c16"
+    },
+    {
+      "path": "uploads/service-maintenance-and-ongoing-support-v1.webp",
+      "bytes": 104294,
+      "sha256": "e85990b095f4a9ef00b0eb13fe612ffcf098d8c73f081986b123bc47b7ee5c83"
+    },
+    {
+      "path": "uploads/service-motion-and-interaction-design-depth-v1.png",
+      "bytes": 130435,
+      "sha256": "d7cfdb07bae6ef16cead1ac4d97318b91af3800bfba00e5e9af96ce7be039a00"
+    },
+    {
+      "path": "uploads/service-motion-and-interaction-design-v1.webp",
+      "bytes": 95084,
+      "sha256": "32abe428a6a54d2bb19d0c77a101d4bf845b520a16d4f0144d511fd29470d613"
+    },
+    {
+      "path": "uploads/service-performance-optimization-depth-v1.png",
+      "bytes": 117988,
+      "sha256": "c097da42323d3236150662ba04ef6b424245fdf82daf865d4b313429e6e58d91"
+    },
+    {
+      "path": "uploads/service-performance-optimization-v1.webp",
+      "bytes": 100772,
+      "sha256": "cd5ba61cb69c28807d3ebbacb3cc4099b188ce883a3e097e89f08938d9649e7c"
+    },
+    {
+      "path": "uploads/service-ux-centric-strategy-depth-v1.png",
+      "bytes": 116705,
+      "sha256": "e3fafde05c60f70ed3588665b1e0fa13933a8af2b6e45dc41dc9e770e58e99b2"
+    },
+    {
+      "path": "uploads/service-ux-centric-strategy-v1.webp",
+      "bytes": 86420,
+      "sha256": "946d359529a71e00db33cb0d35a4c4e23918f796a2d138403a443a2d8a4034b2"
+    },
+    {
+      "path": "uploads/service-website-redesign-depth-v1.png",
+      "bytes": 120819,
+      "sha256": "3c7e4b21577fa06b1f160ed2c287905459afc84b0efa2c8170fec5f023bb0337"
+    },
+    {
+      "path": "uploads/service-website-redesign-v1.webp",
+      "bytes": 119568,
+      "sha256": "544a150776dc094c1b06b68c8b0b0093faaab2990dca5a337fdc1d0dced6ecd8"
     },
     {
       "path": "project-images.js",
