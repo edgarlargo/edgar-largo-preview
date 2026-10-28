@@ -733,7 +733,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -783,6 +784,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -825,7 +827,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -875,6 +878,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -917,7 +921,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -967,6 +972,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1009,7 +1015,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1059,6 +1066,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1101,7 +1109,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1151,6 +1160,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1193,7 +1203,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1243,6 +1254,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1285,7 +1297,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1335,6 +1348,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1377,7 +1391,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1427,6 +1442,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1469,7 +1485,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1519,6 +1536,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1561,7 +1579,8 @@ function mount({stage,svg,read},value){
   let strength=value, active=-1;
   const items=PARTS.map((p,i)=>{
     const group=mk('g',{},g), body=solid(group), detail=mk('path',{class:'nf'},group), fine=mk('path',{class:'nf lo'},group);
-    return {p,group,body,detail,fine,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
+    const glow=mk('path',{class:'nf hi hairline-glow',visibility:'hidden','aria-hidden':'true'},group);
+    return {p,group,body,detail,fine,glow,lift:tween(0),turn:tween(0),last:'',anchor:P(p.x,p.y,p.z+(p.upright?p.h/2:0))};
   });
   function draw(o,i,lift,turn){
     const p=o.p,w=p.w,h=p.h,angle=rad((p.angle||0)+turn),co=Math.cos(angle),si=Math.sin(angle);
@@ -1611,6 +1630,7 @@ function mount({stage,svg,read},value){
     }else if(p.kind==='key'){d+=R(5,4,w-10,h-8,2);}
     else if(p.kind==='base'){f+=S(5,h-4,w-5,h-4);}
     o.detail.setAttribute('d',d);o.fine.setAttribute('d',f);
+    o.glow.setAttribute('d',paths.sil+d);o.group.classList.toggle('hairline-active',i===active);
   }
   const loop=register(stage,(_dt,now)=>{
     let moving=false;
@@ -1638,7 +1658,7 @@ hairline({name:"service-rack",means:"A service rack opens its drawers in sequenc
 })();
 
 const SERVICE_FIGURES={"crafted-websites":"devices","website-redesign":"rebuild","ecommerce-website-design":"storefront","cms-and-dynamic-websites":"cardfile","landing-pages-and-microsites":"launchpad","consistent-identity":"swatches","motion-and-interaction-design":"frames","ux-centric-strategy":"fieldnotes","performance-optimization":"chronograph","maintenance-and-ongoing-support":"service-rack"};
-const style=document.createElement('style');style.textContent="/* Client artwork only. Theme layout, labels and navigation retain their styles. */\n.largo-hairline-cover {\n  position:absolute; inset:0; overflow:hidden; border-radius:15px;\n  background:#08090a; z-index:1; isolation:isolate;\n  --hairline-hi:#f4f3ff; --hairline-edge:#92929f;\n  --hairline-mid:#666674; --hairline-lo:#41414c; --hairline-stroke:1.15;\n}\n.largo-hairline-cover [data-hairline] {\n  position:absolute; width:100%; height:100%; inset:0; aspect-ratio:auto;\n  background:#08090a; touch-action:pan-y;\n}\n.largo-hairline-cover svg { transition:opacity .65s ease,translate .7s cubic-bezier(.32,.72,0,1); }\n.largo-hairline-cover[data-visible=\"false\"] svg {opacity:0;translate:0 14px;}\n@media(prefers-reduced-motion:reduce){\n  .largo-hairline-cover svg {transition:none;translate:none!important;opacity:1!important;}\n}\n";document.head.append(style);
+const style=document.createElement('style');style.textContent="/* Client artwork only. Theme layout, labels and navigation retain their styles. */\n.largo-hairline-cover {\n  position:absolute; inset:0; overflow:hidden; border-radius:15px;\n  background:#08090a; z-index:1; isolation:isolate;\n  --hairline-hi:#f4f3ff; --hairline-edge:#92929f;\n  --hairline-mid:#666674; --hairline-lo:#41414c; --hairline-stroke:1.15;\n}\n.largo-hairline-cover [data-hairline] {\n  position:absolute; width:100%; height:100%; inset:0; aspect-ratio:auto;\n  background:#08090a; touch-action:pan-y;\n}\n.largo-hairline-cover svg { transition:opacity .65s ease,translate .7s cubic-bezier(.32,.72,0,1); }\n.largo-hairline-cover[data-visible=\"false\"] svg {opacity:0;translate:0 14px;}\n/* Owner-requested glow follows only the currently animated part's linework. */\n.largo-hairline-cover [data-hairline] .hairline-glow {\n  visibility:visible; fill:none; stroke:#e3d8ff; stroke-width:1.25;\n  opacity:0; pointer-events:none;\n  filter:drop-shadow(0 0 2px #b995ff) drop-shadow(0 0 5px #8951ff);\n  transition:opacity .7s cubic-bezier(.32,.72,0,1);\n}\n.largo-hairline-cover [data-hairline] .hairline-active > .hairline-glow {opacity:1;}\n.largo-hairline-cover[data-visible=\"false\"] .hairline-glow {visibility:hidden;}\n@media(prefers-reduced-motion:reduce){\n  .largo-hairline-cover svg {transition:none;translate:none!important;opacity:1!important;}\n  .largo-hairline-cover [data-hairline] .hairline-glow {transition:none;}\n}\n";document.head.append(style);
 // Loaded once on every entry page so a theme navigation into Services works too.
 if (!window.__largoServiceHairlines) {
   window.__largoServiceHairlines=true;
