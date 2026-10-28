@@ -1,4 +1,4 @@
-/* Admintation scroll indicator contrast v2 */
+/* Admintation scroll indicator contrast v3 */
 
 function eaScrollIndicatorPaint(indicator,bar,background){
   const now=performance.now();
@@ -40,11 +40,11 @@ function eaImportedScrollIndicator(owner){
   if(!indicator||!bar||owner.scrollIndicatorActiveRatio<=0||performance.now()-(indicator.eaContrastTime??-100)<75)return;
   const context=typeof properties==='undefined'?null:properties;
   let background=typeof context?.bgColor?.getHexString==='function'?'#'+context.bgColor.getHexString():null;
-  const classes=(context?.domRoot||document.documentElement).classList;
+  const classes=typeof context?.domRoot?.classList?.contains==='function'?context.domRoot.classList:document.documentElement.classList;
   if(classes.contains('is-black-bg')||classes.contains('is-blue-bg'))background='#000';
   else if(classes.contains('is-white-bg'))background='#fff';
   const section=typeof projectDetailsSection==='undefined'?null:projectDetailsSection;
-  if(typeof projectPage!=='undefined'&&projectPage?.isActive&&section?.projectDetailsData&&section.domContainer){
+  if(typeof projectPage!=='undefined'&&projectPage?.isActive&&section?.projectDetailsData&&typeof section.domContainer?.getBoundingClientRect==='function'){
     const rect=section.domContainer.getBoundingClientRect(),track=indicator.getBoundingClientRect(),y=track.top+track.height/2;
     if(y>=rect.top&&y<rect.bottom)background=projectPage.nextProjectRatio>.5?section.projectDetailsData.nextColorBg:section.projectDetailsData.colorBg;
   }
