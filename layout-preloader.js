@@ -1,4 +1,4 @@
-import {createImportedPreloaderPainter} from './preloader-paint.js?v=80cd085694ee3559';
+import {createImportedPreloaderPainter} from './preloader-paint.js?v=8e059e51b3380125';
 
 // Use the theme's existing overlay, mark, title settings and digit typography.
 // Its whole-page SPA controller cannot own a newly assembled DOM structure.
@@ -35,7 +35,7 @@ if (document.documentElement.hasAttribute('data-ea-layout')) {
   };
   const resources=[document.fonts?.ready,...[...document.images].filter(image=>image.loading!=='lazy'||image.getBoundingClientRect().top<innerHeight*1.2).map(image=>image.complete?Promise.resolve():new Promise(resolve=>{image.addEventListener('load',resolve,{once:true});image.addEventListener('error',resolve,{once:true});}))].filter(Boolean);
   let settled=0;
-  const ready=Promise.allSettled(resources.map(resource=>Promise.resolve(resource).finally(()=>{target=++settled/Math.max(1,resources.length);}))); 
+  const ready=Promise.allSettled(resources.map(resource=>Promise.resolve(resource).finally(()=>{target=++settled/Math.max(1,resources.length);})));
   resize();show();frame=requestAnimationFrame(update);
   const timeout=new Promise(resolve=>setTimeout(resolve,5000));
   Promise.race([ready,timeout]).then(()=>{target=1;const wait=reduced?0:Math.max(0,700-(performance.now()-started));setTimeout(()=>{complete=performance.now();},wait);});

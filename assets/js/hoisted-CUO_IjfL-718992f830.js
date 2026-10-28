@@ -1083,20 +1083,35 @@ function eaAboutStarsPatternUpdate(owner,delta){
 
 
 
-/* Admintation optional split preloader v5 */
+
+/* Admintation optional split preloader v6 */
 function eaImportedPreloaderTitle(owner,wordmark,title,split,reduced,width,viewHeight){
   const ctx=owner.ctx;
   if(typeof ctx.measureText!=='function'||typeof ctx.fillText!=='function')return false;
-  // CSS may arrive after the first loader frame. Read its current font while
-  // active, retaining measured layout caching and explicit Cyrillic fallback.
-  let family='Arial, sans-serif',weight='500';
-  try{
-    const node=document.querySelector?.('h1')||document.body;
-    const style=node&&typeof getComputedStyle==='function'?getComputedStyle(node):null;
-    if(typeof style?.fontFamily==='string'&&style.fontFamily.trim())family=style.fontFamily.trim()+', Arial, sans-serif';
-    if(/^[1-9]00$/.test(style?.fontWeight||''))weight=style.fontWeight;
-  }catch{}
-  const key=JSON.stringify([title,width,viewHeight,family,weight,document.fonts?.status]);
+  // Imported headings can be inserted while the loader is already visible.
+  // Use the site's inherited typography, once per title, and never paint a
+  // temporary web-font fallback that would change width on the next frame.
+  if(owner.eaTitleFont?.title!==title){
+    const font={title,family:'Arial, sans-serif',weight:'400',ready:true};
+    let primary='Arial';
+    try{
+      const style=document.body&&typeof getComputedStyle==='function'?getComputedStyle(document.body):null;
+      if(typeof style?.fontFamily==='string')primary=style.fontFamily.trim().match(/^(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|[^,])+/)?.[0]?.trim()||primary;
+      font.family=primary+', Arial, sans-serif';
+      if(/^[1-9]00$/.test(style?.fontWeight||''))font.weight=style.fontWeight;
+    }catch{}
+    owner.eaTitleFont=font;
+    if(typeof document.fonts?.load==='function'){
+      font.ready=false;
+      const fallback=()=>{font.family='Arial, sans-serif';font.ready=true;};
+      // Query only the primary family: a loaded secondary face must never
+      // validate an unresolved primary and allow a later visible font swap.
+      try{Promise.resolve(document.fonts.load(font.weight+' 16px '+primary,title)).then(faces=>{if(faces?.length>0&&faces.every(face=>face.status==='loaded'))font.ready=true;else fallback();},fallback);}catch{fallback();}
+    }else font.family='Arial, sans-serif';
+  }
+  const {family,weight,ready}=owner.eaTitleFont;
+  if(!ready)split=0; // Keep the slash pair visible; do not block native completion.
+  const key=JSON.stringify([title,width,viewHeight,family,weight,ready]);
   if(owner.eaTitleLayout?.key!==key){
     const margin=Math.max(18,Math.min(80,width*.06));
     const wrap=(text,limit)=>{
@@ -1122,8 +1137,8 @@ function eaImportedPreloaderTitle(owner,wordmark,title,split,reduced,width,viewH
     for(;;size=Math.max(12,size-1)){
       ctx.font=weight+' '+size+'px '+family;
       const slashHeight=size*1.65,halfWidth=slashHeight*.34,gap=size*.5;
-      const available=Math.max(size,width-margin*2-gap*2-halfWidth*4),lines=wrap(title,available);
-      const textWidth=Math.max(...lines.map(line=>ctx.measureText(line).width)),lineHeight=size*1.22;
+      const available=Math.max(size,width-margin*2-gap*2-halfWidth*4),lines=ready?wrap(title,available):[];
+      const textWidth=Math.max(0,...lines.map(line=>ctx.measureText(line).width)),lineHeight=size*1.22;
       layout={key,size,slashHeight,halfWidth,gap,lines,textWidth,lineHeight,font:ctx.font};
       if(lines.length*lineHeight<=viewHeight*.44||size===12)break;
     }
@@ -1242,6 +1257,7 @@ function eaImportedPreloaderDraw(owner){
   if(split===0)bar(0);else{bar(-offset);bar(offset);}
   ctx.restore();
 }
+
 
 
 

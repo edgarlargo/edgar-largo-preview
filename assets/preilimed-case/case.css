@@ -1,0 +1,106 @@
+@font-face{font-family:PreilimedInter;src:url(Inter-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:PreilimedInter;src:url(Inter-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+/* Individual PreiļiMED presentation; selectors also work after SPA navigation. */
+#project-details:has([data-ea-content-block^="preilimed-"]) #project-details-meta,
+#project-details:has([data-ea-content-block^="preilimed-"]) #project-details-header-info {
+  display: none !important;
+}
+#project-details:has([data-ea-content-block^="preilimed-"]) #project-details-preview-title {
+  width: 100% !important;
+  max-width: 100%;
+}
+#project-details .project-details-item[data-ea-project-story-item][data-ea-project-media^="block:preilimed-"] {
+  margin-top: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+#project-details .project-details-item[data-ea-project-media^="block:preilimed-"] > .ea-content-story,
+#project-details .ea-content-story .ea-story-block[data-ea-content-block^="preilimed-"] {
+  margin: 0;
+  border: 0;
+  border-radius: 0 !important;
+}
+#project-details .ea-content-story .ea-story-image[data-ea-content-block^="preilimed-"] {
+  padding: 0;
+  line-height: 0;
+  clip-path: none !important;
+  transition: none !important;
+}
+#project-details .ea-content-story .ea-story-image[data-ea-content-block^="preilimed-"] > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1 !important;
+  transition: none !important;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block^="preilimed-"] {
+  --case-ink: #151f6d;
+  font-family: PreilimedInter, Inter, sans-serif;
+  --case-paper: #edf4fa;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 32px 64px;
+  align-items: start;
+  padding: clamp(32px, 7vw, 112px) clamp(24px, 6vw, 96px);
+  color: var(--case-ink);
+  background: var(--case-paper);
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block^="preilimed-"] h2 {
+  margin: 0;
+  font-size: clamp(32px, 4.8vw, 72px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block^="preilimed-"] p {
+  margin: 0;
+  max-width: 40em;
+  font-size: clamp(16px, 1.4vw, 21px);
+  line-height: 1.6;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-intro"] h2,
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-digital"] h2 {
+  grid-row: span 2;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-intro"] p:last-child {
+  font-size: 12px;
+  letter-spacing: .05em;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] a {
+  display: inline-block;
+  min-height: 44px;
+  padding-block: 8px;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] a:hover {
+  text-decoration-thickness: 2px;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+#project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-visit"] p:last-child {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 68em;
+}
+@media (max-width: 640px) {
+  #project-details .ea-content-story .ea-story-text[data-ea-content-block^="preilimed-"] {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  #project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-intro"] h2,
+  #project-details .ea-content-story .ea-story-text[data-ea-content-block="preilimed-v2-digital"] h2 {
+    grid-row: auto;
+  }
+}

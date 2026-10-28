@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "from": "Lusion",
+  "to": "Largo",
+  "brandName": "Edgar Largo Studio",
+  "origin": "https://edgarlargo.com",
+  "description": "Edgar Largo Studio creates brands, websites and visual experiences. Based in Latvia, working with clients worldwide.",
+  "socialImage": "assets/meta/largo-social-3855fc3e4c68.jpg",
+  "assetAliases": {
+    "assets/fonts/LusionMono-0cf1c90769.woff": "assets/fonts/IBMPlexMono-Regular-5380b152ac.woff",
+    "assets/fonts/LusionMono-b27564e8f7.woff2": "assets/fonts/IBMPlexMono-Regular-5cfdc4acbb.woff2",
+    "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LusionMono-0cf1c90769.woff": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LargoMono-Regular-de7d0690aebe.woff",
+    "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LusionMono-b27564e8f7.woff2": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/LargoMono-Regular-0a4fda21fa9d.woff2",
+    "assets/scene/largo-environment/stickers-a8e2d2fa088d.png": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7.png",
+    "assets/scene/largo-environment/stickers_low-602501332670.png": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e.png",
+    "assets/scene/largo-environment/largo-stickers-1465-2fffff24da73.png": "assets/scene/largo-environment/largo-neon-stickers-1465-bdd0094132a7.png",
+    "assets/scene/largo-environment/largo-stickers-733-3a7740da6e73.png": "assets/scene/largo-environment/largo-neon-stickers-733-6370f64cd03e.png",
+    "assets/meta/largo-social-891cf2a7c315.jpg": "assets/meta/largo-social-3855fc3e4c68.jpg"
+  },
+  "removeScripts": [
+    "assets/js/js-b097aa9872.js",
+    "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/js-b097aa9872.js"
+  ],
+  "textReplacements": {
+    "https://lusion.co": "https://edgarlargo.com",
+    "https://lusion.dev": "https://edgarlargo.com",
+    "lusionltd": "edgarlargo"
+  }
+}
