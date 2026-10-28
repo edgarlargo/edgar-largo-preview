@@ -1241,13 +1241,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1388547,
-      "sha256": "ef02220cd8dafa890dc661d7722748aac5ffdcc0cd95e21f91866943c2ee7212"
+      "bytes": 1388774,
+      "sha256": "585e7ab57cec4f81d57bdf05cb37d4f3d9dc21f8ab5d1e1c7fc77d7318103cd6"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1539096,
-      "sha256": "ca1f004ca57a34459463675abfc05811ab46d4ef931e564d62346b8c16696101"
+      "bytes": 1539323,
+      "sha256": "a855f3c417622a8a8153d2d9768f9ce854b1cd665e4f28457aa67bd3e9b3bebe"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -3456,8 +3456,8 @@
     },
     {
       "path": "layout-site.js",
-      "bytes": 7612,
-      "sha256": "46ac07c2be5a90a54a16f61595430ee57f88b69c35660cfb0d87e23bee042a35"
+      "bytes": 7738,
+      "sha256": "b28c97b6ece8463923722defcbe972d39769e33769bb49dff9965cef6537440f"
     },
     {
       "path": "preloader-paint.js",

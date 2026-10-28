@@ -1,4 +1,4 @@
-/* Admintation scroll indicator contrast v1 */
+/* Admintation scroll indicator contrast v2 */
 
 function eaScrollIndicatorPaint(indicator,bar,background){
   const now=performance.now();
@@ -12,7 +12,9 @@ function eaScrollIndicatorPaint(indicator,bar,background){
     return m?[Number(m[1])/255,Number(m[2])/255,Number(m[3])/255,m[4]===undefined?1:Number(m[4])]:null;
   };
   const over=(a,b)=>a.slice(0,3).map((v,i)=>v*a[3]+b[i]*(1-a[3])).concat(1);
-  let color=rgba(background)||over(rgba(getComputedStyle(document.body).backgroundColor)||[0,0,0,0],rgba(getComputedStyle(document.documentElement).backgroundColor)||[1,1,1,1]);
+  // CSS's transparent initial html/body paint reveals the white viewport.
+  const base=over(rgba(getComputedStyle(document.body).backgroundColor)||[0,0,0,0],over(rgba(getComputedStyle(document.documentElement).backgroundColor)||[0,0,0,0],[1,1,1,1]));
+  let color=over(rgba(background)||[0,0,0,0],base);
   // WebGL can own the authored background while its DOM remains transparent.
   if(typeof eaLogoSurface==='function')color=eaLogoSurface({domLogoSvg:indicator},color);
   else{
@@ -36,12 +38,13 @@ function eaScrollIndicatorPaint(indicator,bar,background){
 function eaImportedScrollIndicator(owner){
   const indicator=owner.domScrollIndicator,bar=owner.domScrollIndicatorBar;
   if(!indicator||!bar||owner.scrollIndicatorActiveRatio<=0||performance.now()-(indicator.eaContrastTime??-100)<75)return;
-  let background=properties.bgColor?.getHexString?'#'+properties.bgColor.getHexString():null;
-  const classes=document.documentElement.classList;
+  const context=typeof properties==='undefined'?null:properties;
+  let background=typeof context?.bgColor?.getHexString==='function'?'#'+context.bgColor.getHexString():null;
+  const classes=(context?.domRoot||document.documentElement).classList;
   if(classes.contains('is-black-bg')||classes.contains('is-blue-bg'))background='#000';
   else if(classes.contains('is-white-bg'))background='#fff';
   const section=typeof projectDetailsSection==='undefined'?null:projectDetailsSection;
-  if(typeof projectPage!=='undefined'&&projectPage.isActive&&section?.projectDetailsData&&section.domContainer){
+  if(typeof projectPage!=='undefined'&&projectPage?.isActive&&section?.projectDetailsData&&section.domContainer){
     const rect=section.domContainer.getBoundingClientRect(),track=indicator.getBoundingClientRect(),y=track.top+track.height/2;
     if(y>=rect.top&&y<rect.bottom)background=projectPage.nextProjectRatio>.5?section.projectDetailsData.nextColorBg:section.projectDetailsData.colorBg;
   }

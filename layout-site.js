@@ -63,7 +63,9 @@ function eaScrollIndicatorPaint(indicator,bar,background){
     return m?[Number(m[1])/255,Number(m[2])/255,Number(m[3])/255,m[4]===undefined?1:Number(m[4])]:null;
   };
   const over=(a,b)=>a.slice(0,3).map((v,i)=>v*a[3]+b[i]*(1-a[3])).concat(1);
-  let color=rgba(background)||over(rgba(getComputedStyle(document.body).backgroundColor)||[0,0,0,0],rgba(getComputedStyle(document.documentElement).backgroundColor)||[1,1,1,1]);
+  // CSS's transparent initial html/body paint reveals the white viewport.
+  const base=over(rgba(getComputedStyle(document.body).backgroundColor)||[0,0,0,0],over(rgba(getComputedStyle(document.documentElement).backgroundColor)||[0,0,0,0],[1,1,1,1]));
+  let color=over(rgba(background)||[0,0,0,0],base);
   // WebGL can own the authored background while its DOM remains transparent.
   if(typeof eaLogoSurface==='function')color=eaLogoSurface({domLogoSvg:indicator},color);
   else{
