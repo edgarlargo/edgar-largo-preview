@@ -1,7 +1,8 @@
 /* Only assembled pages load this compatibility layer. Original styles remain. */
 html[data-ea-layout],html[data-ea-layout] body{height:auto!important;min-height:100%;max-height:none!important;overflow-x:hidden!important;overflow-y:auto!important;touch-action:auto!important}
 html[data-ea-layout] body{overflow:visible!important}
-html[data-ea-layout] :is(#canvas,#video-overlay,#scroll-indicator,#scroll-nav-section,#home-hero-scroll-container){display:none!important}
+html[data-ea-layout] :is(#canvas,#video-overlay,#scroll-nav-section,#home-hero-scroll-container){display:none!important}
+html[data-ea-layout] #scroll-indicator{opacity:0;pointer-events:none}
 html[data-ea-layout] :is(#preloader,#transition-overlay)[hidden]{display:none!important}
 html[data-ea-layout] #transition-overlay{position:fixed!important;inset:0!important;pointer-events:none!important;z-index:10000}
 html[data-ea-layout] #preloader{position:fixed!important;inset:0!important;pointer-events:none!important;z-index:10001}

@@ -49,3 +49,61 @@
   };
   document.addEventListener('ea-layout-ready',reveal,{once:true});
 })();
+
+
+function eaScrollIndicatorPaint(indicator,bar,background){
+  const now=performance.now();
+  if(now-(indicator.eaContrastTime??-100)<75)return;
+  indicator.eaContrastTime=now;
+  const rgba=value=>{
+    if(typeof value!=='string')return null;
+    let hex=value.trim().match(/^#([a-f0-9]{3}|[a-f0-9]{6})$/i)?.[1];
+    if(hex){if(hex.length===3)hex=hex.split('').map(v=>v+v).join('');return [0,2,4].map(i=>parseInt(hex.slice(i,i+2),16)/255).concat(1);}
+    const m=value.match(/^rgba?\(\s*([\d.]+)[, ]+([\d.]+)[, ]+([\d.]+)(?:\s*[,/]\s*([\d.]+))?\s*\)$/);
+    return m?[Number(m[1])/255,Number(m[2])/255,Number(m[3])/255,m[4]===undefined?1:Number(m[4])]:null;
+  };
+  const over=(a,b)=>a.slice(0,3).map((v,i)=>v*a[3]+b[i]*(1-a[3])).concat(1);
+  let color=rgba(background)||over(rgba(getComputedStyle(document.body).backgroundColor)||[0,0,0,0],rgba(getComputedStyle(document.documentElement).backgroundColor)||[1,1,1,1]);
+  // WebGL can own the authored background while its DOM remains transparent.
+  if(typeof eaLogoSurface==='function')color=eaLogoSurface({domLogoSvg:indicator},color);
+  else{
+    const rect=indicator.getBoundingClientRect(),paints=[];
+    for(const node of document.elementsFromPoint(rect.left+rect.width/2,rect.top+rect.height/2)){
+      if(node===document.body||node===document.documentElement||indicator.contains(node))continue;
+      const style=getComputedStyle(node),paint=rgba(style.backgroundColor);
+      if(style.visibility!=='visible'||!paint||!paint[3]||Number(style.opacity)===0)continue;
+      paint[3]*=Number(style.opacity);paints.push(paint);if(paint[3]>=1)break;
+    }
+    for(let i=paints.length-1;i>=0;i--)color=over(paints[i],color);
+  }
+  const linear=color.slice(0,3).map(v=>v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4));
+  const light=linear[0]*.2126+linear[1]*.7152+linear[2]*.0722<=.179;
+  if(indicator.eaContrastLight===light)return;
+  indicator.eaContrastLight=light;
+  bar.style.backgroundColor=light?'#fff':'#000';
+  indicator.style.backgroundColor=light?'rgba(255,255,255,.1)':'rgba(0,0,0,.1)';
+}
+
+(() => {
+  if(!document.documentElement.hasAttribute('data-ea-layout'))return;
+  const indicator=document.getElementById('scroll-indicator'),bar=document.getElementById('scroll-indicator-bar');
+  if(!indicator||!bar)return;
+  let frame=0,previous=0,lastScroll=-Infinity,opacity=0,lastY=document.scrollingElement?.scrollTop||0;
+  const draw=now=>{
+    frame=0;
+    const root=document.scrollingElement;if(!root)return;
+    const max=Math.max(0,root.scrollHeight-root.clientHeight),y=Math.max(0,Math.min(max,root.scrollTop));
+    if(y!==lastY){lastScroll=now;lastY=y;}
+    const active=max>1&&now-lastScroll<500,dt=previous?Math.min(.1,(now-previous)/1000):0;previous=now;
+    opacity=max>1?Math.max(0,Math.min(1,opacity+(active?2:-2)*dt)):0;
+    const height=indicator.getBoundingClientRect().height,ratio=Math.max(.2,root.clientHeight/Math.max(1,root.scrollHeight));
+    indicator.style.opacity=String(opacity);
+    bar.style.height=height*ratio+'px';bar.style.transform='translate3d(0,'+(max?height*(1-ratio)*y/max:0)+'px,0)';
+    eaScrollIndicatorPaint(indicator,bar);
+    if(active||opacity>0)frame=requestAnimationFrame(draw);
+  };
+  const schedule=()=>{if(!frame){previous=performance.now();frame=requestAnimationFrame(draw);}};
+  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule,{passive:true});
+  if(typeof ResizeObserver==='function')new ResizeObserver(schedule).observe(document.body);
+  schedule();
+})();
