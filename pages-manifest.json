@@ -640,6 +640,11 @@
       "sha256": "efe24ebb6d47e0d9e4fcacd53bbdacb15773813ef0e38a6f8525efa65c7a8051"
     },
     {
+      "path": "assets/components/service-models/padel.obj",
+      "bytes": 95596,
+      "sha256": "0afb17a1fff084c423dfcb63a2b3290a0cc81aae792ee1d8e81b5dc5d5892275"
+    },
+    {
       "path": "assets/components/service-models/queen.obj",
       "bytes": 10969,
       "sha256": "d2ee2901970d7e15acf1a40e21ea3177dcb4e69a1a00fa2b6cac0900798669a5"
@@ -651,8 +656,8 @@
     },
     {
       "path": "assets/components/service-models/service-models.js",
-      "bytes": 13156,
-      "sha256": "e5e88410e78c26ffcd123550658287f4f9eec1d72c31f3eda0dfce37ab52160d"
+      "bytes": 13165,
+      "sha256": "d7919b6585d7eb5725d2522d4a084fc38a1a25df187816b974215b9761013f31"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
