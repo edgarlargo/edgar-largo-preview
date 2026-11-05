@@ -527,7 +527,52 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     gap: clamp(1.75rem, 5vw, 3.75rem);
   }
 
-  .project-list[data-largo-service-carousel] :is(.project-item-main, .largo-services-number, .largo-services-description) {
+  .largo-services-carousel {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .largo-service-model-canvas {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline: 0;
+    z-index: 0;
+    display: block;
+    inline-size: 100%;
+    block-size: 100vh;
+    block-size: 100dvh;
+    pointer-events: none;
+  }
+
+  .project-list[data-largo-service-carousel] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .project-list[data-largo-service-carousel] .largo-services-slide[data-largo-service-model] > .project-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(4.5rem, 24vw, 7.5rem);
+    column-gap: clamp(.5rem, 2.5vw, 1rem);
+    align-items: center;
+  }
+
+  .project-list[data-largo-service-carousel] [data-largo-service-model] .project-item-main {
+    grid-area: 1 / 2;
+    block-size: clamp(6rem, 31vw, 9rem);
+    padding: 0;
+    pointer-events: none;
+  }
+
+  .project-list[data-largo-service-carousel] [data-largo-service-model] .project-item-footer {
+    grid-area: 1 / 1;
+  }
+
+  .project-list[data-largo-service-carousel] [data-largo-service-model-ready] .project-item-main {
+    visibility: hidden;
+  }
+
+  .project-list[data-largo-service-carousel] :is(.largo-services-number, .largo-services-description),
+  .project-list[data-largo-service-carousel] .largo-services-slide:not([data-largo-service-model]) .project-item-main {
     display: none;
   }
 

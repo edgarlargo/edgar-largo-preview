@@ -72,6 +72,7 @@ function createStage(THREE, carousel, track, slots) {
   let spinStart = -Infinity;
   let width = 0;
   let height = 0;
+  let canvasOffset = 0;
   let frame = 0;
   let visible = false;
   let lost = false;
@@ -92,8 +93,7 @@ function createStage(THREE, carousel, track, slots) {
         if (fetches.signal.aborted) return;
         const { geometry, width: modelWidth, height: modelHeight } = readGeometry(THREE, source);
         const solid = new THREE.Mesh(geometry, solidMaterial);
-        const wire = new THREE.LineSegments(new THREE.WireframeGeometry(geometry), wireMaterial);
-        requests.set(key, { solid, wire, modelWidth, modelHeight });
+        requests.set(key, { solid, wire: null, modelWidth, modelHeight });
         drawSoon();
       })
       .catch(() => {}); // The original artwork remains visible if this model fails.
@@ -116,6 +116,17 @@ function createStage(THREE, carousel, track, slots) {
   }
 
   function renderFrame(time) {
+    const mobile = !desktop.matches;
+    const viewport = window.visualViewport;
+    const viewportTop = viewport?.offsetTop ?? 0;
+    const viewportBottom = viewportTop + (viewport?.height ?? innerHeight);
+    // The imported mobile scroller translates the page. Keep one viewport-sized
+    // canvas within the carousel and move it with the visible slice of the list.
+    const offset = mobile ? Math.max(0, viewportTop - carousel.getBoundingClientRect().top) : 0;
+    if (offset !== canvasOffset) {
+      canvasOffset = offset;
+      canvas.style.transform = offset ? `translateY(${offset}px)` : '';
+    }
     const canvasRect = canvas.getBoundingClientRect();
     const trackRect = track.getBoundingClientRect();
     if (!canvasRect.width || !canvasRect.height) return;
@@ -131,7 +142,7 @@ function createStage(THREE, carousel, track, slots) {
       activeSlide = current;
     }
 
-    const still = reducedMotion.matches;
+    const still = mobile || reducedMotion.matches;
     tilt.x += (target.x - tilt.x) * .15;
     tilt.y += (target.y - tilt.y) * .15;
     const progress = still ? 1 : Math.min(1, (time - spinStart) / 950);
@@ -146,16 +157,22 @@ function createStage(THREE, carousel, track, slots) {
       const rect = art.getBoundingClientRect();
       const left = Math.max(rect.left, trackRect.left, canvasRect.left);
       const right = Math.min(rect.right, trackRect.right, canvasRect.right);
-      const top = Math.max(rect.top, trackRect.top, canvasRect.top);
-      const bottom = Math.min(rect.bottom, trackRect.bottom, canvasRect.bottom);
+      const top = Math.max(rect.top, trackRect.top, canvasRect.top, mobile ? viewportTop : -Infinity);
+      const bottom = Math.min(rect.bottom, trackRect.bottom, canvasRect.bottom, mobile ? viewportBottom : Infinity);
       if (right <= left || bottom <= top) continue;
 
       const model = modelFor(key);
       if (!model) continue;
       const active = slide === current;
-      const mesh = active ? model.solid : model.wire;
+      let mesh = model.solid;
+      if (!mobile && !active) {
+        model.wire ??= new THREE.LineSegments(new THREE.WireframeGeometry(model.solid.geometry), wireMaterial);
+        mesh = model.wire;
+      }
       camera.aspect = rect.width / rect.height;
-      const viewHeight = Math.max(2.45, model.modelHeight / .69, model.modelWidth / (camera.aspect * .76));
+      const viewHeight = mobile
+        ? Math.max(2.25, model.modelHeight / .86, model.modelWidth / (camera.aspect * .9))
+        : Math.max(2.45, model.modelHeight / .69, model.modelWidth / (camera.aspect * .76));
       camera.position.z = viewHeight / (2 * Math.tan(Math.PI / 12));
       camera.updateProjectionMatrix();
       mesh.rotation.x = active && !still ? tilt.x : 0;
@@ -179,8 +196,15 @@ function createStage(THREE, carousel, track, slots) {
   }
 
   listen(track, 'scroll', drawSoon);
+  listen(window, 'scroll', drawSoon);
+  listen(window, 'resize', drawSoon);
+  listen(desktop, 'change', drawSoon);
+  if (window.visualViewport) {
+    listen(window.visualViewport, 'scroll', drawSoon);
+    listen(window.visualViewport, 'resize', drawSoon);
+  }
   listen(carousel, 'pointermove', (event) => {
-    if (reducedMotion.matches || event.pointerType === 'touch') return;
+    if (!desktop.matches || reducedMotion.matches || event.pointerType === 'touch') return;
     const rect = track.getBoundingClientRect();
     target.x = ((event.clientY - rect.top) / rect.height - .5) * .2;
     target.y = ((event.clientX - rect.left) / rect.width - .5) * .25;
@@ -221,6 +245,16 @@ function createStage(THREE, carousel, track, slots) {
   intersection.observe(track);
   const state = new MutationObserver(drawSoon);
   state.observe(track, { subtree: true, attributes: true, attributeFilter: ['data-largo-service-active'] });
+  // Virtual scrolling does not dispatch a DOM scroll event.
+  const page = track.closest('#page-container');
+  let pageTransform = page?.style.transform;
+  const pageScroll = new MutationObserver(() => {
+    const transform = page.style.transform;
+    if (transform === pageTransform) return;
+    pageTransform = transform;
+    if (!desktop.matches) drawSoon();
+  });
+  if (page) pageScroll.observe(page, { attributes: true, attributeFilter: ['style'] });
   drawSoon();
 
   return () => {
@@ -230,10 +264,11 @@ function createStage(THREE, carousel, track, slots) {
     sizes.disconnect();
     intersection.disconnect();
     state.disconnect();
+    pageScroll.disconnect();
     clearReady();
     for (const model of requests.values()) {
       model?.solid.geometry.dispose();
-      model?.wire.geometry.dispose();
+      model?.wire?.geometry.dispose();
     }
     solidMaterial.dispose();
     wireMaterial.dispose();
@@ -258,7 +293,7 @@ function setup() {
   let starting = false;
   let pageVisible = true;
   async function syncViewport() {
-    if (!desktop.matches || !pageVisible) {
+    if (!pageVisible) {
       dispose?.();
       dispose = undefined;
       return;
@@ -268,7 +303,7 @@ function setup() {
     starting = true;
     try {
       const THREE = await import('../../../scene/three.module.js');
-      if (desktop.matches && pageVisible) dispose = createStage(THREE, carousel, track, slots);
+      if (pageVisible) dispose = createStage(THREE, carousel, track, slots);
     } catch {
       // Browsers without WebGL keep the existing service artwork and controls.
     } finally {
@@ -276,7 +311,6 @@ function setup() {
     }
   }
 
-  desktop.addEventListener('change', syncViewport);
   window.addEventListener('pagehide', () => { pageVisible = false; syncViewport(); });
   window.addEventListener('pageshow', () => { pageVisible = true; syncViewport(); });
   syncViewport();

@@ -536,8 +536,8 @@
     },
     {
       "path": "assets/components/service-carousel/service-carousel.css",
-      "bytes": 21122,
-      "sha256": "dc293e8e180415b72fb3f2e5b9295f19314a367df9aa8ada32b9a74aedced724"
+      "bytes": 22362,
+      "sha256": "0aae4e9e0b94532019d2904fe9cd00ca3acaac9f0ecf7dfdb5c8d12bdd8c0835"
     },
     {
       "path": "assets/components/service-carousel/service-carousel.js",
@@ -641,8 +641,8 @@
     },
     {
       "path": "assets/components/service-models/service-models.js",
-      "bytes": 10688,
-      "sha256": "6edefb8f2715d2b162d20e32c82adb166c9ed344b3484aa1314a840a56bf9f69"
+      "bytes": 12248,
+      "sha256": "a9401dc8a64e4da1905281d7e0209a3165771bc91a35e199e54f1764c86762fa"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
