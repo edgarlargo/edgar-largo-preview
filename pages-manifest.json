@@ -86,7 +86,7 @@
       "path": "/edgar-largo-preview/services/",
       "file": "services/index.html",
       "assembled": true,
-      "sandboxedEmbeds": 4
+      "sandboxedEmbeds": 0
     },
     {
       "key": "service:b174244fa2b6eb611fdf6654",
@@ -415,6 +415,16 @@
       "sha256": "71f3341336d9da8a2342d2f5950da0498452239251acead66ce63294bedd4765"
     },
     {
+      "path": "assets/components/hero-scene/fullscreen-home.css",
+      "bytes": 3165,
+      "sha256": "be754ff285db405718311ae229c512aa9614c6350134f64a2e2bf54bb95c1769"
+    },
+    {
+      "path": "assets/components/hero-scene/fullscreen-home.js",
+      "bytes": 404,
+      "sha256": "a65044bf95306bedcefa27feee73a918650aad174ae629d18d5ce83be98d75c9"
+    },
+    {
       "path": "assets/components/hero-scene/scene.bundle.js",
       "bytes": 586249,
       "sha256": "dbe0e5559d9fb48249dced995a89571c575646887cfb58c090bcdcd433a67f3f"
@@ -525,6 +535,16 @@
       "sha256": "9589d3ff67bf90ff8c0acc6327aebaf049c6e7c734fcf57805c61d398c86dc58"
     },
     {
+      "path": "assets/components/service-carousel/service-carousel.css",
+      "bytes": 20837,
+      "sha256": "0e93258d5775e15e90e1f0b8cc920485e35e1d213e9a66cb39c2425d74a2b0cf"
+    },
+    {
+      "path": "assets/components/service-carousel/service-carousel.js",
+      "bytes": 13887,
+      "sha256": "eeb2c2cddcd6c64778aeba4e947d15a373c4cbe43619210f646aa95e02a61007"
+    },
+    {
       "path": "assets/components/service-hairline/cardfile.webp",
       "bytes": 12830,
       "sha256": "d5df837070fcf768f44922b2b43b275ce69fbfc01556821279fd4e0c23d17047"
@@ -583,6 +603,46 @@
       "path": "assets/components/service-hairline/swatches.webp",
       "bytes": 13688,
       "sha256": "30892ad8d1d6b759e8bfba20b356df2b3dc1806f16c43e1655915f9b81f600e5"
+    },
+    {
+      "path": "assets/components/service-models/busto.obj",
+      "bytes": 31507,
+      "sha256": "2f1a060f28099da957df0af68754128e2b557ad3d170d1689bf48cee02ab74f0"
+    },
+    {
+      "path": "assets/components/service-models/cat.obj",
+      "bytes": 41343,
+      "sha256": "1afa56cfdbfc55fedf64f28229271399c1f2e5b4211dcfbda0a8e4722e4d6cce"
+    },
+    {
+      "path": "assets/components/service-models/fire.obj",
+      "bytes": 5134,
+      "sha256": "4d7470ebca156f53cd15cf1227f137609230988c469d0a2fe80d24b67143d2ad"
+    },
+    {
+      "path": "assets/components/service-models/heart.obj",
+      "bytes": 13535,
+      "sha256": "f91ae065b9c2bb17ce555e7b1063e7cc8cd2b4b33beaf1217a06d37cab4d13e0"
+    },
+    {
+      "path": "assets/components/service-models/king.obj",
+      "bytes": 8053,
+      "sha256": "24949d6e069bd89520e6e91488aeb1dd46e651c641bf37e0afd5390f29518d86"
+    },
+    {
+      "path": "assets/components/service-models/nose.obj",
+      "bytes": 14878,
+      "sha256": "efe24ebb6d47e0d9e4fcacd53bbdacb15773813ef0e38a6f8525efa65c7a8051"
+    },
+    {
+      "path": "assets/components/service-models/queen.obj",
+      "bytes": 10969,
+      "sha256": "d2ee2901970d7e15acf1a40e21ea3177dcb4e69a1a00fa2b6cac0900798669a5"
+    },
+    {
+      "path": "assets/components/service-models/service-models.js",
+      "bytes": 10688,
+      "sha256": "6edefb8f2715d2b162d20e32c82adb166c9ed344b3484aa1314a840a56bf9f69"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
@@ -1242,12 +1302,12 @@
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
       "bytes": 1388881,
-      "sha256": "a6c1361c8dfd768e47f3d6486597ed534c214e0b6f27589809a469cad970bfde"
+      "sha256": "25d88cec477f4b9ff48d873fd758851e681aa677a55e30ddd3ad0dad53f87210"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1539430,
-      "sha256": "dfd4ea2365640c0c942589c5aa97cc17ee7d0a235d8235858b2b0606b88cbcd0"
+      "bytes": 1539554,
+      "sha256": "8ed1b86c995ca1524112975218e751438cfdd3bfcc4430bae14713b1b6f1d6d2"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -3468,6 +3528,16 @@
       "path": "preview.js",
       "bytes": 5896,
       "sha256": "0f9c832d6d57e3eac86ec04ff7e748795d6d577f3dc4cb81131bb87cf5fd623c"
+    },
+    {
+      "path": "scene/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+    },
+    {
+      "path": "scene/three.module.js",
+      "bytes": 1237216,
+      "sha256": "313203957197800a1dfa954cfde84103be12bcd8e33aeee07be04216002b2e6d"
     },
     {
       "path": "settings-site.css",

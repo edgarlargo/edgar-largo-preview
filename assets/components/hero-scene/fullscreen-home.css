@@ -1,0 +1,106 @@
+html[data-largo-home-hero-fullscreen] #home-hero {
+  --largo-home-backdrop: #020206;
+  --largo-home-ink: #f7f5ff;
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  block-size: 100vh;
+  block-size: 100dvh;
+  padding-block-start: max(var(--base-padding-y), env(safe-area-inset-top));
+  padding-inline-start: max(var(--base-padding-x), env(safe-area-inset-left));
+  padding-inline-end: max(var(--base-padding-x), env(safe-area-inset-right));
+  overflow: hidden;
+  overflow: clip;
+  background: var(--largo-home-backdrop);
+  color: var(--largo-home-ink);
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero > #home-hero-visual-container {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  grid-area: auto;
+  inline-size: auto;
+  block-size: auto;
+  min-inline-size: 0;
+  min-block-size: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero-visual-container > iframe {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(2 2 6 / .56),
+    transparent 30%,
+    transparent 78%,
+    rgb(2 2 6 / .65)
+  );
+  pointer-events: none;
+  content: "";
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero-title {
+  z-index: 2;
+  color: var(--largo-home-ink);
+  text-shadow: 0 1px 8px rgb(2 2 6 / .85);
+  pointer-events: none;
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero-scroll-container {
+  --largo-home-scroll-center: calc((100% - env(safe-area-inset-bottom)) / 2);
+  z-index: 2;
+  inset-block-end: 0;
+  inset-inline: 0;
+  inline-size: auto;
+  block-size: calc(max(2.75rem, var(--base-padding-y)) + clamp(.6rem, 2.5dvh, 1.5rem) + env(safe-area-inset-bottom));
+  background: #fff;
+  color: #111;
+  pointer-events: none;
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero-scroll-container-crosses {
+  inset-block-start: calc(var(--largo-home-scroll-center) - var(--cross-size) / 2);
+  inset-inline-start: max(var(--base-padding-x), env(safe-area-inset-left));
+  inset-inline-end: max(var(--base-padding-x), env(safe-area-inset-right));
+  inline-size: auto;
+}
+
+html[data-largo-home-hero-fullscreen] #home-hero-scroll {
+  inset-block-start: var(--largo-home-scroll-center);
+}
+
+html[data-largo-home-hero-fullscreen] .home-hero-scroll-container-cross::before,
+html[data-largo-home-hero-fullscreen] .home-hero-scroll-container-cross::after {
+  background: currentColor;
+}
+
+html[data-largo-home-hero-in-view] #header:not(.--menu-opened) #header-logo {
+  color: #f7f5ff;
+}
+
+html[data-largo-home-hero-in-view] #header {
+  padding-block-start: max(var(--base-padding-y), env(safe-area-inset-top));
+  padding-inline-start: max(var(--base-padding-x), env(safe-area-inset-left));
+  padding-inline-end: max(var(--base-padding-x), env(safe-area-inset-right));
+}
+
+@media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
+  html[data-largo-home-hero-fullscreen] #home-hero-title {
+    background: var(--largo-home-backdrop);
+  }
+}
