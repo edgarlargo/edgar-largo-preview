@@ -630,6 +630,11 @@
       "sha256": "24949d6e069bd89520e6e91488aeb1dd46e651c641bf37e0afd5390f29518d86"
     },
     {
+      "path": "assets/components/service-models/knight.obj",
+      "bytes": 12193,
+      "sha256": "9f442d1f31b8c11c970b35c64202a641e1e4a9e1c373605c5280c999010d5b71"
+    },
+    {
       "path": "assets/components/service-models/nose.obj",
       "bytes": 14878,
       "sha256": "efe24ebb6d47e0d9e4fcacd53bbdacb15773813ef0e38a6f8525efa65c7a8051"
@@ -641,8 +646,8 @@
     },
     {
       "path": "assets/components/service-models/service-models.js",
-      "bytes": 13137,
-      "sha256": "0660746ac76a38b5596169a7b167089fb0168f4508b27840aa149c7b34e056cc"
+      "bytes": 13147,
+      "sha256": "e2106b0faa47d0857c08090b260d5ff40945ba6ae9618041cb913777dcd0ff69"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
