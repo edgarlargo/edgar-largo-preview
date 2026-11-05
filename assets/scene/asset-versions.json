@@ -34,8 +34,8 @@
       "stripQuery": [
         "v"
       ],
-      "bytes": 586249,
-      "sha256": "dbe0e5559d9fb48249dced995a89571c575646887cfb58c090bcdcd433a67f3f"
+      "bytes": 585342,
+      "sha256": "0d8f72efa8854abed5b6e104450b94e3cbdb02e0265dc11a02e8a8ca5537e953"
     },
     {
       "path": "content.css",
