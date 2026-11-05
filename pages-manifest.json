@@ -536,8 +536,8 @@
     },
     {
       "path": "assets/components/service-carousel/service-carousel.css",
-      "bytes": 22362,
-      "sha256": "0aae4e9e0b94532019d2904fe9cd00ca3acaac9f0ecf7dfdb5c8d12bdd8c0835"
+      "bytes": 23321,
+      "sha256": "4c464bf8e23c65a061a61dbfe0c21696c5e604a28b0cb020190244d4e712ac1b"
     },
     {
       "path": "assets/components/service-carousel/service-carousel.js",

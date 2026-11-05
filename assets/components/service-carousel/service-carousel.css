@@ -522,6 +522,38 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     padding-block-start: 7rem;
   }
 
+  #projects-main:has(.project-list[data-largo-service-carousel]) > #projects-main-title-top {
+    position: relative;
+    grid-column: 1 / -1;
+    inline-size: auto;
+    block-size: auto;
+    margin: 0 0 2em;
+    overflow: visible;
+    clip-path: none;
+  }
+
+  #projects-main:has(.project-list[data-largo-service-carousel]) #projects-main-title-wrapper {
+    inline-size: 100%;
+    left: 0;
+    font-size: min(17vw, 9rem);
+  }
+
+  #projects-main:has(.project-list[data-largo-service-carousel]) #projects-main-title {
+    left: 0;
+  }
+
+  #projects-main:has(.project-list[data-largo-service-carousel]) :is(#projects-main-title-project-number, #projects-main-title-project-arrow) {
+    right: 0;
+  }
+
+  #projects-main:has(.project-list[data-largo-service-carousel]) #projects-main-title-project-arrow {
+    bottom: .1em;
+  }
+
+  #projects-main:has(.project-list[data-largo-service-carousel]) #projects-main-title-project-arrow path {
+    stroke: currentColor;
+  }
+
   .project-list[data-largo-service-carousel] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(1.75rem, 5vw, 3.75rem);
