@@ -721,6 +721,502 @@
           ]
         }
       ]
+    },
+    "/services/": {
+      "title": "Services | Edgar Largo Studio",
+      "description": "Explore Edgar Largo Studio services in web design, eCommerce, CMS, brand identity, interaction design, UX and website support.",
+      "schema": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/#webpage",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/",
+          "name": "Services",
+          "description": "Explore Edgar Largo Studio services in web design, eCommerce, CMS, brand identity, interaction design, UX and website support.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#website"
+          },
+          "publisher": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Crafted Websites",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/crafted-websites/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Website Redesign",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/website-redesign/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "eCommerce Website",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/ecommerce-website-design/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "CMS & Dynamic Websites",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/cms-and-dynamic-websites/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Landing Pages & Microsites",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/landing-pages-and-microsites/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Consistent Identity",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/consistent-identity/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Motion & Interaction Design",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/motion-and-interaction-design/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "UX Centric Strategy",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/ux-centric-strategy/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "name": "Performance Optimization",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/performance-optimization/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "name": "Maintenance & Ongoing Support",
+              "url": "https://edgarlargo.github.io/edgar-largo-preview/services/maintenance-and-ongoing-support/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/crafted-websites/": {
+      "title": "Crafted Websites | Edgar Largo Studio",
+      "description": "Custom website design and development. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/crafted-websites/#service",
+          "name": "Crafted Websites",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/crafted-websites/",
+          "description": "Custom website design and development.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Crafted Websites",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/crafted-websites/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/website-redesign/": {
+      "title": "Website Redesign | Edgar Largo Studio",
+      "description": "A clearer experience for an existing website. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/website-redesign/#service",
+          "name": "Website Redesign",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/website-redesign/",
+          "description": "A clearer experience for an existing website.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Website Redesign",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/website-redesign/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/ecommerce-website-design/": {
+      "title": "eCommerce Website | Edgar Largo Studio",
+      "description": "Custom online stores by Edgar Largo Studio with payments, courier and parcel-locker delivery, invoicing and warehouse integrations.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/ecommerce-website-design/#service",
+          "name": "eCommerce Website",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/ecommerce-website-design/",
+          "description": "Online stores that connect your products, payments, delivery, invoicing and warehouse stock in one clear shopping experience.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "eCommerce Website",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/ecommerce-website-design/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/cms-and-dynamic-websites/": {
+      "title": "CMS & Dynamic Websites | Edgar Largo Studio",
+      "description": "Structured content with an individual page for every entry. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/cms-and-dynamic-websites/#service",
+          "name": "CMS & Dynamic Websites",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/cms-and-dynamic-websites/",
+          "description": "Structured content with an individual page for every entry.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "CMS & Dynamic Websites",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/cms-and-dynamic-websites/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/landing-pages-and-microsites/": {
+      "title": "Landing Pages & Microsites | Edgar Largo Studio",
+      "description": "A focused page for a campaign, offer or launch. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/landing-pages-and-microsites/#service",
+          "name": "Landing Pages & Microsites",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/landing-pages-and-microsites/",
+          "description": "A focused page for a campaign, offer or launch.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Landing Pages & Microsites",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/landing-pages-and-microsites/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/consistent-identity/": {
+      "title": "Consistent Identity | Edgar Largo Studio",
+      "description": "A visual language that holds together across touchpoints. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/consistent-identity/#service",
+          "name": "Consistent Identity",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/consistent-identity/",
+          "description": "A visual language that holds together across touchpoints.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Consistent Identity",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/consistent-identity/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/motion-and-interaction-design/": {
+      "title": "Motion & Interaction Design | Edgar Largo Studio",
+      "description": "Motion that gives an interface clarity and character. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/motion-and-interaction-design/#service",
+          "name": "Motion & Interaction Design",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/motion-and-interaction-design/",
+          "description": "Motion that gives an interface clarity and character.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Motion & Interaction Design",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/motion-and-interaction-design/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/ux-centric-strategy/": {
+      "title": "UX Centric Strategy | Edgar Largo Studio",
+      "description": "Content and navigation organised around visitor tasks. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/ux-centric-strategy/#service",
+          "name": "UX Centric Strategy",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/ux-centric-strategy/",
+          "description": "Content and navigation organised around visitor tasks.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "UX Centric Strategy",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/ux-centric-strategy/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/performance-optimization/": {
+      "title": "Performance Optimization | Edgar Largo Studio",
+      "description": "A practical review of loading and responsiveness. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/performance-optimization/#service",
+          "name": "Performance Optimization",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/performance-optimization/",
+          "description": "A practical review of loading and responsiveness.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Performance Optimization",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/performance-optimization/"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/maintenance-and-ongoing-support/": {
+      "title": "Maintenance & Ongoing Support | Edgar Largo Studio",
+      "description": "Keep the website useful as its content and requirements change. Explore this service with Edgar Largo Studio.",
+      "schema": [
+        {
+          "@type": "Service",
+          "@id": "https://edgarlargo.github.io/edgar-largo-preview/services/maintenance-and-ongoing-support/#service",
+          "name": "Maintenance & Ongoing Support",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/services/maintenance-and-ongoing-support/",
+          "description": "Keep the website useful as its content and requirements change.",
+          "provider": {
+            "@id": "https://edgarlargo.github.io/edgar-largo-preview/#studio"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Maintenance & Ongoing Support",
+              "item": "https://edgarlargo.github.io/edgar-largo-preview/services/maintenance-and-ongoing-support/"
+            }
+          ]
+        }
+      ]
+    },
+    "/pages/8b059f60aa013f0a6855cf7f/": {
+      "title": "Test | Edgar Largo Studio",
+      "description": "Edgar Largo Studio — page preview.",
+      "schema": [
+        {
+          "@type": "WebPage",
+          "name": "Test",
+          "url": "https://edgarlargo.github.io/edgar-largo-preview/pages/8b059f60aa013f0a6855cf7f/"
+        }
+      ]
+    },
+    "/pages/privacy-policy/": {
+      "title": "Privacy Policy | Edgar Largo Studio",
+      "description": "How Edgar Largo Studio handles personal information, contact enquiries, website preferences and your data protection rights.",
+      "schema": []
+    },
+    "/pages/terms-and-conditions/": {
+      "title": "Terms & Conditions | Edgar Largo Studio",
+      "description": "Information about using the Edgar Largo Studio website, project enquiries, intellectual property and written service agreements.",
+      "schema": []
     }
   }
 }

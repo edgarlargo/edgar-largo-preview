@@ -1,3 +1,4 @@
+# Edgar Largo Studio GitHub Pages preview
 User-agent: *
 Allow: /edgar-largo-preview/
 Sitemap: https://edgarlargo.github.io/edgar-largo-preview/sitemap.xml

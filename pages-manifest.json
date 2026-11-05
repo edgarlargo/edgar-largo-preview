@@ -26,56 +26,56 @@
     {
       "key": "project:3a4928d1a884c4895af695e0",
       "kind": "project",
-      "title": "OrtoMed — Healthcare Website | Edgar Largo Studio",
+      "title": "OrtoMed | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/ortomed/",
       "file": "projects/ortomed/index.html"
     },
     {
       "key": "project:ec89366859d9901d50eecdca",
       "kind": "project",
-      "title": "Vintage Stories: Brand & E-commerce | Edgar Largo Studio",
+      "title": "Vintage Stories Shop | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/vintage-stories-shop/",
       "file": "projects/vintage-stories-shop/index.html"
     },
     {
       "key": "project:db1f0e072531516acc00d533",
       "kind": "project",
-      "title": "Flow Mural in Daugavpils | Edgar Largo Studio",
+      "title": "Flow mural in Daugavpils | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/flow-mural-in-daugavpils/",
       "file": "projects/flow-mural-in-daugavpils/index.html"
     },
     {
       "key": "project:d20d870afd8eb6646182c0b5",
       "kind": "project",
-      "title": "Studio Branding & Website | Edgar Largo Studio",
+      "title": "Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/ru-edgar-largo-studia-website/",
       "file": "projects/ru-edgar-largo-studia-website/index.html"
     },
     {
       "key": "project:47e61af0a448b33db58882b1",
       "kind": "project",
-      "title": "Dixieme Art: Furniture Website | Edgar Largo Studio",
+      "title": "Dixieme Art | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/dixieme-art/",
       "file": "projects/dixieme-art/index.html"
     },
     {
       "key": "project:291552af83442c9a93c26cf2",
       "kind": "project",
-      "title": "Latvian Spine Surgeons: Branding | Edgar Largo Studio",
+      "title": "Latvian Spine Surgeons | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/latvian-spine-surgeons-website/",
       "file": "projects/latvian-spine-surgeons-website/index.html"
     },
     {
       "key": "project:8300dfa675fa70a7aad3b567",
       "kind": "project",
-      "title": "Latvian Caviar: Branding & Packaging | Edgar Largo Studio",
+      "title": "Latvian caviar | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/latvian-caviar/",
       "file": "projects/latvian-caviar/index.html"
     },
     {
       "key": "project:d204c30224eb1409a53d5958",
       "kind": "project",
-      "title": "Euro Energo: Corporate Website | Edgar Largo Studio",
+      "title": "Euro Energo Company Website | Edgar Largo Studio",
       "path": "/edgar-largo-preview/projects/euro-energo-company-website/",
       "file": "projects/euro-energo-company-website/index.html"
     },
@@ -1316,13 +1316,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1388881,
-      "sha256": "25d88cec477f4b9ff48d873fd758851e681aa677a55e30ddd3ad0dad53f87210"
+      "bytes": 1388758,
+      "sha256": "165610168dd266c9df2646a23324d21f1cd22927c76fe20422a39e4619485896"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1539554,
-      "sha256": "8ed1b86c995ca1524112975218e751438cfdd3bfcc4430bae14713b1b6f1d6d2"
+      "bytes": 1539431,
+      "sha256": "541f551bc39b18cc73e07a46b5df97daed1816719db303eca8094bb34e27a7a6"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -3481,8 +3481,8 @@
     },
     {
       "path": "assets/scene/site-seo.json",
-      "bytes": 31297,
-      "sha256": "c92c65a022b147e99655d16accdd87f88f1f4b76d4fc517109e67e2bf8470606"
+      "bytes": 50955,
+      "sha256": "d6ab4f51266569d2e088fe3a227f488850cbda8164ef59054650398cb414c471"
     },
     {
       "path": "assets/scene/tunnel-exit.json",
@@ -4146,8 +4146,8 @@
     },
     {
       "path": "robots.txt",
-      "bytes": 113,
-      "sha256": "82f7d43a7a5b5d8ec215935945f370b2e47f14f1d58729cb1010cbba3b10902d"
+      "bytes": 155,
+      "sha256": "b3e6d2d855867c2cc0f0ff84ba6caa6bf1cd082732168584923b5408c70267c7"
     }
   ],
   "forms": "remote-footer",
