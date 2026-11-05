@@ -645,9 +645,14 @@
       "sha256": "d2ee2901970d7e15acf1a40e21ea3177dcb4e69a1a00fa2b6cac0900798669a5"
     },
     {
+      "path": "assets/components/service-models/robot.obj",
+      "bytes": 66767,
+      "sha256": "edb03332225c499fd043b0dd06962a0766b84a998de4840b3937387270ec9de9"
+    },
+    {
       "path": "assets/components/service-models/service-models.js",
-      "bytes": 13147,
-      "sha256": "e2106b0faa47d0857c08090b260d5ff40945ba6ae9618041cb913777dcd0ff69"
+      "bytes": 13156,
+      "sha256": "e5e88410e78c26ffcd123550658287f4f9eec1d72c31f3eda0dfce37ab52160d"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",
