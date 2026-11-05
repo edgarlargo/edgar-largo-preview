@@ -1,5 +1,6 @@
 const desktop = matchMedia('(min-width: 992px)');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const mobileTurnDistance = 720;
 const modelKeys = new Set(['busto', 'nose', 'heart', 'fire', 'cream', 'cat', 'queen', 'king']);
 
 // The same OBJ triangles serve the flat-shaded artwork and the wireframe.
@@ -33,7 +34,12 @@ function readGeometry(THREE, source) {
   geometry.translate(-center.x, -center.y, -center.z);
   geometry.scale(scale, scale, scale);
   geometry.computeVertexNormals();
-  return { geometry, width: size.x * scale, height: size.y * scale };
+  let turnRadius = 0;
+  for (let index = 0; index < triangles.length; index += 3) {
+    const radius = Math.hypot(triangles[index] - center.x, triangles[index + 2] - center.z);
+    turnRadius = Math.max(turnRadius, radius);
+  }
+  return { geometry, width: size.x * scale, height: size.y * scale, turnRadius: turnRadius * scale };
 }
 
 function createStage(THREE, carousel, track, slots) {
@@ -73,6 +79,7 @@ function createStage(THREE, carousel, track, slots) {
   let width = 0;
   let height = 0;
   let canvasOffset = 0;
+  let mobileScrollOrigin;
   let frame = 0;
   let visible = false;
   let lost = false;
@@ -91,9 +98,9 @@ function createStage(THREE, carousel, track, slots) {
       })
       .then((source) => {
         if (fetches.signal.aborted) return;
-        const { geometry, width: modelWidth, height: modelHeight } = readGeometry(THREE, source);
+        const { geometry, width: modelWidth, height: modelHeight, turnRadius } = readGeometry(THREE, source);
         const solid = new THREE.Mesh(geometry, solidMaterial);
-        requests.set(key, { solid, wire: null, modelWidth, modelHeight });
+        requests.set(key, { solid, wire: null, modelWidth, modelHeight, turnRadius });
         drawSoon();
       })
       .catch(() => {}); // The original artwork remains visible if this model fails.
@@ -142,6 +149,13 @@ function createStage(THREE, carousel, track, slots) {
       activeSlide = current;
     }
 
+    // The track's position includes the donor's transform-driven scroll.
+    if (mobile) mobileScrollOrigin ??= trackRect.top;
+    else mobileScrollOrigin = undefined;
+    const scrollTurns = mobile && !reducedMotion.matches;
+    const scrollRotation = scrollTurns
+      ? (mobileScrollOrigin - trackRect.top) * Math.PI * 2 / mobileTurnDistance
+      : 0;
     const still = mobile || reducedMotion.matches;
     tilt.x += (target.x - tilt.x) * .15;
     tilt.y += (target.y - tilt.y) * .15;
@@ -171,12 +185,13 @@ function createStage(THREE, carousel, track, slots) {
       }
       camera.aspect = rect.width / rect.height;
       const viewHeight = mobile
-        ? Math.max(2.25, model.modelHeight / .86, model.modelWidth / (camera.aspect * .9))
+        ? Math.max(2.25, model.modelHeight / .86, (scrollTurns ? model.turnRadius * 2 : model.modelWidth) / (camera.aspect * .9))
         : Math.max(2.45, model.modelHeight / .69, model.modelWidth / (camera.aspect * .76));
-      camera.position.z = viewHeight / (2 * Math.tan(Math.PI / 12));
+      // Allow for the nearest edge of the rotating model as well as its widest side.
+      camera.position.z = viewHeight / (2 * Math.tan(Math.PI / 12)) + (scrollTurns ? model.turnRadius : 0);
       camera.updateProjectionMatrix();
       mesh.rotation.x = active && !still ? tilt.x : 0;
-      mesh.rotation.y = rotation + (active && !still ? tilt.y : 0);
+      mesh.rotation.y = mobile ? scrollRotation : rotation + (active && !still ? tilt.y : 0);
 
       renderer.setViewport(rect.left - canvasRect.left, canvasRect.bottom - rect.bottom, rect.width, rect.height);
       renderer.setScissor(left - canvasRect.left, canvasRect.bottom - bottom, right - left, bottom - top);
