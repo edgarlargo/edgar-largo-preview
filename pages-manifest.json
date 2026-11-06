@@ -536,8 +536,8 @@
     },
     {
       "path": "assets/components/service-carousel/service-carousel.css",
-      "bytes": 24764,
-      "sha256": "d83ac217cd11fe23c05a4e7f1e15ad4b088c716293b6e7071cff82dec098159b"
+      "bytes": 25000,
+      "sha256": "125c4bdc12e79199f8ac17bb329867fe186446706d1d275f726707d49beaa77d"
     },
     {
       "path": "assets/components/service-carousel/service-carousel.js",
@@ -581,8 +581,8 @@
     },
     {
       "path": "assets/components/service-covers/performance-optimization.png",
-      "bytes": 17554,
-      "sha256": "e7974fff0f6c539151709a5465719c59b0b769330d83ace8147ff32bef3bdf0f"
+      "bytes": 28271,
+      "sha256": "f4d3df4c7f39e4c6c7db81429d0b4b3cb8f152d1bdf5fadbf85c00aa474bfa14"
     },
     {
       "path": "assets/components/service-covers/ux-centric-strategy.png",
@@ -665,6 +665,11 @@
       "sha256": "1afa56cfdbfc55fedf64f28229271399c1f2e5b4211dcfbda0a8e4722e4d6cce"
     },
     {
+      "path": "assets/components/service-models/dice.obj",
+      "bytes": 74581,
+      "sha256": "b251e704657e93b60b741267209da18e8623814809d78f4b63f1a643f46e17f7"
+    },
+    {
       "path": "assets/components/service-models/fire.obj",
       "bytes": 5134,
       "sha256": "4d7470ebca156f53cd15cf1227f137609230988c469d0a2fe80d24b67143d2ad"
@@ -706,8 +711,8 @@
     },
     {
       "path": "assets/components/service-models/service-models.js",
-      "bytes": 13165,
-      "sha256": "d7919b6585d7eb5725d2522d4a084fc38a1a25df187816b974215b9761013f31"
+      "bytes": 13741,
+      "sha256": "54a66004b32b76827bc46d2bdfdab1d317eff4a84aad5dd6d7a00336c8b356c7"
     },
     {
       "path": "assets/components/vr-glasses/images/21e5769821995057.webp",

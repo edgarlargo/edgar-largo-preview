@@ -1,17 +1,21 @@
 const desktop = matchMedia('(min-width: 992px)');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const mobileTurnDistance = 720;
-const modelKeys = new Set(['busto', 'nose', 'heart', 'fire', 'cream', 'cat', 'queen', 'king', 'knight', 'robot', 'padel']);
+const modelKeys = new Set(['busto', 'nose', 'heart', 'fire', 'cream', 'cat', 'queen', 'king', 'knight', 'robot', 'padel', 'dice']);
 
 // The same OBJ triangles serve the flat-shaded artwork and the wireframe.
 function readGeometry(THREE, source) {
   const vertices = [];
   const triangles = [];
+  const pips = [];
+  let materialFaces = triangles;
 
   for (const line of source.split('\n')) {
     const [kind, ...values] = line.split('#', 1)[0].trim().split(/\s+/);
     if (kind === 'v') {
       vertices.push(values.slice(0, 3).map(Number));
+    } else if (kind === 'usemtl') {
+      materialFaces = values[0] === 'pip' ? pips : triangles;
     } else if (kind === 'f') {
       const face = values.map((value) => {
         const index = parseInt(value.split('/', 1)[0], 10);
@@ -19,14 +23,19 @@ function readGeometry(THREE, source) {
       });
       if (face.some((vertex) => !vertex || vertex.length !== 3 || !vertex.every(Number.isFinite))) continue;
       for (let index = 1; index + 1 < face.length; index += 1) {
-        triangles.push(...face[0], ...face[index], ...face[index + 1]);
+        materialFaces.push(...face[0], ...face[index], ...face[index + 1]);
       }
     }
   }
 
   if (!triangles.length) throw new Error('Service model has no faces');
+  const positions = pips.length ? triangles.concat(pips) : triangles;
   const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute('position', new THREE.Float32BufferAttribute(triangles, 3));
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  if (pips.length) {
+    geometry.addGroup(0, triangles.length / 3, 0);
+    geometry.addGroup(triangles.length / 3, pips.length / 3, 1);
+  }
   geometry.computeBoundingBox();
   const size = geometry.boundingBox.getSize(new THREE.Vector3());
   const center = geometry.boundingBox.getCenter(new THREE.Vector3());
@@ -35,8 +44,8 @@ function readGeometry(THREE, source) {
   geometry.scale(scale, scale, scale);
   geometry.computeVertexNormals();
   let turnRadius = 0;
-  for (let index = 0; index < triangles.length; index += 3) {
-    const radius = Math.hypot(triangles[index] - center.x, triangles[index + 2] - center.z);
+  for (let index = 0; index < positions.length; index += 3) {
+    const radius = Math.hypot(positions[index] - center.x, positions[index + 2] - center.z);
     turnRadius = Math.max(turnRadius, radius);
   }
   return { geometry, width: size.x * scale, height: size.y * scale, turnRadius: turnRadius * scale };
@@ -56,6 +65,9 @@ function createStage(THREE, carousel, track, slots) {
   const camera = new THREE.PerspectiveCamera(30, 1, .1, 30);
   const brandPurple = getComputedStyle(document.documentElement).getPropertyValue('--color-blue').trim() || '#784DFF';
   const solidMaterial = new THREE.MeshPhongMaterial({ color: brandPurple, flatShading: true, shininess: 8 });
+  const pipMaterial = solidMaterial.clone();
+  pipMaterial.color.set('#21153b');
+  const diceMaterials = [solidMaterial, pipMaterial];
   const wireMaterial = new THREE.LineBasicMaterial({ color: brandPurple, transparent: true, opacity: .34 });
   scene.add(new THREE.HemisphereLight(0xf1eaff, 0x645281, .68));
 
@@ -99,7 +111,7 @@ function createStage(THREE, carousel, track, slots) {
       .then((source) => {
         if (fetches.signal.aborted) return;
         const { geometry, width: modelWidth, height: modelHeight, turnRadius } = readGeometry(THREE, source);
-        const solid = new THREE.Mesh(geometry, solidMaterial);
+        const solid = new THREE.Mesh(geometry, geometry.groups.length ? diceMaterials : solidMaterial);
         requests.set(key, { solid, wire: null, modelWidth, modelHeight, turnRadius });
         drawSoon();
       })
@@ -286,6 +298,7 @@ function createStage(THREE, carousel, track, slots) {
       model?.wire?.geometry.dispose();
     }
     solidMaterial.dispose();
+    pipMaterial.dispose();
     wireMaterial.dispose();
     renderer.dispose();
     renderer.forceContextLoss();

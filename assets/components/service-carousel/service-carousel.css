@@ -112,6 +112,14 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   touch-action: pan-x pan-y pinch-zoom;
 }
 
+[data-largo-service-model="dice"] .largo-hairline-cover {
+  display: none;
+}
+
+[data-largo-service-model="dice"] .project-item-image img {
+  object-fit: contain !important;
+}
+
 .project-list[data-largo-service-carousel] .project-item-footer {
   min-inline-size: 0;
 }
@@ -408,7 +416,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     mix-blend-mode: lighten;
   }
 
-  .project-list[data-largo-service-carousel] .project-item-main:has(.largo-hairline-cover) .project-item-image {
+  .project-list[data-largo-service-carousel] .largo-services-slide:not([data-largo-service-model="dice"]) .project-item-main:has(.largo-hairline-cover) .project-item-image {
     opacity: 0 !important;
   }
 
