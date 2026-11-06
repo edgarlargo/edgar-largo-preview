@@ -256,8 +256,8 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   .project-list[data-largo-service-carousel] {
     --largo-services-left-gutter: var(--base-padding-x, 5vw);
     --largo-services-title-width: 26vw;
-    --largo-services-description-start: 42vw;
-    --largo-services-description-width: 42.5vw;
+    --largo-services-description-start: 45vw;
+    --largo-services-description-width: 38.5vw;
     --largo-services-column-gap: calc(var(--largo-services-description-start) - var(--largo-services-left-gutter) - var(--largo-services-title-width));
     --largo-services-slide-overlap: -20%;
     position: relative;
@@ -390,7 +390,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     z-index: 1;
     grid-area: 1 / 2;
     align-self: center;
-    max-block-size: min(70svh, 44rem, 100%);
+    max-block-size: min(57svh, 34rem, 100%);
     padding-inline-end: .75rem;
     overflow: auto;
     overscroll-behavior-y: contain;
