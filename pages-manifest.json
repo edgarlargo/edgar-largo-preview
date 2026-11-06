@@ -545,6 +545,56 @@
       "sha256": "eeb2c2cddcd6c64778aeba4e947d15a373c4cbe43619210f646aa95e02a61007"
     },
     {
+      "path": "assets/components/service-covers/cms-and-dynamic-websites.png",
+      "bytes": 24392,
+      "sha256": "395b0da749abb9c104d897cde9bbe5381592fd8c0dd83ced75c9d43b53d6b834"
+    },
+    {
+      "path": "assets/components/service-covers/consistent-identity.png",
+      "bytes": 25652,
+      "sha256": "e7130b93d700ccd861df08e87e48252ec1f689354fbc759486a9c94ec399d91e"
+    },
+    {
+      "path": "assets/components/service-covers/crafted-websites.png",
+      "bytes": 15533,
+      "sha256": "1527f0739586fc92bf400fbe8cad538f67b148429394f97e78aee355d048d5da"
+    },
+    {
+      "path": "assets/components/service-covers/ecommerce-website-design.png",
+      "bytes": 15803,
+      "sha256": "a13b62803092ade6089ffe7d4f7180bec1b40fef09e7427224e717d7e5afec7b"
+    },
+    {
+      "path": "assets/components/service-covers/landing-pages-and-microsites.png",
+      "bytes": 14531,
+      "sha256": "83cf98b48fd888ba2f07cc8dba3492538386d02470eb99caadf8d2727c9b432a"
+    },
+    {
+      "path": "assets/components/service-covers/maintenance-and-ongoing-support.png",
+      "bytes": 14269,
+      "sha256": "c0b8970c3511837b8157b802f234e2c4be0f72168b54b2d09aa20edda2505b6e"
+    },
+    {
+      "path": "assets/components/service-covers/motion-and-interaction-design.png",
+      "bytes": 27357,
+      "sha256": "cb5d7ab1c8f4daddb3d72fbe38e49d45a3552be7d449c82bf185ca70c88c879b"
+    },
+    {
+      "path": "assets/components/service-covers/performance-optimization.png",
+      "bytes": 17554,
+      "sha256": "e7974fff0f6c539151709a5465719c59b0b769330d83ace8147ff32bef3bdf0f"
+    },
+    {
+      "path": "assets/components/service-covers/ux-centric-strategy.png",
+      "bytes": 18186,
+      "sha256": "88ca162cefc0ab123b931d97fce73f2516f0a8892510266eaf0f75f079fd9090"
+    },
+    {
+      "path": "assets/components/service-covers/website-redesign.png",
+      "bytes": 25312,
+      "sha256": "308b4b2a593d1b9c6edcf8e2b15c48d47ea4a5615e996baa950e806ad1e37978"
+    },
+    {
       "path": "assets/components/service-hairline/cardfile.webp",
       "bytes": 12830,
       "sha256": "d5df837070fcf768f44922b2b43b275ce69fbfc01556821279fd4e0c23d17047"
