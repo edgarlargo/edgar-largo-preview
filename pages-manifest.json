@@ -426,8 +426,8 @@
     },
     {
       "path": "assets/components/hero-scene/scene.bundle.js",
-      "bytes": 590798,
-      "sha256": "a320ffcc2dc42a5bffd485bdf78613b855b60e1cb279a7372c34090611dccf1c"
+      "bytes": 588092,
+      "sha256": "2606597ae7ec351d9b7bbd0cf0cead44abcabf9c38622f36379b09c3882a7ce1"
     },
     {
       "path": "assets/components/hero-scene/THREE-LICENSE.txt",
@@ -1376,8 +1376,8 @@
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1539431,
-      "sha256": "541f551bc39b18cc73e07a46b5df97daed1816719db303eca8094bb34e27a7a6"
+      "bytes": 1539577,
+      "sha256": "6964776b5a6d65853fc11a48ecda9f009c5e4b28cf5d2bd699aec97bd9d1f6cc"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",

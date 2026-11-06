@@ -1948,13 +1948,14 @@ function eaImportedHeroViewport(owner){
     document.addEventListener?.('visibilitychange',owner.eaHeroVisibilityHandler);
   }
   const now=performance.now(),motion=!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const revealed=!!properties.hasStarted&&!preloader.isActive&&transitionOverlay.activeRatio===0;
   const previous=owner.eaHeroViewportState;
-  if(previous?.frame===frame&&previous.hidden===document.hidden&&previous.motion===motion&&now-previous.at<1000/30)return;
+  if(previous?.frame===frame&&previous.hidden===document.hidden&&previous.motion===motion&&previous.revealed===revealed&&now-previous.at<1000/30)return;
   const height=window.innerHeight||document.documentElement?.clientHeight||1,rect=frame.getBoundingClientRect();
   const visible=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height;
   const progress=Math.max(0,Math.min(1,(height*.85-rect.top)/(height*.7+rect.height)));
-  frame.contentWindow.postMessage({type:'ea-code-viewport',progress,visible,motion},'*');
-  owner.eaHeroViewportState={frame,hidden:document.hidden,motion,at:now};
+  frame.contentWindow.postMessage({type:'ea-code-viewport',progress,visible,motion,revealed},'*');
+  owner.eaHeroViewportState={frame,hidden:document.hidden,motion,revealed,at:now};
 }
 
 function eaImportedGoalRestoreHandoff(owner){
