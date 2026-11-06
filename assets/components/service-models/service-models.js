@@ -1,7 +1,7 @@
 const desktop = matchMedia('(min-width: 992px)');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const mobileTurnDistance = 720;
-const modelKeys = new Set(['busto', 'nose', 'heart', 'fire', 'cream', 'cat', 'queen', 'king', 'knight', 'robot', 'padel', 'dice']);
+const modelKeys = new Set(['busto', 'nose', 'heart', 'fire', 'cream', 'cat', 'queen', 'king', 'knight', 'hand', 'padel', 'dice']);
 
 // The same OBJ triangles serve the flat-shaded artwork and the wireframe.
 function readGeometry(THREE, source) {

@@ -81,7 +81,14 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   content: '';
   inline-size: clamp(2rem, 6vw, 5rem);
   block-size: 2px;
-  background: linear-gradient(90deg, #754ad4 34%, #c6c2d0 34%);
+  background: #c6c2d0 linear-gradient(#754ad4, #754ad4) no-repeat;
+  background-size: calc(var(--largo-project-progress, 0) * 100%) 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .largo-services-projects-action::after {
+    transition: background-size .16s linear;
+  }
 }
 
 .largo-services-projects-action svg {
@@ -116,7 +123,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   display: none;
 }
 
-[data-largo-service-model="dice"] .project-item-image img {
+:is([data-largo-service-model="dice"], [data-largo-service-model="hand"]) .project-item-image img {
   object-fit: contain !important;
 }
 
@@ -314,7 +321,8 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   .project-list[data-largo-service-carousel] {
     --largo-services-left-gutter: var(--base-padding-x, 5vw);
     --largo-services-title-width: 26vw;
-    --largo-services-description-start: 45vw;
+    --largo-services-art-width: min(37vw, 29.5rem);
+    --largo-services-description-start: max(34vw, calc(var(--largo-services-left-gutter) - .75vw + var(--largo-services-art-width) + 1rem));
     --largo-services-description-width: 38.5vw;
     --largo-services-column-gap: calc(var(--largo-services-description-start) - var(--largo-services-left-gutter) - var(--largo-services-title-width));
     --largo-services-slide-overlap: -20%;
@@ -401,7 +409,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   .project-list[data-largo-service-carousel] .project-item-main {
     position: absolute;
     inset: 0 auto 0 calc(var(--largo-services-left-gutter) - .75vw);
-    inline-size: min(37%, 29.5rem);
+    inline-size: var(--largo-services-art-width);
     padding: 0;
     background: transparent;
     z-index: -1;

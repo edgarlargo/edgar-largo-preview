@@ -201,6 +201,59 @@
   let frame = 0;
   let wheelDirection = 0;
   let wheelLockUntil = 0;
+  let projectProgress = 0;
+  let projectFrame = 0;
+  let projectLastTick = 0;
+  let projectHoldUntil = 0;
+  let projectNavigation = 0;
+
+  function atProjectsEnd() {
+    return projects && desktop.matches && activeIndex === panels.length - 1 &&
+      Math.abs(track.scrollLeft - offsets[activeIndex]) < 2;
+  }
+
+  function resetProjectProgress() {
+    cancelAnimationFrame(projectFrame);
+    clearTimeout(projectNavigation);
+    projectFrame = 0;
+    projectProgress = 0;
+    projectNavigation = 0;
+    projects?.style.removeProperty('--largo-project-progress');
+  }
+
+  function drawProjectProgress(time) {
+    if (!atProjectsEnd()) {
+      resetProjectProgress();
+      return;
+    }
+    const elapsed = Math.max(0, (time - Math.max(projectLastTick, projectHoldUntil)) / 1000);
+    projectLastTick = time;
+    projectProgress = Math.max(0, projectProgress - elapsed * .2);
+    projects.style.setProperty('--largo-project-progress', projectProgress);
+    projectFrame = projectProgress > 0 ? requestAnimationFrame(drawProjectProgress) : 0;
+  }
+
+  function advanceProjectProgress(delta, deltaMode) {
+    if (projectNavigation) return;
+    const unit = deltaMode === 1 ? 16 : deltaMode === 2 ? track.clientWidth : 1;
+    // Match the site's next-page scroll distance and require more than one wheel tick.
+    projectProgress = Math.min(1, projectProgress + Math.min(delta * unit, 100) / 240);
+    projects.style.setProperty('--largo-project-progress', projectProgress);
+    if (projectProgress === 1) {
+      cancelAnimationFrame(projectFrame);
+      projectFrame = 0;
+      projectNavigation = window.setTimeout(() => {
+        if (atProjectsEnd()) window.location.assign(projects.href);
+        else resetProjectProgress();
+      }, reducedMotion.matches ? 0 : 160);
+      return;
+    }
+    const now = performance.now();
+    projectHoldUntil = now + 300;
+    if (projectFrame) return;
+    projectLastTick = now;
+    projectFrame = requestAnimationFrame(drawProjectProgress);
+  }
 
   function updateArrows() {
     const index = commandIndex();
@@ -244,6 +297,7 @@
     if (!desktop.matches) return;
     requestedIndex = Math.max(0, Math.min(panels.length - 1, index));
     requestExpires = performance.now() + 750;
+    if (requestedIndex < panels.length - 1) resetProjectProgress();
     if (focusCard) (cards[requestedIndex] ?? projects).focus({ preventScroll: true });
     track.scrollTo({ left: offsets[requestedIndex], behavior: reducedMotion.matches ? 'instant' : 'smooth' });
     updateArrows();
@@ -292,7 +346,16 @@
     // Keep desktop wheel gestures inside the service rail. The theme's
     // window handler would otherwise cancel native scrolling and move the page.
     event.stopPropagation();
-    if (event.ctrlKey || event.metaKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+    if (event.ctrlKey || event.metaKey) return;
+    const horizontal = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+    const delta = horizontal ? event.deltaX : event.deltaY;
+    if (delta > 0 && atProjectsEnd()) {
+      event.preventDefault();
+      advanceProjectProgress(delta, event.deltaMode);
+      return;
+    }
+    if (delta < 0 && projectProgress > 0) resetProjectProgress();
+    if (horizontal) {
       requestExpires = 0;
       return;
     }
@@ -334,6 +397,7 @@
     }
     requestExpires = 0;
     wheelLockUntil = 0;
+    resetProjectProgress();
     if (desktop.matches) {
       if (dialog.open) dialog.close();
       if (panels.length > 1) track.tabIndex = 0;
@@ -347,6 +411,7 @@
   }
 
   updateLayout();
+  window.addEventListener('pagehide', resetProjectProgress);
   desktop.addEventListener('change', updateLayout);
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(track);
   else window.addEventListener('resize', measure);
