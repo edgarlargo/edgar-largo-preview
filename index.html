@@ -28,7 +28,7 @@
 .ea-page-content[data-ea-page-record^="largo-"] .ea-story-text li {
   margin-block: .7em;
 }
-</style><style data-ea-deleted-rules="true">[data-ea-deleted="true"]{display:none!important}</style><link rel="stylesheet" href="content-blocks.css?ea-v=1cdd9d4cd1bdc12f"><script src="content-video.js?ea-v=de23718cf8236098" defer=""></script><style data-ea-project-story-style="">#project-details .project-details-item[data-ea-project-story-item]{visibility:visible;white-space:normal;pointer-events:auto;border-radius:var(--global-border-radius,16px);overflow:hidden;margin-left:var(--ea-project-story-gap,5em)}
+</style><style id="largo-hero-wordmark-bleed">#home-hero-visual-container:has(>iframe[data-ea-code]){overflow:visible!important}#home-hero-visual-container>iframe[data-ea-code]{width:106%!important;max-width:none;margin-inline:-3%}</style><style data-ea-deleted-rules="true">[data-ea-deleted="true"]{display:none!important}</style><link rel="stylesheet" href="content-blocks.css?ea-v=1cdd9d4cd1bdc12f"><script src="content-video.js?ea-v=de23718cf8236098" defer=""></script><style data-ea-project-story-style="">#project-details .project-details-item[data-ea-project-story-item]{visibility:visible;white-space:normal;pointer-events:auto;border-radius:var(--global-border-radius,16px);overflow:hidden;margin-left:var(--ea-project-story-gap,5em)}
 #project-details .project-details-item[data-ea-project-story-item]:first-child{margin-left:0}
 #project-details .project-details-item[data-ea-project-story-item]>.ea-content-story{height:100%;max-height:100%;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;box-sizing:border-box;user-select:text;touch-action:pan-y;color:var(--project-details-text);border-radius:inherit}
 #project-details .project-details-item[data-ea-project-story-item] .ea-content-story :focus-visible{outline:2px solid currentColor;outline-offset:3px}
@@ -177,7 +177,7 @@
 </style>
 <style id=&quot;largo-cosmic-background&quot;>
 body.page-id-757 .largo-glass3d { background:#020206; }
-body.page-id-757 .largo-glass3d::before {
+body.page-id-757 .largo-glass3d .largo-hero-backdrop::before {
   content:&quot;&quot;; position:absolute; inset:-22%; z-index:0; pointer-events:none;
   background:
     radial-gradient(ellipse at 25% 35%,rgba(60,25,118,.64),transparent 48%),
@@ -196,7 +196,7 @@ body.page-id-757 .largo-glass3d .largo-fallback { z-index:2; }
   100% { transform:translate3d(-1%,3%,0) rotate(8deg) scale(1.04); opacity:.76; }
 }
 @media (prefers-reduced-motion:reduce) {
-  body.page-id-757 .largo-glass3d::before { animation:none; opacity:.8; }
+  body.page-id-757 .largo-glass3d .largo-hero-backdrop::before { animation:none; opacity:.8; }
 }
 </style>
 <style id=&quot;largo-embed-container&quot;>
@@ -204,11 +204,11 @@ html, body { width:100%; height:100%; margin:0; overflow:hidden; }
 body .largo-glass3d { width:100%; height:100%; }
 </style>
 
-</head>
+<style id=&quot;largo-hero-backdrop-style&quot;>body.page-id-757 .largo-glass3d{background:transparent}.largo-hero-backdrop{position:absolute;inset:0 2.8301887%;overflow:hidden;border-radius:20px;background:#020206;pointer-events:none}.largo-glass3d .largo-fallback{width:81.132075%}.largo-glass3d[data-mobile=&quot;true&quot;] .largo-fallback{width:88.679245%}@media(max-width:812px){.largo-hero-backdrop{border-radius:10px}}</style></head>
 <body class=&quot;page-id-757&quot;>
-<div class=&quot;largo-glass3d&quot; aria-label=&quot;LARGO interactive 3D logo&quot;></div>
+<div class=&quot;largo-glass3d&quot; aria-label=&quot;LARGO interactive 3D logo&quot;><div class=&quot;largo-hero-backdrop&quot; aria-hidden=&quot;true&quot;></div></div>
 
-<script src=&quot;./assets/components/hero-scene/scene.bundle.js?ea-v=a320ffcc2dc42a5b&quot;></script>
+<script src=&quot;./assets/components/hero-scene/scene.bundle.js?ea-v=97bbbc34edaec2a1&quot;></script>
 
 <script data-ea-code-scroll=&quot;&quot;>
 (() => {
