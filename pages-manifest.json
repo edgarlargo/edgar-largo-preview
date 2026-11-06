@@ -536,13 +536,13 @@
     },
     {
       "path": "assets/components/service-carousel/service-carousel.css",
-      "bytes": 23321,
-      "sha256": "4c464bf8e23c65a061a61dbfe0c21696c5e604a28b0cb020190244d4e712ac1b"
+      "bytes": 24764,
+      "sha256": "d83ac217cd11fe23c05a4e7f1e15ad4b088c716293b6e7071cff82dec098159b"
     },
     {
       "path": "assets/components/service-carousel/service-carousel.js",
-      "bytes": 13887,
-      "sha256": "eeb2c2cddcd6c64778aeba4e947d15a373c4cbe43619210f646aa95e02a61007"
+      "bytes": 14383,
+      "sha256": "ae81db80a169680a1f1b5b19750bced786c5a99f7b081debc464337a857bf3c1"
     },
     {
       "path": "assets/components/service-covers/cms-and-dynamic-websites.png",

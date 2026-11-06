@@ -45,6 +45,56 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   touch-action: pan-x pan-y pinch-zoom;
 }
 
+.project-list[data-largo-service-carousel] > .largo-services-projects {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  min-block-size: 14rem;
+  padding: clamp(1.5rem, 4vw, 4.5rem);
+  border-radius: 1rem;
+  background: #eeeefa;
+  color: #17151e;
+  text-decoration: none;
+}
+
+.largo-services-projects-kicker,
+.largo-services-projects-action {
+  font-size: .875rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.largo-services-projects-title {
+  font-size: clamp(3.25rem, 9vw, 9rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.largo-services-projects-action {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+}
+
+.largo-services-projects-action::after {
+  content: '';
+  inline-size: clamp(2rem, 6vw, 5rem);
+  block-size: 2px;
+  background: linear-gradient(90deg, #754ad4 34%, #c6c2d0 34%);
+}
+
+.largo-services-projects-action svg {
+  order: 1;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+.largo-services-projects:focus-visible {
+  outline: 2px solid #754ad4;
+  outline-offset: -4px;
+}
+
 .project-list[data-largo-service-carousel] .largo-services-slide,
 .project-list[data-largo-service-carousel] .largo-services-slide > .project-item {
   min-inline-size: 0;
@@ -319,6 +369,19 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
 
   .project-list[data-largo-service-carousel] > .largo-services-slide:last-child {
     margin-inline-end: 0;
+  }
+
+  .project-list[data-largo-service-carousel] > .largo-services-slide:has(+ .largo-services-projects) {
+    margin-inline-end: -9%;
+  }
+
+  .project-list[data-largo-service-carousel] > .largo-services-projects {
+    position: relative;
+    flex: 0 0 100%;
+    min-block-size: 0;
+    border-radius: 0;
+    padding-inline: clamp(1.5rem, 2.5vw, 3rem);
+    scroll-snap-align: start;
   }
 
   .project-list[data-largo-service-carousel] .largo-services-slide > .project-item {

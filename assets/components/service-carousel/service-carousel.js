@@ -12,6 +12,8 @@
   const slides = Array.from(track.children).filter((child) => child.matches('.largo-services-slide, a.project-item'));
   if (!slides.length) return;
   const cards = slides.map((slide) => slide.matches('a.project-item') ? slide : slide.querySelector('a.project-item'));
+  const projects = track.querySelector(':scope > .largo-services-projects');
+  const panels = projects ? [...slides, projects] : slides;
 
   const desktop = matchMedia('(min-width: 992px)');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -204,7 +206,8 @@
     const index = commandIndex();
     if (index === arrowIndex) return;
     previous.setAttribute('aria-disabled', String(index === 0));
-    next.setAttribute('aria-disabled', String(index === slides.length - 1));
+    next.setAttribute('aria-disabled', String(index === panels.length - 1));
+    next.setAttribute('aria-label', projects && index === slides.length - 1 ? 'Show projects panel' : 'Next service');
     arrowIndex = index;
   }
 
@@ -216,9 +219,9 @@
     ), 0);
     if (activeIndex !== index) {
       pages[activeIndex]?.removeAttribute('aria-current');
-      slides[activeIndex]?.removeAttribute('data-largo-service-active');
-      pages[index].setAttribute('aria-current', 'true');
-      slides[index].setAttribute('data-largo-service-active', '');
+      panels[activeIndex]?.removeAttribute('data-largo-service-active');
+      pages[index]?.setAttribute('aria-current', 'true');
+      panels[index].setAttribute('data-largo-service-active', '');
       activeIndex = index;
     }
     updateArrows();
@@ -229,7 +232,7 @@
     const left = track.getBoundingClientRect().left + track.clientLeft;
     const padding = parseFloat(getComputedStyle(track).scrollPaddingInlineStart) || 0;
     const max = Math.max(0, track.scrollWidth - track.clientWidth);
-    offsets = slides.map((slide) => Math.max(0, Math.min(max, slide.getBoundingClientRect().left - left + track.scrollLeft - padding)));
+    offsets = panels.map((panel) => Math.max(0, Math.min(max, panel.getBoundingClientRect().left - left + track.scrollLeft - padding)));
     render();
   }
 
@@ -239,9 +242,9 @@
 
   function moveTo(index, focusCard = false) {
     if (!desktop.matches) return;
-    requestedIndex = Math.max(0, Math.min(slides.length - 1, index));
+    requestedIndex = Math.max(0, Math.min(panels.length - 1, index));
     requestExpires = performance.now() + 750;
-    if (focusCard) cards[requestedIndex].focus({ preventScroll: true });
+    if (focusCard) (cards[requestedIndex] ?? projects).focus({ preventScroll: true });
     track.scrollTo({ left: offsets[requestedIndex], behavior: reducedMotion.matches ? 'instant' : 'smooth' });
     updateArrows();
   }
@@ -258,7 +261,7 @@
   });
   track.addEventListener('pointerdown', () => { requestExpires = 0; });
   track.addEventListener('focusin', (event) => {
-    const index = cards.indexOf(event.target);
+    const index = event.target === projects ? slides.length : cards.indexOf(event.target);
     if (!desktop.matches || index < 0 || index === commandIndex()) return;
     requestExpires = 0;
     track.scrollTo({ left: offsets[index], behavior: 'instant' });
@@ -275,12 +278,12 @@
     if (event.key === 'ArrowLeft') index -= 1;
     else if (event.key === 'ArrowRight') index += 1;
     else if (event.key === 'Home') index = 0;
-    else if (event.key === 'End') index = slides.length - 1;
+    else if (event.key === 'End') index = panels.length - 1;
     else return;
 
     event.preventDefault();
     event.stopPropagation();
-    moveTo(index, event.target.matches('a.project-item, [data-largo-service-request]'));
+    moveTo(index, event.target.matches('a.project-item, [data-largo-service-request], .largo-services-projects'));
   });
 
   carousel.addEventListener('wheel', (event) => {
@@ -297,8 +300,12 @@
     const description = event.target.closest('.largo-services-description');
     if (description) {
       const canScroll = event.deltaY < 0 ? description.scrollTop > 0 : description.scrollTop + description.clientHeight < description.scrollHeight - 1;
-      if (!canScroll) event.preventDefault();
-      return;
+      if (canScroll) return;
+      const canShowProjects = projects && event.deltaY > 0 && commandIndex() === slides.length - 1;
+      if (!canShowProjects) {
+        event.preventDefault();
+        return;
+      }
     }
 
     event.preventDefault();
@@ -308,7 +315,7 @@
     const direction = Math.sign(event.deltaY);
     const locked = direction === wheelDirection && now < wheelLockUntil;
     const destination = commandIndex() + direction;
-    if (locked || destination < 0 || destination >= slides.length) return;
+    if (locked || destination < 0 || destination >= panels.length) return;
 
     wheelDirection = direction;
     wheelLockUntil = now + 480;
@@ -320,7 +327,7 @@
   }, { passive: true });
 
   function updateLayout() {
-    controls.hidden = !desktop.matches || slides.length < 2;
+    controls.hidden = !desktop.matches || panels.length < 2;
     for (let index = 0; index < cards.length; index += 1) {
       if (!desktop.matches && supportsDialog && descriptions[index]) cards[index].setAttribute('aria-haspopup', 'dialog');
       else cards[index].removeAttribute('aria-haspopup');
@@ -329,12 +336,12 @@
     wheelLockUntil = 0;
     if (desktop.matches) {
       if (dialog.open) dialog.close();
-      if (slides.length > 1) track.tabIndex = 0;
+      if (panels.length > 1) track.tabIndex = 0;
       measure();
     } else {
       track.removeAttribute('tabindex');
       pages[activeIndex]?.removeAttribute('aria-current');
-      slides[activeIndex]?.removeAttribute('data-largo-service-active');
+      panels[activeIndex]?.removeAttribute('data-largo-service-active');
       activeIndex = -1;
     }
   }
