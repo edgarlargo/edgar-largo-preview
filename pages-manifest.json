@@ -426,8 +426,8 @@
     },
     {
       "path": "assets/components/hero-scene/scene.bundle.js",
-      "bytes": 597453,
-      "sha256": "ed5c8cb8508d3b2acec185f56755d29171a97b02ea9ac5951d64119ac2fcec2a"
+      "bytes": 597959,
+      "sha256": "17c3432692b541c7221fba4f9f4b721f9858d449997cc17d4d7daf29dcfdc8e4"
     },
     {
       "path": "assets/components/hero-scene/THREE-LICENSE.txt",
@@ -976,8 +976,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 93956,
-      "sha256": "098646bb2f8fa97b8611141b0f653b5802f5cc8439f5a26a7e9ff2cc628b95e2"
+      "bytes": 93979,
+      "sha256": "c3dd55f2e04a8e13fc25eb280b5fbe9d1d8af2980b8ce7f320a8b562cbdef8fc"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -1376,8 +1376,8 @@
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1544090,
-      "sha256": "2b368332f09553a107e40c29d1db4f561383af0ae633e90ede9a6d015a3d4f87"
+      "bytes": 1545551,
+      "sha256": "e1095655f96b994ec0be846b1da46cba16cf57d1d27b38e515ff662c1a19806f"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",

@@ -96,7 +96,7 @@
   flex: none;
 }
 .largo-tech-group li { display: flex; align-items: center; justify-content: center; flex: none; }
-.largo-tech-group img { display: block; width: auto; height: 20px; max-width: 132px; object-fit: contain; }
+.largo-tech-group img { display: block; width: auto; height: 20px; max-width: 132px; object-fit: contain; filter: brightness(0); }
 .largo-tech-group img[data-brand="microsoft"] { height: 23px; }
 .largo-tech-group img[data-brand="google"] { height: 23px; }
 .largo-tech-group img[data-brand="nvidia"] { height: 23px; }
