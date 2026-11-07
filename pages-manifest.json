@@ -976,8 +976,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 90532,
-      "sha256": "9dfa9e10a974aaba26a795bf36a87f7f900f7a554f5d31d27cce4b0f85e1f688"
+      "bytes": 93889,
+      "sha256": "03782855b1c716c7643cb275ef4c53f21c81f2ba79610f1eabad407f1646c48a"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -4203,6 +4203,36 @@
       "path": "uploads/largo-studio-light-48-567bf1ccb020e42f.png",
       "bytes": 820,
       "sha256": "567bf1ccb020e42f22ad0faa4d5ad9bddc5a5eb3fb6cff5972a0e9fd83bda332"
+    },
+    {
+      "path": "assets/components/hero-technologies/anthropic.svg",
+      "bytes": 2243,
+      "sha256": "6ef5cdec2cc3cf8f2e219e76fb363a2eabe1d72298c3c6bd2492765c925a37b6"
+    },
+    {
+      "path": "assets/components/hero-technologies/github.svg",
+      "bytes": 3946,
+      "sha256": "802172fd58f2956be454f45e07c351d5c3d6830554632796b8f16fcecc7d273b"
+    },
+    {
+      "path": "assets/components/hero-technologies/google.svg",
+      "bytes": 1661,
+      "sha256": "5e14b41cde5bc62367166e07bcc5c365b89157abf0521745d5b82f184319a361"
+    },
+    {
+      "path": "assets/components/hero-technologies/microsoft.png",
+      "bytes": 4054,
+      "sha256": "112fec798b78aa02e102a724b5cb1990c0f909bc1d8b7b1fa256eab41bbc0960"
+    },
+    {
+      "path": "assets/components/hero-technologies/nvidia.svg",
+      "bytes": 2730,
+      "sha256": "d67c0b47c686ea151ed8a57bedadd52b509842eb6a77f2b36edcd07c184f4909"
+    },
+    {
+      "path": "assets/components/hero-technologies/openai.svg",
+      "bytes": 4097,
+      "sha256": "5c9d3cacffc350e23472fd6314fdc5df0542cc006104895122bb9520d931e229"
     }
   ],
   "forms": "remote-footer",
