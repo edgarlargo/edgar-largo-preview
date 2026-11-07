@@ -82,7 +82,7 @@
   display: flex;
   width: max-content;
   height: 100%;
-  animation: largo-technologies 38s linear infinite;
+  animation: largo-technologies 64s linear infinite;
 }
 .largo-tech-group {
   display: flex;
@@ -97,9 +97,8 @@
 }
 .largo-tech-group li { display: flex; align-items: center; justify-content: center; flex: none; }
 .largo-tech-group img { display: block; width: auto; height: 20px; max-width: 132px; object-fit: contain; filter: brightness(0); }
-.largo-tech-group img[data-brand="microsoft"] { height: 23px; }
-.largo-tech-group img[data-brand="google"] { height: 23px; }
-.largo-tech-group img[data-brand="nvidia"] { height: 23px; }
+.largo-tech-group img[data-tech-symbol="true"] { height: 25px; }
+.largo-tech-group img[data-preserve-negative-space="true"] { filter: grayscale(1) contrast(100); }
 .largo-tech-pause {
   position: absolute;
   right: 0;
@@ -148,9 +147,7 @@
   #home-hero-scroll-container { grid-row: 3; bottom: auto; height: 52px; }
   .largo-tech-group { gap: 44px; padding-right: 44px; }
   .largo-tech-group img { height: 17px; max-width: 112px; }
-  .largo-tech-group img[data-brand="microsoft"],
-  .largo-tech-group img[data-brand="google"],
-  .largo-tech-group img[data-brand="nvidia"] { height: 20px; }
+  .largo-tech-group img[data-tech-symbol="true"] { height: 22px; }
   .largo-tech-pause { top: 4px; }
   .largo-tech-pause-label { top: 8px; }
 }

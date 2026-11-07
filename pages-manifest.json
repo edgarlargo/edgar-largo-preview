@@ -976,8 +976,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 93979,
-      "sha256": "c3dd55f2e04a8e13fc25eb280b5fbe9d1d8af2980b8ce7f320a8b562cbdef8fc"
+      "bytes": 93866,
+      "sha256": "c957e30980ca33fc4647b94cbb9a0274141511b308012d97e367504c31cb5782"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -4233,6 +4233,56 @@
       "path": "assets/components/hero-technologies/openai.svg",
       "bytes": 4097,
       "sha256": "5c9d3cacffc350e23472fd6314fdc5df0542cc006104895122bb9520d931e229"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/dotnet.svg",
+      "bytes": 1064,
+      "sha256": "5f86a4f9bc55733eff605c4847c8d0dd28c73ba68221fa5f2fa45e3cc115c56d"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/flutter.svg",
+      "bytes": 4096,
+      "sha256": "909eeee58e9fff17fe87cca9b6f236a427ee04d1ca358fda1dabd5fb864d5a0f"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/kotlin.svg",
+      "bytes": 2153,
+      "sha256": "9735cfcd367250d0b6916561ab25bebce0ae18daaec323cdfd60eca02c1cf289"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/laravel.svg",
+      "bytes": 3836,
+      "sha256": "f4db703fc27336abd9046e77182bcbd684dc3e035d1e3ad1f46311691d380a22"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/nextjs.svg",
+      "bytes": 1617,
+      "sha256": "2e67bfa2194e6850f58f015fd5992179b841924d8b82f5cd2d1a708bf572b814"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/nodejs.svg",
+      "bytes": 5844,
+      "sha256": "69fe820a6dfdb829a0767eb2450b42a7d376257b4c15de72d4361e4d888459b3"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/react.svg",
+      "bytes": 349,
+      "sha256": "e7133722ce56fd0956edee6c21befb855f11496b025fae57503ebfa1634cfe57"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/swift.svg",
+      "bytes": 3179,
+      "sha256": "25e7a6c921f81ca4c8fd39b509062658c96fb8ea8b275881c0b14f65dd655526"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/typescript.svg",
+      "bytes": 1687,
+      "sha256": "a42d4f49a6422717c8da4c7b1b274cd81bc5b4b3d4768858101b9d43604377b3"
+    },
+    {
+      "path": "assets/components/hero-technologies/dev-stack/wordpress.png",
+      "bytes": 77766,
+      "sha256": "e9af6045fd8983f5f6bcd21ace583a98a6a9b6d6e8bbf734ddaf977dc4fff904"
     }
   ],
   "forms": "remote-footer",
