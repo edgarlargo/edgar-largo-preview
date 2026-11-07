@@ -426,8 +426,8 @@
     },
     {
       "path": "assets/components/hero-scene/scene.bundle.js",
-      "bytes": 598879,
-      "sha256": "7ac7ced8d1e480142f6a286f37e06f6fbf6d68ae4ad51e058a4a55e5ae8fa901"
+      "bytes": 598906,
+      "sha256": "3b3e81f97fe9230426f887d5078fe8601363ab8a9abadecce9af0896fac8f034"
     },
     {
       "path": "assets/components/hero-scene/THREE-LICENSE.txt",
@@ -536,13 +536,13 @@
     },
     {
       "path": "assets/components/service-carousel/service-carousel.css",
-      "bytes": 25888,
-      "sha256": "8de018cc474207bff4619c0440184ee6eaac28bdc9e52871ea07b427b2e373ae"
+      "bytes": 25947,
+      "sha256": "38b89e8046acc2869aca52241f12737cecb02dee3ac9eb29fdad78f692607198"
     },
     {
       "path": "assets/components/service-carousel/service-carousel.js",
-      "bytes": 16837,
-      "sha256": "cc163a094d02974820c5979896d1d78b13063f8c24aa302af7bec3876f558959"
+      "bytes": 21313,
+      "sha256": "86ec1b91f906d11ba3371d532f6db3b222c4dd6a6894dec1448c559599c2ffbb"
     },
     {
       "path": "assets/components/service-covers/cms-and-dynamic-websites.png",
@@ -976,8 +976,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 92709,
-      "sha256": "b0482b26acc1dfbfc71550c60e23fa0e2cb9262975972b3a8f4431ae52de5c07"
+      "bytes": 92694,
+      "sha256": "6ffaeed9b900116a16cd368d1395424c89716851368bb0eac4d998a132bd045c"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -1251,8 +1251,8 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 90568,
-      "sha256": "fe82960d3d4333f6270fbb6d29b81aea8e9445a19f259f829934a59c0e3d7534"
+      "bytes": 90553,
+      "sha256": "f5d941c2183708bf85c14419877b1dff278f73c0d9946dd8e537826883d30bf0"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/Aeonik-Medium-7349d98003.woff2",

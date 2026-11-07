@@ -75,11 +75,14 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   display: flex;
   align-items: center;
   gap: .875rem;
+  inline-size: 100%;
+  min-inline-size: 0;
 }
 
 .largo-services-projects-action::after {
   content: '';
-  inline-size: clamp(2rem, 6vw, 5rem);
+  flex: 1 1 0;
+  min-inline-size: 0;
   block-size: 2px;
   background: #c6c2d0 linear-gradient(#754ad4, #754ad4) no-repeat;
   background-size: calc(var(--largo-project-progress, 0) * 100%) 100%;
@@ -93,6 +96,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
 
 .largo-services-projects-action svg {
   order: 1;
+  flex: 0 0 auto;
   inline-size: 1.25rem;
   block-size: 1.25rem;
 }

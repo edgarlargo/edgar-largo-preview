@@ -206,10 +206,36 @@
   let projectLastTick = 0;
   let projectHoldUntil = 0;
   let projectNavigation = 0;
+  let projectNavigating = false;
+  let projectTouch;
+  let suppressProjectClickUntil = 0;
+
+  function projectNavigationLocked() {
+    if (document.hidden || document.querySelector('dialog[open], #header.--menu-opened, #header-menu.--opened, [data-ea-live-editor="editing"], form[data-ea-submitting="true"]')) return true;
+    return ['#video-overlay', '#input-blocker', '#transition-overlay', '#preloader'].some((selector) => {
+      const overlay = document.querySelector(selector);
+      if (!overlay || overlay.hidden) return false;
+      const style = getComputedStyle(overlay);
+      const rect = overlay.getBoundingClientRect();
+      return style.display !== 'none' && style.visibility !== 'hidden' && style.pointerEvents !== 'none' && rect.width > 0 && rect.height > 0;
+    });
+  }
+
+  function navigateProjects() {
+    if (!projects || projectNavigating || projectNavigationLocked()) return false;
+    projectNavigating = true;
+    resetProjectProgress();
+    window.location.assign(projects.href);
+    return true;
+  }
 
   function atProjectsEnd() {
-    return projects && desktop.matches && activeIndex === panels.length - 1 &&
+    if (!projects || projectNavigationLocked()) return false;
+    if (desktop.matches) return activeIndex === panels.length - 1 &&
       Math.abs(track.scrollLeft - offsets[activeIndex]) < 2;
+    const rect = projects.getBoundingClientRect();
+    const height = window.visualViewport?.height || window.innerHeight;
+    return rect.top >= 0 && rect.bottom <= height + 2 && rect.bottom >= height / 2;
   }
 
   function resetProjectProgress() {
@@ -226,24 +252,24 @@
       resetProjectProgress();
       return;
     }
-    const elapsed = Math.max(0, (time - Math.max(projectLastTick, projectHoldUntil)) / 1000);
+    const elapsed = projectTouch?.ready ? 0 : Math.max(0, (time - Math.max(projectLastTick, projectHoldUntil)) / 1000);
     projectLastTick = time;
     projectProgress = Math.max(0, projectProgress - elapsed * .2);
     projects.style.setProperty('--largo-project-progress', projectProgress);
     projectFrame = projectProgress > 0 ? requestAnimationFrame(drawProjectProgress) : 0;
   }
 
-  function advanceProjectProgress(delta, deltaMode) {
+  function advanceProjectProgress(delta, deltaMode, commit = true) {
     if (projectNavigation) return;
     const unit = deltaMode === 1 ? 16 : deltaMode === 2 ? track.clientWidth : 1;
     // Match the site's next-page scroll distance and require more than one wheel tick.
     projectProgress = Math.min(1, projectProgress + Math.min(delta * unit, 100) / 240);
     projects.style.setProperty('--largo-project-progress', projectProgress);
-    if (projectProgress === 1) {
+    if (projectProgress === 1 && commit) {
       cancelAnimationFrame(projectFrame);
       projectFrame = 0;
       projectNavigation = window.setTimeout(() => {
-        if (atProjectsEnd()) window.location.assign(projects.href);
+        if (atProjectsEnd()) navigateProjects();
         else resetProjectProgress();
       }, reducedMotion.matches ? 0 : 160);
       return;
@@ -254,6 +280,78 @@
     projectLastTick = now;
     projectFrame = requestAnimationFrame(drawProjectProgress);
   }
+
+  projects?.addEventListener('click', (event) => {
+    if (!event.detail || performance.now() >= suppressProjectClickUntil) return;
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
+  projects?.addEventListener('touchstart', (event) => {
+    projectTouch = undefined;
+    if (desktop.matches) return;
+    if (event.touches.length !== 1 || projectNavigationLocked()) {
+      resetProjectProgress();
+      return;
+    }
+    suppressProjectClickUntil = 0;
+    const touch = event.touches[0];
+    projectTouch = { id: touch.identifier, x: touch.clientX, y: touch.clientY, lastY: touch.clientY, minimumY: touch.clientY, ready: atProjectsEnd(), dragged: false };
+  }, { passive: true });
+
+  projects?.addEventListener('touchmove', (event) => {
+    const state = projectTouch;
+    if (!state) return;
+    const touch = Array.from(event.touches).find((item) => item.identifier === state.id);
+    if (event.touches.length !== 1 || !touch || desktop.matches || projectNavigationLocked()) {
+      projectTouch = undefined;
+      resetProjectProgress();
+      return;
+    }
+    const dx = touch.clientX - state.x;
+    const dy = state.y - touch.clientY;
+    const delta = state.lastY - touch.clientY;
+    state.lastY = touch.clientY;
+    state.minimumY = Math.min(state.minimumY, touch.clientY);
+    if (Math.hypot(dx, dy) > 12) {
+      state.dragged = true;
+      suppressProjectClickUntil = performance.now() + 700;
+    }
+    if (!state.ready) return;
+    if (Math.abs(dx) > Math.max(24, Math.abs(dy) * .75) || touch.clientY - state.minimumY > 12 || !atProjectsEnd()) {
+      state.ready = false;
+      resetProjectProgress();
+      return;
+    }
+    if (dy < 24 || delta <= 0) return;
+    if (event.cancelable) event.preventDefault();
+    advanceProjectProgress(delta, 0, false);
+  }, { passive: false });
+
+  projects?.addEventListener('touchend', (event) => {
+    const state = projectTouch;
+    if (!state || !Array.from(event.changedTouches).some((touch) => touch.identifier === state.id)) return;
+    projectTouch = undefined;
+    if (state.dragged) suppressProjectClickUntil = performance.now() + 700;
+    if (event.touches.length !== 0) {
+      resetProjectProgress();
+      return;
+    }
+    if (state.ready && state.dragged && projectProgress === 1 && atProjectsEnd()) advanceProjectProgress(0, 0);
+  }, { passive: true });
+
+  // A second finger can start outside the panel; it cancels only our pending gesture.
+  document.addEventListener('touchstart', (event) => {
+    if (projectTouch && event.touches.length !== 1) {
+      projectTouch = undefined;
+      resetProjectProgress();
+    }
+  }, { capture: true, passive: true });
+
+  projects?.addEventListener('touchcancel', () => {
+    projectTouch = undefined;
+    resetProjectProgress();
+  }, { passive: true });
 
   function updateArrows() {
     const index = commandIndex();
@@ -397,6 +495,7 @@
     }
     requestExpires = 0;
     wheelLockUntil = 0;
+    projectTouch = undefined;
     resetProjectProgress();
     if (desktop.matches) {
       if (dialog.open) dialog.close();
@@ -411,7 +510,17 @@
   }
 
   updateLayout();
-  window.addEventListener('pagehide', resetProjectProgress);
+  function resetProjectInteraction() {
+    projectTouch = undefined;
+    projectNavigating = false;
+    suppressProjectClickUntil = 0;
+    resetProjectProgress();
+  }
+  window.addEventListener('pagehide', resetProjectInteraction);
+  window.addEventListener('pageshow', resetProjectInteraction);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) resetProjectInteraction();
+  });
   desktop.addEventListener('change', updateLayout);
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(track);
   else window.addEventListener('resize', measure);
