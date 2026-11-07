@@ -426,8 +426,8 @@
     },
     {
       "path": "assets/components/hero-scene/scene.bundle.js",
-      "bytes": 589459,
-      "sha256": "1e5568837dd6c9e46239e82b66147ab8cb66b5252da302f27c6924eea680aedd"
+      "bytes": 594681,
+      "sha256": "ecbb67ba4c46d47b1f55380903b565b574c1dd24d02b635fc1adc57f2002a26d"
     },
     {
       "path": "assets/components/hero-scene/THREE-LICENSE.txt",
