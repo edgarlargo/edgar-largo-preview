@@ -159,6 +159,7 @@
   .largo-hero-cta { padding: 11px 12px; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  #home-hero { grid-template-rows: auto minmax(240px, 1fr) auto; }
   .largo-hero-cta { transition: none; }
   .largo-hero-cta:hover { transform: none; }
   #home-hero-scroll-container { height: auto; min-height: 58px; overflow: visible; }
