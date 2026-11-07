@@ -1939,6 +1939,10 @@ function eaImportedNativeResize(owner,stage,width,height){
 }
 function eaImportedHeroViewport(owner){
   const frame=owner.domVisualContainer?.querySelector('iframe[data-ea-code]');
+  if(owner.eaHeroFlight&&owner.eaHeroFlight.frame!==frame){
+    owner.eaHeroFlight.destroy();
+    owner.eaHeroFlight=null;owner.eaHeroViewportState=null;
+  }
   if(!frame?.contentWindow){
     if(owner.eaHeroVisibilityHandler)document.removeEventListener?.('visibilitychange',owner.eaHeroVisibilityHandler);
     owner.eaHeroVisibilityHandler=null;owner.eaHeroViewportState=null;return;
@@ -1947,15 +1951,96 @@ function eaImportedHeroViewport(owner){
     owner.eaHeroVisibilityHandler=()=>eaImportedHeroViewport(owner);
     document.addEventListener?.('visibilitychange',owner.eaHeroVisibilityHandler);
   }
+  if(!owner.eaHeroFlight){
+    const state=owner.eaHeroFlight={
+      frame,ready:false,active:false,finished:false,unsupported:typeof frame.showPopover!=='function',
+      style:null,popover:null,wasOpen:false,observer:null
+    };
+    state.restore=()=>{
+      if(!state.active)return;
+      state.active=false;
+      try{if(frame.matches(':popover-open'))frame.hidePopover();}catch{}
+      if(state.popover===null)frame.removeAttribute('popover');else frame.setAttribute('popover',state.popover);
+      if(state.style===null)frame.removeAttribute('style');else frame.setAttribute('style',state.style);
+      if(state.wasOpen)try{frame.showPopover();}catch{}
+    };
+    state.finish=()=>{
+      if(state.finished)return;
+      state.restore();state.finished=true;owner.eaHeroViewportState=null;
+      if(frame.isConnected!==false)eaImportedHeroViewport(owner);
+    };
+    state.message=event=>{
+      if(event.source!==frame.contentWindow||event.data?.type!=='largo-logo-arrival')return;
+      if(event.data.state==='complete'||event.data.state==='fallback'){state.finish();return;}
+      if(event.data.state==='ready'&&!state.ready){
+        state.ready=true;owner.eaHeroViewportState=null;eaImportedHeroViewport(owner);
+      }
+    };
+    state.pagehide=()=>{state.restore();state.finished=true;};
+    state.destroy=()=>{
+      state.restore();
+      window.removeEventListener?.('message',state.message);
+      window.removeEventListener?.('pagehide',state.pagehide);
+      state.observer?.disconnect();
+    };
+    window.addEventListener?.('message',state.message);
+    window.addEventListener?.('pagehide',state.pagehide);
+    // A route can remove the frame after the native home updater has stopped.
+    if(typeof MutationObserver==='function'&&document.body){
+      state.observer=new MutationObserver(()=>{
+        if(frame.isConnected)return;
+        state.destroy();
+        if(owner.eaHeroFlight===state){
+          owner.eaHeroFlight=null;owner.eaHeroViewportState=null;
+          if(owner.eaHeroVisibilityHandler)document.removeEventListener?.('visibilitychange',owner.eaHeroVisibilityHandler);
+          owner.eaHeroVisibilityHandler=null;
+        }
+      });
+      state.observer.observe(document.body,{childList:true,subtree:true});
+    }
+  }
+  const flightState=owner.eaHeroFlight;
   const now=performance.now(),motion=!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const revealed=!!properties.hasStarted&&!preloader.isActive&&transitionOverlay.activeRatio===0;
-  const previous=owner.eaHeroViewportState;
-  if(previous?.frame===frame&&previous.hidden===document.hidden&&previous.motion===motion&&previous.revealed===revealed&&now-previous.at<1000/30)return;
-  const height=window.innerHeight||document.documentElement?.clientHeight||1,rect=frame.getBoundingClientRect();
+  const height=window.innerHeight||document.documentElement?.clientHeight||1;
+  const width=window.innerWidth||document.documentElement?.clientWidth||1;
+  const rect=owner.domVisualContainer.getBoundingClientRect?.()||frame.getBoundingClientRect();
   const visible=!document.hidden&&rect.width>0&&rect.height>0&&rect.bottom>0&&rect.top<height;
+  if(flightState.active&&(!motion||!visible||transitionOverlay.activeRatio>.25)){
+    flightState.restore();flightState.finished=true;
+  }
+  if(!flightState.active&&!flightState.finished&&!flightState.unsupported&&flightState.ready&&motion&&visible&&properties.hasStarted&&transitionOverlay.activeRatio<=.25){
+    flightState.style=frame.getAttribute('style');
+    flightState.popover=frame.getAttribute('popover');
+    flightState.wasOpen=frame.matches(':popover-open');
+    try{
+      frame.setAttribute('popover','manual');
+      const styles={
+        position:'fixed',inset:'0',width:width+'px',height:height+'px','max-width':'none','max-height':'none',
+        'min-width':'0','min-height':'0',margin:'0',padding:'0',border:'0','border-radius':'0',background:'transparent',
+        'pointer-events':'none','z-index':'2147483646'
+      };
+      for(const [property,value]of Object.entries(styles))frame.style.setProperty(property,value,'important');
+      flightState.active=true;
+      frame.showPopover();
+    }catch{
+      flightState.restore();flightState.unsupported=true;
+    }
+  }
+  const revealed=flightState.finished||flightState.active||(flightState.unsupported&&!!properties.hasStarted&&!preloader.isActive&&transitionOverlay.activeRatio===0);
+  if(flightState.active){
+    if(frame.style.getPropertyValue('width')!==width+'px')frame.style.setProperty('width',width+'px','important');
+    if(frame.style.getPropertyValue('height')!==height+'px')frame.style.setProperty('height',height+'px','important');
+  }
+  const previous=owner.eaHeroViewportState;
+  if(previous?.frame===frame&&previous.hidden===document.hidden&&previous.motion===motion&&previous.revealed===revealed&&previous.active===flightState.active&&previous.ready===flightState.ready&&now-previous.at<1000/30)return;
   const progress=Math.max(0,Math.min(1,(height*.85-rect.top)/(height*.7+rect.height)));
-  frame.contentWindow.postMessage({type:'ea-code-viewport',progress,visible,motion,revealed},'*');
-  owner.eaHeroViewportState={frame,hidden:document.hidden,motion,revealed,at:now};
+  let flight=null;
+  if(flightState.active){
+    const radius=typeof getComputedStyle==='function'?getComputedStyle(owner.domVisualContainer).borderRadius:'0px';
+    flight={active:true,panel:{left:rect.left,top:rect.top,width:rect.width,height:rect.height,radius},width,height};
+  }else if(flightState.finished&&!flightState.unsupported)flight={active:false};
+  frame.contentWindow.postMessage({type:'ea-code-viewport',progress,visible,motion,revealed,flight},'*');
+  owner.eaHeroViewportState={frame,hidden:document.hidden,motion,revealed,active:flightState.active,ready:flightState.ready,at:now};
 }
 
 function eaImportedGoalRestoreHandoff(owner){
