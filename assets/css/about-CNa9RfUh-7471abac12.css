@@ -109,9 +109,6 @@
   .largo-tech-group img { height: 17px; max-width: 112px; }
   .largo-tech-group img[data-tech-symbol="true"] { height: 22px; }
 }
-@media (hover: none) and (pointer: coarse) and (max-height: 650px) {
-  .largo-hero-intro { display: none; }
-}
 @media (prefers-reduced-motion: reduce) {
   #home-hero { grid-template-rows: auto minmax(240px, 1fr) auto; }
   #home-hero-scroll-container { height: auto; min-height: 58px; overflow: visible; }

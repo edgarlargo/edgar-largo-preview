@@ -691,6 +691,22 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     padding: 0;
   }
 
+  .largo-services-dialog {
+    --largo-services-dialog-top: max(4.5rem, 16dvh, calc(env(safe-area-inset-top) + .75rem));
+    inset: var(--largo-services-dialog-top) 0 0;
+    inline-size: 100%;
+    block-size: calc(100dvh - var(--largo-services-dialog-top));
+    max-block-size: calc(100dvh - var(--largo-services-dialog-top));
+    margin: 0 auto;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  .largo-services-dialog-header,
+  .largo-services-dialog-body {
+    padding-inline-start: max(clamp(1.25rem, 4vw, 2rem), env(safe-area-inset-left));
+    padding-inline-end: max(clamp(1.25rem, 4vw, 2rem), env(safe-area-inset-right));
+  }
+
   .largo-services-dialog-body > .ea-content-story > .ea-story-image {
     display: none;
   }
@@ -706,13 +722,6 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     row-gap: 3.5rem;
   }
 
-  .largo-services-dialog {
-    inset: auto 0 0;
-    inline-size: 100%;
-    max-block-size: 90dvh;
-    margin: 0 auto;
-    border-radius: 1.5rem 1.5rem 0 0;
-  }
 }
 
 @media (hover: hover) {
