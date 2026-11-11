@@ -11,11 +11,11 @@
 #ea-consent a{font:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
 #ea-consent a:hover{text-decoration-thickness:2px}
 #ea-consent .ea-consent-copy{min-width:0;overflow-wrap:anywhere}
-#ea-consent button,#ea-consent-open{appearance:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--ea-consent-ink);border-radius:10px;padding:10px 14px;min-height:38px;font:600 13px/1.4 Arial,sans-serif;letter-spacing:normal;text-transform:none;text-align:center;background:var(--ea-consent-ink);color:var(--ea-consent-bg);margin:0;box-shadow:none;white-space:normal;overflow-wrap:anywhere;transition:background-color .15s,color .15s}
-#ea-consent .ea-consent-secondary,#ea-consent-open{border-color:var(--ea-consent-line);background:var(--ea-consent-bg);color:var(--ea-consent-ink)}
-#ea-consent button:hover{background:var(--ea-consent-bg);color:var(--ea-consent-ink)}
-#ea-consent .ea-consent-secondary:hover,#ea-consent-open:hover{background:var(--ea-consent-hover)}
-#ea-consent button:active,#ea-consent-open:active{background:var(--ea-consent-active);color:var(--ea-consent-ink)}
+#ea-consent button,#ea-consent-open{appearance:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--ea-consent-ink);border-radius:10px;padding:10px 14px;min-height:38px;font:600 13px/1.4 Arial,sans-serif;letter-spacing:normal;text-transform:none;text-align:center;background:var(--largo-glass-host-bg,var(--ea-consent-ink));color:var(--ea-consent-bg);margin:0;box-shadow:none;white-space:normal;overflow-wrap:anywhere;transition:background-color .15s,color .15s;--largo-glass-tint:color-mix(in srgb,var(--ea-consent-ink) 82%,transparent)}
+#ea-consent .ea-consent-secondary,#ea-consent-open{border-color:var(--ea-consent-line);background:var(--largo-glass-host-bg,var(--ea-consent-bg));color:var(--ea-consent-ink);--largo-glass-tint:color-mix(in srgb,var(--ea-consent-bg) 82%,transparent)}
+#ea-consent button:hover{background:var(--largo-glass-host-bg,var(--ea-consent-bg));color:var(--ea-consent-ink);--largo-glass-tint:color-mix(in srgb,var(--ea-consent-bg) 82%,transparent)}
+#ea-consent .ea-consent-secondary:hover,#ea-consent-open:hover{background:var(--largo-glass-host-bg,var(--ea-consent-hover));--largo-glass-tint:color-mix(in srgb,var(--ea-consent-hover) 82%,transparent)}
+#ea-consent button:active,#ea-consent-open:active{background:var(--largo-glass-host-bg,var(--ea-consent-active));color:var(--ea-consent-ink);--largo-glass-tint:color-mix(in srgb,var(--ea-consent-active) 82%,transparent)}
 #ea-consent button:focus-visible,#ea-consent a:focus-visible,#ea-consent input:focus-visible,#ea-consent-open:focus-visible{outline:2px solid var(--ea-consent-ink);outline-offset:3px}
 #ea-consent button:disabled{cursor:default;opacity:.55}
 #ea-consent .ea-consent-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}

@@ -1,3 +1,4 @@
+@import url("../liquid-glass/liquid-glass.css?v=ac6a8e1c4ffbb2d1");
 @font-face{font-family:Aeonik;src:url("../../fonts/Aeonik-Regular-01e61dc264.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:LargoMono;src:url("../../fonts/IBMPlexMono-Regular-5cfdc4acbb.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
 :root{color-scheme:dark;--background:#09090f;--foreground:#f0f1fa;--muted:#a3a3b5;--accent:#b7a2ff;--edge:rgba(240,241,250,.22)}
@@ -24,18 +25,18 @@ h1 span{color:#858596}
 .roadster-stage[data-ready="true"] .roadster-poster{opacity:0;pointer-events:none}
 .scene-controls{position:absolute;z-index:2;bottom:12px;left:max(22px,calc((100% - 680px)/2));right:max(22px,calc((100% - 680px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--muted);font-size:10px;letter-spacing:.025em}
 .scene-controls p{margin:0;max-width:58%}
-.scene-controls button{appearance:none;flex-shrink:0;min-height:40px;padding:8px 0 8px 14px;border:0;background:transparent;color:var(--foreground);font:inherit;cursor:pointer}
+.scene-controls button{appearance:none;flex-shrink:0;min-height:40px;padding:8px 14px;border:0;background:var(--largo-glass-host-bg,transparent);color:var(--foreground);font:inherit;cursor:pointer;border-radius:999px}
 .scene-controls button[hidden]{display:none}
 .actions{position:relative;z-index:3;display:flex;justify-content:center;gap:12px;width:100%;margin-top:6px}
 .button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-width:225px;min-height:60px;padding:16px 25px;border:1px solid transparent;border-radius:999px;font-size:15px;line-height:1.25;letter-spacing:-.01em;text-decoration:none;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
-.button-primary{background:var(--foreground);color:#09090f}
-.button-secondary{border-color:var(--edge);background:rgba(255,255,255,.015);color:var(--foreground)}
+.button-primary{background:var(--largo-glass-host-bg,var(--foreground));color:#09090f}
+.button-secondary{border-color:var(--edge);background:var(--largo-glass-host-bg,rgba(255,255,255,.015));color:var(--foreground)}
 .button-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#09090f;color:var(--foreground);font-family:LargoMono,monospace;font-size:10px}
 a:focus-visible,button:focus-visible,.roadster-stage canvas:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
 .roadster-stage canvas:focus-visible{outline-offset:-8px}
 .button:active{transform:scale(.98)}
 .page-footer{display:flex;justify-content:space-between;gap:18px;max-width:1600px;width:100%;margin-inline:auto;padding:12px clamp(22px,5vw,80px) max(24px,env(safe-area-inset-bottom));color:#717181;font-size:9px}
-@media(hover:hover){.button-primary:hover{background:#d7cff7}.button-secondary:hover{border-color:var(--foreground);background:rgba(255,255,255,.07)}.scene-controls button:hover{color:var(--accent)}}
+@media(hover:hover){.button-primary:hover{background:var(--largo-glass-host-bg,#d7cff7)}.button-secondary:hover{border-color:var(--foreground);background:var(--largo-glass-host-bg,rgba(255,255,255,.07))}.scene-controls button:hover{color:var(--accent)}}
 @media(max-width:640px){.header-note{max-width:90px;text-align:right;font-size:9px}.brand img{width:124px}main{padding-top:18px}.eyebrow{margin-bottom:15px;font-size:10px}h1{font-size:clamp(39px,10.4vw,62px)}.description{max-width:290px;margin-top:15px;font-size:15px}.roadster-stage{height:clamp(300px,39svh,410px);margin-top:-2px}.actions{flex-direction:column;max-width:390px;gap:10px;margin-top:0}.button{width:100%;min-height:56px}.button-primary{padding-block:12px}.scene-controls{bottom:12px;left:26px;right:26px;font-size:9px}.page-footer{font-size:8px;padding-bottom:max(20px,env(safe-area-inset-bottom))}}
 @media(max-width:340px){.header-note{display:none}h1{font-size:36px}.roadster-stage{height:290px}.button{min-width:0}.page-footer span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}

@@ -52,8 +52,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   align-items: center;
   min-block-size: 14rem;
   padding: clamp(1.5rem, 4vw, 4.5rem);
-  border-radius: 1rem;
-  background: #eeeefa;
+  border-radius: 1rem;background:var(--largo-glass-host-bg,#eeeefa);
   color: #17151e;
   text-decoration: none;
 }
@@ -229,8 +228,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   margin: 0;
   padding: 0;
   border: 1px solid var(--largo-services-stroke);
-  border-radius: 50%;
-  background: none;
+  border-radius: 50%;background:var(--largo-glass-host-bg,none);
   color: var(--largo-services-ink);
   cursor: pointer;
 }
@@ -544,8 +542,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     margin: 0;
     padding: 0;
     border: 0;
-    border-radius: .35rem;
-    background: none;
+    border-radius: .35rem;background:var(--largo-glass-host-bg,none);
     color: var(--largo-services-muted);
     cursor: pointer;
   }
@@ -772,14 +769,14 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   min-block-size: 44px;
   padding: .35rem 0;
   border: 0;
-  border-radius: .2rem;
-  background: transparent;
+  border-radius: .2rem;background: transparent;
   color: var(--largo-services-ink);
   font: 500 .7rem/1.35 IBMPlexMono, ui-monospace, monospace;
   letter-spacing: .12em;
   text-align: start;
   text-transform: uppercase;
   cursor: pointer;
+  margin-block-start: .75rem;
 }
 
 .largo-services-request-trigger[hidden] {
@@ -850,8 +847,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   aspect-ratio: 1;
   padding: 0;
   border: 0;
-  border-radius: 50%;
-  background: var(--color-off-white, #f0f1fa);
+  border-radius: 50%;background:var(--largo-glass-host-bg,var(--color-off-white, #f0f1fa));
   color: inherit;
   font: 400 1.5rem/1 system-ui, sans-serif;
   cursor: pointer;
@@ -937,8 +933,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
     color: var(--largo-services-accent);
   }
 
-  .largo-services-request-close:hover {
-    background: #e9eaf4;
+  .largo-services-request-close:hover {background:var(--largo-glass-host-bg,#e9eaf4);
   }
 }
 

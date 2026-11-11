@@ -466,13 +466,13 @@
     },
     {
       "path": "assets/components/roadster-404/page.css",
-      "bytes": 5645,
-      "sha256": "08b69c8b8b1df78f09babced8e5bc04b8234a5d716a07604e41759a432e6715e"
+      "bytes": 5862,
+      "sha256": "07856b11958290c5223b8cfce2ccac33463423fb056f8a6999d58b8ca78c7b7c"
     },
     {
       "path": "assets/components/roadster-404/page.html",
       "bytes": 2402,
-      "sha256": "9125e3c842c036eb84bbf10fd539dfea7e452dae9f2f8cff2832ba7f01793db3"
+      "sha256": "e81912dd00c98e646d9be4058d5e4139db15555ef9066a5e25dfa5261be3895c"
     },
     {
       "path": "assets/components/roadster-404/poster.jpg",
@@ -481,8 +481,8 @@
     },
     {
       "path": "assets/components/roadster-404/scene.bundle.js",
-      "bytes": 565148,
-      "sha256": "71d4618be7591442abfe14bb8f1c238d24d1ff6a89e676c31e1489a4b6293cc8"
+      "bytes": 565329,
+      "sha256": "c2888c46b24bfa247098a5f51176cb5e32901e5c0a90c05887df55101a14c393"
     },
     {
       "path": "assets/components/roadster-404/THREE-LICENSE.txt",
@@ -501,8 +501,8 @@
     },
     {
       "path": "assets/components/roadster-footer/roadster-3d-v2.css",
-      "bytes": 3323,
-      "sha256": "c19888b8e4bd58aaa730f4b04f02592b36bd28e8cf6149e86e85e0941381300c"
+      "bytes": 3470,
+      "sha256": "4cbd3339ff879f0a60d8591a285f7984b0e83b875872f7702651cd5d0aa75a82"
     },
     {
       "path": "assets/components/roadster-footer/roadster-flight-3b2f475c467d.jpg",
@@ -536,8 +536,8 @@
     },
     {
       "path": "assets/components/service-carousel/service-carousel.css",
-      "bytes": 25947,
-      "sha256": "38b89e8046acc2869aca52241f12737cecb02dee3ac9eb29fdad78f692607198"
+      "bytes": 26085,
+      "sha256": "6af507fab74cdadebdcee21f9ff429f21f403368e1e56cae309b1883325fd501"
     },
     {
       "path": "assets/components/service-carousel/service-carousel.js",
@@ -961,13 +961,15 @@
     },
     {
       "path": "assets/components/vr-glasses/scene.bundle.js",
-      "bytes": 609850,
-      "sha256": "1289b5b3707e5e8bc62140a753d86298cafa823b4b71fdc46dccac95086eb480"
+      "bytes": 631942,
+      "sha256": "0c90c89ae3ec326a5326b29c74be8cbd90d2e3331699ae054643f97209602729",
+      "derivative": false
     },
     {
       "path": "assets/components/vr-glasses/scene.html",
-      "bytes": 2764,
-      "sha256": "fbcfd588543adbc00d62e8a6cf687824f3003547d2c841fc56c996192aad9b4b"
+      "bytes": 1540,
+      "sha256": "d609ba679d41563397aaa95ed55be490969b21420ef475bfe9773d2489a78297",
+      "derivative": false
     },
     {
       "path": "assets/components/vr-glasses/THREE-LICENSE.txt",
@@ -976,8 +978,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 92694,
-      "sha256": "6ffaeed9b900116a16cd368d1395424c89716851368bb0eac4d998a132bd045c"
+      "bytes": 94715,
+      "sha256": "31a113e0e1d05f41579c2b81c702613d90ed30d5ab82ff48c271f3e623e047ac"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -1251,8 +1253,8 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 90553,
-      "sha256": "f5d941c2183708bf85c14419877b1dff278f73c0d9946dd8e537826883d30bf0"
+      "bytes": 92543,
+      "sha256": "af4a34812cc1b813c88fdb55d1f4ace696e8482d0f3e8e67a3b5c7028e655e39"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -1371,13 +1373,13 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1388758,
-      "sha256": "165610168dd266c9df2646a23324d21f1cd22927c76fe20422a39e4619485896"
+      "bytes": 1389012,
+      "sha256": "da630c524be896df07dbe45b6fa02b4d1605064dd8ada1b6bcb402c07da1717e"
     },
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
-      "bytes": 1559649,
-      "sha256": "a1643b7bb8868a1f20989b954f020eaa98dfae5df80a41e6487303dfd546e593"
+      "bytes": 1559894,
+      "sha256": "217af7c7a921aa011eb252fdde7982398dfeb0d3a98f303b9c294de3111f2d7c"
     },
     {
       "path": "assets/media/images/responsive-q90-000e5f1c1ef8c7d5-1440-f2532236391b.webp",
@@ -3131,8 +3133,8 @@
     },
     {
       "path": "assets/scene/asset-versions.json",
-      "bytes": 3691,
-      "sha256": "e56aefa4d37c2399a66dfc59f37f19f73f2a949be95b77c213bf39d667c06720"
+      "bytes": 5733,
+      "sha256": "9e1d61e4d83a9a9ba5c046e0d32463b833006d758b9d0ee5277fcea236a8a669"
     },
     {
       "path": "assets/scene/brand-color.css",
@@ -3546,8 +3548,8 @@
     },
     {
       "path": "content-blocks.css",
-      "bytes": 7821,
-      "sha256": "1cdd9d4cd1bdc12fe1e2d2282b3a986ba148ecb621cc5cf345ebce2421a4dd3f"
+      "bytes": 8266,
+      "sha256": "5858545bcf8aa2ca2ee04c257ed69409dcd041aa07fbef97e3343c5a4a8eca43"
     },
     {
       "path": "content-page.css",
@@ -3621,8 +3623,8 @@
     },
     {
       "path": "settings-site.css",
-      "bytes": 6148,
-      "sha256": "5f6cb204760cca0ef7df138a2146e7e145479ca118838765ae0aea834413f2de"
+      "bytes": 6666,
+      "sha256": "65f869b1f4452654d8f7b4d207805142f98d933ed6cb195cb6d3fe2831a2a671"
     },
     {
       "path": "settings-site.js",
@@ -4283,6 +4285,47 @@
       "path": "assets/components/hero-technologies/dev-stack/wordpress.png",
       "bytes": 77766,
       "sha256": "e9af6045fd8983f5f6bcd21ace583a98a6a9b6d6e8bbf734ddaf977dc4fff904"
+    },
+    {
+      "path": "assets/components/liquid-glass/build-report.json",
+      "bytes": 340,
+      "sha256": "b9a02074777f4fe423c33034b0c62c07080a0946ac2ee8bbf778543648a03bb3"
+    },
+    {
+      "path": "assets/components/liquid-glass/liquid-glass.css",
+      "bytes": 1193,
+      "sha256": "ac6a8e1c4ffbb2d18802c577a5ddbc786142429161dce2149136d0c381f5c13a"
+    },
+    {
+      "path": "assets/components/liquid-glass/liquid-glass.js",
+      "bytes": 278262,
+      "sha256": "0da5f8a9e47df7c837c46ff7d9a152e25cc88043998a746dec2b9907fc292137"
+    },
+    {
+      "path": "assets/components/liquid-glass/REACT-DOM-LICENSE.txt",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "assets/components/liquid-glass/REACT-LICENSE.txt",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "assets/components/liquid-glass/SAMASANTE-LIQUID-GLASS-LICENSE.txt",
+      "bytes": 1067,
+      "sha256": "11bc33eaf33639755f5531e5fd059ff4ae85db6a2730588b72ff2eea6fd47614"
+    },
+    {
+      "path": "assets/components/liquid-glass/SCHEDULER-LICENSE.txt",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "assets/components/vr-glasses/optics.c50ab9c508bd.js",
+      "bytes": 2855199,
+      "sha256": "068d8c63cf6cfd6e3bb08b33b1190a8bb6efc0a4bc3b7e7601eed438cc906ab1",
+      "derivative": false
     }
   ],
   "forms": "remote-footer",

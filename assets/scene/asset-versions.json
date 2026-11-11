@@ -4,30 +4,36 @@
     {
       "path": "assets/js/hoisted-CUO_IjfL-718992f830.js",
       "stripQuery": [
-        "edgar-about"
+        "edgar-about",
+        "v"
       ],
-      "bytes": 1531022,
-      "sha256": "3296ca51aa1e81c2ff55580e4bf47928608d11aea14ee060c41f48e42ab050df"
+      "bytes": 1559894,
+      "sha256": "217af7c7a921aa011eb252fdde7982398dfeb0d3a98f303b9c294de3111f2d7c"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/js/hoisted-CUO_IjfL-718992f830.js",
       "stripQuery": [
-        "edgar-about"
+        "edgar-about",
+        "v"
       ],
-      "bytes": 1380473,
-      "sha256": "f3ee5caadf529e5b5c8bddc545e76c4cf055c57ae97fa7d7a65fe96523285107"
+      "bytes": 1389012,
+      "sha256": "da630c524be896df07dbe45b6fa02b4d1605064dd8ada1b6bcb402c07da1717e"
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "stripQuery": [],
-      "bytes": 90532,
-      "sha256": "9dfa9e10a974aaba26a795bf36a87f7f900f7a554f5d31d27cce4b0f85e1f688"
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 94715,
+      "sha256": "31a113e0e1d05f41579c2b81c702613d90ed30d5ab82ff48c271f3e623e047ac"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css",
-      "stripQuery": [],
-      "bytes": 90568,
-      "sha256": "fe82960d3d4333f6270fbb6d29b81aea8e9445a19f259f829934a59c0e3d7534"
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 92543,
+      "sha256": "af4a34812cc1b813c88fdb55d1f4ace696e8482d0f3e8e67a3b5c7028e655e39"
     },
     {
       "path": "assets/components/hero-scene/scene.bundle.js",
@@ -50,8 +56,8 @@
       "stripQuery": [
         "v"
       ],
-      "bytes": 7821,
-      "sha256": "1cdd9d4cd1bdc12fe1e2d2282b3a986ba148ecb621cc5cf345ebce2421a4dd3f"
+      "bytes": 8266,
+      "sha256": "5858545bcf8aa2ca2ee04c257ed69409dcd041aa07fbef97e3343c5a4a8eca43"
     },
     {
       "path": "studio-content.css",
@@ -139,6 +145,78 @@
       ],
       "bytes": 365,
       "sha256": "1f81c2f34c66f9cc15b8ffe4ce6b90c3a3ecb098e018cea79913eed5e053b0a6"
+    },
+    {
+      "path": "assets/components/service-carousel/service-carousel.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 26085,
+      "sha256": "6af507fab74cdadebdcee21f9ff429f21f403368e1e56cae309b1883325fd501"
+    },
+    {
+      "path": "assets/components/roadster-footer/roadster-3d-v2.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 3470,
+      "sha256": "4cbd3339ff879f0a60d8591a285f7984b0e83b875872f7702651cd5d0aa75a82"
+    },
+    {
+      "path": "footer-contact-form.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 4022,
+      "sha256": "d37432a66a3a557d4d106c3d9fce9addc07147de725b6a0d970d0fb5ec046843"
+    },
+    {
+      "path": "settings-site.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 6666,
+      "sha256": "65f869b1f4452654d8f7b4d207805142f98d933ed6cb195cb6d3fe2831a2a671"
+    },
+    {
+      "path": "assets/components/roadster-404/page.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 5862,
+      "sha256": "07856b11958290c5223b8cfce2ccac33463423fb056f8a6999d58b8ca78c7b7c"
+    },
+    {
+      "path": "assets/components/roadster-404/scene.bundle.js",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 565329,
+      "sha256": "c2888c46b24bfa247098a5f51176cb5e32901e5c0a90c05887df55101a14c393"
+    },
+    {
+      "path": "assets/components/liquid-glass/liquid-glass.js",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 278262,
+      "sha256": "0da5f8a9e47df7c837c46ff7d9a152e25cc88043998a746dec2b9907fc292137"
+    },
+    {
+      "path": "assets/components/liquid-glass/liquid-glass.css",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 1193,
+      "sha256": "ac6a8e1c4ffbb2d18802c577a5ddbc786142429161dce2149136d0c381f5c13a"
+    },
+    {
+      "path": "assets/components/vr-glasses/scene.bundle.js",
+      "stripQuery": [
+        "v"
+      ],
+      "bytes": 631942,
+      "sha256": "0c90c89ae3ec326a5326b29c74be8cbd90d2e3331699ae054643f97209602729"
     }
   ]
 }

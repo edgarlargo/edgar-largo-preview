@@ -1,0 +1,29 @@
+/* Decorative material only: native controls retain their sizing and behaviour. */
+.largo-glass-control,
+.largo-glass-panel { isolation: isolate; }
+.largo-glass-light { --largo-glass-tint: rgba(255, 255, 255, .5); }
+.largo-glass-dark { --largo-glass-tint: rgba(24, 25, 36, .66); }
+.largo-glass-panel { --largo-glass-shadow: 0 14px 40px rgb(15 13 35 / .13); }
+.largo-glass-ready { --largo-glass-host-bg: transparent; }
+.largo-glass-layer {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  user-select: none;
+  box-shadow: var(--largo-glass-shadow, 0 5px 18px rgb(15 13 35 / .09));
+}
+.largo-glass-material { border-radius: inherit; }
+.largo-glass-control:focus-visible {
+  outline: 2px solid var(--largo-glass-focus, #7850ff);
+  outline-offset: 4px;
+}
+.largo-glass-control[disabled],
+.largo-glass-control[aria-disabled="true"] { opacity: .5; }
+/* No spring, wobble or frame loop: the site's existing motion stays in charge. */
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+  .largo-glass-layer { display: none; }
+  .largo-glass-ready { --largo-glass-host-bg: initial; }
+}

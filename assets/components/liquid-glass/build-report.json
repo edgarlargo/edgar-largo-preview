@@ -1,0 +1,12 @@
+{
+  "library": "@samasante/liquid-glass",
+  "version": "0.1.1",
+  "upstreamCommit": "4e7b769e1df7e5a7d3669fef22417fe3d2f79ade",
+  "react": "19.3.1",
+  "reactDom": "19.3.1",
+  "bytes": 278262,
+  "gzipBytes": 87738,
+  "sha256": "0da5f8a9e47df7c837c46ff7d9a152e25cc88043998a746dec2b9907fc292137",
+  "externalImports": 0,
+  "testsRun": false
+}
