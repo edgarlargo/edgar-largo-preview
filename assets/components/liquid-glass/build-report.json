@@ -4,9 +4,9 @@
   "upstreamCommit": "4e7b769e1df7e5a7d3669fef22417fe3d2f79ade",
   "react": "19.3.1",
   "reactDom": "19.3.1",
-  "bytes": 278262,
-  "gzipBytes": 87738,
-  "sha256": "0da5f8a9e47df7c837c46ff7d9a152e25cc88043998a746dec2b9907fc292137",
+  "bytes": 278235,
+  "gzipBytes": 87733,
+  "sha256": "2752aa3e9cb548bdf86e09b5ab747395c503ddbc7ec398d59a86b63bd9c59029",
   "externalImports": 0,
   "testsRun": false
 }

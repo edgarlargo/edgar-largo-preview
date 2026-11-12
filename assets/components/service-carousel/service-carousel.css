@@ -69,6 +69,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   font-size: clamp(3.25rem, 9vw, 9rem);
   line-height: 1;
   letter-spacing: -.05em;
+  text-transform: uppercase;
 }
 
 .largo-services-projects-action {
