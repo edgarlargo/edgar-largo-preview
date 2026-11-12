@@ -52,8 +52,9 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   align-items: center;
   min-block-size: 14rem;
   padding: clamp(1.5rem, 4vw, 4.5rem);
-  border-radius: 1rem;background:var(--largo-glass-host-bg,#eeeefa);
-  color: #17151e;
+  border-radius: 1rem;
+  background: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -83,7 +84,7 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
   flex: 1 1 0;
   min-inline-size: 0;
   block-size: 2px;
-  background: #c6c2d0 linear-gradient(#754ad4, #754ad4) no-repeat;
+  background: #55515e linear-gradient(#754ad4, #754ad4) no-repeat;
   background-size: calc(var(--largo-project-progress, 0) * 100%) 100%;
 }
 
@@ -818,10 +819,47 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
 .largo-services-request-dialog[open] {
   display: flex;
   flex-direction: column;
+  animation: largo-request-enter .45s cubic-bezier(.4, 0, .1, 1) both;
 }
 
 .largo-services-request-dialog::backdrop {
   background: rgb(16 13 24 / .48);
+  animation: largo-request-backdrop-in .45s cubic-bezier(.4, 0, .1, 1) both;
+}
+
+.largo-services-request-dialog[open].is-closing {
+  animation: largo-request-exit .35s cubic-bezier(.4, 0, .1, 1) both;
+}
+
+.largo-services-request-dialog.is-closing::backdrop {
+  animation: largo-request-backdrop-out .35s cubic-bezier(.4, 0, .1, 1) both;
+}
+
+@keyframes largo-request-enter {
+  from { opacity: 0; transform: translateY(1.25rem) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes largo-request-exit {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(.75rem) scale(.99); }
+}
+
+@keyframes largo-request-backdrop-in {
+  from { background-color: rgb(16 13 24 / 0); }
+  to { background-color: rgb(16 13 24 / .48); }
+}
+
+@keyframes largo-request-backdrop-out {
+  from { background-color: rgb(16 13 24 / .48); }
+  to { background-color: rgb(16 13 24 / 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .largo-services-request-dialog[open],
+  .largo-services-request-dialog[open].is-closing,
+  .largo-services-request-dialog::backdrop,
+  .largo-services-request-dialog.is-closing::backdrop { animation: none; }
 }
 
 .largo-services-request-header {
@@ -938,7 +976,9 @@ body:has(#projects-main .project-list[data-largo-service-carousel]) {
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .largo-services-request-dialog::backdrop {
+  .largo-services-request-dialog::backdrop,
+  .largo-services-request-dialog.is-closing::backdrop {
     background: #17151f;
+    animation: none;
   }
 }

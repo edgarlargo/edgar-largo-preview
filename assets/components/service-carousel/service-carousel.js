@@ -69,11 +69,11 @@
   carousel.append(track, controls);
   carousel.setAttribute('data-largo-services-ready', '');
 
-  function isolateDialog(modal) {
+  function isolateDialog(modal, dismiss = () => modal.close()) {
     modal.addEventListener('click', (event) => {
       if (event.target !== modal) return;
       const rect = modal.getBoundingClientRect();
-      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) modal.close();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dismiss();
     });
 
     // Keep the theme's virtual page scrolling out of the open dialog.
@@ -151,15 +151,43 @@
   if (supportsDialog && requestForm && requestServiceId && requestTitle && closeRequest) {
     const requestStatus = requestForm.querySelector('[data-ea-form-status]');
     let requestTrigger;
+    let closeTimer = 0;
     requestTitle.tabIndex = -1;
-    isolateDialog(requestDialog);
+    function finishRequestClose() {
+      clearTimeout(closeTimer);
+      closeTimer = 0;
+      requestDialog.removeEventListener('animationend', onRequestCloseAnimationEnd);
+      if (requestDialog.open) requestDialog.close();
+    }
+    function onRequestCloseAnimationEnd(event) {
+      if (event.target === requestDialog && event.animationName === 'largo-request-exit') finishRequestClose();
+    }
+    function dismissRequest() {
+      if (!requestDialog.open || requestDialog.classList.contains('is-closing')) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finishRequestClose();
+        return;
+      }
+      requestDialog.classList.add('is-closing');
+      requestDialog.addEventListener('animationend', onRequestCloseAnimationEnd);
+      closeTimer = window.setTimeout(finishRequestClose, 550);
+    }
+    isolateDialog(requestDialog, dismissRequest);
+    requestDialog.addEventListener('cancel', (event) => {
+      event.preventDefault();
+      dismissRequest();
+    });
 
     closeRequest.addEventListener('click', (event) => {
       event.preventDefault();
-      requestDialog.close();
+      dismissRequest();
     });
     requestDialog.addEventListener('close', () => {
       if (requestDialog.open) return;
+      clearTimeout(closeTimer);
+      closeTimer = 0;
+      requestDialog.removeEventListener('animationend', onRequestCloseAnimationEnd);
+      requestDialog.classList.remove('is-closing');
       requestTrigger?.focus({ preventScroll: true });
       requestTrigger = undefined;
     });

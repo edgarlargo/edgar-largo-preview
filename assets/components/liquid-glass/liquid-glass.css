@@ -16,6 +16,18 @@
   box-shadow: var(--largo-glass-shadow, 0 5px 18px rgb(15 13 35 / .09));
 }
 .largo-glass-material { border-radius: inherit; }
+/* Keep the navigation and contact panels solid white. */
+#header-menu-links,
+#header-menu-talk {
+  --largo-glass-host-bg: #fff;
+  background: #fff;
+}
+#header-menu-links > .largo-glass-layer,
+#header-menu-talk > .largo-glass-layer { display: none; }
+/* Allow the mobile menu button's shadow to extend beyond the header row. */
+@media (max-width: 812px) {
+  #header-container { overflow: visible; }
+}
 .largo-glass-control:focus-visible {
   outline: 2px solid var(--largo-glass-focus, #7850ff);
   outline-offset: 4px;
