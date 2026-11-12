@@ -541,8 +541,8 @@
     },
     {
       "path": "assets/components/liquid-glass/liquid-glass.css",
-      "bytes": 1593,
-      "sha256": "27afd16140e1bed9db04374d6920539ff67086a780fc2794810946069874bd77"
+      "bytes": 1443,
+      "sha256": "4ed19b6f2b520413da1ff5098ba2af7f47db5a53a68a819d3bad2875dc460a89"
     },
     {
       "path": "assets/components/liquid-glass/liquid-glass.js",
@@ -1091,8 +1091,8 @@
     },
     {
       "path": "assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 101597,
-      "sha256": "878b1a7d0a9f1dc4fed82f900bd166552fe4a971230d3753e0bb852cec9c6986"
+      "bytes": 101598,
+      "sha256": "96b093282a0eba0989bff224fa8cc8260c01f3aca7fff3dd0c9e95731119e784"
     },
     {
       "path": "assets/fonts/Aeonik-Medium-7349d98003.woff2",
@@ -1366,8 +1366,8 @@
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/css/about-CNa9RfUh-7471abac12.css",
-      "bytes": 99425,
-      "sha256": "9e85d94278150b67600484c0cb70004c2b1ee9b1af62c917e4d5c5d9538073ae"
+      "bytes": 99426,
+      "sha256": "8819470406a9e18352e7fd46feea25e3532f50746623dd47c99c42492c8393cf"
     },
     {
       "path": "assets/imports/e2f15c00-fe9e-4c79-8a01-5ee0e212fd0b/assets/fonts/Aeonik-Medium-7349d98003.woff2",
